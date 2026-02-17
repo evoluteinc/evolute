@@ -2328,7 +2328,7 @@ body.login {
     align-items: stretch;
     flex-direction: column;
     background-color: var(--color-white) !important;
-    padding: 24px !important;
+    padding: 0 !important;
 }
 
 /* Label Value Pairs */
@@ -3126,10 +3126,6 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard #FormFields {
     padding: 0;
-}
-
-.dashboard .formSectionContent {
-    padding: 24px;
 }
 
 .dashboard .formSectionContent .inputGroup {
@@ -10258,7 +10254,7 @@ img.calendarIcon {
 }
 
 .dashboard .nestedListTable td {
-    padding: 10px 16px;
+    padding: 8px;
     border-bottom: 1px solid var(--border);
     font-size: 14px;
     color: var(--color-dark);
@@ -10311,9 +10307,6 @@ img.calendarIcon {
 }
 
 /* Form section content */
-.dashboard .formSectionContent {
-    padding: 16px;
-}
 
 .dashboard .boxContent {
     padding: 16px;
