@@ -2307,6 +2307,10 @@ body.login {
     width: 100% !important;
 }
 
+.dashboard #Main:has(#buyerSignupFormv22) .inputGroup .optionsContent {
+    display: flex !important;
+}
+
 .dashboard #Main:has(#buyerSignupFormv22) .inputGroup .mainLabel {
     width: auto !important;
     min-width: auto !important;
