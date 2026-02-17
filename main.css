@@ -2203,9 +2203,12 @@ body.login {
 .dashboard #Main:has(#buyerSignupFormv22) #steps {
     display: flex;
     align-items: center;
+    justify-content: center;
     list-style: none;
+    height: auto !important;
     padding: 0;
     margin: 0;
+    border: 0 !important;
     counter-reset: step;
 }
 
@@ -2219,6 +2222,7 @@ body.login {
     margin: 0 !important;
     counter-increment: step;
     white-space: nowrap;
+    background: none !important;
 }
 
 .dashboard #Main:has(#buyerSignupFormv22) #steps li::before {
