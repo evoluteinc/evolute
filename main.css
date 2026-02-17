@@ -207,7 +207,7 @@ textarea {
     gap: 8px;
     height: 40px;
     min-height: 40px;
-    padding: 0 24px;
+    padding: 0 16px;
     font-size: 14px;
     font-weight: 500;
     line-height: 1;
@@ -426,6 +426,7 @@ button:disabled {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
     gap: 24px;
 }
