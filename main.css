@@ -2499,8 +2499,22 @@ body.login {
     width: 180px !important;
     min-width: 180px;
     flex-shrink: 0;
-    padding-right: 20px;
+    padding: 0 20px;
     float: none !important;
+}
+
+div.titleDiv {
+    display: flex;
+    background-color: #F0F0F1;
+}
+.titleDiv h3 {
+    display: flex;
+    padding: 16px 24px;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: bold;
+    background-color: transparent;
+    border: 0;
 }
 
 .dashboard .labelValue .label .bold,
@@ -4668,13 +4682,6 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .labelValue:last-of-type {
     border-bottom: none;
-}
-
-.dashboard .labelValue .label {
-    flex-shrink: 0;
-    width: 180px;
-    font-size: 14px;
-    color: var(--color-gray);
 }
 
 .dashboard .labelValue .label .bold,
@@ -7304,6 +7311,7 @@ div.grid_1_1#leftInnerGrid {
     justify-content: space-between !important;
     gap: 16px !important;
     padding: 20px 24px !important;
+    margin: 0;
     background-color: var(--bg-light) !important;
     border-top: 1px solid var(--border) !important;
 }

@@ -1132,23 +1132,6 @@ div.titleDiv {
     text-align: center;
 }
 
-div.titleDiv h3,
-div#filters div.filter h3,
-div#filters div.titleDiv h3,
-div#filters div.filter div.titleDiv h3,
-div#settings div.titleDiv h3,
-div#pricing div.titleDiv h3,
-div#relationship div.titleDiv h3,
-div.summaryContainer div.titleDiv h3 {
-    text-align: left;
-    display: block;
-
-    font-weight: bold;
-    background-color: #F0F0F1;
-    
-    font-size: 110%;
-}
-
 div#filters div#exclusivity div {
     float: left;
 }
@@ -2942,11 +2925,6 @@ div#orderSeriesContainer div.roundedBox {
 
 #changesDiv ul.changeHolder li.details {
     width: 698px;
-}
-
-div#orderSeriesContainer div#primaryContainer div#buttons {
-
-    width: 99.9%;
 }
 
 div#orderSeriesContainer div#primaryContainer .filters,
