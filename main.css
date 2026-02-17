@@ -7007,21 +7007,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard #outerDiv {
     margin-top: 20px !important;
 }
-
-/* Toggle view span */
-.dashboard #toggleViewSpan {
-    display: flex !important;
-    justify-content: flex-end !important;
-    gap: 4px !important;
-    margin-bottom: 12px !important;
-    font-size: 13px !important;
-}
-
-.dashboard #toggleViewSpan a {
-    color: var(--color-primary) !important;
-    text-decoration: none !important;
-}
-
 /* Tabs navigation */
 .dashboard #bidTabs {
     margin-bottom: 0 !important;
@@ -9309,11 +9294,6 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button:hover {
 }
 
 /* Toggle view span fix */
-#toggleViewSpan {
-    display: flex !important;
-    gap: 4px !important;
-    white-space: nowrap !important;
-}
 
 #toggleShowTabs,
 #toggleSinglePage {

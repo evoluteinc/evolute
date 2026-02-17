@@ -1065,13 +1065,6 @@ div#bidgroupContent div.inputGroup div.mainLabel {
 }
 
 /** Links at top right of bidgroup **/
-#bidgroupContent span#toggleViewSpan {
-    position: relative;
-
-    display: inline;
-    float: right;
-    font-size: 93%;
-}
 
 #bidgroupContent span#howtoLink {
     position: relative;
