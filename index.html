@@ -441,6 +441,76 @@
             </table>
         </div>
 
+        <div class="component">
+            <div class="info">
+                <h2 class="name">Table with Colspan & Rowspan</h2>
+                <p class="about">Atributos nativos <b>colspan</b> y <b>rowspan</b> dentro de <b>.table</b>. Celdas con rowspan usan <b>vertical-align: top</b> y fondo sutil. Filas de resumen con clase <b>.summary</b> aplican borde superior y texto <b>font-weight: 600</b>. En mobile, rowspan no tiene efecto en layout flex y colspan se muestra como celda de ancho completo.</p>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Publisher</th>
+                        <th>Channel</th>
+                        <th>Lead Type</th>
+                        <th>Orders</th>
+                        <th>Revenue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2" data-label="Publisher">Acme Leads Inc.</td>
+                        <td data-label="Channel">Auto Insurance</td>
+                        <td data-label="Lead Type"><span class="badge info">Exclusive</span></td>
+                        <td data-label="Orders">1,250</td>
+                        <td data-label="Revenue">$15,625</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Channel">Home Insurance</td>
+                        <td data-label="Lead Type"><span class="badge neutral">Shared</span></td>
+                        <td data-label="Orders">830</td>
+                        <td data-label="Revenue">$7,262</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" data-label="Publisher">MedLeads Pro</td>
+                        <td data-label="Channel">Health Insurance</td>
+                        <td data-label="Lead Type"><span class="badge info">Exclusive</span></td>
+                        <td data-label="Orders">2,100</td>
+                        <td data-label="Revenue">$37,800</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Channel">Life Insurance</td>
+                        <td data-label="Lead Type"><span class="badge neutral">Shared</span></td>
+                        <td data-label="Orders">1,450</td>
+                        <td data-label="Revenue">$9,062</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3" data-label="Publisher">BrightPath Leads</td>
+                        <td data-label="Channel">Solar Energy</td>
+                        <td data-label="Lead Type"><span class="badge info">Exclusive</span></td>
+                        <td data-label="Orders">3,200</td>
+                        <td data-label="Revenue">$70,400</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Channel">Legal Services</td>
+                        <td data-label="Lead Type"><span class="badge neutral">Shared</span></td>
+                        <td data-label="Orders">980</td>
+                        <td data-label="Revenue">$34,300</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Channel">Debt Relief</td>
+                        <td data-label="Lead Type"><span class="badge warning">Pending</span></td>
+                        <td data-label="Orders">540</td>
+                        <td data-label="Revenue">$5,130</td>
+                    </tr>
+                    <tr class="summary">
+                        <td colspan="3">Total</td>
+                        <td data-label="Orders">10,350</td>
+                        <td data-label="Revenue">$179,579</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
     </div>
 </body>
 </html>

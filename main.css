@@ -80,18 +80,20 @@ textarea {
 }
 
 .component {
-    width: 800px;
     display: flex;
     flex-direction: column;
+    width: 800px;
     gap: 20px;
-    align-items: flex-start;
+    align-items: center;
 }
-.component:last-child {
+.component:nth-last-child(1),
+.component:nth-last-child(2) {
     width: 100%;
 }
 .component > .info {
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 6px;
 }
 .component > .info .name {
@@ -570,6 +572,19 @@ textarea {
     width: 14px;
     height: 14px;
 }
+.table tbody td[rowspan] {
+    vertical-align: top;
+    font-weight: 500;
+    background: #fafafa;
+}
+.table tbody tr.summary td {
+    font-weight: 600;
+    background: #fafafa;
+    border-bottom: none;
+}
+.table tbody tr.summary td[colspan] {
+    border-top: 2px solid #e4e4e7;
+}
 .badge {
     display: inline-flex;
     align-items: center;
@@ -749,13 +764,17 @@ textarea {
     .table thead {
         display: none;
     }
+    .table tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
     .table tbody tr {
         display: flex;
         flex-direction: column;
-        border-bottom: 1px solid #e4e4e7;
-    }
-    .table tbody tr:last-child {
-        border-bottom: none;
+        border: 1px solid #e4e4e7;
+        border-radius: 8px;
+        overflow: hidden;
     }
     .table tbody td {
         display: flex;
@@ -773,6 +792,20 @@ textarea {
         text-transform: uppercase;
         letter-spacing: 0.5px;
         text-align: left;
+    }
+    .table tbody td[rowspan] {
+        background: none;
+    }
+    .table tbody tr.summary {
+        background: #fafafa;
+    }
+    .table tbody tr.summary td[colspan] {
+        justify-content: flex-start;
+        font-weight: 600;
+        border-top: none;
+    }
+    .table tbody tr.summary td[colspan]::before {
+        display: none;
     }
 }
 
@@ -2204,6 +2237,7 @@ body.login {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 24px;
     list-style: none;
     height: auto !important;
     padding: 0;
@@ -2215,6 +2249,7 @@ body.login {
 .dashboard #Main:has(#buyerSignupFormv22) #steps li {
     display: flex;
     align-items: center;
+    flex-direction: column;
     gap: 8px;
     font-size: 12px;
     font-weight: 500;
@@ -2479,7 +2514,7 @@ body.login {
     align-items: stretch;
     flex-direction: column;
     background-color: var(--color-white) !important;
-    padding: 0 !important;
+    padding: 12px !important;
 }
 
 /* Label Value Pairs */
@@ -2506,7 +2541,13 @@ body.login {
 div.titleDiv {
     display: flex;
     background-color: #F0F0F1;
+    margin-bottom: 0;
 }
+
+div#termsContainer {
+    display: none !important;
+}
+
 .titleDiv h3 {
     display: flex;
     padding: 16px 24px;
@@ -3544,6 +3585,8 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard .nestedListTable tfoot tr.actions td.last {
+    border-left: 0;
+    border-right: 0;
     border-top: 1px solid var(--border);
 }
 
@@ -10995,6 +11038,18 @@ img.calendarIcon {
     display: contents;
 }
 
+.dashboard #infoDiv {
+    width: 100%;
+    display: flex;
+}
+
+.dashboard #leadStoreSearch {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+
 /* Fixed width override */
 .dashboard #PrimaryContent > div[style*="width: 1100px"] {
     width: 100% !important;
@@ -11177,6 +11232,7 @@ img.calendarIcon {
 .dashboard .nestedListTable tbody tr.even td {
     padding: 10px 16px;
     font-size: 14px;
+    white-space: nowrap;
     border-bottom: 1px solid var(--border);
 }
 
