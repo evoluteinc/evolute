@@ -2215,8 +2215,8 @@ body.login {
 .dashboard #Main:has(#buyerSignupFormv22) #steps li {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 14px;
+    gap: 8px;
+    font-size: 12px;
     font-weight: 500;
     color: #a1a1aa;
     margin: 0 !important;
@@ -2230,8 +2230,8 @@ body.login {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     font-size: 13px;
     font-weight: 600;
@@ -2239,19 +2239,6 @@ body.login {
     background: #fff;
     color: #a1a1aa;
     flex-shrink: 0;
-}
-
-.dashboard #Main:has(#buyerSignupFormv22) #steps li::after {
-    content: "";
-    width: 40px;
-    height: 2px;
-    background: #e4e4e7;
-    flex-shrink: 0;
-    margin: 0 12px;
-}
-
-.dashboard #Main:has(#buyerSignupFormv22) #steps li:last-child::after {
-    display: none;
 }
 
 .dashboard #Main:has(#buyerSignupFormv22) #steps li.completed {
