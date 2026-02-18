@@ -69,6 +69,11 @@ textarea {
 
 /* clean classes */
 
+
+.operatorOnly {
+    color: #f59e0b;
+}
+
 .wrapper {
     display: flex;
     align-items: center;
