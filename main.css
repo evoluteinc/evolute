@@ -98,7 +98,7 @@ textarea {
     display: flex;
     flex-direction: column;
     width: 800px;
-    gap: 20px;
+    gap: 24px;
     align-items: center;
 }
 .component:nth-last-child(1),
@@ -428,7 +428,8 @@ button:disabled {
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 12px;
 }
 
 .card {
