@@ -30,7 +30,7 @@
     gap: 10px;
 }
 
-.dashboard .grid_600px_340px > #sellerSideBar .secondary{
+.dashboard .grid_600px_340px > #sellerSideBar{
     display: flex !important;
     width: 100% !important;
 }
