@@ -24,13 +24,13 @@
     gap: 10px;
 }
 
-.grid_600px_340px{
+.dashboard .grid_600px_340px{
     display: grid;
     grid-template-columns: fit-content(80%) fit-content(20%);
     gap: 10px;
 }
 
-.grid_600px_340px > #sellerSideBar .secondary{
+.dashboard .grid_600px_340px > #sellerSideBar .secondary{
     display: flex !important;
     width: 100% !important;
 }
