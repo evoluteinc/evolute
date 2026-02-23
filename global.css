@@ -364,24 +364,12 @@ table.nestedListTable tr.sectionStart th.tableSectionHeaderAlternate {
     font-weight: 500
 }
 
-div#search div#checkBoxDiv {
-    
-}
-
 div#search div#selectorDiv {
     width: auto
 }
 
-div#search div#searchButtonDiv {
-    
-}
-
 div#search div#checkBoxDiv div {
     white-space: nowrap
-}
-
-div#search div#checkBoxDiv div input[type='checkbox'] {
-    
 }
 
 span#searchButton span.first-child button {
@@ -480,21 +468,9 @@ table.leadListTable div.lsPaginationBottom {
     white-space: nowrap
 }
 
-div#topCartButton div#topButton {
-    
-}
-
-div#bottomCartButton div#bottomButton {
-    
-}
-
 #leadStoreTopCart,
 #leadStoreBottomCart {
     width: 100%
-}
-
-#leadStoreBottomCart {
-    
 }
 
 #leadStoreTopCart div,
@@ -512,10 +488,6 @@ div#bottomCartButton div#bottomButton {
 
 #searchNameDiv div.label {
     text-align: right
-}
-
-#searchNameDiv div.submitButton {
-    
 }
 
 #scheduleSearchSubmitButton-button {
@@ -580,10 +552,6 @@ div.buttonColumn {
     width: 44%
 }
 
-div.buttonColumn label {
-    
-}
-
 #searchResultsContainer {
     width: 100%
 }
@@ -626,10 +594,6 @@ div#bidgroupContent div.inputGroup div.mainLabel {
     
     white-space: nowrap;
     display: inline
-}
-
-div#filtersContainer {
-    
 }
 
 div#pricingContainer span.pricingMsg,
@@ -776,10 +740,6 @@ div.subtabHeading {
 
 div.clickable {
     font-size: 93%
-}
-
-div.clickable label {
-    
 }
 
 div.clickable:hover {
@@ -1606,10 +1566,6 @@ table.reportResults td.rptDataRight b {
     text-align: right
 }
 
-#bidTabs {
-    
-}
-
 div#bidoptions {
     position: static
 }
@@ -1627,10 +1583,6 @@ div#filters div.filter div.titleDiv h3,
 div#settings div.titleDiv h3,
 div#pricing div.titleDiv h3 {
     width: auto
-}
-
-div.subtabHeading {
-    
 }
 
 #dashTabs ul#tabsList {
@@ -1669,10 +1621,6 @@ div#reportListGrid div.column {
     width: 32%
 }
 
-#paymentHistoryLink {
-    
-}
-
 #iliWizardSteps li.affiliate {
     width: 31.29%
 }
@@ -1683,14 +1631,6 @@ div#reportListGrid div.column {
 
 #productId {
     width: auto
-}
-
-div#sideNavHeading {
-    
-}
-
-table#connectionsTable td.paginationTop div.buttonGroup {
-    
 }
 
 #bidgroupContent {
@@ -1736,10 +1676,6 @@ div#bidoptions div#buttons {
 
 #dashTabs {
     width: 610px
-}
-
-#dashTabs ul#tabsList {
-    
 }
 
 div.chartDiv {
@@ -1795,10 +1731,6 @@ ul.changeHolder li.expando span,
 ul.changeHolder li.contracto span {
     display: inline-block;
     width: 90%
-}
-
-ul.changeHolder li.details {
-    
 }
 
 #searchResultsContainer {
