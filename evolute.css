@@ -87,8 +87,15 @@ details > summary {
 .roundedBox2 div.sectionHeader,
 .roundedBox3 div.sectionHeader,
 .roundedBox4 div.sectionHeader,
-div.confirmationSectionHeader {
-    background: #cce9ff !important;
+div.confirmationSectionHeader,
+.dashboard #formContainer .roundedBox .hdr,
+.dashboard .reportListWrapper .roundedBox .hdr {
+    background: #00ade1 !important;
+}
+
+.dashboard .roundedBox .hdr h2 span:first-child,
+.dashboard .sectionHeader h2 {
+    color: #f0f7ff !important;
 }
 
 .sample-form-link:hover {
