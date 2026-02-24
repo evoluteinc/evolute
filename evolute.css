@@ -94,9 +94,13 @@ div.confirmationSectionHeader,
 }
 
 .dashboard .roundedBox .hdr h2 span:first-child,
+.dashboard .sectionHeader h2,
+.dashboard #formContainer .roundedBox .hdr h2 span,
+.dashboard .roundedBox .hdr h2 span:first-child,
 .dashboard .sectionHeader h2 {
     color: #f0f7ff !important;
 }
+/********************************/
 
 .sample-form-link:hover {
     background: #e0efff;
