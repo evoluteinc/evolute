@@ -146,8 +146,18 @@ div.confirmationSectionHeader,
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
     background-color: #f8ffff !important;
-    position: relative !important;
-    box-shadow: 0 25px 40px -20px rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.dashboard .roundedBox,
+.dashboard .roundedBox2,
+.dashboard .roundedBox3,
+.dashboard .roundedBox4,
+.dashboard div.roundedBox,
+.dashboard div.roundedBox2,
+.dashboard div.roundedBox3,
+.dashboard div.roundedBox4 {
+    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.15) !important;
 }
 /**********************************/
 
