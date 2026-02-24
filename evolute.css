@@ -81,6 +81,10 @@ details > summary {
     cursor: pointer;
 }
 
+.dashboard .roundedBox .hdr {
+    background: #CCE9FF !important;
+}
+
 .sample-form-link:hover{
     background: #e0efff;
     border-color: var(--color-primary);
