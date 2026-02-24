@@ -89,7 +89,8 @@ details > summary {
 .roundedBox4 div.sectionHeader,
 div.confirmationSectionHeader,
 .dashboard #formContainer .roundedBox .hdr,
-.dashboard .reportListWrapper .roundedBox .hdr {
+.dashboard .reportListWrapper .roundedBox .hdr,
+.dashboard .settings .roundedBox .sectionHeader {
     background: #00ade1 !important;
 }
 
@@ -97,7 +98,8 @@ div.confirmationSectionHeader,
 .dashboard .sectionHeader h2,
 .dashboard #formContainer .roundedBox .hdr h2 span,
 .dashboard .roundedBox .hdr h2 span:first-child,
-.dashboard .sectionHeader h2 {
+.dashboard .sectionHeader h2,
+.dashboard .settings .roundedBox .sectionHeader h2 {
     color: #f0f7ff !important;
 }
 /********************************/
