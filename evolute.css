@@ -87,6 +87,13 @@ details > summary {
     color: var(--color-muted) !important;
 }
 
+.proposal-settings-amt-dt{
+    position: unset;
+    left: 0;
+    margin-bottom: unset;
+    width: unset
+}
+
 /*Header colors for cards*/
 .dashboard .roundedBox .hdr,
 .roundedBox div.sectionHeader,
