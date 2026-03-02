@@ -108,6 +108,10 @@ h1.operatorOnly, h2.operatorOnly, h3.operatorOnly, h4.operatorOnly, p.operatorOn
     color: #f59e0b !important;
 }
 
+#FormFields .inputGroup label p.operatorOnly{
+   color: #f59e0b !important; 
+}
+
 a.btn-primary{
     text-decoration: none;
     background: var(--color-primary);
