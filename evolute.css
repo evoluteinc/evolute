@@ -117,12 +117,12 @@ a.btn-primary:hover{
 }
 
 /*brand management instructions*/
-p.instructions {
+.dashboard .settings .formSectionContent p.instructions {
     padding: 0 !important;
     margin: 0 !important;
     background: unset !important;
     border-radius: unset !important;
-
+    border: unset !important;
 }
 
 /*Header colors for cards*/
