@@ -125,6 +125,15 @@ a.btn-primary:hover{
     border: unset !important;
 }
 
+.advanced{
+    border-radius: 1em 1em 0 0 !important;
+    background: #009da1 !important;
+}
+
+.advanced > h2, p{
+    color: white !important;
+}
+
 /*Header colors for cards*/
 .dashboard .roundedBox .hdr,
 .roundedBox div.sectionHeader,
