@@ -116,6 +116,15 @@ a.btn-primary:hover{
     margin: 1em;
 }
 
+/*brand management instructions*/
+p.instructions {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: unset !important;
+    border-radius: unset !important;
+
+}
+
 /*Header colors for cards*/
 .dashboard .roundedBox .hdr,
 .roundedBox div.sectionHeader,
