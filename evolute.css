@@ -99,8 +99,13 @@ details > summary {
     display: block !important;
 }
 
-.operatorOnly{
+div.operatorOnly, span.operatorOnly{
     background: #f59e0b !important;
+    color: white !important;
+}
+
+h1.operatorOnly, h2.operatorOnly, h3.operatorOnly, h4.operatorOnly, p.operatorOnly{
+    color: #f59e0b !important;
 }
 
 a.btn-primary{
