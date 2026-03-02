@@ -2320,11 +2320,19 @@ body.login {
     align-items: center;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100vw !important;
     height: 100vh;
     z-index: 666;
     overflow-y: auto;
     margin: 0 !important;
+}
+
+.dashboard #Main:has([name="publisher_signup_v2_1"]) #NestedFormPage {
+    width: 100% !important;
+}
+
+.dashboard #Main:has([name="publisher_signup_v2_1"]) .formSectionContent .buttonGroup .yui-submit-button button#nextButton-button {
+    position: relative !important;
 }
 
 .dashboard #Main:has(#buyerSignupFormv22) #MainContent,
