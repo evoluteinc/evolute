@@ -99,11 +99,6 @@ details > summary {
     display: block !important;
 }
 
-div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
-    background: #f59e0b !important;
-    color: white !important;
-}
-
 h1.operatorOnly, h2.operatorOnly, h3.operatorOnly, h4.operatorOnly, p.operatorOnly{
     color: #f59e0b !important;
 }
@@ -171,6 +166,12 @@ div.confirmationSectionHeader,
 .dashboard .settings .roundedBox .sectionHeader h2 {
     color: #f0f7ff !important;
 }
+
+div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
+    background: #f59e0b !important;
+    color: white !important;
+}
+
 /********************************/
 
 /* tabs colors */
