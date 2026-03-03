@@ -4939,20 +4939,6 @@ div.grid_1_1#leftInnerGrid {
     cursor: pointer;
 }
 
-.dashboard .ordersTable .searchOrders button {
-    height: 42px !important;
-    padding: 0 20px !important;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    font-size: 14px;
-    font-weight: 500;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.15s ease;
-    box-sizing: border-box !important;
-}
-
 .dashboard .ordersTable .orderActions {
     display: flex;
     gap: 8px;
@@ -5932,7 +5918,6 @@ form[name="ticketLogForm"] .formSectionContent {
 
 .dashboard #connectionsTable thead tr.actions td.paginationTop {
     padding: 20px !important;
-    background-color: var(--color-white) !important;
     border-bottom: 1px solid var(--border) !important;
 }
 
@@ -5941,6 +5926,8 @@ form[name="ticketLogForm"] .formSectionContent {
     align-items: center !important;
     gap: 20px !important;
     flex-wrap: nowrap !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
 }
 
 .dashboard #connectionsTable #search #selectorDiv,
@@ -6154,8 +6141,6 @@ form[name="ticketLogForm"] .formSectionContent {
     padding: 16px 20px !important;
     font-size: 13px !important;
     line-height: 1.5 !important;
-    color: var(--color-gray) !important;
-    background-color: var(--bg-light) !important;
 }
 
 .dashboard .channels table.nestedListTable.ordersTable thead tr.colheaders th {

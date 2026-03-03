@@ -162,15 +162,6 @@ td.paginationTop {
     color: var(--color-primary) !important;
 }
 
-.dashboard .roundedBox .hdr h2 span:first-child,
-.dashboard .sectionHeader h2,
-.dashboard #formContainer .roundedBox .hdr h2 span,
-.dashboard .roundedBox .hdr h2 span:first-child,
-.dashboard .sectionHeader h2,
-.dashboard .settings .roundedBox .sectionHeader h2 {
-    color: #f0f7ff !important;
-}
-
 div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
     background: var(--color-orange) !important;
     color: white !important;
