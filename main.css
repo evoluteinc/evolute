@@ -2856,7 +2856,6 @@ body.login {
 .dashboard .sectionHeader {
     display: flex;
     align-items: center;
-    background: var(--color-white) !important;
     margin: 0 !important;
     padding: 20px 24px !important;
     border: none !important;
@@ -9071,7 +9070,6 @@ img.calendarIcon {
 .dashboard .sectionHeader {
     padding: 14px 16px 12px;
     border-bottom: 1px solid var(--border);
-    background-color: var(--color-white);
 }
 
 .dashboard .roundedBox .hdr h2,
