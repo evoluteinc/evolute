@@ -1,21 +1,23 @@
 @charset "utf-8";
 
 :root {
-    --color-primary: #004279;
+    --color-primary: #1e3a5f;
     --color-primary-light: #0060a7;
     --color-white: #ffffff;
-    --color-dark: #09090b;
-    --color-gray: #6b7280;
-    --color-muted: #94a3b8;
+    --color-dark: #18181b;
+    --color-gray: #71717a;
+    --color-muted: #a1a1aa;
     --color-success: #16a34a;
     --color-error: #dc2626;
     --color-warning: #f59e0b;
     --bg-light: #f4f4f5;
-    --bg-info: #e0f2fe;
-    --bg-success: #dcfce7;
-    --bg-error: #fee2e2;
-    --bg-warning: #fef3c7;
-    --border: #e5e7eb;
+    --bg-info: #eff6ff;
+    --bg-success: #f0fdf4;
+    --bg-error: #fef2f2;
+    --bg-warning: #fffbeb;
+    --border: #e4e4e7;
+    --overlay: rgba(0, 0, 0, 0.5);
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 html,
@@ -199,7 +201,7 @@ form[name="ticketLogForm"] .roundedBox b.bt {
 
 
 .operatorOnly {
-    color: #f59e0b;
+    color: var(--color-warning);
 }
 
 .wrapper {
@@ -209,7 +211,7 @@ form[name="ticketLogForm"] .roundedBox b.bt {
     width: 100%;
     row-gap: 60px;
     padding: 40px;
-    background: #f8f9fa;
+    background: var(--bg-light);
 }
 
 .component {
@@ -232,12 +234,12 @@ form[name="ticketLogForm"] .roundedBox b.bt {
 .component > .info .name {
     font-size: 20px;
     font-weight: 600;
-    color: #18181b;
+    color: var(--color-dark);
     margin: 0;
 }
 .component > .info .about {
     font-size: 14px;
-    color: #71717a;
+    color: var(--color-gray);
     line-height: 1.5;
     margin: 0;
 }
@@ -254,7 +256,7 @@ form[name="ticketLogForm"] .roundedBox b.bt {
     width: 100vw;
     height: 100vh;
     z-index: 666;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--overlay);
 }
 
 .modal::backdrop {
@@ -266,7 +268,7 @@ form[name="ticketLogForm"] .roundedBox b.bt {
     width: 100vw;
     height: 100vh;
     z-index: 666;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--overlay);
 }
 
 .modal {
@@ -274,7 +276,7 @@ form[name="ticketLogForm"] .roundedBox b.bt {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    background: #fff;
+    background: var(--color-white);
     border-radius: 12px;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     width: 100%;
@@ -294,12 +296,12 @@ dialog.modal {
     align-items: center;
     justify-content: space-between;
     padding: 16px 20px;
-    border-bottom: 1px solid #e4e4e7;
+    border-bottom: 1px solid var(--border);
 }
 .modal .label {
     font-size: 12px;
     font-weight: 500;
-    color: #a1a1aa;
+    color: var(--color-muted);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -313,12 +315,12 @@ dialog.modal {
     background: transparent;
     border-radius: 6px;
     cursor: pointer;
-    color: #71717a;
+    color: var(--color-gray);
     transition: all 0.15s;
 }
 .modal .close:hover {
-    background: #f4f4f5;
-    color: #18181b;
+    background: var(--bg-light);
+    color: var(--color-dark);
 }
 .modal .close .icon {
     width: 18px;
@@ -339,12 +341,12 @@ dialog.modal {
 .modal .title {
     font-size: 18px;
     font-weight: 600;
-    color: #18181b;
+    color: var(--color-dark);
     line-height: 1.4;
 }
 .modal p {
     font-size: 14px;
-    color: #71717a;
+    color: var(--color-gray);
     line-height: 1.6;
     margin: 0 !important;
 }
@@ -363,7 +365,7 @@ dialog.modal {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #71717a;
+    color: var(--color-gray);
     font-size: 14px;
     line-height: 1.5;
     margin: 0;
@@ -373,8 +375,8 @@ dialog.modal {
     display: flex;
     gap: 12px;
     padding: 16px 20px;
-    border-top: 1px solid #e4e4e7;
-    background: #fafafa;
+    border-top: 1px solid var(--border);
+    background: var(--bg-light);
 }
 
 .modal div.lpTermsContainer {
@@ -412,16 +414,16 @@ dialog.modal {
 .btn svg { width: 16px; height: 16px; flex-shrink: 0; }
 
 .btn-secondary {
-    background-color: #e4e4e7;
-    color: #18181b;
+    background-color: var(--border);
+    color: var(--color-dark);
 }
 .btn-primary {
-    background-color: #1e3a5f;
-    color: #fff;
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }
 .btn-accent {
     background-color: var(--color-primary-light);
-    color: #fff;
+    color: var(--color-white);
 }
 .btn-outline {
     border-color: var(--color-primary);
@@ -430,7 +432,7 @@ dialog.modal {
 }
 .btn-danger {
     color: white;
-    background-color: #fb2c36;
+    background-color: var(--color-error);
 }
 
 button:hover {
@@ -443,7 +445,7 @@ button:disabled {
 }
 
 .datepicker {
-    background: #fff;
+    background: var(--color-white);
     border-radius: 12px;
     box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
     width: 280px;
@@ -465,12 +467,12 @@ button:disabled {
     background: transparent;
     border-radius: 6px;
     cursor: pointer;
-    color: #71717a;
+    color: var(--color-gray);
     transition: all 0.15s;
 }
 .datepicker .nav:hover {
-    background: #f4f4f5;
-    color: #18181b;
+    background: var(--bg-light);
+    color: var(--color-dark);
 }
 .datepicker .nav .icon {
     width: 18px;
@@ -484,19 +486,19 @@ button:disabled {
     padding: 6px 28px 6px 10px;
     font-size: 14px;
     font-weight: 500;
-    color: #18181b;
+    color: var(--color-dark);
     background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2371717a' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 8px center;
-    border: 1px solid #e4e4e7;
+    border: 1px solid var(--border);
     border-radius: 6px;
     cursor: pointer;
     appearance: none;
 }
 .datepicker .select:hover {
-    border-color: #a1a1aa;
+    border-color: var(--color-muted);
 }
 .datepicker .select:focus {
     outline: none;
-    border-color: #1e3a5f;
+    border-color: var(--color-primary);
 }
 .datepicker .weekdays,
 .datepicker .days {
@@ -510,7 +512,7 @@ button:disabled {
 .datepicker .weekday {
     font-size: 12px;
     font-weight: 500;
-    color: #a1a1aa;
+    color: var(--color-muted);
     text-align: center;
     padding: 8px 0;
 }
@@ -521,7 +523,7 @@ button:disabled {
     width: 32px;
     height: 32px;
     font-size: 14px;
-    color: #18181b;
+    color: var(--color-dark);
     border: none;
     background: transparent;
     border-radius: 6px;
@@ -530,18 +532,18 @@ button:disabled {
     margin: 0 auto;
 }
 .datepicker .day:hover:not(.selected) {
-    background: #f4f4f5;
+    background: var(--bg-light);
 }
 .datepicker .day.muted {
-    color: #a1a1aa;
+    color: var(--color-muted);
 }
 .datepicker .day.selected {
-    background: #1e3a5f;
-    color: #fff;
+    background: var(--color-primary);
+    color: var(--color-white);
     font-weight: 500;
 }
 .datepicker .day.today:not(.selected) {
-    border: 1px solid #1e3a5f;
+    border: 1px solid var(--color-primary);
 }
 
 .modal .form {
@@ -557,7 +559,7 @@ button:disabled {
 .modal .field .label {
     font-size: 13px;
     font-weight: 500;
-    color: #18181b;
+    color: var(--color-dark);
     text-transform: none;
     letter-spacing: 0;
 }
@@ -566,9 +568,9 @@ button:disabled {
 .modal .field .textarea {
     padding: 10px 12px;
     font-size: 14px;
-    color: #18181b;
-    background: #fff;
-    border: 1px solid #e4e4e7;
+    color: var(--color-dark);
+    background: var(--color-white);
+    border: 1px solid var(--border);
     border-radius: 6px;
     transition: all 0.15s;
     outline: none;
@@ -576,17 +578,17 @@ button:disabled {
 .modal .field .input:hover,
 .modal .field .select:hover,
 .modal .field .textarea:hover {
-    border-color: #a1a1aa;
+    border-color: var(--color-muted);
 }
 .modal .field .input:focus,
 .modal .field .select:focus,
 .modal .field .textarea:focus {
-    border-color: #1e3a5f;
-    box-shadow: 0 0 0 3px rgba(30,58,95,0.1);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
 }
 .modal .field .input::placeholder,
 .modal .field .textarea::placeholder {
-    color: #a1a1aa;
+    color: var(--color-muted);
 }
 .modal .field .select {
     appearance: none;
@@ -621,9 +623,9 @@ button:disabled {
 }
 
 .card {
-    background: #fff;
+    background: var(--color-white);
     border-radius: 12px;
-    border: 1px solid #e4e4e7;
+    border: 1px solid var(--border);
     padding: 24px;
     width: 100%;
     display: flex;
@@ -633,10 +635,10 @@ button:disabled {
 .card .title {
     font-size: 16px;
     font-weight: 600;
-    color: #18181b;
+    color: var(--color-dark);
     margin: 0;
     padding-bottom: 16px;
-    border-bottom: 1px solid #e4e4e7;
+    border-bottom: 1px solid var(--border);
 }
 
 .field {
@@ -647,14 +649,14 @@ button:disabled {
 .field .label {
     font-size: 13px;
     font-weight: 500;
-    color: #18181b;
+    color: var(--color-dark);
 }
 .field .input {
     padding: 10px 12px;
     font-size: 14px;
-    color: #18181b;
-    background: #fff;
-    border: 1px solid #e4e4e7;
+    color: var(--color-dark);
+    background: var(--color-white);
+    border: 1px solid var(--border);
     border-radius: 6px;
     outline: none;
     transition: all 0.15s;
@@ -663,21 +665,21 @@ button:disabled {
     box-sizing: border-box;
 }
 .field .input:hover {
-    border-color: #a1a1aa;
+    border-color: var(--color-muted);
 }
 .field .input:focus {
-    border-color: #1e3a5f;
-    box-shadow: 0 0 0 3px rgba(30,58,95,0.1);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
 }
 .field .input::placeholder {
-    color: #a1a1aa;
+    color: var(--color-muted);
 }
 .field .select {
     padding: 10px 36px 10px 12px;
     font-size: 14px;
-    color: #18181b;
+    color: var(--color-dark);
     background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2371717a' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 12px center;
-    border: 1px solid #e4e4e7;
+    border: 1px solid var(--border);
     border-radius: 6px;
     outline: none;
     transition: all 0.15s;
@@ -688,18 +690,18 @@ button:disabled {
     cursor: pointer;
 }
 .field .select:hover {
-    border-color: #a1a1aa;
+    border-color: var(--color-muted);
 }
 .field .select:focus {
-    border-color: #1e3a5f;
-    box-shadow: 0 0 0 3px rgba(30,58,95,0.1);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
 }
 .field .textarea {
     padding: 10px 12px;
     font-size: 14px;
-    color: #18181b;
-    background: #fff;
-    border: 1px solid #e4e4e7;
+    color: var(--color-dark);
+    background: var(--color-white);
+    border: 1px solid var(--border);
     border-radius: 6px;
     outline: none;
     transition: all 0.15s;
@@ -711,14 +713,14 @@ button:disabled {
     line-height: 1.5;
 }
 .field .textarea:hover {
-    border-color: #a1a1aa;
+    border-color: var(--color-muted);
 }
 .field .textarea:focus {
-    border-color: #1e3a5f;
-    box-shadow: 0 0 0 3px rgba(30,58,95,0.1);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
 }
 .field .textarea::placeholder {
-    color: #a1a1aa;
+    color: var(--color-muted);
 }
 
 .checkboxes {
@@ -730,7 +732,7 @@ button:disabled {
 .radios .label {
     font-size: 13px;
     font-weight: 500;
-    color: #18181b;
+    color: var(--color-dark);
     margin-bottom: 2px;
 }
 .checkboxes .option,
@@ -739,14 +741,14 @@ button:disabled {
     align-items: center;
     gap: 8px;
     font-size: 14px;
-    color: #18181b;
+    color: var(--color-dark);
     cursor: pointer;
 }
 .checkboxes .option input,
 .radios .option input {
     width: 16px;
     height: 16px;
-    accent-color: #1e3a5f;
+    accent-color: var(--color-primary);
     cursor: pointer;
     margin: 0;
 }
@@ -761,38 +763,38 @@ button:disabled {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
-    background: #fff;
+    background: var(--color-white);
     border-radius: 12px;
     overflow: hidden;
-    border: 1px solid #e4e4e7;
+    border: 1px solid var(--border);
 }
 .table thead th {
     padding: 12px 16px;
     font-size: 12px;
     font-weight: 600;
-    color: #71717a;
+    color: var(--color-gray);
     text-align: left;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    background: #fafafa;
-    border-bottom: 1px solid #e4e4e7;
+    background: var(--bg-light);
+    border-bottom: 1px solid var(--border);
 }
 .table tbody td {
     padding: 12px 16px;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
-    color: #18181b;
-    border-bottom: 1px solid #e4e4e7;
+    color: var(--color-dark);
+    border-bottom: 1px solid var(--border);
 }
 .table tbody tr:last-child td {
     border-bottom: none;
 }
 .table tbody tr:hover td {
-    background: #f4f4f5;
+    background: var(--bg-light);
 }
 .table tbody td a {
-    color: #1e3a5f;
+    color: var(--color-primary);
     text-decoration: none;
     font-weight: 500;
 }
@@ -810,7 +812,7 @@ button:disabled {
     gap: 4px;
     padding: 4px 2px;
     font-size: 13px;
-    color: #004279;
+    color: var(--color-primary);
     cursor: pointer;
     border: none;
     background: none;
@@ -818,7 +820,7 @@ button:disabled {
     transition: all 0.15s;
 }
 .table .actions .action.delete {
-    color: #dc2626;
+    color: var(--color-error);
 }
 .table .actions .action svg {
     width: 14px;
@@ -827,15 +829,15 @@ button:disabled {
 .table tbody td[rowspan] {
     vertical-align: top;
     font-weight: 500;
-    background: #fafafa;
+    background: var(--bg-light);
 }
 .table tbody tr.summary td {
     font-weight: 600;
-    background: #fafafa;
+    background: var(--bg-light);
     border-bottom: none;
 }
 .table tbody tr.summary td[colspan] {
-    border-top: 2px solid #e4e4e7;
+    border-top: 2px solid var(--border);
 }
 .badge {
     display: inline-flex;
@@ -856,39 +858,39 @@ button:disabled {
     flex-shrink: 0;
 }
 .badge.success {
-    background: #f0fdf4;
-    color: #15803d;
+    background: var(--bg-success);
+    color: var(--color-success);
 }
 .badge.success::before {
-    background: #22c55e;
+    background: var(--color-success);
 }
 .badge.danger {
-    background: #fef2f2;
-    color: #dc2626;
+    background: var(--bg-error);
+    color: var(--color-error);
 }
 .badge.danger::before {
-    background: #ef4444;
+    background: var(--color-error);
 }
 .badge.warning {
-    background: #fffbeb;
-    color: #b45309;
+    background: var(--bg-warning);
+    color: var(--color-warning);
 }
 .badge.warning::before {
-    background: #f59e0b;
+    background: var(--color-warning);
 }
 .badge.info {
-    background: #eff6ff;
-    color: #1d4ed8;
+    background: var(--bg-info);
+    color: var(--color-primary-light);
 }
 .badge.info::before {
-    background: #3b82f6;
+    background: var(--color-primary-light);
 }
 .badge.neutral {
-    background: #f4f4f5;
-    color: #52525b;
+    background: var(--bg-light);
+    color: var(--color-gray);
 }
 .badge.neutral::before {
-    background: #a1a1aa;
+    background: var(--color-muted);
 }
 
 .checkboxes.inline,
@@ -924,20 +926,20 @@ button:disabled {
 .checkboxes.pills .option,
 .radios.pills .option {
     padding: 8px 16px;
-    border: 1px solid #e4e4e7;
+    border: 1px solid var(--border);
     border-radius: 20px;
     transition: all 0.15s;
 }
 .checkboxes.pills .option:hover,
 .radios.pills .option:hover {
-    border-color: #a1a1aa;
-    background: #f4f4f5;
+    border-color: var(--color-muted);
+    background: var(--bg-light);
 }
 .checkboxes.pills .option:has(input:checked),
 .radios.pills .option:has(input:checked) {
-    border-color: #1e3a5f;
-    background: #eff6ff;
-    color: #1e3a5f;
+    border-color: var(--color-primary);
+    background: var(--bg-info);
+    color: var(--color-primary);
 }
 .checkboxes.pills .option input,
 .radios.pills .option input {
@@ -1024,7 +1026,7 @@ button:disabled {
     .table tbody tr {
         display: flex;
         flex-direction: column;
-        border: 1px solid #e4e4e7;
+        border: 1px solid var(--border);
         border-radius: 8px;
         overflow: hidden;
     }
@@ -1040,7 +1042,7 @@ button:disabled {
         content: attr(data-label);
         font-size: 12px;
         font-weight: 600;
-        color: #71717a;
+        color: var(--color-gray);
         text-transform: uppercase;
         letter-spacing: 0.5px;
         text-align: left;
@@ -1049,7 +1051,7 @@ button:disabled {
         background: none;
     }
     .table tbody tr.summary {
-        background: #fafafa;
+        background: var(--bg-light);
     }
     .table tbody tr.summary td[colspan] {
         justify-content: flex-start;
@@ -2482,7 +2484,7 @@ body.login {
     gap: 8px;
     font-size: 12px;
     font-weight: 500;
-    color: #a1a1aa;
+    color: var(--color-muted);
     margin: 0 !important;
     counter-increment: step;
     white-space: nowrap;
@@ -2499,24 +2501,24 @@ body.login {
     border-radius: 50%;
     font-size: 13px;
     font-weight: 600;
-    border: 2px solid #e4e4e7;
-    background: #fff;
-    color: #a1a1aa;
+    border: 2px solid var(--border);
+    background: var(--color-white);
+    color: var(--color-muted);
     flex-shrink: 0;
 }
 
 .dashboard #Main:has(#buyerSignupFormv22) #steps li.completed {
-    color: #15803d;
+    color: var(--color-success);
 }
 
 .dashboard #Main:has(#buyerSignupFormv22) #steps li.completed::before {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
-    background: #22c55e;
-    border-color: #22c55e;
+    background: var(--color-success);
+    border-color: var(--color-success);
 }
 
 .dashboard #Main:has(#buyerSignupFormv22) #steps li.completed::after {
-    background: #22c55e;
+    background: var(--color-success);
 }
 
 .dashboard #Main:has(#buyerSignupFormv22) #steps li.selected {
@@ -2526,7 +2528,7 @@ body.login {
 .dashboard #Main:has(#buyerSignupFormv22) #steps li.selected::before {
     border-color: var(--color-primary);
     color: var(--color-primary);
-    background: #eff6ff;
+    background: var(--bg-info);
 }
 
 .dashboard #Main:has(#buyerSignupFormv22) #MainContent #NestedFormPage {
@@ -2749,7 +2751,7 @@ body.login {
 
 div.titleDiv {
     display: flex;
-    background-color: #F0F0F1;
+    background-color: var(--bg-light);
     margin-bottom: 0;
 }
 
@@ -2992,16 +2994,6 @@ div.titleDiv {
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 24px;
     padding: 20px;
-}
-
-.dashboard .blueBox.integration {
-    display: flex;
-    flex-direction: column;
-    padding: 24px;
-    background-color: var(--color-white) !important;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    min-height: auto;
 }
 
 .dashboard .blueBox.integration h1,
@@ -3549,12 +3541,6 @@ div.grid_1_1#leftInnerGrid {
     margin-left: 2px;
 }
 
-.dashboard .formSectionContent .options {
-    flex: 1;
-    width: auto;
-    float: none;
-}
-
 .dashboard .formSectionContent .optionsContent {
     padding-left: 0;
     display: flex;
@@ -3566,17 +3552,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard #formContainer input.textInput,
 .dashboard #formContainer input[type="text"] {
     max-width: 180px !important;
-}
-
-.dashboard .formSectionContent .textInput:focus {
-    outline: none;
-    border-color: var(--color-primary-light);
-}
-
-.dashboard .formSectionContent .instructions {
-    font-size: 13px;
-    color: var(--color-gray);
-    margin-top: 6px;
 }
 
 .dashboard .formSectionContent .inlineHelpImg {
@@ -3977,7 +3952,7 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard .ordersTable tbody td .oliDiv .right a {
-    color: var(--color-error, #dc3545) !important;
+    color: var(--color-error, var(--color-error)) !important;
 }
 
 .dashboard .ordersTable thead tr.colheaders th a {
@@ -4327,12 +4302,6 @@ div.grid_1_1#leftInnerGrid {
     margin: 0 auto;
 }
 
-.dashboard .gridWrapper .grid_1_1 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 24px;
-}
-
 .dashboard .gridWrapper .grid_1_1 .column {
     display: flex;
     flex-direction: column;
@@ -4489,8 +4458,8 @@ div.grid_1_1#leftInnerGrid {
     font-size: 13px !important;
     font-weight: 500 !important;
     color: var(--color-primary) !important;
-    background: #f0f7ff !important;
-    border: 1px solid #d0e3f7 !important;
+    background: var(--bg-info) !important;
+    border: 1px solid var(--bg-info) !important;
     border-radius: 6px !important;
     text-decoration: none !important;
     transition: all 0.2s ease !important;
@@ -4498,7 +4467,7 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .formSectionContent .optionsContent .docPreview a:hover,
 .dashboard .formSectionContent .optionsContent .getCode a:hover {
-    background: #e0efff !important;
+    background: var(--bg-info) !important;
     border-color: var(--color-primary) !important;
     color: var(--color-primary-light) !important;
 }
@@ -4880,13 +4849,6 @@ div.grid_1_1#leftInnerGrid {
     background-color: var(--border) !important;
 }
 
-.dashboard .labelValue {
-    display: flex;
-    align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid var(--border);
-}
-
 .dashboard .labelValue:last-of-type {
     border-bottom: none;
 }
@@ -4894,12 +4856,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .labelValue .label .bold,
 .dashboard .labelValue .label.bold {
     font-weight: 500;
-    color: var(--color-dark);
-}
-
-.dashboard .labelValue .value {
-    flex: 1;
-    font-size: 14px;
     color: var(--color-dark);
 }
 
@@ -4985,13 +4941,6 @@ div.grid_1_1#leftInnerGrid {
 
 #dailyLeadLimits tbody td.right {
     text-align: right;
-}
-
-.dashboard .blueBox {
-    background-color: var(--bg-light);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
 }
 
 .dashboard .blueBox .boxContent {
@@ -5241,25 +5190,6 @@ div.grid_1_1#leftInnerGrid {
     border-bottom: 1px solid var(--border);
 }
 
-.dashboard #validationErrors .sectionHeader h2 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--color-dark);
-}
-
-.dashboard #validationErrors ol {
-    padding: 20px 20px 20px 40px;
-    margin: 0;
-}
-
-.dashboard #validationErrors ol li {
-    font-size: 14px;
-    color: var(--color-dark);
-    line-height: 1.6;
-    margin-bottom: 12px;
-}
-
 .dashboard #validationErrors #linkItem {
     padding: 0 20px 20px;
     margin: 0;
@@ -5472,12 +5402,6 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .settings table.nestedListTable tbody tr td a:hover {
     text-decoration: underline !important;
-}
-
-.dashboard .settings table.nestedListTable thead tr td.paginationTop {
-    padding: 16px !important;
-    background-color: var(--color-white) !important;
-    border: none !important;
 }
 
 .dashboard .settings table.nestedListTable thead tr td.paginationTop p.information {
@@ -5747,10 +5671,6 @@ div.grid_1_1#leftInnerGrid {
     background: none !important;
 }
 
-.dashboard .settings .noticePeriodsContainer {
-    margin-top: 24px !important;
-}
-
 .dashboard .settings .grid_1_1 {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
@@ -5878,7 +5798,7 @@ div.grid_1_1#leftInnerGrid {
     border: 1px solid var(--border) !important;
     border-radius: 12px !important;
     overflow: hidden !important;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+    box-shadow: var(--shadow) !important;
 }
 
 .dashboard .settings #linkContainer .roundedBox .hdr {
@@ -6036,10 +5956,6 @@ div.grid_1_1#leftInnerGrid {
     text-decoration: none !important;
     cursor: pointer !important;
     transition: background-color 0.15s ease !important;
-}
-
-.dashboard .settings table.nestedListTable thead tr td.paginationTop .yui-button.yui-link-button .first-child a:hover {
-    background-color: var(--color-primary-light) !important;
 }
 
 .dashboard .settings table.nestedListTable thead tr td.paginationTop .yui-button.yui-link-button {
@@ -6311,7 +6227,7 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard p.connectiondata {
-    color: #727272;
+    color: var(--color-gray);
     font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
@@ -6904,39 +6820,9 @@ div.grid_1_1#leftInnerGrid {
     margin-left: 10px !important;
 }
 
-.dashboard #formContainer ul.text li.details .target > div.even {
-    background-color: var(--color-white) !important;
-}
-
-.dashboard #formContainer ul.text li.details .target > div.odd {
-    background-color: var(--bg-light) !important;
-}
-
 .dashboard #formContainer ul.text li.details .target > div:hover {
     background-color: var(--bg-info) !important;
     border-left-color: var(--color-primary) !important;
-}
-
-.dashboard #formContainer ul.text li.details .left {
-    display: flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-}
-
-.dashboard #formContainer ul.text li.details .left label {
-    font-size: 14px !important;
-    color: var(--color-dark) !important;
-    cursor: pointer !important;
-}
-
-.dashboard #formContainer ul.text li.details .right a {
-    font-size: 13px !important;
-    color: var(--color-primary) !important;
-    text-decoration: none !important;
-}
-
-.dashboard #formContainer ul.text li.details .right a:hover {
-    text-decoration: underline !important;
 }
 
 /* Lead type / Exclusivity section */
@@ -6945,36 +6831,6 @@ div.grid_1_1#leftInnerGrid {
     margin-top: 24px !important;
     padding-top: 24px !important;
     border-top: 1px solid var(--border) !important;
-}
-
-.dashboard #formContainer .leadtypecontainer {
-    padding: 16px 20px !important;
-}
-
-.dashboard #formContainer .leadtype {
-    padding: 12px 0 !important;
-}
-
-.dashboard #formContainer .leadtype label {
-    display: flex !important;
-    align-items: flex-start !important;
-    gap: 10px !important;
-    font-size: 14px !important;
-    font-weight: 500 !important;
-    color: var(--color-dark) !important;
-    cursor: pointer !important;
-}
-
-.dashboard #formContainer .leadtype label input[type="radio"] {
-    width: 18px !important;
-    height: 18px !important;
-    margin-top: 2px !important;
-    accent-color: var(--color-primary) !important;
-}
-
-.dashboard #formContainer .leadtype label .normal {
-    font-weight: 400 !important;
-    color: var(--color-gray) !important;
 }
 
 /* Bottom button area */
@@ -7045,7 +6901,7 @@ div.grid_1_1#leftInnerGrid {
 .dashboard #formContainer ul.text > li.contracto:hover,
 .dashboard #formContainer ul.text > li.expando:hover,
 .dashboard #formContainer ul.text > li.expando1:hover {
-    background-color: #e8eef3 !important;
+    background-color: var(--border) !important;
 }
 
 .dashboard #formContainer ul.text > li.contracto span,
@@ -7118,10 +6974,6 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard #formContainer ul.text li.details .target > div.odd {
     background-color: var(--bg-light) !important;
-}
-
-.dashboard #formContainer ul.text li.details .target > div:hover {
-    background-color: var(--bg-info) !important;
 }
 
 .dashboard #formContainer ul.text li.details .left {
@@ -7652,7 +7504,7 @@ div.grid_1_1#leftInnerGrid {
     border-radius: 12px !important;
     padding: 16px !important;
     margin-top: 16px !important;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+    box-shadow: var(--shadow) !important;
 }
 
 /* Price grid table */
@@ -7935,10 +7787,6 @@ div.grid_1_1#leftInnerGrid {
     margin-bottom: 16px !important;
     overflow: hidden !important;
     background-color: var(--color-white) !important;
-}
-
-.dashboard #formContainer ul.text > li.details .target {
-    padding: 12px 0 !important;
 }
 
 /* Product rows - even/odd styling */
@@ -8536,7 +8384,7 @@ div.grid_1_1#leftInnerGrid {
     font-weight: 600 !important;
     border-radius: 8px !important;
     border: 1px solid var(--border) !important;
-    background-color: #fff !important;
+    background-color: var(--color-white) !important;
     color: var(--color-dark) !important;
     cursor: pointer !important;
     transition: all 0.2s ease !important;
@@ -8554,7 +8402,7 @@ div.grid_1_1#leftInnerGrid {
 .yui-dialog .ft .button-group .yui-button:first-child button {
     background-color: var(--color-primary) !important;
     border-color: var(--color-primary) !important;
-    color: #fff !important;
+    color: var(--color-white) !important;
 }
 
 .yui-dialog .ft .button-group .yui-button.login-button button:hover,
@@ -8611,7 +8459,7 @@ div.grid_1_1#leftInnerGrid {
     justify-content: center !important;
     padding: 0 !important;
     box-sizing: border-box !important;
-    background: rgba(0,0,0,0.5) !important;
+    background: var(--overlay) !important;
 }
 
 .agreement {
@@ -8634,7 +8482,7 @@ div.grid_1_1#leftInnerGrid {
     flex-direction: column !important;
     overflow: hidden !important;
     border-radius: 12px !important;
-    background: #fff !important;
+    background: var(--color-white) !important;
 }
 
 .yui-panel-container .yui-panel .hd {
@@ -8642,8 +8490,8 @@ div.grid_1_1#leftInnerGrid {
     padding: 20px 24px !important;
     font-size: 18px !important;
     font-weight: 600 !important;
-    border-bottom: 1px solid #e5e7eb !important;
-    background: #fff !important;
+    border-bottom: 1px solid var(--border) !important;
+    background: var(--color-white) !important;
 }
 
 .yui-panel-container .yui-panel .bd {
@@ -8656,8 +8504,8 @@ div.grid_1_1#leftInnerGrid {
 .yui-panel-container .yui-panel .ft {
     flex-shrink: 0 !important;
     padding: 20px 24px 24px 24px !important;
-    background: #f9fafb !important;
-    border-top: 1px solid #e5e7eb !important;
+    background: var(--bg-light) !important;
+    border-top: 1px solid var(--border) !important;
     border-radius: 0 0 12px 12px !important;
 }
 
@@ -8680,7 +8528,7 @@ div.grid_1_1#leftInnerGrid {
 .yui-panel-container .yui-panel .bd .sectionHeader h2 {
     font-size: 14px !important;
     font-weight: 600 !important;
-    color: #374151 !important;
+    color: var(--color-gray) !important;
     margin: 0 !important;
 }
 
@@ -8701,12 +8549,12 @@ div.grid_1_1#leftInnerGrid {
 .yui-panel-container .yui-panel .bd .mainLabel label {
     font-size: 13px !important;
     font-weight: 500 !important;
-    color: #374151 !important;
+    color: var(--color-gray) !important;
     text-transform: none !important;
 }
 
 .yui-panel-container .yui-panel .bd .mainLabel .requiredMarker {
-    color: #dc2626 !important;
+    color: var(--color-error) !important;
     margin-left: 2px !important;
 }
 
@@ -8716,10 +8564,10 @@ div.grid_1_1#leftInnerGrid {
 
 .yui-panel-container .yui-panel .bd .optionsContent {
     font-size: 14px !important;
-    color: #111827 !important;
+    color: var(--color-dark) !important;
     font-weight: 400 !important;
     padding: 8px 12px !important;
-    background: #f3f4f6 !important;
+    background: var(--bg-light) !important;
     border-radius: 6px !important;
 }
 
@@ -8735,8 +8583,8 @@ div.grid_1_1#leftInnerGrid {
     padding: 10px 12px !important;
     font-size: 14px !important;
     line-height: 1.5 !important;
-    background: #fff !important;
-    border: 1px solid #d1d5db !important;
+    background: var(--color-white) !important;
+    border: 1px solid var(--border) !important;
     border-radius: 6px !important;
     box-sizing: border-box !important;
     resize: vertical !important;
@@ -8757,7 +8605,7 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .yui-panel-container .yui-panel .bd textarea::placeholder {
-    color: #aaa !important;
+    color: var(--color-muted) !important;
     font-style: italic !important;
 }
 
@@ -8765,8 +8613,8 @@ div.grid_1_1#leftInnerGrid {
     width: 100% !important;
     padding: 10px 14px !important;
     font-size: 14px !important;
-    background: #fff !important;
-    border: 1px solid var(--border-light, #e0e0e0) !important;
+    background: var(--color-white) !important;
+    border: 1px solid var(--border-light, var(--border)) !important;
     border-radius: 8px !important;
     cursor: pointer !important;
     transition: border-color 0.2s !important;
@@ -8788,8 +8636,8 @@ div.grid_1_1#leftInnerGrid {
     width: 100% !important;
     padding: 10px 14px !important;
     font-size: 14px !important;
-    background: #fff !important;
-    border: 1px solid var(--border-light, #e0e0e0) !important;
+    background: var(--color-white) !important;
+    border: 1px solid var(--border-light, var(--border)) !important;
     border-radius: 8px !important;
     box-sizing: border-box !important;
     transition: border-color 0.2s, box-shadow 0.2s !important;
@@ -8924,7 +8772,7 @@ div.grid_1_1#leftInnerGrid {
     border: 1px solid var(--border) !important;
     border-radius: 12px !important;
     padding: 16px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+    box-shadow: var(--shadow) !important;
     z-index: 10000 !important;
 }
 
@@ -9163,7 +9011,7 @@ div[id*="panel"] {
     border: 1px solid var(--border) !important;
     border-radius: 12px !important;
     padding: 16px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+    box-shadow: var(--shadow) !important;
     z-index: 10000 !important;
 }
 
@@ -9293,27 +9141,27 @@ form[name="ticketLogForm"] {
     font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 14px;
     line-height: 1.5;
-    color: #09090b;
+    color: var(--color-dark);
 }
 
 form[name="ticketLogForm"] .roundedBox {
-    background: #fff;
-    border: 1px solid #e5e7eb;
+    background: var(--color-white);
+    border: 1px solid var(--border);
     border-radius: 8px;
     margin: 16px;
     overflow: hidden;
 }
 
 form[name="ticketLogForm"] .roundedBox .hdr {
-    background: #f4f4f5;
+    background: var(--bg-light);
     padding: 12px 16px;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid var(--border);
 }
 
 form[name="ticketLogForm"] .roundedBox .hdr h2 {
     font-size: 15px;
     font-weight: 600;
-    color: #09090b;
+    color: var(--color-dark);
     margin: 0;
 }
 
@@ -9344,11 +9192,11 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent {
 form[name="ticketLogForm"] .inputGroup .mainLabel label {
     font-size: 13px !important;
     font-weight: 500 !important;
-    color: #6b7280 !important;
+    color: var(--color-gray) !important;
 }
 
 form[name="ticketLogForm"] .inputGroup .mainLabel .requiredMarker {
-    color: #dc2626 !important;
+    color: var(--color-error) !important;
     margin-left: 2px !important;
 }
 
@@ -9362,7 +9210,7 @@ form[name="ticketLogForm"] .inputGroup .options {
 form[name="ticketLogForm"] .inputGroup .options .optionsContent {
     display: block !important;
     font-size: 14px !important;
-    color: #09090b !important;
+    color: var(--color-dark) !important;
 }
 
 form[name="ticketLogForm"] .inputGroup .options input.textInput {
@@ -9371,16 +9219,16 @@ form[name="ticketLogForm"] .inputGroup .options input.textInput {
     padding: 10px 12px !important;
     font-size: 14px !important;
     font-family: inherit !important;
-    border: 1px solid #e5e7eb !important;
+    border: 1px solid var(--border) !important;
     border-radius: 6px !important;
-    background: #fff !important;
-    color: #09090b !important;
+    background: var(--color-white) !important;
+    color: var(--color-dark) !important;
     box-sizing: border-box !important;
 }
 
 form[name="ticketLogForm"] .inputGroup .options input.textInput:focus {
     outline: none !important;
-    border-color: #0060a7 !important;
+    border-color: var(--color-primary-light) !important;
     box-shadow: 0 0 0 2px rgba(0, 96, 167, 0.15) !important;
 }
 
@@ -9391,17 +9239,17 @@ form[name="ticketLogForm"] .inputGroup .options textarea {
     padding: 10px 12px !important;
     font-size: 14px !important;
     font-family: inherit !important;
-    border: 1px solid #e5e7eb !important;
+    border: 1px solid var(--border) !important;
     border-radius: 6px !important;
-    background: #fff !important;
-    color: #09090b !important;
+    background: var(--color-white) !important;
+    color: var(--color-dark) !important;
     resize: vertical !important;
     box-sizing: border-box !important;
 }
 
 form[name="ticketLogForm"] .inputGroup .options textarea:focus {
     outline: none !important;
-    border-color: #0060a7 !important;
+    border-color: var(--color-primary-light) !important;
     box-shadow: 0 0 0 2px rgba(0, 96, 167, 0.15) !important;
 }
 
@@ -9427,15 +9275,15 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
     font-size: 14px !important;
     font-weight: 600 !important;
     font-family: inherit !important;
-    color: #fff !important;
-    background: #004279 !important;
+    color: var(--color-white) !important;
+    background: var(--color-primary) !important;
     border: none !important;
     border-radius: 6px !important;
     cursor: pointer !important;
 }
 
 form[name="ticketLogForm"] .buttonGroup .yui-button button:hover {
-    background: #0060a7 !important;
+    background: var(--color-primary-light) !important;
 }
 
 /* Datepicker / Calendar fixes */
@@ -9443,7 +9291,7 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button:hover {
     position: absolute !important;
     z-index: 9999 !important;
     max-width: 300px !important;
-    background: #fff !important;
+    background: var(--color-white) !important;
     border: 1px solid var(--border) !important;
     border-radius: 8px !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
@@ -9453,12 +9301,6 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button:hover {
 .yui-calendar {
     width: 100% !important;
     font-size: 13px !important;
-}
-
-.yui-calendar td.calcell {
-    padding: 6px !important;
-    width: 36px !important;
-    height: 36px !important;
 }
 
 .yui-calcontainer .calclose,
@@ -9550,7 +9392,7 @@ img.calendarIcon {
     border: 1px solid var(--border) !important;
     border-top: none !important;
     border-radius: 0 0 8px 8px !important;
-    background: #fff !important;
+    background: var(--color-white) !important;
 }
 
 .dashboard .expando .details ul {
@@ -9590,7 +9432,7 @@ img.calendarIcon {
     display: inline-block !important;
     padding: 4px 12px !important;
     background: var(--color-secondary) !important;
-    color: #fff !important;
+    color: var(--color-white) !important;
     border-radius: 4px !important;
     text-decoration: none !important;
     font-size: 12px !important;
@@ -9598,7 +9440,7 @@ img.calendarIcon {
 }
 
 .dashboard .formSectionContent a[href*="sample"]:hover {
-    background: var(--color-secondary-hover, #4a9f52) !important;
+    background: var(--color-secondary-hover, var(--color-success)) !important;
 }
 
 /* Integration method grid - 3 columns */
@@ -9934,7 +9776,7 @@ img.calendarIcon {
 .dashboard .reports tr.rollOver,
 .dashboard .reports table#report tbody tr:hover,
 .dashboard .reports table.reportResults tbody tr:hover {
-    background-color: #e8f4fd !important;
+    background-color: var(--bg-info) !important;
 }
 
 /* Last row - no border */
@@ -10004,7 +9846,7 @@ img.calendarIcon {
 }
 
 .dashboard .reports .nestedListTable tbody tr:hover td {
-    background: #e8f4fd;
+    background: var(--bg-info);
 }
 
 .dashboard .reports .nestedListTable tbody tr:last-child td {
@@ -10048,8 +9890,8 @@ img.calendarIcon {
     font-size: 12px !important;
     word-break: break-all;
     white-space: normal !important;
-    background-color: #1e293b !important;
-    color: #e2e8f0;
+    background-color: var(--color-primary) !important;
+    color: var(--border);
     padding: 14px 16px !important;
     line-height: 1.6;
 }
@@ -10111,7 +9953,7 @@ img.calendarIcon {
     background-color: var(--color-white) !important;
     border: 1px solid var(--border) !important;
     border-radius: 12px !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
+    box-shadow: var(--shadow) !important;
     padding: 12px !important;
 }
 
@@ -10173,7 +10015,7 @@ img.calendarIcon {
     background-color: var(--color-white);
     border: 1px solid var(--border);
     border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow);
     padding: 12px;
 }
 
@@ -10222,8 +10064,8 @@ img.calendarIcon {
 
 /* Alert boxes */
 .dashboard .redBox {
-    background-color: #fef2f2;
-    border: 1px solid #fecaca;
+    background-color: var(--bg-error);
+    border: 1px solid var(--bg-error);
     border-radius: 8px;
     padding: 12px 16px;
     margin-bottom: 16px;
@@ -10239,7 +10081,7 @@ img.calendarIcon {
     align-items: center;
     gap: 8px;
     font-weight: 600;
-    color: #dc2626;
+    color: var(--color-error);
     font-size: 14px;
 }
 
@@ -10248,7 +10090,7 @@ img.calendarIcon {
 }
 
 .dashboard .redBox a {
-    color: #dc2626;
+    color: var(--color-error);
 }
 
 /* Grid layouts */
@@ -10464,10 +10306,6 @@ img.calendarIcon {
 
 /* Form section content */
 
-.dashboard .boxContent {
-    padding: 16px;
-}
-
 .dashboard .pageContent {
     padding: 16px;
 }
@@ -10592,10 +10430,6 @@ img.calendarIcon {
     border-radius: 8px;
 }
 
-.dashboard .noChartData a {
-    color: var(--color-primary);
-}
-
 /* Orders container */
 .dashboard #ordersContainer .roundedBox {
     margin: 0;
@@ -10638,33 +10472,10 @@ img.calendarIcon {
     padding: 20px;
 }
 
-.dashboard #search .inputGroup {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 16px;
-}
-
-.dashboard #search .inputGroup .mainLabel {
-    flex: 0 0 120px;
-    text-align: right;
-}
-
 .dashboard #search .inputGroup .mainLabelContent label {
     font-size: 14px;
     font-weight: 500;
     color: var(--color-dark);
-}
-
-.dashboard #search .inputGroup .options {
-    flex: 1;
-}
-
-.dashboard #search .inputGroup .optionsContent {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px;
 }
 
 .dashboard #search select {
@@ -10795,7 +10606,7 @@ img.calendarIcon {
 
 .dashboard table.listTable tbody tr:hover td,
 .dashboard table.leadListTable tbody tr:hover td {
-    background-color: #e8f4fd;
+    background-color: var(--bg-info);
 }
 
 .dashboard table.listTable input[type="checkbox"],
@@ -11258,7 +11069,7 @@ img.calendarIcon {
 }
 
 .dashboard .nestedListTable tbody tr:hover td {
-    background-color: #e8f4fd;
+    background-color: var(--bg-info);
 }
 
 .dashboard .nestedListTable tbody td a {
@@ -11311,14 +11122,332 @@ img.calendarIcon {
     flex-direction: column;
     gap: 10px;
 }
+/* ========== ADDITIONAL FIXES & IMPROVEMENTS ========== */
 
-@media (max-width: 1400px) {
-    .dashboard .settings .grid_1_1 {
-        grid-template-columns: 1fr !important;
-    }
+/* Home page sidebar improvements */
+.dashboard .secondary {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-@media (max-width: 1200px) {
+.dashboard .secondary > div {
+    margin-bottom: 0;
+}
+
+/* Ensure roundedBox has proper background */
+.dashboard .roundedBox,
+.dashboard .roundedBox3 {
+    background-color: var(--color-white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Account Management Support box styling */
+.dashboard .secondary > .roundedBox:last-child .formSectionContent {
+    padding: 16px;
+}
+
+.dashboard #salesForceLinks,
+.dashboard #userGuideLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Search form improvements - better alignment */
+.dashboard #search .formSectionContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.dashboard #search .formSectionContent > div[style*="margin-left"] {
+    margin-left: 0 !important;
+    padding: 0 0 16px;
+}
+
+.dashboard #search .inputGroup {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: start;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.dashboard #search .inputGroup .mainLabel {
+    flex: none;
+    width: auto;
+    text-align: right;
+    padding-top: 10px;
+}
+
+.dashboard #search .inputGroup .options {
+    flex: none;
+    width: 100%;
+}
+
+.dashboard #search .inputGroup .optionsContent {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Select dropdowns consistent sizing */
+.dashboard #search select[name*="date"],
+.dashboard #search select[id*="Date"] {
+    min-width: auto;
+    width: auto;
+}
+
+.dashboard #search select#categoryList,
+.dashboard #search select#productList,
+.dashboard #search select#feedback,
+.dashboard #search select#state {
+    min-width: 160px;
+}
+
+/* Button group alignment with form fields */
+.dashboard #search .buttonGroup,
+.dashboard #search + .formSectionContent .buttonGroup {
+    margin-left: 132px;
+    padding-top: 4px;
+}
+
+/* Lead Manager Quick Links improvements */
+.dashboard #leadManagerQuickLinksDiv .roundedBox3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard #leadManagerQuickLinksDiv .roundedBox3 .sectionHeader {
+    flex-shrink: 0;
+}
+
+.dashboard #leadManagerQuickLinksDiv .inlineSideBar {
+    flex: 1;
+    display: block;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--color-gray);
+    padding: 16px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.dashboard #leadManagerQuickLinksDiv .inlineSideBar em {
+    font-style: normal;
+}
+
+.dashboard #leadManagerQuickLinksDiv .inlineSideBar strong {
+    color: var(--color-dark);
+}
+
+/* Section header consistent spacing */
+.dashboard .sectionHeader + .formSectionContent {
+    padding: 20px;
+}
+
+/* Primary content wrapper fixes */
+.dashboard #PrimaryContent > div[style*="width"] {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+/* Last updated text styling */
+.dashboard .leadsInfo #dluContainer {
+    font-size: 11px;
+    color: var(--color-gray);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.dashboard .leadsInfo {
+    display: block;
+}
+
+/* Charts area no data state */
+.dashboard .noChartData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 100px;
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--color-gray);
+}
+
+.dashboard .noChartData a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.dashboard .noChartData a:hover {
+    text-decoration: underline;
+}
+
+/* Active orders empty state */
+.dashboard .activeOrders thead th.center[colspan] {
+    text-align: center;
+    font-weight: 400;
+    color: var(--color-gray);
+    padding: 24px 16px;
+    background-color: transparent;
+}
+
+/* Calendar icon next to date fields */
+.dashboard img[id*="CalendarIcon"],
+.dashboard .calendarIcon {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23004279' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E");
+    width: 20px !important;
+    height: 20px !important;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-left: 8px;
+    transition: opacity 0.15s ease;
+}
+
+.dashboard img[id*="CalendarIcon"]:hover,
+.dashboard .calendarIcon:hover {
+    opacity: 0.7;
+}
+
+/* Form section header separator */
+.dashboard .sectionHeader {
+    background-color: var(--bg-light);
+}
+
+.dashboard .sectionHeader h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+/* Alert title styling */
+.dashboard .alertTitle {
+    font-weight: 600;
+    color: var(--color-error, var(--color-error));
+}
+
+/* Instructions text */
+.dashboard p.information,
+.dashboard .information {
+    font-size: 13px;
+    color: var(--color-gray);
+    margin: 0 0 16px 0;
+}
+
+.dashboard .instructions:not(span) {
+    font-size: 12px;
+    color: var(--color-gray);
+    white-space: nowrap;
+}
+
+/* Input focus states */
+.dashboard select:focus,
+.dashboard .textInput:focus,
+.dashboard input[type="text"]:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+/* Button group inside formSectionContent */
+.dashboard .formSectionContent > .buttonGroup {
+    margin-top: 8px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+/* Responsive improvements for search */
+/* Sidebar boxes (Lead Store, Create Invoice, etc.) */
+.dashboard .roundedBox4,
+.dashboard .sideBar {
+    background-color: var(--color-white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.dashboard .roundedBox4 h4,
+.dashboard .sideBar h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin: 0;
+    padding: 14px 16px;
+    background-color: var(--bg-light);
+    border-bottom: 1px solid var(--border);
+}
+
+.dashboard .roundedBox4 .sideBarGroup,
+.dashboard .sideBar .sideBarGroup {
+    padding: 16px;
+    font-size: 13px;
+    color: var(--color-gray);
+    line-height: 1.5;
+}
+
+.dashboard .roundedBox4 a,
+.dashboard .sideBar a {
+    color: var(--color-primary);
+}
+
+/* Secondary left column on Lead Store */
+.dashboard .secondary.left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.dashboard .secondary.left > div {
+    margin-bottom: 0;
+}
+
+/* Footer styling */
+.dashboard #Footer {
+    margin-top: 32px;
+    padding: 24px 0;
+    border-top: 1px solid var(--border);
+    background-color: var(--bg-light);
+}
+
+.dashboard #FooterContent {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.dashboard #FooterContent p {
+    margin: 0 0 8px 0;
+    font-size: 12px;
+    color: var(--color-gray);
+}
+
+.dashboard #FooterContent p:last-child {
+    margin-bottom: 0;
+}
+
+.dashboard #FooterContent a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.dashboard #FooterContent a:hover {
+    text-decoration: underline;
+}
+
+/* ========== SMALL DESKTOP ========== */
+
+@media (max-width: 1024px) {
+
     .dashboard .settings .sellerBidMinimum thead th {
         font-size: 10px !important;
         padding: 8px 6px !important;
@@ -11347,15 +11476,12 @@ img.calendarIcon {
         padding: 8px 10px !important;
         font-size: 13px !important;
     }
-}
 
-@media (max-width: 1024px) {
     .dashboard #Main {
         margin-left: 0;
         margin-top: 60px;
     }
 
-    /* Home page grid responsive */
     .dashboard .grid_340px_600px {
         flex-direction: column;
     }
@@ -11370,7 +11496,6 @@ img.calendarIcon {
         width: 100%;
     }
 
-    /* Manager container responsive */
     .dashboard #managerContainer {
         flex-direction: column;
     }
@@ -11387,7 +11512,6 @@ img.calendarIcon {
         min-width: 280px;
     }
 
-    /* Products grid responsive */
     .dashboard .productsByCategory {
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
@@ -11414,10 +11538,9 @@ img.calendarIcon {
     }
 
     .dashboard .gridWrapper .grid_1_1 {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 
-    /* Search filter responsive */
     .dashboard #search {
         flex-direction: column;
         align-items: flex-start;
@@ -11475,13 +11598,14 @@ img.calendarIcon {
         width: 100%;
         text-align: left;
         padding: 0 0 4px;
+        padding-right: 0;
+        margin-bottom: 8px;
     }
 
     .dashboard .formSectionContent .mainLabelContent {
         padding-right: 0;
     }
 
-    /* Tables responsive */
     .dashboard table.listTable,
     .dashboard table.leadListTable {
         display: block;
@@ -11503,7 +11627,6 @@ img.calendarIcon {
         align-self: flex-start;
     }
 
-    /* Report display page responsive - Tablet */
     .dashboard .reports .filter {
         flex-direction: column;
         align-items: stretch;
@@ -11611,10 +11734,6 @@ img.calendarIcon {
         order: 1;
     }
 
-    .dashboard .ordersTable thead tr.colheaders {
-        display: none !important;
-    }
-
     .dashboard .ordersTable thead tr.actions {
         display: block;
     }
@@ -11667,7 +11786,7 @@ img.calendarIcon {
         border: 1px solid var(--border);
         border-radius: 12px;
         overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        box-shadow: var(--shadow);
     }
 
     .dashboard .ordersTable tbody tr td {
@@ -11882,20 +12001,16 @@ img.calendarIcon {
         gap: 16px !important;
     }
 
-    .dashboard .gridWrapper .grid_1_1 {
-        grid-template-columns: 1fr !important;
-    }
-
     .dashboard .gridWrapper .grid_1_1 .column {
         width: 100% !important;
     }
 
     .dashboard .grid_600px_340px {
-        flex-direction: column !important;
+        flex-direction: column;
     }
 
     .dashboard .grid_600px_340px .primary {
-        width: 100% !important;
+        width: 100%;
     }
 
     .dashboard .ordersTable tfoot tr.actions,
@@ -11908,7 +12023,6 @@ img.calendarIcon {
         width: 100% !important;
     }
 
-    /* Lead Channel Detail responsive */
     .dashboard .channelInfo {
         flex-direction: column;
         align-items: flex-start;
@@ -11938,7 +12052,7 @@ img.calendarIcon {
     }
 
     .dashboard .grid_600px_340px .secondary {
-        width: 100% !important;
+        width: 100%;
         margin-top: 24px;
     }
 
@@ -11948,7 +12062,6 @@ img.calendarIcon {
         margin: 0 auto 16px;
     }
 
-    /* My Orders responsive */
     .dashboard .ordersTable #search {
         flex-direction: column;
     }
@@ -11990,7 +12103,6 @@ img.calendarIcon {
         width: 100%;
     }
 
-    /* Proposals responsive */
     .dashboard #validationErrors {
         max-width: 100% !important;
     }
@@ -12000,13 +12112,11 @@ img.calendarIcon {
         margin: 0 !important;
     }
 
-    /* Wholesale Orders responsive */
     .dashboard .ordersTable .oliDiv {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    /* Connections responsive */
     .dashboard .ordersTable .expando.control {
         flex-direction: column;
         align-items: flex-start;
@@ -12034,7 +12144,6 @@ img.calendarIcon {
         color: var(--color-gray);
     }
 
-    /* Lead Channels Wizard responsive */
     .dashboard .grid_1_1 {
         grid-template-columns: 1fr;
     }
@@ -12053,35 +12162,10 @@ img.calendarIcon {
         width: 100%;
     }
 
-    .dashboard .grid_600px_340px {
-        flex-direction: column;
-    }
-
-    .dashboard .grid_600px_340px .primary {
-        width: 100%;
-    }
-
-    .dashboard .grid_600px_340px .secondary {
-        width: 100%;
-    }
-
     .dashboard .wizard-integration-details img.sidebar {
         float: none;
         display: block;
         margin: 0 auto 16px;
-    }
-
-    /* Wizard form fields responsive */
-    .dashboard .formSectionContent .inputGroup {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .dashboard .formSectionContent .mainLabel {
-        width: 100%;
-        text-align: left;
-        padding-right: 0;
-        margin-bottom: 8px;
     }
 
     .dashboard .formSectionContent .options {
@@ -12125,19 +12209,37 @@ img.calendarIcon {
         top: 0;
         right: 0;
     }
-}
 
-@media (max-width: 992px) {
-    .dashboard .gridWrapper .grid_1_1 {
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
-}
-
-@media (max-width: 900px) {
     .dashboard .settings .noticePeriodsContainer {
         grid-template-columns: 1fr !important;
     }
+
+    .dashboard #search .inputGroup {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard #search .inputGroup .mainLabel {
+        text-align: left;
+        padding-top: 0;
+        padding-bottom: 4px;
+    }
+
+    .dashboard #search .buttonGroup,
+    .dashboard #search + .formSectionContent .buttonGroup {
+        margin-left: 0;
+    }
+
+    .dashboard #search .formSectionContent > div[style*="margin-left"] {
+        padding: 0 0 12px;
+    }
+
+    .dashboard #search p.information {
+        margin-left: 0;
+    }
+
 }
+
+/* ========== TABLET ========== */
 
 @media (max-width: 768px) {
 
@@ -12145,7 +12247,6 @@ img.calendarIcon {
         width: 100% !important;
     }
 
-    /* --- MOBILE MENU --- */
     #mobilemenu {
         position: fixed;
         top: 0;
@@ -12160,13 +12261,16 @@ img.calendarIcon {
         background: var(--color-white);
         border-bottom: 1px solid var(--border);
     }
+
     #mobilemenu .logo {
         display: flex;
     }
+
     #mobilemenu .logo svg {
         height: 30px;
         width: auto;
     }
+
     #mobilebutton {
         position: relative;
         width: 30px;
@@ -12176,6 +12280,7 @@ img.calendarIcon {
         border: none;
         cursor: pointer;
     }
+
     #mobilebutton svg {
         position: absolute;
         top: 50%;
@@ -12184,25 +12289,27 @@ img.calendarIcon {
         width: 24px;
         height: 24px;
         fill: none;
-        stroke: var(--color-dark, #333);
+        stroke: var(--color-dark);
         stroke-width: 2;
         stroke-linecap: round;
         transition: opacity 0.25s, transform 0.25s;
     }
+
     #mobilebutton .close {
         opacity: 0;
         transform: translate(-50%, -50%) rotate(-90deg) scale(0.8);
     }
+
     #mobilebutton.open .menu {
         opacity: 0;
         transform: translate(-50%, -50%) rotate(90deg) scale(0.8);
     }
+
     #mobilebutton.open .close {
         opacity: 1;
         transform: translate(-50%, -50%) rotate(0) scale(1);
     }
 
-    /* --- HEADER / NAVIGATION --- */
     .dashboard #Header {
         position: fixed;
         top: 0;
@@ -12211,6 +12318,7 @@ img.calendarIcon {
         height: auto;
         border-right: none;
     }
+
     .dashboard #HeaderContent {
         position: fixed;
         top: 60px;
@@ -12222,16 +12330,20 @@ img.calendarIcon {
         transition: transform .3s ease;
         transform: translateX(100%);
     }
+
     .dashboard #HeaderContent.open {
         transform: translateX(0);
     }
+
     .dashboard #logoDiv {
         display: none;
     }
+
     .dashboard #toolbar,
     .dashboard #Navigation {
         padding: 0 24px;
     }
+
     .dashboard #toolbar *,
     .dashboard #toolbar *::after,
     .dashboard #toolbar *::before,
@@ -12244,10 +12356,12 @@ img.calendarIcon {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
+
     .dashboard #MainNavigation.tabs ul li a,
     .dashboard #SubNavigation.subtabs ul li a {
         padding: 6px 0 !important;
     }
+
     .dashboard #MainNavigation.tabs ul li.selected a,
     .dashboard #MainNavigation.tabs ul li.current a,
     .dashboard #links a:hover,
@@ -12255,10 +12369,12 @@ img.calendarIcon {
     .dashboard #SubNavigation.subtabs ul li a:hover {
         background-color: transparent !important;
     }
+
     .dashboard #MainNavigation.tabs ul li.selected a,
     .dashboard #MainNavigation.tabs ul li.current a {
         color: var(--color-primary) !important;
     }
+
     .dashboard #MainNavigation.tabs ul li.selected a::after,
     .dashboard #MainNavigation.tabs ul li.current a::after,
     .dashboard #SubNavigation.subtabs ul li.current a::after {
@@ -12275,21 +12391,22 @@ img.calendarIcon {
         -webkit-mask-size: contain;
         mask-size: contain;
     }
+
     .dashboard #SubNavigation.subtabs ul li.current a {
         color: var(--color-primary) !important;
         background-color: transparent !important;
     }
 
-    /* --- MAIN CONTENT --- */
     .dashboard #MainContent {
         padding: 16px !important;
+        min-height: calc(100vh - 272px);
     }
+
     .dashboard #MainTitle {
         font-size: 18px !important;
         margin: 0 0 16px !important;
     }
 
-    /* --- GENERAL LAYOUT --- */
     .dashboard .roundedBox,
     .dashboard .roundedBox2,
     .dashboard .blueBox,
@@ -12298,6 +12415,7 @@ img.calendarIcon {
         padding: 12px !important;
         margin-bottom: 16px !important;
     }
+
     .dashboard .boxContent {
         display: flex;
         gap: 4px;
@@ -12324,9 +12442,11 @@ img.calendarIcon {
     .dashboard .paginationBottom {
         padding: 8px !important;
     }
+
     .dashboard .formSectionContent {
         padding: 16px !important;
     }
+
     .dashboard .formSectionContent:has(.warning) .boxContent {
         padding: 0;
     }
@@ -12336,63 +12456,66 @@ img.calendarIcon {
         padding: 16px 0 0 0 !important;
     }
 
-    /* --- GRID LAYOUTS --- */
     .dashboard .grid_580px_240px,
     .dashboard .grid_200px_n {
         grid-template-columns: 1fr !important;
     }
+
     .dashboard .gridWrapper .grid_1_1 {
         grid-template-columns: 1fr !important;
     }
+
     .dashboard .grid_600px_340px {
         display: block !important;
     }
+
     .dashboard .grid_600px_340px .primary,
     .dashboard .grid_600px_340px .secondary {
         width: 100% !important;
         float: none !important;
     }
+
     .dashboard .secondary {
         margin-top: 20px !important;
+        order: 2;
     }
 
-    /* --- TABLES (Card Layout for Mobile) --- */
     .dashboard .ordersTable {
         display: block !important;
         overflow-x: visible !important;
         white-space: normal !important;
     }
-    
+
     .dashboard .ordersTable thead tr.colheaders {
         display: none !important;
     }
-    
+
     .dashboard .ordersTable thead tr.actions {
         display: block !important;
     }
-    
+
     .dashboard .ordersTable thead tr.actions td {
         display: block !important;
         padding: 16px !important;
         white-space: normal !important;
     }
-    
+
     .dashboard .ordersTable tbody {
         display: flex !important;
         flex-direction: column !important;
         gap: 16px !important;
     }
-    
+
     .dashboard .ordersTable tbody tr {
         display: flex !important;
         flex-direction: column !important;
-        background: #fff !important;
+        background: var(--color-white) !important;
         border: 1px solid var(--border) !important;
         border-radius: 8px !important;
         padding: 0 !important;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+        box-shadow: var(--shadow) !important;
     }
-    
+
     .dashboard .ordersTable tbody tr td {
         display: flex !important;
         justify-content: space-between !important;
@@ -12402,11 +12525,11 @@ img.calendarIcon {
         border-bottom: 1px solid var(--border) !important;
         white-space: normal !important;
     }
-    
+
     .dashboard .ordersTable tbody tr td:last-child {
         border-bottom: none !important;
     }
-    
+
     .dashboard .ordersTable tbody tr td::before {
         content: attr(data-label);
         font-weight: 600 !important;
@@ -12416,38 +12539,49 @@ img.calendarIcon {
         min-width: 100px !important;
         flex-shrink: 0 !important;
     }
-    
-    /* Mobile labels for wholesale orders table */
-    .dashboard .ordersTable tbody tr td:nth-child(1)::before { content: "ID"; }
-    .dashboard .ordersTable tbody tr td:nth-child(2)::before { content: "NAME"; }
-    .dashboard .ordersTable tbody tr td:nth-child(3)::before { content: "PRODUCT"; }
-    .dashboard .ordersTable tbody tr td:nth-child(4)::before { content: "DELIVERY"; }
-    .dashboard .ordersTable tbody tr td:nth-child(5)::before { content: "ACTIONS"; }
-    
-    /* Delivery column on mobile */
+
+    .dashboard .ordersTable tbody tr td:nth-child(1)::before {
+        content: "ID";
+    }
+
+    .dashboard .ordersTable tbody tr td:nth-child(2)::before {
+        content: "NAME";
+    }
+
+    .dashboard .ordersTable tbody tr td:nth-child(3)::before {
+        content: "PRODUCT";
+    }
+
+    .dashboard .ordersTable tbody tr td:nth-child(4)::before {
+        content: "DELIVERY";
+    }
+
+    .dashboard .ordersTable tbody tr td:nth-child(5)::before {
+        content: "ACTIONS";
+    }
+
     .dashboard .ordersTable tbody tr td.nowrap {
         white-space: normal !important;
         flex-direction: column !important;
         align-items: flex-start !important;
         gap: 8px !important;
     }
-    
+
     .dashboard .ordersTable tbody tr td.nowrap::before {
         margin-bottom: 4px !important;
     }
-    
+
     .dashboard .ordersTable tbody tr td .oliDiv {
         flex-direction: column !important;
         align-items: flex-start !important;
         gap: 6px !important;
     }
-    
+
     .dashboard .ordersTable tbody tr td .oliDiv .left,
     .dashboard .ordersTable tbody tr td .oliDiv .right {
         white-space: normal !important;
     }
-    
-    /* Actions column on mobile */
+
     .dashboard .ordersTable tbody tr td.last {
         display: flex !important;
         flex-direction: column !important;
@@ -12456,44 +12590,44 @@ img.calendarIcon {
         gap: 8px !important;
         width: 100% !important;
     }
-    
+
     .dashboard .ordersTable tbody tr td.last::before {
         display: none !important;
     }
-    
+
     .dashboard .ordersTable tbody tr td.last .buttonGroup {
         width: 100% !important;
         display: flex !important;
         justify-content: center !important;
     }
-    
+
     .dashboard .ordersTable tbody tr td.last .buttonGroup a {
         display: inline-block !important;
         padding: 10px 20px !important;
         background: var(--color-primary) !important;
-        color: #fff !important;
+        color: var(--color-white) !important;
         border-radius: 6px !important;
         text-decoration: none !important;
         font-size: 14px !important;
         text-align: center !important;
     }
-    
+
     .dashboard .ordersTable tfoot {
         display: block !important;
     }
-    
+
     .dashboard .ordersTable tfoot tr.actions td {
         display: block !important;
         padding: 16px !important;
     }
-    
+
     .dashboard #connectionsTable {
         display: block !important;
         overflow-x: auto !important;
         -webkit-overflow-scrolling: touch !important;
         white-space: nowrap !important;
     }
-    
+
     .dashboard #connectionsTable thead,
     .dashboard #connectionsTable tbody,
     .dashboard #connectionsTable tr {
@@ -12501,22 +12635,27 @@ img.calendarIcon {
         width: 100% !important;
     }
 
-    /* --- FORM INPUTS --- */
     .dashboard .inputGroup {
         display: block !important;
         padding: 12px 0 !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 8px !important;
     }
+
     .dashboard .inputGroup .mainLabel,
     .dashboard .mainLabel {
         float: none !important;
         width: 100% !important;
         margin-bottom: 8px !important;
     }
+
     .dashboard .inputGroup .options,
     .dashboard .options {
         float: none !important;
         width: 100% !important;
     }
+
     .dashboard select,
     .dashboard input.textInput,
     .dashboard textarea {
@@ -12525,7 +12664,6 @@ img.calendarIcon {
         box-sizing: border-box !important;
     }
 
-    /* --- BUTTONS --- */
     .dashboard .buttonGroup {
         display: flex !important;
         flex-wrap: wrap !important;
@@ -12541,15 +12679,16 @@ img.calendarIcon {
     .dashboard .buttonGroup .yui-button {
         margin: 0 !important;
     }
+
     .dashboard .yui-button {
         width: 100% !important;
     }
+
     .dashboard .yui-button .first-child a {
         width: 100% !important;
         justify-content: center !important;
     }
 
-    /* --- PAGINATION --- */
     .paginationContainer .pagination ul,
     .dashboard .pagination ul {
         display: flex !important;
@@ -12559,12 +12698,14 @@ img.calendarIcon {
         padding: 0 !important;
         margin: 0 !important;
     }
+
     .paginationContainer .pagination ul li,
     .dashboard .pagination ul li {
         display: inline-flex !important;
         margin: 0 !important;
         min-width: 32px !important;
     }
+
     .paginationContainer .pagination ul li a {
         min-width: 36px !important;
         height: 36px !important;
@@ -12573,20 +12714,22 @@ img.calendarIcon {
         justify-content: center !important;
         padding: 0 8px !important;
     }
+
     .paginationContainer .results {
         text-align: center !important;
         margin-bottom: 12px !important;
     }
+
     .dashboard .pagination ul li:first-child,
     .dashboard .pagination ul li:last-child {
         display: none !important;
     }
 
-    /* --- FOOTER --- */
     #Footer #FooterContent p:first-child {
         gap: 4px 8px !important;
         text-align: center !important;
     }
+
     #Footer #FooterContent p:first-child a {
         font-size: 0 !important;
         gap: 0 !important;
@@ -12617,48 +12760,53 @@ img.calendarIcon {
         content: "buyer";
     }
 
-    /* --- LEAD CHANNELS LIST TABLE --- */
     .dashboard #leadChannelsListTable thead .actions .paginationTop:first-child,
     .dashboard #leadChannelsListTable thead .colheaders {
         display: none !important;
     }
+
     .dashboard #leadChannelsListTable thead .actions .paginationTop {
         padding: 16px !important;
         display: flex !important;
         justify-content: center !important;
     }
+
     .dashboard #leadChannelsListTable thead .actions .paginationTop .buttonGroup {
         justify-content: center !important;
         width: 100% !important;
     }
 
-    /* --- LEAD CHANNELS TABLE (Card Layout) --- */
     .dashboard .channels .roundedBox2 > b.bt,
     .dashboard .channels .roundedBox2 > b.bb {
         display: none !important;
     }
+
     .dashboard .channels table.nestedListTable {
         display: block !important;
         border: none !important;
         min-width: 100% !important;
     }
+
     .dashboard .channels table.nestedListTable thead {
         display: none !important;
     }
+
     .dashboard .channels table.nestedListTable tbody {
         display: flex !important;
         flex-direction: column !important;
         gap: 12px !important;
     }
+
     .dashboard .channels table.nestedListTable tbody tr {
         display: block !important;
-        background: #fff !important;
+        background: var(--color-white) !important;
         border: 1px solid var(--border) !important;
         border-radius: 8px !important;
         padding: 0 !important;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+        box-shadow: var(--shadow) !important;
         overflow: hidden !important;
     }
+
     .dashboard .channels table.nestedListTable tbody tr td {
         display: flex !important;
         justify-content: space-between !important;
@@ -12667,9 +12815,11 @@ img.calendarIcon {
         border: none !important;
         border-bottom: 1px solid var(--border) !important;
     }
+
     .dashboard .channels table.nestedListTable tbody tr td:last-child {
         border-bottom: none !important;
     }
+
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(2) a {
         font-weight: 600 !important;
         background: none !important;
@@ -12677,36 +12827,41 @@ img.calendarIcon {
         display: block !important;
         width: 100% !important;
     }
+
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(2) a:hover {
         text-decoration: none !important;
         opacity: 0.9 !important;
     }
+
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(7),
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(8),
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(9),
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(10) {
         display: none !important;
     }
+
     .dashboard .channels table.nestedListTable tfoot,
     .dashboard .channels table.nestedListTable tr.actions {
         display: block !important;
         width: 100% !important;
     }
+
     .dashboard .channels table.nestedListTable tr.actions td {
         display: block !important;
         padding: 12px 0 !important;
         border: none !important;
     }
+
     .dashboard .channels .paginationTop .buttonGroup {
         width: 100% !important;
     }
+
     .dashboard .channels .paginationTop .yui-button a,
     .dashboard .channels .paginationTop .yui-button button {
         width: 100% !important;
         text-align: center !important;
     }
 
-    /* --- LEAD CHANNEL DETAILS (Label/Value) --- */
     .dashboard .labelValue {
         display: flex !important;
         flex-direction: column !important;
@@ -12715,9 +12870,11 @@ img.calendarIcon {
         border-bottom: 1px solid var(--border) !important;
         gap: 4px !important;
     }
+
     .dashboard .labelValue:last-child {
         border-bottom: none !important;
     }
+
     .dashboard .labelValue .label {
         font-weight: 500 !important;
         color: var(--color-gray) !important;
@@ -12726,6 +12883,7 @@ img.calendarIcon {
         width: 100% !important;
         min-width: unset !important;
     }
+
     .dashboard .labelValue .value {
         font-size: 14px !important;
         text-align: left !important;
@@ -12734,14 +12892,15 @@ img.calendarIcon {
         font-weight: 500 !important;
         color: var(--color-dark) !important;
     }
+
     .dashboard .labelValue .clear {
         display: none !important;
     }
 
-    /* --- SIDEBAR / WIZARD --- */
     .dashboard .wizard-summary {
         padding: 0 !important;
     }
+
     .dashboard .wizard-summary h2 {
         font-size: 15px !important;
         padding: 12px !important;
@@ -12749,112 +12908,125 @@ img.calendarIcon {
         background: var(--background) !important;
         border-bottom: 1px solid var(--border) !important;
     }
+
     .dashboard .wizard-summary .boxContent {
         padding: 0 12px !important;
     }
+
     .dashboard .blueBox .sideBarGroup,
     .dashboard #sidebar {
         padding: 12px !important;
     }
+
     .dashboard #sidebar h2 {
         font-size: 14px !important;
         margin: 16px 0 8px 0 !important;
         padding-bottom: 8px !important;
         border-bottom: 1px solid var(--border) !important;
     }
+
     .dashboard #sidebar h2:first-child {
         margin-top: 0 !important;
     }
 
-    /* --- SETTINGS PAGE --- */
     .dashboard .settings .sellerBidMinimum {
         font-size: 12px !important;
     }
+
     .dashboard .settings .sellerBidMinimum thead th {
         font-size: 9px !important;
         padding: 6px 4px !important;
     }
+
     .dashboard .settings .sellerBidMinimum tbody td {
         padding: 6px 4px !important;
         font-size: 12px !important;
     }
+
     .dashboard .settings .sellerBidMinimum tbody td.price input.textInput {
         max-width: 60px !important;
         min-width: 45px !important;
         padding: 4px !important;
         font-size: 12px !important;
     }
+
     .dashboard .settings .roundedBox.bbLeft h4,
     .dashboard .settings .roundedBox.bbRight h4 {
         font-size: 13px !important;
         padding: 12px 14px !important;
     }
+
     .dashboard .settings .inputGroup {
         flex-direction: column !important;
         padding: 12px 0 !important;
     }
+
     .dashboard .settings .mainLabel {
         width: 100% !important;
         margin-bottom: 8px !important;
     }
+
     .dashboard .settings .options {
         width: 100% !important;
     }
+
     .dashboard .settings select,
     .dashboard .settings input[type="text"],
     .dashboard .settings textarea {
         width: 100% !important;
         font-size: 16px !important;
     }
+
     .dashboard .settings .roundedBox .hdr h2 {
         font-size: 16px !important;
     }
+
     .dashboard .settings .formSectionContent {
         padding: 16px !important;
     }
+
     .dashboard .settings .grid_1_1 {
         grid-template-columns: 1fr !important;
         gap: 16px !important;
     }
 
-    /* --- CREATE PROPOSAL STEP 1 - MOBILE --- */
     .dashboard #formContainer .formSectionContent > ul.text {
         display: flex !important;
         flex-direction: column !important;
         width: 100% !important;
+        grid-template-columns: 1fr !important;
     }
-    
+
     .dashboard #formContainer ul.text > li.expando,
     .dashboard #formContainer ul.text > li.expando1 {
         width: 100% !important;
         padding: 14px 16px !important;
     }
-    
+
     .dashboard #formContainer ul.text > li.details .target {
         margin-bottom: 8px !important;
     }
-    
-    /* Exclusivity section mobile */
+
     .dashboard #formContainer ul.text#leadtypesection {
         margin-top: 0 !important;
     }
-    
+
     .dashboard #formContainer ul.text#leadtypesection > li.leadtypecontainer,
     .dashboard #formContainer ul.text#voiceprogramsection > li.leadtypecontainer {
         grid-template-columns: 1fr !important;
         padding: 16px !important;
         gap: 12px !important;
     }
-    
+
     .dashboard #formContainer .leadtypecontainer .leadtype {
         padding: 14px 16px !important;
     }
-    
+
     .dashboard #formContainer .leadtypecontainer .leadtype label {
         flex-direction: row !important;
         flex-wrap: wrap !important;
     }
-    
+
     .dashboard #formContainer .leadtypecontainer .leadtype label .normal {
         display: block !important;
         width: 100% !important;
@@ -12862,12 +13034,11 @@ img.calendarIcon {
         margin-top: 4px !important;
         font-size: 12px !important;
     }
-    
-    /* Voice Program mobile */
+
     .dashboard #formContainer ul.text#voiceprogramsection {
         margin-top: 16px !important;
     }
-    
+
     .dashboard #formContainer ul.text#voiceprogramsection .leadtypecontainer > div {
         padding: 14px 16px !important;
     }
@@ -12882,19 +13053,18 @@ img.calendarIcon {
         justify-content: flex-start;
     }
 
-    /* --- REPORT DISPLAY MOBILE --- */
     .dashboard .reports #PrimaryContent {
         gap: 12px !important;
     }
 
     .dashboard .reports .filter {
-        padding: 12px !important;
+        padding: 10px !important;
         gap: 10px !important;
         margin-bottom: 12px !important;
     }
 
     .dashboard .reports h1 {
-        font-size: 18px !important;
+        font-size: 16px !important;
         margin-bottom: 12px !important;
     }
 
@@ -12906,20 +13076,26 @@ img.calendarIcon {
     .dashboard .reports .rptHeaderLeft,
     .dashboard .reports .rptHeaderCenter,
     .dashboard .reports .rptHeaderRight {
-        font-size: 11px !important;
-        padding: 10px 8px !important;
+        font-size: 10px !important;
+        padding: 8px 6px !important;
     }
 
     .dashboard .reports .rptDataLeft,
     .dashboard .reports .rptDataCenter,
     .dashboard .reports .rptDataRight {
-        font-size: 12px !important;
-        padding: 8px !important;
+        font-size: 11px !important;
+        padding: 6px !important;
+        text-align: right !important;
     }
 
     .dashboard .reports table#report,
     .dashboard .reports table.reportResults {
         margin-bottom: 12px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        border: none !important;
+        border-radius: 0 !important;
+        overflow: visible !important;
     }
 
     .dashboard .reports table.reportResults td.rptDataLeft {
@@ -12933,8 +13109,8 @@ img.calendarIcon {
     }
 
     .dashboard .reports .yui-button button {
-        padding: 10px 16px !important;
-        font-size: 13px !important;
+        padding: 8px 14px !important;
+        font-size: 12px !important;
     }
 
     .dashboard .reports .calendarWithSelects select {
@@ -12947,16 +13123,13 @@ img.calendarIcon {
         height: 34px !important;
     }
 
-    /* Action links on mobile */
     .dashboard .reports table:not(#report):not(.reportResults) td {
         padding: 4px 8px 4px 0 !important;
     }
-}
 
-@media (max-width: 768px) {
     .yui-panel-container.yui-dialog {
         padding: 0 !important;
-        background: #fff !important;
+        background: var(--color-white) !important;
     }
 
     .yui-panel-container.yui-dialog .yui-panel {
@@ -13020,14 +13193,7 @@ img.calendarIcon {
     .yui-panel-container.yui-dialog .underlay {
         display: none !important;
     }
-}
 
-@media (max-width: 640px) {
-    .dashboard #formContainer .formSectionContent > ul.text {
-        grid-template-columns: 1fr !important;
-    }
-
-    /* --- HOME PAGE SMALL MOBILE --- */
     .dashboard .grid_340px_600px .secondary,
     .dashboard .grid_340px_600px .primary {
         gap: 12px;
@@ -13042,6 +13208,9 @@ img.calendarIcon {
     .dashboard .boxContent,
     .dashboard .pageContent {
         padding: 12px 14px;
+        align-items: flex-start !important;
+        width: 100% !important;
+        box-sizing: border-box;
     }
 
     .dashboard #search {
@@ -13051,14 +13220,24 @@ img.calendarIcon {
 
     .dashboard #search .inputGroup {
         width: 100%;
+        display: block !important;
+        margin-bottom: 16px;
     }
 
     .dashboard .productsByCategory {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
 
     .dashboard .radioContainer {
-        padding: 8px 10px;
+        padding: 12px !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        gap: 8px !important;
+        margin-bottom: 8px !important;
+        background: var(--bg-light) !important;
+        border-radius: 8px !important;
     }
 
     .dashboard .yui-button button,
@@ -13068,11 +13247,13 @@ img.calendarIcon {
     }
 
     .dashboard #leadManagerQuickLinksDiv {
-        flex-direction: column;
+        flex-direction: column !important;
     }
 
     .dashboard #leadManagerQuickLinksDiv > .roundedBox3 {
-        min-width: auto;
+        min-width: 0 !important;
+        width: 100% !important;
+        flex: none !important;
     }
 
     .dashboard .nestedListTable td {
@@ -13081,8 +13262,8 @@ img.calendarIcon {
     }
 
     .dashboard .blueBox h2 {
-        font-size: 14px;
-        padding: 12px 14px 0;
+        font-size: 14px !important;
+        padding: 12px 14px 0 !important;
     }
 
     .dashboard .blueBox .boxContent {
@@ -13093,48 +13274,37 @@ img.calendarIcon {
         font-size: 18px;
     }
 
-    /* Create Order page mobile */
     .dashboard #buttonsContainer {
         padding: 12px;
         gap: 16px;
     }
 
     .dashboard .optionsContainer {
-        padding: 12px;
+        padding: 0 !important;
         gap: 8px;
     }
 
     .dashboard #submitButtonContainer {
-        padding: 12px;
+        padding: 16px !important;
     }
 
     .dashboard .categoryContainer {
-        padding: 12px;
+        padding: 16px !important;
     }
 
     .dashboard .categoryContainer select {
-        width: 100%;
+        width: 100% !important;
         min-width: auto;
     }
 
     .dashboard .productsContainer {
-        padding: 12px;
+        padding: 16px !important;
     }
 
-    /* Lead Store mobile */
     .dashboard .nestedListTable thead th,
     .dashboard .nestedListTable tbody th.producttitle {
         font-size: 12px;
         padding: 10px 12px;
-    }
-
-    /* --- REPORT DISPLAY SMALL MOBILE --- */
-    .dashboard .reports h1 {
-        font-size: 16px !important;
-    }
-
-    .dashboard .reports .filter {
-        padding: 10px !important;
     }
 
     .dashboard .reports .filter select,
@@ -13143,351 +13313,25 @@ img.calendarIcon {
         font-size: 13px !important;
     }
 
-    .dashboard .reports .rptHeaderLeft,
-    .dashboard .reports .rptHeaderCenter,
-    .dashboard .reports .rptHeaderRight {
-        font-size: 10px !important;
-        padding: 8px 6px !important;
-    }
-
-    .dashboard .reports .rptDataLeft,
-    .dashboard .reports .rptDataCenter,
-    .dashboard .reports .rptDataRight {
-        font-size: 11px !important;
-        padding: 6px !important;
-    }
-
-    .dashboard .reports .yui-button button {
-        padding: 8px 14px !important;
-        font-size: 12px !important;
-    }
-}
-
-@media (max-width: 425px) {
-
-    .dashboard #Main:has(#buyerSignupFormv22) .inputGroup {
-        width: 100% !important;
-    }
-
-    .login form[name="changePasswordForm"] {
-        width: 100%;
-    }
-    body.login {
-        padding: 0 24px;
-    }
-    body.login #Header,
-    .login #Main {
-        width: 100%;
-    }
-    body.login div.roundedBox {
-        width: 100%;
-    }
-    body.login .grid_450px_350px {
-        width: 100%;
-    }
-    body.login .grid_450px_350px .secondary {
-        width: 100%;
-    }
-}
-
-/* ========== ADDITIONAL FIXES & IMPROVEMENTS ========== */
-
-/* Home page sidebar improvements */
-.dashboard .secondary {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.dashboard .secondary > div {
-    margin-bottom: 0;
-}
-
-/* Ensure roundedBox has proper background */
-.dashboard .roundedBox,
-.dashboard .roundedBox3 {
-    background-color: var(--color-white);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-/* Account Management Support box styling */
-.dashboard .secondary > .roundedBox:last-child .formSectionContent {
-    padding: 16px;
-}
-
-.dashboard #salesForceLinks,
-.dashboard #userGuideLinks {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-/* Search form improvements - better alignment */
-.dashboard #search .formSectionContent {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-}
-
-.dashboard #search .formSectionContent > div[style*="margin-left"] {
-    margin-left: 0 !important;
-    padding: 0 0 16px;
-}
-
-.dashboard #search .inputGroup {
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    align-items: start;
-    gap: 12px;
-    margin-bottom: 16px;
-}
-
-.dashboard #search .inputGroup .mainLabel {
-    flex: none;
-    width: auto;
-    text-align: right;
-    padding-top: 10px;
-}
-
-.dashboard #search .inputGroup .options {
-    flex: none;
-    width: 100%;
-}
-
-.dashboard #search .inputGroup .optionsContent {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px;
-}
-
-/* Select dropdowns consistent sizing */
-.dashboard #search select[name*="date"],
-.dashboard #search select[id*="Date"] {
-    min-width: auto;
-    width: auto;
-}
-
-.dashboard #search select#categoryList,
-.dashboard #search select#productList,
-.dashboard #search select#feedback,
-.dashboard #search select#state {
-    min-width: 160px;
-}
-
-/* Button group alignment with form fields */
-.dashboard #search .buttonGroup,
-.dashboard #search + .formSectionContent .buttonGroup {
-    margin-left: 132px;
-    padding-top: 4px;
-}
-
-/* Lead Manager Quick Links improvements */
-.dashboard #leadManagerQuickLinksDiv .roundedBox3 {
-    display: flex;
-    flex-direction: column;
-}
-
-.dashboard #leadManagerQuickLinksDiv .roundedBox3 .sectionHeader {
-    flex-shrink: 0;
-}
-
-.dashboard #leadManagerQuickLinksDiv .inlineSideBar {
-    flex: 1;
-    display: block;
-    font-size: 13px;
-    line-height: 1.6;
-    color: var(--color-gray);
-    padding: 16px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-
-.dashboard #leadManagerQuickLinksDiv .inlineSideBar em {
-    font-style: normal;
-}
-
-.dashboard #leadManagerQuickLinksDiv .inlineSideBar strong {
-    color: var(--color-dark);
-}
-
-/* Section header consistent spacing */
-.dashboard .sectionHeader + .formSectionContent {
-    padding: 20px;
-}
-
-/* Primary content wrapper fixes */
-.dashboard #PrimaryContent > div[style*="width"] {
-    width: 100% !important;
-    max-width: none !important;
-}
-
-/* Last updated text styling */
-.dashboard .leadsInfo #dluContainer {
-    font-size: 11px;
-    color: var(--color-gray);
-    display: block;
-    margin-bottom: 8px;
-}
-
-.dashboard .leadsInfo {
-    display: block;
-}
-
-/* Charts area no data state */
-.dashboard .noChartData {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    min-height: 100px;
-    background-color: var(--bg-light);
-    border-radius: 8px;
-    font-size: 14px;
-    color: var(--color-gray);
-}
-
-.dashboard .noChartData a {
-    color: var(--color-primary);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.dashboard .noChartData a:hover {
-    text-decoration: underline;
-}
-
-/* Active orders empty state */
-.dashboard .activeOrders thead th.center[colspan] {
-    text-align: center;
-    font-weight: 400;
-    color: var(--color-gray);
-    padding: 24px 16px;
-    background-color: transparent;
-}
-
-/* Calendar icon next to date fields */
-.dashboard img[id*="CalendarIcon"],
-.dashboard .calendarIcon {
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23004279' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E");
-    width: 20px !important;
-    height: 20px !important;
-    cursor: pointer;
-    vertical-align: middle;
-    margin-left: 8px;
-    transition: opacity 0.15s ease;
-}
-
-.dashboard img[id*="CalendarIcon"]:hover,
-.dashboard .calendarIcon:hover {
-    opacity: 0.7;
-}
-
-/* Form section header separator */
-.dashboard .sectionHeader {
-    background-color: var(--bg-light);
-}
-
-.dashboard .sectionHeader h2 {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--color-dark);
-}
-
-/* Alert title styling */
-.dashboard .alertTitle {
-    font-weight: 600;
-    color: var(--color-error, #dc2626);
-}
-
-/* Instructions text */
-.dashboard p.information,
-.dashboard .information {
-    font-size: 13px;
-    color: var(--color-gray);
-    margin: 0 0 16px 0;
-}
-
-.dashboard .instructions:not(span) {
-    font-size: 12px;
-    color: var(--color-gray);
-    white-space: nowrap;
-}
-
-/* Input focus states */
-.dashboard select:focus,
-.dashboard .textInput:focus,
-.dashboard input[type="text"]:focus {
-    outline: none;
-    border-color: var(--color-primary);
-}
-
-/* Button group inside formSectionContent */
-.dashboard .formSectionContent > .buttonGroup {
-    margin-top: 8px;
-    padding-top: 16px;
-    border-top: 1px solid var(--border);
-}
-
-/* Responsive improvements for search */
-@media (max-width: 1024px) {
-    .dashboard #search .inputGroup {
-        grid-template-columns: 1fr;
-    }
-
-    .dashboard #search .inputGroup .mainLabel {
-        text-align: left;
-        padding-top: 0;
-        padding-bottom: 4px;
-    }
-
-    .dashboard #search .buttonGroup,
-    .dashboard #search + .formSectionContent .buttonGroup {
-        margin-left: 0;
-    }
-
-    .dashboard #search .formSectionContent > div[style*="margin-left"] {
-        padding: 0 0 12px;
-    }
-
-    .dashboard #search p.information {
-        margin-left: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .dashboard .secondary {
-        order: 2;
-    }
-
     .dashboard .primary {
         order: 1;
     }
 
     .dashboard #overview {
         gap: 12px;
-    }
-
-    .dashboard #leadManagerQuickLinksDiv {
-        flex-direction: column;
-    }
-
-    .dashboard #leadManagerQuickLinksDiv > .roundedBox3 {
-        min-width: 100%;
+        width: 100% !important;
     }
 
     .dashboard .leadsInfo #dluContainer {
         font-size: 10px;
     }
-}
 
-@media (max-width: 640px) {
     .dashboard #search .inputGroup .optionsContent {
-        flex-direction: column;
+        flex-direction: column !important;
         align-items: stretch;
+        display: flex !important;
+        gap: 8px !important;
+        width: 100% !important;
     }
 
     .dashboard #search select {
@@ -13498,92 +13342,7 @@ img.calendarIcon {
     .dashboard #search .textInput {
         width: 100%;
     }
-}
 
-/* Sidebar boxes (Lead Store, Create Invoice, etc.) */
-.dashboard .roundedBox4,
-.dashboard .sideBar {
-    background-color: var(--color-white);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 16px;
-}
-
-.dashboard .roundedBox4 h4,
-.dashboard .sideBar h4 {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--color-dark);
-    margin: 0;
-    padding: 14px 16px;
-    background-color: var(--bg-light);
-    border-bottom: 1px solid var(--border);
-}
-
-.dashboard .roundedBox4 .sideBarGroup,
-.dashboard .sideBar .sideBarGroup {
-    padding: 16px;
-    font-size: 13px;
-    color: var(--color-gray);
-    line-height: 1.5;
-}
-
-.dashboard .roundedBox4 a,
-.dashboard .sideBar a {
-    color: var(--color-primary);
-}
-
-/* Secondary left column on Lead Store */
-.dashboard .secondary.left {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.dashboard .secondary.left > div {
-    margin-bottom: 0;
-}
-
-/* Footer styling */
-.dashboard #Footer {
-    margin-top: 32px;
-    padding: 24px 0;
-    border-top: 1px solid var(--border);
-    background-color: var(--bg-light);
-}
-
-.dashboard #FooterContent {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 24px;
-    text-align: center;
-}
-
-.dashboard #FooterContent p {
-    margin: 0 0 8px 0;
-    font-size: 12px;
-    color: var(--color-gray);
-}
-
-.dashboard #FooterContent p:last-child {
-    margin-bottom: 0;
-}
-
-.dashboard #FooterContent a {
-    color: var(--color-primary);
-    text-decoration: none;
-}
-
-.dashboard #FooterContent a:hover {
-    text-decoration: underline;
-}
-
-/* ========== MOBILE FIXES ========== */
-
-/* Global mobile container fix */
-@media (max-width: 768px) {
-    /* Prevent horizontal overflow */
     .dashboard,
     .dashboard #Main,
     .dashboard #MainContent,
@@ -13596,11 +13355,6 @@ img.calendarIcon {
         min-height: auto;
     }
 
-    .dashboard #MainContent {
-        min-height: calc(100vh - 272px);
-    }
-
-    /* All boxes should be full width */
     .dashboard .roundedBox,
     .dashboard .roundedBox2,
     .dashboard .roundedBox3,
@@ -13613,7 +13367,6 @@ img.calendarIcon {
         box-sizing: border-box;
     }
 
-    /* Manager container - stack vertically */
     .dashboard #managerContainer {
         flex-direction: column !important;
         width: 100% !important;
@@ -13625,17 +13378,6 @@ img.calendarIcon {
         flex: none !important;
     }
 
-    .dashboard #leadManagerQuickLinksDiv {
-        flex-direction: column !important;
-    }
-
-    .dashboard #leadManagerQuickLinksDiv > .roundedBox3 {
-        width: 100% !important;
-        min-width: 0 !important;
-        flex: none !important;
-    }
-
-    /* Inline sidebar text fix */
     .dashboard .inlineSideBar {
         display: block !important;
         width: 100% !important;
@@ -13644,16 +13386,6 @@ img.calendarIcon {
         hyphens: auto;
     }
 
-    /* Form sections full width */
-    .dashboard .formSectionContent,
-    .dashboard .boxContent,
-    .dashboard .pageContent {
-        align-items: flex-start !important;
-        width: 100% !important;
-        box-sizing: border-box;
-    }
-
-    /* Tables should scroll horizontally */
     .dashboard table {
         display: block;
         width: 100% !important;
@@ -13667,19 +13399,16 @@ img.calendarIcon {
         width: 100%;
     }
 
-    /* Nested list tables */
     .dashboard .nestedListTable {
         min-width: 100%;
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 0 !important;
     }
 
-    /* Search form mobile */
     .dashboard #search .formSectionContent {
         padding: 16px !important;
-    }
-
-    .dashboard #search .inputGroup {
-        display: block !important;
-        margin-bottom: 16px;
     }
 
     .dashboard #search .inputGroup .mainLabel {
@@ -13692,13 +13421,6 @@ img.calendarIcon {
 
     .dashboard #search .inputGroup .options {
         display: block !important;
-        width: 100% !important;
-    }
-
-    .dashboard #search .inputGroup .optionsContent {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 8px !important;
         width: 100% !important;
     }
 
@@ -13728,18 +13450,15 @@ img.calendarIcon {
         display: block !important;
     }
 
-    /* Quick links mobile */
     .dashboard #leadManagerQuickLinksDiv .boxContent ul li a {
         word-break: break-word;
     }
 
-    /* Info text */
     .dashboard p.information,
     .dashboard .information {
         margin-left: 0 !important;
     }
 
-    /* Calendar with selects - stack on mobile */
     .dashboard .calendarWithSelects {
         display: flex !important;
         flex-wrap: wrap !important;
@@ -13751,25 +13470,11 @@ img.calendarIcon {
         min-width: 80px !important;
     }
 
-    /* Create order page mobile */
     .dashboard .categoryContainer,
     .dashboard .productsContainer {
         padding: 12px !important;
     }
 
-    .dashboard .categoryContainer select {
-        width: 100% !important;
-    }
-
-    .dashboard .productsByCategory {
-        grid-template-columns: 1fr !important;
-    }
-
-    .dashboard .radioContainer {
-        width: 100% !important;
-    }
-
-    /* Lead Store mobile */
     .dashboard #FormPage,
     .dashboard #FormPageContent,
     .dashboard #FormFields {
@@ -13795,7 +13500,6 @@ img.calendarIcon {
         width: 100% !important;
     }
 
-    /* Home page grids mobile */
     .dashboard .grid_340px_600px,
     .dashboard .grid_600px_340px,
     .dashboard .grid_580px_240px,
@@ -13816,20 +13520,17 @@ img.calendarIcon {
         flex: none !important;
     }
 
-    /* Buttons full width on mobile */
     .dashboard .yui-button,
     .dashboard .yui-link-button,
     .dashboard .yui-submit-button {
         width: 100%;
     }
 
-    /* Section headers */
     .dashboard .sectionHeader h2,
     .dashboard .roundedBox .hdr h2 {
         font-size: 14px;
     }
 
-    /* Footer mobile */
     .dashboard #Footer {
         margin-top: 24px;
         padding: 16px 0;
@@ -13842,49 +13543,7 @@ img.calendarIcon {
     .dashboard #FooterContent p {
         font-size: 11px;
     }
-}
 
-/* Extra small screens */
-@media (max-width: 480px) {
-    .dashboard #MainContent {
-        padding: 12px !important;
-    }
-
-    .dashboard .roundedBox .hdr,
-    .dashboard .sectionHeader {
-        padding: 12px !important;
-    }
-
-    .dashboard .formSectionContent,
-    .dashboard .boxContent,
-    .dashboard .pageContent {
-        padding: 12px !important;
-    }
-
-    .dashboard #search .formSectionContent {
-        padding: 12px !important;
-    }
-
-    .dashboard .inlineSideBar {
-        padding: 12px !important;
-        font-size: 12px !important;
-    }
-
-    /* Stack date selects vertically on very small screens */
-    .dashboard #search .inputGroup .optionsContent {
-        gap: 6px !important;
-    }
-
-    .dashboard #search select[name*="date"],
-    .dashboard #search select[id*="Date"] {
-        width: 100% !important;
-    }
-}
-
-/* ========== ENHANCED MOBILE IMPROVEMENTS ========== */
-
-@media (max-width: 768px) {
-    /* Home page sidebar - Lead Search Widget */
     .dashboard #leadSearchFormWidgets {
         flex-direction: column !important;
         gap: 10px !important;
@@ -13907,7 +13566,6 @@ img.calendarIcon {
         width: 100% !important;
     }
 
-    /* Lead search box links */
     .dashboard #leadSearchBox ul {
         display: flex;
         flex-direction: column;
@@ -13923,7 +13581,6 @@ img.calendarIcon {
         border-bottom: none;
     }
 
-    /* Account overview table - Card Layout */
     .dashboard #accountOverview {
         display: flex !important;
         flex-direction: column !important;
@@ -13973,7 +13630,6 @@ img.calendarIcon {
         color: var(--color-gray) !important;
     }
 
-    /* Chart selector full width */
     .dashboard #chartSelectorContainer {
         padding: 12px 16px 16px !important;
     }
@@ -13983,7 +13639,6 @@ img.calendarIcon {
         min-width: 0 !important;
     }
 
-    /* Chart header layout */
     .dashboard .chartHeader h2 {
         flex-direction: column !important;
         align-items: flex-start !important;
@@ -13999,14 +13654,8 @@ img.calendarIcon {
         font-size: 10px !important;
     }
 
-    /* Blue box (Lead Store) mobile */
     .dashboard .blueBox {
         width: 100% !important;
-    }
-
-    .dashboard .blueBox h2 {
-        font-size: 14px !important;
-        padding: 12px 14px 0 !important;
     }
 
     .dashboard .blueBox .boxContent,
@@ -14024,7 +13673,6 @@ img.calendarIcon {
         margin-bottom: 3px !important;
     }
 
-    /* Red box (Alert) mobile */
     .dashboard .redBox {
         width: 100% !important;
     }
@@ -14034,10 +13682,11 @@ img.calendarIcon {
         font-size: 13px !important;
     }
 
-    /* Support links mobile - better touch targets */
     .dashboard #salesForceLinks li,
     .dashboard #userGuideLinks li {
-        padding: 10px 0 !important;
+        padding: 14px 0 !important;
+        list-style: none !important;
+        border-bottom: 1px solid var(--border) !important;
     }
 
     .dashboard #salesForceLinks li a,
@@ -14045,14 +13694,11 @@ img.calendarIcon {
         display: flex !important;
         align-items: center !important;
         min-height: 24px !important;
-    }
-
-    /* Nested list table mobile - Card Layout with Labels */
-    .dashboard .nestedListTable {
-        display: flex !important;
-        flex-direction: column !important;
-        width: 100% !important;
-        gap: 0 !important;
+        gap: 10px !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        color: var(--color-primary-light) !important;
+        text-decoration: none !important;
     }
 
     .dashboard .nestedListTable thead {
@@ -14113,12 +13759,13 @@ img.calendarIcon {
         width: 100% !important;
     }
 
-    /* Lead Store table - Product section headers */
     .dashboard .nestedListTable tbody tr.sectionStart {
         background: var(--bg-light) !important;
         border: none !important;
         border-radius: 0 !important;
         margin-top: 16px !important;
+        padding: 0 !important;
+        border-bottom: none !important;
     }
 
     .dashboard .nestedListTable tbody tr.sectionStart:first-child {
@@ -14136,7 +13783,6 @@ img.calendarIcon {
         text-align: left !important;
     }
 
-    /* Lead Store table specific labels */
     .dashboard .nestedListTable tbody tr.odd td:nth-child(1)::before,
     .dashboard .nestedListTable tbody tr.even td:nth-child(1)::before {
         content: "Order ID";
@@ -14147,34 +13793,20 @@ img.calendarIcon {
         content: "Name";
     }
 
-    /* Section start rows */
-    .dashboard .nestedListTable tbody tr.sectionStart {
-        padding: 0 !important;
-        border-bottom: none !important;
-    }
-
-    /* Overview section mobile */
-    .dashboard #overview {
-        width: 100% !important;
-    }
-
     .dashboard #secondaryMetrics,
     .dashboard #secondaryMetricsContent {
         width: 100% !important;
     }
 
-    /* Primary column spacing */
     .dashboard .grid_340px_600px .primary {
         gap: 16px !important;
     }
 
-    /* Performance / Orders containers */
     .dashboard #chartsContainer,
     .dashboard #ordersContainer {
         width: 100% !important;
     }
 
-    /* Active orders mobile - Card Layout */
     .dashboard .activeOrders {
         display: flex !important;
         flex-direction: column !important;
@@ -14216,7 +13848,7 @@ img.calendarIcon {
         border: 1px solid var(--border) !important;
         border-radius: 10px !important;
         overflow: hidden !important;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+        box-shadow: var(--shadow) !important;
     }
 
     .dashboard .activeOrders tbody td {
@@ -14256,12 +13888,10 @@ img.calendarIcon {
         border-top: 1px solid var(--border) !important;
     }
 
-    /* Create order button container */
     .dashboard .createOrderButtonPad {
         padding: 0 !important;
     }
 
-    /* Data/List tables - Card Layout */
     .dashboard table.listTable,
     .dashboard table.leadListTable {
         display: flex !important;
@@ -14289,7 +13919,7 @@ img.calendarIcon {
         border: 1px solid var(--border) !important;
         border-radius: 10px !important;
         overflow: hidden !important;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+        box-shadow: var(--shadow) !important;
     }
 
     .dashboard table.listTable tbody td,
@@ -14321,7 +13951,6 @@ img.calendarIcon {
         margin-right: 16px !important;
     }
 
-    /* Checkbox column on mobile */
     .dashboard table.listTable tbody td:first-child,
     .dashboard table.leadListTable tbody td:first-child {
         justify-content: flex-start !important;
@@ -14330,16 +13959,6 @@ img.calendarIcon {
     .dashboard table.listTable tbody td:first-child::before,
     .dashboard table.leadListTable tbody td:first-child::before {
         content: "Select" !important;
-    }
-
-    /* Report tables - Card Layout */
-    .dashboard .reports table#report,
-    .dashboard .reports table.reportResults {
-        display: flex !important;
-        flex-direction: column !important;
-        border: none !important;
-        border-radius: 0 !important;
-        overflow: visible !important;
     }
 
     .dashboard .reports table#report thead,
@@ -14362,7 +13981,7 @@ img.calendarIcon {
         border: 1px solid var(--border) !important;
         border-radius: 10px !important;
         overflow: hidden !important;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+        box-shadow: var(--shadow) !important;
     }
 
     .dashboard .reports table#report tbody tr.rollOut,
@@ -14390,12 +14009,6 @@ img.calendarIcon {
         border-bottom: none !important;
     }
 
-    .dashboard .reports .rptDataLeft,
-    .dashboard .reports .rptDataCenter,
-    .dashboard .reports .rptDataRight {
-        text-align: right !important;
-    }
-
     .dashboard .reports .rptDataLeft::before,
     .dashboard .reports .rptDataCenter::before,
     .dashboard .reports .rptDataRight::before {
@@ -14410,89 +14023,9 @@ img.calendarIcon {
         margin-right: 12px !important;
     }
 
-    /* Instructions text mobile */
     .dashboard .instructions span {
         white-space: normal !important;
         word-wrap: break-word !important;
-    }
-}
-
-/* Tablet adjustments */
-@media (min-width: 481px) and (max-width: 768px) {
-    /* Two column for date selects on tablet */
-    .dashboard #search .inputGroup .optionsContent {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 8px !important;
-    }
-
-    .dashboard #search .inputGroup .optionsContent .calendarIcon,
-    .dashboard #search .inputGroup .optionsContent img[id*="CalendarIcon"] {
-        grid-column: span 3;
-        justify-self: start;
-    }
-
-    /* Quick links side by side on tablet */
-    .dashboard #leadManagerQuickLinksDiv {
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
-    }
-
-    .dashboard #leadManagerQuickLinksDiv > .roundedBox3 {
-        flex: 1 1 calc(50% - 8px) !important;
-        min-width: 280px !important;
-    }
-}
-
-/* Very small screens */
-@media (max-width: 380px) {
-    .dashboard #MainContent {
-        padding: 10px !important;
-    }
-
-    .dashboard .roundedBox .hdr,
-    .dashboard .sectionHeader {
-        padding: 10px !important;
-    }
-
-    .dashboard .roundedBox .hdr h2,
-    .dashboard .sectionHeader h2 {
-        font-size: 13px !important;
-    }
-
-    .dashboard .formSectionContent,
-    .dashboard .boxContent,
-    .dashboard .pageContent {
-        padding: 10px !important;
-    }
-
-    .dashboard .yui-button button,
-    .dashboard .yui-link-button a,
-    .dashboard .yui-submit-button button {
-        padding: 10px 16px !important;
-        font-size: 13px !important;
-    }
-
-    .dashboard .nestedListTable td,
-    .dashboard .nestedListTable th {
-        font-size: 12px !important;
-    }
-
-    .dashboard .textInput,
-    .dashboard input[type="text"] {
-        font-size: 13px !important;
-        padding: 8px 10px !important;
-    }
-}
-
-/* ========== MOBILE ENHANCEMENTS V2 ========== */
-
-@media (max-width: 768px) {
-    /* --- FORM INPUT GROUPS --- */
-    .dashboard .inputGroup {
-        flex-direction: column !important;
-        align-items: stretch !important;
-        gap: 8px !important;
     }
 
     .dashboard .inputGroup .mainLabel {
@@ -14511,7 +14044,6 @@ img.calendarIcon {
         flex-wrap: wrap;
     }
 
-    /* Date selects grid layout */
     .dashboard .inputGroup .optionsContent:has(select[id*="Date"]),
     .dashboard .inputGroup .optionsContent:has(select[name*="date"]) {
         display: grid !important;
@@ -14534,7 +14066,6 @@ img.calendarIcon {
         grid-column: 1 / -1 !important;
     }
 
-    /* All selects full width on mobile */
     .dashboard .formSectionContent select,
     .dashboard .inputGroup select,
     .dashboard .optionsContent select {
@@ -14543,7 +14074,6 @@ img.calendarIcon {
         max-width: auto !important;
     }
 
-    /* --- PAYMENT METHODS CARDS --- */
     .dashboard table[class*="payment"],
     .dashboard table:has(td:contains("Visa")),
     .dashboard table:has(td:contains("MasterCard")),
@@ -14553,7 +14083,6 @@ img.calendarIcon {
         gap: 12px !important;
     }
 
-    /* Payment cards wrapper */
     .dashboard .formSectionContent > table {
         display: flex !important;
         flex-direction: column !important;
@@ -14585,9 +14114,13 @@ img.calendarIcon {
 
     .dashboard .formSectionContent > table > tbody > tr > td:last-child {
         border-bottom: none !important;
+        display: flex !important;
+        justify-content: center !important;
+        gap: 20px !important;
+        padding: 14px 16px !important;
+        background: var(--color-white) !important;
     }
 
-    /* Card type header */
     .dashboard .formSectionContent > table > tbody > tr > td:first-child {
         background: var(--color-primary) !important;
         color: var(--color-white) !important;
@@ -14595,20 +14128,10 @@ img.calendarIcon {
         font-size: 14px !important;
     }
 
-    /* Card number */
     .dashboard .formSectionContent > table > tbody > tr > td:nth-child(2) {
         font-family: 'Courier New', monospace !important;
         font-size: 14px !important;
         letter-spacing: 1px !important;
-    }
-
-    /* Edit/Delete links row */
-    .dashboard .formSectionContent > table > tbody > tr > td:last-child {
-        display: flex !important;
-        justify-content: center !important;
-        gap: 20px !important;
-        padding: 14px 16px !important;
-        background: var(--color-white) !important;
     }
 
     .dashboard .formSectionContent > table > tbody > tr > td:last-child a {
@@ -14617,7 +14140,6 @@ img.calendarIcon {
         text-decoration: none !important;
     }
 
-    /* --- BALANCE INPUT WITH CURRENCY --- */
     .dashboard .formSectionContent:has(select[name*="balance"]),
     .dashboard .formSectionContent:has(input[name*="balance"]) {
         padding: 16px !important;
@@ -14637,7 +14159,6 @@ img.calendarIcon {
         min-width: 100px !important;
     }
 
-    /* --- SAVED SEARCHES TABLE --- */
     .dashboard table#savedSearchesTable tbody tr,
     .dashboard .nestedListTable:has(input[type="checkbox"]) tbody tr {
         position: relative !important;
@@ -14659,14 +14180,12 @@ img.calendarIcon {
         display: none !important;
     }
 
-    /* Selected row highlight */
     .dashboard .nestedListTable tbody tr:has(input[type="checkbox"]:checked),
     .dashboard table#savedSearchesTable tbody tr:has(input[type="checkbox"]:checked) {
         background: var(--bg-info) !important;
         border-color: var(--color-primary-light) !important;
     }
 
-    /* --- DELETE/ACTION BUTTONS --- */
     .dashboard .buttonGroup:has(button:contains("Delete")),
     .dashboard .formSectionContent > .buttonGroup {
         padding: 16px !important;
@@ -14684,7 +14203,6 @@ img.calendarIcon {
         min-width: 180px !important;
     }
 
-    /* --- CREATE ORDER PAGE --- */
     .dashboard .channels #PrimaryContent {
         padding: 0 !important;
     }
@@ -14701,27 +14219,8 @@ img.calendarIcon {
         line-height: 1.5 !important;
     }
 
-    .dashboard .categoryContainer {
-        padding: 16px !important;
-    }
-
     .dashboard .categoryContainer select#productCategoryId {
         width: 100% !important;
-    }
-
-    .dashboard .productsContainer {
-        padding: 16px !important;
-    }
-
-    .dashboard .radioContainer {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        align-items: center !important;
-        gap: 8px !important;
-        padding: 12px !important;
-        margin-bottom: 8px !important;
-        background: var(--bg-light) !important;
-        border-radius: 8px !important;
     }
 
     .dashboard .radioContainer label {
@@ -14734,7 +14233,6 @@ img.calendarIcon {
         color: var(--color-primary-light) !important;
     }
 
-    /* Lead type and source options */
     .dashboard #leadTypeContainer,
     .dashboard #sourceContainer {
         padding: 16px !important;
@@ -14744,10 +14242,6 @@ img.calendarIcon {
     .dashboard #sourceContainer .hdr h2 {
         font-size: 14px !important;
         margin-bottom: 12px !important;
-    }
-
-    .dashboard .optionsContainer {
-        padding: 0 !important;
     }
 
     .dashboard .optionsContainer .radioContainer {
@@ -14761,12 +14255,6 @@ img.calendarIcon {
         color: var(--color-gray) !important;
     }
 
-    /* Submit button container */
-    .dashboard #submitButtonContainer {
-        padding: 16px !important;
-    }
-
-    /* --- BACKUP PAYMENT SECTION --- */
     .dashboard .formSectionContent:has(img[src*="check"]) {
         padding: 16px !important;
     }
@@ -14778,7 +14266,6 @@ img.calendarIcon {
         margin-right: 8px !important;
     }
 
-    /* Card list with icons */
     .dashboard .formSectionContent ul:has(img) {
         list-style: none !important;
         padding: 0 !important;
@@ -14797,7 +14284,6 @@ img.calendarIcon {
         border-bottom: none !important;
     }
 
-    /* --- LEAD STORE SEARCH BY PRODUCT --- */
     .dashboard .roundedBox2 .formSectionContent > div {
         display: block !important;
         width: 100% !important;
@@ -14826,7 +14312,6 @@ img.calendarIcon {
         margin-bottom: 12px !important;
     }
 
-    /* --- INLINE HELP TEXT --- */
     .dashboard .instructions,
     .dashboard span.instructions,
     .dashboard .smallGrey,
@@ -14841,7 +14326,6 @@ img.calendarIcon {
         margin: 0 !important;
     }
 
-    /* --- CHART/PERFORMANCE SECTION --- */
     .dashboard #fusionChartContainer,
     .dashboard #chart_div {
         min-height: 200px !important;
@@ -14861,7 +14345,6 @@ img.calendarIcon {
         color: var(--color-primary-light) !important;
     }
 
-    /* --- ACCOUNT MANAGEMENT SUPPORT --- */
     .dashboard #salesForceLinks,
     .dashboard #userGuideLinks {
         display: flex !important;
@@ -14871,27 +14354,9 @@ img.calendarIcon {
         margin: 0 !important;
     }
 
-    .dashboard #salesForceLinks li,
-    .dashboard #userGuideLinks li {
-        list-style: none !important;
-        padding: 14px 0 !important;
-        border-bottom: 1px solid var(--border) !important;
-    }
-
     .dashboard #salesForceLinks li:last-child,
     .dashboard #userGuideLinks li:last-child {
         border-bottom: none !important;
-    }
-
-    .dashboard #salesForceLinks li a,
-    .dashboard #userGuideLinks li a {
-        display: flex !important;
-        align-items: center !important;
-        gap: 10px !important;
-        font-size: 14px !important;
-        font-weight: 500 !important;
-        color: var(--color-primary-light) !important;
-        text-decoration: none !important;
     }
 
     .dashboard #salesForceLinks li a::before,
@@ -14925,12 +14390,124 @@ img.calendarIcon {
         -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20'/%3E%3C/svg%3E") !important;
         mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20'/%3E%3C/svg%3E") !important;
     }
+
 }
 
-/* ========== EXTRA SMALL SCREENS V2 ========== */
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .dashboard #search .inputGroup .optionsContent {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+    }
+
+    .dashboard #search .inputGroup .optionsContent .calendarIcon,
+    .dashboard #search .inputGroup .optionsContent img[id*="CalendarIcon"] {
+        grid-column: span 3;
+        justify-self: start;
+    }
+
+    .dashboard #leadManagerQuickLinksDiv {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+    }
+
+    .dashboard #leadManagerQuickLinksDiv > .roundedBox3 {
+        flex: 1 1 calc(50% - 8px) !important;
+        min-width: 280px !important;
+    }
+
+}
+
+/* ========== MOBILE ========== */
 
 @media (max-width: 480px) {
-    /* Tighter spacing */
+
+    .dashboard #Main:has(#buyerSignupFormv22) .inputGroup {
+        width: 100% !important;
+    }
+
+    .login form[name="changePasswordForm"] {
+        width: 100%;
+    }
+
+    body.login {
+        padding: 0 24px;
+    }
+
+    body.login #Header,
+    .login #Main {
+        width: 100%;
+    }
+
+    body.login div.roundedBox {
+        width: 100%;
+    }
+
+    body.login .grid_450px_350px {
+        width: 100%;
+    }
+
+    body.login .grid_450px_350px .secondary {
+        width: 100%;
+    }
+
+    .dashboard #MainContent {
+        padding: 10px !important;
+    }
+
+    .dashboard .roundedBox .hdr,
+    .dashboard .sectionHeader {
+        padding: 10px !important;
+    }
+
+    .dashboard .formSectionContent,
+    .dashboard .boxContent,
+    .dashboard .pageContent {
+        padding: 10px !important;
+    }
+
+    .dashboard #search .formSectionContent {
+        padding: 12px !important;
+    }
+
+    .dashboard .inlineSideBar {
+        padding: 12px !important;
+        font-size: 12px !important;
+    }
+
+    .dashboard #search .inputGroup .optionsContent {
+        gap: 6px !important;
+    }
+
+    .dashboard #search select[name*="date"],
+    .dashboard #search select[id*="Date"] {
+        width: 100% !important;
+    }
+
+    .dashboard .roundedBox .hdr h2,
+    .dashboard .sectionHeader h2 {
+        font-size: 13px !important;
+    }
+
+    .dashboard .yui-button button,
+    .dashboard .yui-link-button a,
+    .dashboard .yui-submit-button button {
+        padding: 10px 16px !important;
+        font-size: 13px !important;
+    }
+
+    .dashboard .nestedListTable td,
+    .dashboard .nestedListTable th {
+        font-size: 12px !important;
+    }
+
+    .dashboard .textInput,
+    .dashboard input[type="text"] {
+        font-size: 13px !important;
+        padding: 8px 10px !important;
+    }
+
     .dashboard .radioContainer {
         padding: 10px !important;
     }
@@ -14939,7 +14516,6 @@ img.calendarIcon {
         font-size: 13px !important;
     }
 
-    /* Single column for all date selects */
     .dashboard .inputGroup .optionsContent:has(select[id*="Date"]),
     .dashboard .inputGroup .optionsContent:has(select[name*="date"]) {
         grid-template-columns: 1fr !important;
@@ -14954,7 +14530,6 @@ img.calendarIcon {
         grid-column: 1 / -1 !important;
     }
 
-    /* Payment cards compact */
     .dashboard .formSectionContent > table > tbody > tr > td {
         padding: 10px 14px !important;
     }
@@ -14963,4 +14538,5 @@ img.calendarIcon {
         gap: 16px !important;
         padding: 12px 14px !important;
     }
+
 }
