@@ -326,6 +326,7 @@ form[name="ticketLogForm"] .roundedBox b.bt {
 .yui-dialog .ft .yui-button,
 .yui-dialog .ft .yui-button .first-child,
 form[name="ticketLogForm"] .buttonGroup .yui-button {
+    flex: 1;
     display: inline-flex !important;
     background: none !important;
     border: none !important;
@@ -375,12 +376,6 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
     width: 100% !important;
     background-color: var(--color-primary-light) !important;
     font-weight: 600 !important;
-}
-
-/* Secondary buttons (submit buttons in form button groups) */
-.dashboard .formSectionContent .buttonGroup .yui-submit-button button {
-    background-color: var(--border) !important;
-    color: var(--color-dark) !important;
 }
 
 /* Primary override for login-button and report submit */
