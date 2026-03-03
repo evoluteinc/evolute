@@ -2065,7 +2065,8 @@ body.login {
     background-size: contain;
 }
 
-.dashboard #links a[onclick*="sellerGuide"]::before {
+.dashboard #links a[onclick*="sellerGuide"]::before,
+.dashboard #links a[onclick*="buyerGuide"]::before {
     content: '';
     width: 16px;
     height: 16px;
@@ -3540,6 +3541,9 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .wizard-summary .boxContent,
 .dashboard .redBox .boxContent,
 .dashboard .redBox .pageContent {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     padding: 0;
 }
 
@@ -3699,7 +3703,13 @@ div.grid_1_1#leftInnerGrid {
     width: 100% !important;
     border-collapse: collapse !important;
     min-width: auto !important;
+    margin: 0 !important;
     background-color: var(--color-white) !important;
+}
+
+.dashboard table#activeOrdersList td.first,
+.dashboard table#activeOrdersList td.last {
+    border: 0 !important;
 }
 
 .dashboard .nestedListTable thead tr.actions td,
@@ -4266,12 +4276,6 @@ div.grid_1_1#leftInnerGrid {
     display: flex;
     flex-direction: column;
     gap: 24px;
-}
-
-.dashboard .gridWrapper .grid_1_1 .column .blueBox.integration,
-.dashboard .blueBox.integration .sideBarGroup,
-.dashboard #searchFieldsDiv {
-    flex: 1;
 }
 
 .dashboard .blueBox.integration {
@@ -9280,17 +9284,8 @@ img.calendarIcon {
 }
 
 .dashboard #fusionChartContainer {
-    padding: 0 16px 16px;
+    padding: 16px;
     height: auto !important;
-}
-
-.dashboard .noChartData {
-    padding: 32px 24px;
-    text-align: center;
-    color: var(--color-gray);
-    font-size: 14px;
-    background-color: var(--bg-light);
-    border-radius: 8px;
 }
 
 /* Orders container */
@@ -9872,11 +9867,14 @@ img.calendarIcon {
 
 .dashboard #leadManagerQuickLinksDiv .inlineSideBar {
     flex: 1;
-    display: block;
+    display: flex;
     font-size: 13px;
     line-height: 1.6;
     color: var(--color-gray);
     padding: 16px;
+    border: 0 !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
