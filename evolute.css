@@ -249,3 +249,9 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
 .dashboard .options {
     flex: 0 1 auto !important;
 }
+
+.plainText {
+	padding-right: 5px;
+	display:flex;
+	align-items: center;
+}
