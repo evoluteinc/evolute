@@ -195,6 +195,166 @@ form[name="ticketLogForm"] .roundedBox b.bt {
     display: none !important;
 }
 
+/* HERE ITS COMBINED */
+
+/* Inputs */
+.login .textInput,
+.dashboard input[type="text"],
+.dashboard input.textInput {
+    padding: 10px 12px !important;
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
+    background: var(--color-white) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 6px !important;
+    outline: none !important;
+    transition: all 0.15s !important;
+    font-family: inherit !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Selects */
+.dashboard select {
+    padding: 10px 36px 10px 12px !important;
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
+    background: var(--color-white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2371717a' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 12px center !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 6px !important;
+    outline: none !important;
+    transition: all 0.15s !important;
+    font-family: inherit !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    cursor: pointer !important;
+}
+
+/* Textareas */
+.dashboard textarea {
+    padding: 10px 12px !important;
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
+    background: var(--color-white) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 6px !important;
+    outline: none !important;
+    transition: all 0.15s !important;
+    font-family: inherit !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    resize: vertical !important;
+    min-height: 100px !important;
+    line-height: 1.5 !important;
+}
+
+/* Input/Select/Textarea hover */
+.login .textInput:hover,
+.dashboard input[type="text"]:hover,
+.dashboard input.textInput:hover,
+.dashboard select:hover,
+.dashboard textarea:hover {
+    border-color: var(--color-muted) !important;
+}
+
+/* Input/Select/Textarea focus */
+.login .textInput:focus,
+.dashboard input[type="text"]:focus,
+.dashboard input.textInput:focus,
+.dashboard select:focus,
+.dashboard textarea:focus {
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1) !important;
+    outline: none !important;
+}
+
+/* Checkboxes & Radios */
+.dashboard input[type="checkbox"],
+.dashboard input[type="radio"] {
+    width: 16px !important;
+    height: 16px !important;
+    accent-color: var(--color-primary) !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+    vertical-align: middle !important;
+}
+
+.dashboard input[type="checkbox"] + label,
+.dashboard label:has(input[type="radio"]) {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
+    cursor: pointer !important;
+}
+
+/* YUI Button/Link wrapper reset */
+.login .yui-button,
+.login .yui-button .first-child,
+.dashboard .yui-button,
+.dashboard .yui-link-button,
+.dashboard .yui-submit-button,
+.dashboard .yui-button .first-child,
+.dashboard .yui-link-button .first-child,
+.dashboard .yui-submit-button .first-child,
+.yui-dialog .ft .yui-button,
+.yui-dialog .ft .yui-button .first-child,
+form[name="ticketLogForm"] .buttonGroup .yui-button {
+    display: inline-flex !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Buttons */
+.login #submitButton-button,
+.dashboard .yui-button button,
+.dashboard .yui-submit-button button,
+.dashboard .yui-link-button a,
+.yui-dialog .ft .yui-button button,
+form[name="ticketLogForm"] .buttonGroup .yui-button button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    height: 40px !important;
+    min-height: 40px !important;
+    padding: 0 16px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+    border-radius: 8px !important;
+    border: none !important;
+    outline: 0 !important;
+    cursor: pointer !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    transition: all 0.2s ease !important;
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
+    text-decoration: none !important;
+    font-family: inherit !important;
+    white-space: nowrap !important;
+}
+
+/* Secondary buttons (submit buttons in form button groups) */
+.dashboard .formSectionContent .buttonGroup .yui-submit-button button {
+    background-color: var(--border) !important;
+    color: var(--color-dark) !important;
+}
+
+/* Primary override for login-button and report submit */
+.dashboard .formSectionContent .buttonGroup .yui-submit-button.login-button button,
+.dashboard .reports #submitHtmlButton button,
+.dashboard .reports #submitHtmlButton-button {
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
+}
+
 /* clean classes */
 
 
@@ -1092,40 +1252,6 @@ body.login {
     width: 100% !important;
 }
 
-.login .yui-button {
-    border-width: 0;
-    border-style: none;
-    border-color: transparent;
-    background: none !important;
-    margin: 0 !important;
-    width: 100%;
-}
-
-.login .yui-button .first-child {
-    border-width: 0;
-    border-style: none;
-    border-color: transparent;
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100%;
-}
-
-.login #submitButton-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 40px;
-    border: none;
-    border-radius: 8px;
-    color: var(--color-white);
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1;
-    cursor: pointer;
-    background-color: var(--color-primary-light);
-}
-
 .login .inputGroup {
     display: flex;
     flex-direction: column;
@@ -1159,23 +1285,6 @@ body.login {
     padding-left: 0 !important;
     line-height: 1 !important;
     position: relative;
-}
-
-.login .textInput {
-    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
-    display: flex;
-    padding: 0 12px;
-    width: 100%;
-    height: 40px;
-    color: var(--color-gray) !important;
-    border-radius: 8px;
-    background: var(--color-white);
-    outline: none;
-    box-shadow: 0;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border: 1px solid var(--border) !important;    
 }
 
 .login #NestedFormPage div.options input:focus {
@@ -1457,22 +1566,6 @@ body.login {
     width: 100%;
     padding: 0 !important;
     margin: 0 !important;
-}
-
-.login form[name="changePasswordForm"] .yui-button.yui-submit-button {
-    display: flex;
-    width: 100%;
-    background: none !important;
-    border: none !important;
-    margin: 0 !important;
-}
-
-.login form[name="changePasswordForm"] .yui-button.yui-submit-button .first-child {
-    display: flex;
-    width: 100%;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: none !important;
 }
 
 .login form[name="changePasswordForm"] .yui-button.yui-submit-button button {
@@ -2449,14 +2542,6 @@ body.login {
     text-align: left;
 }
 
-.dashboard #Main:has([name="publisher_signup_v2_1"]) table.trafficDrivers tbody tr td.checkboxCell input[type="checkbox"],
-.dashboard #Main:has([name="publisher_signup_v2_2"]) table.trafficDrivers tbody tr td.checkboxCell input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-    margin: 0;
-}
-
 .dashboard #Main:has([name="publisher_signup_v2_1"]) table.trafficDrivers tbody tr td label,
 .dashboard #Main:has([name="publisher_signup_v2_2"]) table.trafficDrivers tbody tr td label {
     font-size: 14px;
@@ -2895,86 +2980,6 @@ div.titleDiv {
     background: transparent !important;
 }
 
-.dashboard .optionsContent label,
-.dashboard label:has(input[type="radio"]) {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-right: 24px;
-    margin-bottom: 8px;
-    cursor: pointer;
-}
-
-/* Form Inputs */
-
-.dashboard input[type="text"],
-.dashboard input.textInput {
-    width: 100% !important;
-    height: 40px !important;
-    padding: 0 14px !important;
-    font-size: 14px !important;
-    font-weight: 500 !important;
-    line-height: 1 !important;
-    color: var(--color-dark) !important;
-    background-color: var(--color-white) !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 8px !important;
-    transition: border-color 0.2s ease !important;
-}
-
-.dashboard input[type="text"]:focus,
-.dashboard input.textInput:focus,
-.dashboard select:focus {
-    outline: none !important;
-    border-color: var(--color-primary-light) !important;
-}
-
-.dashboard select {
-    width: 100%;
-    height: 40px;
-    padding: 0 14px !important;
-    color: var(--color-dark) !important;
-    font-size: 14px !important;
-    font-weight: 400;
-    line-height: 1;
-    background-color: var(--color-white) !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 8px !important;
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") !important;
-    background-repeat: no-repeat !important;
-    background-position: right 12px center !important;
-    background-size: 16px !important;
-    padding-right: 40px !important;
-    cursor: pointer;
-}
-
-.dashboard input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    margin: 0;
-    cursor: pointer;
-    accent-color: var(--color-primary-light);
-    vertical-align: middle;
-}
-
-.dashboard input[type="checkbox"] + label {
-    font-size: 14px;
-    color: var(--color-dark);
-    cursor: pointer;
-    vertical-align: middle;
-}
-
-.dashboard input[type="radio"] {
-    width: 18px;
-    height: 18px;
-    margin: 0 8px 0 0;
-    cursor: pointer;
-    accent-color: var(--color-primary-light);
-    vertical-align: middle;
-}
-
 /* Buttons */
 
 .dashboard .buttonGroup {
@@ -2986,41 +2991,6 @@ div.titleDiv {
     clear: none !important;
     text-align: left !important;
     white-space: normal !important;
-}
-
-.dashboard .buttonGroup .yui-button,
-.dashboard .formSectionContent .buttonGroup .yui-button,
-.dashboard .labelValue .value .yui-button {
-    float: none;
-    margin: 0;
-}
-
-.dashboard .buttonGroup .yui-button button,
-.dashboard .buttonGroup .yui-button a,
-.dashboard .formSectionContent .yui-button button,
-.dashboard .formSectionContent .yui-button a {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 12px 24px !important;
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    border: none !important;
-    border-radius: 8px !important;
-    cursor: pointer !important;
-    white-space: nowrap !important;
-    text-decoration: none !important;
-    transition: all 0.15s ease !important;
-    background-color: var(--color-primary) !important;
-    color: var(--color-white) !important;
-}
-
-.dashboard .buttonGroup .yui-submit-button button:hover,
-.dashboard .formSectionContent .yui-submit-button button:hover,
-.dashboard .buttonGroup .yui-button button:hover,
-.dashboard .formSectionContent .yui-button button:hover {
-    background-color: var(--color-primary-light) !important;
-    transform: translateY(-1px);
 }
 
 /* Integration Options */
@@ -3288,8 +3258,7 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard .sellerHomeContentBoxL .boxContent > a:hover,
-.dashboard .sellerHomeContentBoxR .boxContent > a:hover,
-.dashboard .formSectionContent .buttonGroup .yui-submit-button button:hover {
+.dashboard .sellerHomeContentBoxR .boxContent > a:hover {
     background-color: var(--border);
 }
 
@@ -3515,15 +3484,7 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .formSectionContent .yui-button button:hover,
 .dashboard .formSectionContent .yui-submit-button button:hover,
 .dashboard .reportContainer .reportLink2:hover,
-.dashboard .formSectionContent .buttonGroup .yui-submit-button.login-button button:hover,
-.dashboard .ordersTable .searchOrders button:hover,
-.dashboard .reports #submitHtmlButton button:hover,
-.dashboard .reports #submitHtmlButton-button:hover,
-.dashboard .yui-button button:hover,
-.dashboard .yui-submit-button button:hover,
-.dashboard .yui-link-button a:hover {
-    background-color: var(--color-primary-light);
-}
+
 
 .dashboard #settingssubnav .subsection {
     padding-left: 8px;
@@ -3595,35 +3556,6 @@ div.grid_1_1#leftInnerGrid {
     margin: 0;
     cursor: pointer;
     vertical-align: middle;
-}
-
-.dashboard .formSectionContent .buttonGroup {
-    display: flex;
-    justify-content: flex-start;
-    padding: 20px 0 0;
-    margin: 0;
-    float: none;
-    clear: both;
-}
-
-.dashboard .formSectionContent .yui-button {
-    float: none;
-}
-
-.dashboard .formSectionContent .yui-button button,
-.dashboard .formSectionContent .yui-submit-button button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    font-size: 14px;
-    font-weight: 500;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.15s ease;
 }
 
 /* ========== REPORTS ========== */
@@ -4584,29 +4516,6 @@ div.grid_1_1#leftInnerGrid {
     max-width: 130px !important;
 }
 
-/* Extension input - typically no size attribute but should be small */
-
-.dashboard .formSectionContent textarea {
-    width: 100%;
-    max-width: 400px;
-    padding: 10px 14px;
-    font-size: 14px;
-    color: var(--color-dark);
-    background-color: var(--color-white);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    resize: vertical;
-    min-height: 100px;
-}
-
-.dashboard .formSectionContent .radio,
-.dashboard .formSectionContent input[type="radio"],
-.dashboard .formSectionContent input[type="checkbox"] {
-    margin: 0 6px 0 0;
-    cursor: pointer;
-    vertical-align: middle;
-}
-
 .dashboard .formSectionContent .instructions,
 .dashboard .ordersTable .smallGrey {
     font-size: 12px;
@@ -4695,37 +4604,6 @@ div.grid_1_1#leftInnerGrid {
     border-color: var(--color-primary-light);
     transform: translateY(-1px);
     box-shadow: 0 2px 8px rgba(0, 66, 121, 0.2);
-}
-
-/* Wizard Button Group */
-.dashboard .formSectionContent .buttonGroup {
-    display: flex;
-    gap: 12px;
-    padding: 20px;
-    margin: 0;
-    float: none;
-}
-
-.dashboard .formSectionContent .buttonGroup .yui-button button {
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: 500;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.15s ease;
-}
-
-.dashboard .formSectionContent .buttonGroup .yui-submit-button button {
-    background-color: var(--border);
-    color: var(--color-dark);
-}
-
-.dashboard .formSectionContent .buttonGroup .yui-submit-button.login-button button,
-.dashboard .reports #submitHtmlButton button,
-.dashboard .reports #submitHtmlButton-button {
-    background-color: var(--color-primary);
-    color: var(--color-white);
 }
 
 /* Status Badges */
@@ -4954,10 +4832,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .ordersTable #search .yui-button a {
     height: 42px !important;
     padding: 0 20px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    box-sizing: border-box !important;
 }
 
 .dashboard .ordersTable #search .yui-button,
@@ -6350,20 +6224,8 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     padding: 20px 0 !important;
 }
 
-.dashboard .settings .formSectionContent .buttonGroup .yui-button {
-    float: none !important;
-    margin: 0 !important;
-}
-
 .dashboard .settings .formSectionContent .buttonGroup .yui-link-button .first-child a,
 .dashboard .settings .formSectionContent .buttonGroup .yui-submit-button .first-child button {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 12px 24px !important;
-    font-size: 14px !important;
-    font-weight: 500 !important;
-    border-radius: 8px !important;
     min-width: 140px !important;
 }
 
@@ -6372,16 +6234,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     background-color: var(--color-white) !important;
     border: 1px solid var(--border) !important;
     text-decoration: none !important;
-}
-
-.dashboard .settings .formSectionContent .buttonGroup .yui-submit-button .first-child button,
-.dashboard #buttons .nextbutton .first-child button,
-.dashboard #buttons #save .first-child button,
-.dashboard .summaryActions .yui-button:first-child .first-child button,
-.dashboard .actionButtons .yui-button:first-child .first-child button {
-    color: var(--color-white) !important;
-    background-color: var(--color-primary) !important;
-    border: none !important;
 }
 
 .dashboard .settings .formSectionContent .buttonGroup .yui-submit-button .first-child button:hover,
@@ -6394,29 +6246,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 .dashboard #formContainer #bottomButton .buttonGroup .yui-button .first-child button:hover:not(:disabled),
 .dashboard .blueBox .yui-button a:hover {
     background-color: var(--color-primary-light) !important;
-}
-
-/* ========== CONSUMER BRAND LIST - CREATE BUTTON FIX ========== */
-
-.dashboard .settings table.nestedListTable thead tr td.paginationTop .yui-button.yui-link-button {
-    float: none !important;
-    background: none !important;
-    border: none !important;
-}
-
-.dashboard .settings table.nestedListTable thead tr td.paginationTop .yui-button.yui-link-button .first-child a {
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 6px !important;
-    padding: 10px 20px !important;
-    font-size: 14px !important;
-    font-weight: 500 !important;
-    color: var(--color-white) !important;
-    background-color: var(--color-primary) !important;
-    border: none !important;
-    border-radius: 8px !important;
-    text-decoration: none !important;
-    white-space: nowrap !important;
 }
 
 /* ========== LEAD CHANNEL DETAIL - HEADER/TABS ========== */
@@ -7795,39 +7624,15 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 .yui-dialog .ft .button-group .yui-button,
 .yui-dialog .ft span.yui-button {
     float: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: inline-flex !important;
-    background: transparent !important;
-    border: none !important;
     box-shadow: none !important;
-}
-
-.yui-dialog .ft .button-group .yui-button .first-child,
-.yui-dialog .ft span.yui-button .first-child {
-    display: inline-flex !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: transparent !important;
-    border: none !important;
 }
 
 .yui-dialog .ft .button-group .yui-button button,
 .yui-dialog .ft span.yui-button button {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 8px !important;
     padding: 12px 24px !important;
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    border-radius: 8px !important;
     border: 1px solid var(--border) !important;
     background-color: var(--color-white) !important;
     color: var(--color-dark) !important;
-    cursor: pointer !important;
-    transition: all 0.2s ease !important;
-    white-space: nowrap !important;
 }
 
 .yui-dialog .ft .button-group .yui-button button:hover,
@@ -8560,15 +8365,6 @@ form[name="ticketLogForm"] .buttonGroup .yui-button .first-child {
 
 form[name="ticketLogForm"] .buttonGroup .yui-button button {
     width: 100% !important;
-    padding: 12px 24px !important;
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    font-family: inherit !important;
-    color: var(--color-white) !important;
-    background: var(--color-primary) !important;
-    border: none !important;
-    border-radius: 6px !important;
-    cursor: pointer !important;
 }
 
 form[name="ticketLogForm"] .buttonGroup .yui-button button:hover {
@@ -8895,19 +8691,6 @@ img.calendarIcon {
     background: none !important;
     padding: 0 !important;
     margin: 0 !important;
-}
-
-.dashboard .reports .yui-button button,
-.dashboard .reports .yui-submit-button button {
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.15s ease;
-    white-space: nowrap;
 }
 
 .dashboard .reports #submitExcelButton button,
@@ -9828,40 +9611,6 @@ img.calendarIcon {
 }
 
 /* YUI button overrides */
-.dashboard .yui-button,
-.dashboard .yui-link-button,
-.dashboard .yui-submit-button {
-    display: inline-flex !important;
-    background: none !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-.dashboard .yui-button .first-child,
-.dashboard .yui-link-button .first-child,
-.dashboard .yui-submit-button .first-child {
-    background: none !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-.dashboard .yui-button button,
-.dashboard .yui-submit-button button,
-.dashboard .yui-link-button a {
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 10px 20px !important;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    text-decoration: none;
-    transition: background-color 0.15s ease;
-}
 
 /* Overview section */
 .dashboard #overview,
