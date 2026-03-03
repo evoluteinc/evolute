@@ -2465,6 +2465,7 @@ body.login {
 
 .dashboard #Main:has(#buyerSignupFormv22) #MainContent {
     width: auto;
+    min-height: auto !important;
 }
 
 .dashboard #Main:has([name="publisher_signup_v2_1"]) #MainContent,
