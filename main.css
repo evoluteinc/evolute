@@ -852,13 +852,20 @@ button:disabled {
 }
 
 .checkboxes,
+.radios {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
 .checkboxes .label,
 .radios .label {
+    color: var(--color-dark);
     font-size: 13px;
     font-weight: 500;
-    color: var(--color-dark);
-    margin-bottom: 2px;
+    line-height: 1.5;
 }
+
 .checkboxes .option,
 .radios .option {
     display: flex;
