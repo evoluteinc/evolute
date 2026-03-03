@@ -11597,7 +11597,7 @@ img.calendarIcon {
 
     .dashboard .formSectionContent .inputGroup {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
     }
 
     .dashboard .formSectionContent .mainLabel {
