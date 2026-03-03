@@ -57,6 +57,7 @@ ul {
 }
 
 input,
+select,
 button,
 textarea {
     font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -195,12 +196,9 @@ form[name="ticketLogForm"] .roundedBox b.bt {
     display: none !important;
 }
 
-/* HERE ITS COMBINED */
-
 /* Inputs */
 .dashboard input[type="text"],
 .dashboard input.textInput {
-    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
     padding: 10px 12px !important;
     font-size: 14px !important;
     color: var(--color-dark) !important;
@@ -209,14 +207,12 @@ form[name="ticketLogForm"] .roundedBox b.bt {
     border-radius: 6px !important;
     outline: none !important;
     transition: all 0.15s !important;
-    font-family: inherit !important;
     width: 100% !important;
     box-sizing: border-box !important;
 }
 
 /* Login inputs */
 .login .textInput {
-    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
     padding: 0 12px;
     width: 100%;
     height: 40px;
@@ -234,7 +230,6 @@ form[name="ticketLogForm"] .roundedBox b.bt {
 
 /* Selects */
 .dashboard select {
-    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
     padding: 10px 36px 10px 12px !important;
     font-size: 14px !important;
     color: var(--color-dark) !important;
@@ -252,7 +247,6 @@ form[name="ticketLogForm"] .roundedBox b.bt {
 
 /* Textareas */
 .dashboard textarea {
-    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
     padding: 10px 12px !important;
     font-size: 14px !important;
     color: var(--color-dark) !important;
@@ -341,7 +335,6 @@ form[name="ticketLogForm"] .buttonGroup .yui-button {
 .dashboard .yui-link-button a,
 .yui-dialog .ft .yui-button button,
 form[name="ticketLogForm"] .buttonGroup .yui-button button {
-    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -387,7 +380,6 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
 }
 
 /* clean classes */
-
 
 .operatorOnly {
     color: var(--color-warning);
@@ -474,6 +466,7 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
     max-width: 420px;
     overflow: hidden;
 }
+
 dialog.modal {
     top: 50%;
     left: 50%;
@@ -796,7 +789,6 @@ button:disabled {
     border-radius: 6px;
     outline: none;
     transition: all 0.15s;
-    font-family: inherit;
     width: 100%;
     box-sizing: border-box;
 }
@@ -823,7 +815,6 @@ button:disabled {
     border-radius: 6px;
     outline: none;
     transition: all 0.15s;
-    font-family: inherit;
     width: 100%;
     box-sizing: border-box;
     appearance: none;
@@ -838,7 +829,6 @@ button:disabled {
     border-radius: 6px;
     outline: none;
     transition: all 0.15s;
-    font-family: inherit;
     width: 100%;
     box-sizing: border-box;
     resize: vertical;
@@ -5557,7 +5547,6 @@ div.grid_1_1#leftInnerGrid {
     display: block !important;
     padding: 16px 20px !important;
     font-size: 14px !important;
-    font-family: 'SF Mono', Monaco, 'Courier New', monospace !important;
     color: var(--color-primary) !important;
     background-color: var(--bg-info) !important;
     border: 1px solid var(--bg-info) !important;
@@ -6089,7 +6078,6 @@ form[name="ticketLogForm"] .formSectionContent {
 /* Percentage styling */
 .dashboard #connectionsTable tbody tr td:contains("%") {
     font-weight: 500 !important;
-    font-family: 'SF Mono', 'Monaco', 'Consolas', monospace !important;
 }
 
 /* Make help icons consistent */
@@ -7089,7 +7077,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     background-color: var(--color-white) !important;
     text-align: center !important;
     transition: all 0.2s ease !important;
-    font-family: 'SF Mono', 'Monaco', 'Consolas', monospace !important;
 }
 
 .dashboard table.pricegrid input.textInput:focus {
@@ -7838,7 +7825,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .requiredMarker {
     border-radius: 6px !important;
     box-sizing: border-box !important;
     resize: vertical !important;
-    font-family: inherit !important;
 }
 
 /* Remove background from optionsContent when it contains textarea */
@@ -8159,7 +8145,6 @@ div[id*="panel"] {
 .yui-panel,
 .yui-simple-dialog,
 .yui-dialog {
-    font-family: Arial, Helvetica, sans-serif !important;
     font-size: 13px !important;
 }
 
@@ -8272,7 +8257,6 @@ img[src*="warning.gif"] {
 /* These styles target the help popup window which opens separately */
 
 form[name="ticketLogForm"] {
-    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 14px;
     line-height: 1.5;
     color: var(--color-dark);
@@ -8340,7 +8324,6 @@ form[name="ticketLogForm"] .inputGroup .options input.textInput {
     max-width: 100% !important;
     padding: 10px 12px !important;
     font-size: 14px !important;
-    font-family: inherit !important;
     border: 1px solid var(--border) !important;
     border-radius: 6px !important;
     background: var(--color-white) !important;
@@ -8361,7 +8344,6 @@ form[name="ticketLogForm"] .inputGroup .options textarea {
     min-height: 120px !important;
     padding: 10px 12px !important;
     font-size: 14px !important;
-    font-family: inherit !important;
     border: 1px solid var(--border) !important;
     border-radius: 6px !important;
     background: var(--color-white) !important;
@@ -8644,7 +8626,6 @@ img.calendarIcon {
 /* Report filter select dropdown */
 .dashboard .reports .filter select,
 .dashboard .reports .filter .rptFilterSelect {
-    font-family: inherit;
     font-size: 14px;
     padding: 10px 36px 10px 12px;
     border: 1px solid var(--border);
@@ -8688,7 +8669,6 @@ img.calendarIcon {
 /* Report filter date inputs */
 .dashboard .reports .filter input[type="text"],
 .dashboard .reports .filter .textInput {
-    font-family: inherit;
     font-size: 14px;
     padding: 10px 12px;
     border: 1px solid var(--border);
@@ -8875,7 +8855,6 @@ img.calendarIcon {
 
 /* Sample HTTP POST string section */
 .dashboard .reports table.reportResults td.rptDataLeft {
-    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
     font-size: 12px !important;
     word-break: break-all;
     white-space: normal !important;
@@ -8940,7 +8919,6 @@ img.calendarIcon {
 }
 
 .dashboard .reports .calendarWithSelects select {
-    font-family: inherit;
     font-size: 14px;
     padding: 10px 30px 10px 10px;
     border: 1px solid var(--border);
@@ -12336,7 +12314,6 @@ img.calendarIcon {
     }
 
     .dashboard .formSectionContent > table > tbody > tr > td:nth-child(2) {
-        font-family: 'Courier New', monospace !important;
         font-size: 14px !important;
         letter-spacing: 1px !important;
     }
