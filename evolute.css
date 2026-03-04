@@ -124,6 +124,12 @@ a.btn-primary:hover{
     margin: 1em;
 }
 
+/*fix for seller home page*/
+.dashboard .wizard-summary .boxContent{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 /*brand management instructions*/
 .dashboard .settings .formSectionContent p.instructions {
     padding: 0 !important;
