@@ -198,17 +198,22 @@ form[name="ticketLogForm"] .roundedBox b.bt {
 
 /* Inputs */
 .dashboard input[type="text"],
+.dashboard input[type="date"],
+.dashboard input[type="number"],
 .dashboard input.textInput {
+    width: 100% !important;
+    height: 40px !important;
     padding: 10px 12px !important;
     font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
     color: var(--color-dark) !important;
     background: var(--color-white) !important;
-    border: 1px solid var(--border) !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: var(--border) !important;
     border-radius: 6px !important;
-    outline: none !important;
-    transition: all 0.15s !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
+    transition: all 0.2s !important;
 }
 
 /* Login inputs */
@@ -217,15 +222,13 @@ form[name="ticketLogForm"] .roundedBox b.bt {
     width: 100%;
     height: 40px;
     font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
     color: var(--color-dark);
     background: var(--color-white);
     border: 1px solid var(--border);
     border-radius: 8px;
-    outline: none;
-    transition: all 0.15s;
-    box-sizing: border-box;
-    appearance: none;
-    -webkit-appearance: none;
+    transition: all 0.2s;
 }
 
 /* Selects */
@@ -236,10 +239,8 @@ form[name="ticketLogForm"] .roundedBox b.bt {
     background: var(--color-white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2371717a' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 12px center !important;
     border: 1px solid var(--border) !important;
     border-radius: 6px !important;
-    outline: none !important;
-    transition: all 0.15s !important;
+    transition: all 0.2s !important;
     width: 100% !important;
-    box-sizing: border-box !important;
     appearance: none !important;
     -webkit-appearance: none !important;
     cursor: pointer !important;
@@ -249,45 +250,41 @@ form[name="ticketLogForm"] .roundedBox b.bt {
 .dashboard textarea {
     padding: 10px 12px !important;
     font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
     color: var(--color-dark) !important;
     background: var(--color-white) !important;
     border: 1px solid var(--border) !important;
     border-radius: 6px !important;
-    outline: none !important;
-    transition: all 0.15s !important;
+    transition: all 0.2s !important;
     width: 100% !important;
-    box-sizing: border-box !important;
     resize: vertical !important;
     min-height: 100px !important;
-    line-height: 1.5 !important;
 }
 
-/* Input/Select/Textarea hover */
 .login .textInput:hover,
 .dashboard input[type="text"]:hover,
+.dashboard input[type="date"]:hover,
+.dashboard input[type="number"]:hover,
 .dashboard input.textInput:hover,
 .dashboard select:hover,
 .dashboard textarea:hover {
     border-color: var(--color-muted) !important;
 }
 
-/* Input/Select/Textarea focus */
 .dashboard input[type="text"]:focus,
+.dashboard input[type="date"]:focus,
+.dashboard input[type="number"]:focus,
 .dashboard input.textInput:focus,
 .dashboard select:focus,
 .dashboard textarea:focus {
     border-color: var(--color-primary) !important;
-    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1) !important;
-    outline: none !important;
 }
 
 .login .textInput:focus {
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
-    outline: none;
 }
 
-/* Checkboxes & Radios (legacy only, not inside clean class containers) */
 .dashboard input[type="checkbox"],
 .dashboard input[type="radio"] {
     width: 16px;
@@ -348,7 +345,6 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
     line-height: 1 !important;
     border-radius: 8px !important;
     border: none !important;
-    outline: 0 !important;
     cursor: pointer !important;
     appearance: none !important;
     -webkit-appearance: none !important;
@@ -639,7 +635,6 @@ dialog.modal {
     border-width: 2px;
     border-style: solid;
     border-color: transparent;
-    outline: 0;
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
@@ -731,7 +726,6 @@ button:disabled {
     border-color: var(--color-muted);
 }
 .datepicker .select:focus {
-    outline: none;
     border-color: var(--color-primary);
 }
 .datepicker .weekdays,
@@ -841,10 +835,8 @@ button:disabled {
     background: var(--color-white);
     border: 1px solid var(--border);
     border-radius: 6px;
-    outline: none;
     transition: all 0.15s;
     width: 100%;
-    box-sizing: border-box;
 }
 .field .input:hover,
 .field .select:hover,
@@ -855,7 +847,6 @@ button:disabled {
 .field .select:focus,
 .field .textarea:focus {
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
 }
 .field .input::placeholder {
     color: var(--color-muted);
@@ -867,10 +858,8 @@ button:disabled {
     background: var(--color-white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2371717a' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 12px center;
     border: 1px solid var(--border);
     border-radius: 6px;
-    outline: none;
     transition: all 0.15s;
     width: 100%;
-    box-sizing: border-box;
     appearance: none;
     cursor: pointer;
 }
@@ -881,10 +870,8 @@ button:disabled {
     background: var(--color-white);
     border: 1px solid var(--border);
     border-radius: 6px;
-    outline: none;
     transition: all 0.15s;
     width: 100%;
-    box-sizing: border-box;
     resize: vertical;
     min-height: 100px;
     line-height: 1.5;
@@ -922,7 +909,6 @@ button:disabled {
     cursor: pointer;
     margin: 0;
 }
-
 
 .table {
     width: 100%;
@@ -1599,7 +1585,6 @@ body.login {
     gap: 16px;
     padding: 32px 24px !important;
     width: 100%;
-    box-sizing: border-box;
 }
 
 .login form[name="changePasswordForm"] .formSectionContent:last-of-type {
@@ -1634,12 +1619,10 @@ body.login {
     border: 1px solid var(--border) !important;
     border-radius: 10px !important;
     background-color: var(--bg-light) !important;
-    box-sizing: border-box !important;
     transition: all 0.2s ease !important;
 }
 
 .login form[name="changePasswordForm"] input.textInput.password:focus {
-    outline: none !important;
     border-color: var(--color-primary-light) !important;
     background-color: var(--color-white) !important;
     box-shadow: 0 0 0 3px rgba(0, 96, 167, 0.1) !important;
@@ -4319,7 +4302,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .formSectionContent .textInput:focus,
 .dashboard .ordersTable #friendId:focus,
 .dashboard .ordersTable #productDiv select:focus {
-    outline: none;
     border-color: var(--color-primary-light);
 }
 
@@ -4908,7 +4890,6 @@ div.grid_1_1#leftInnerGrid {
     gap: 12px;
     align-items: stretch;
     width: 100%;
-    box-sizing: border-box;
 }
 
 /* Make all search elements same height */
@@ -4933,7 +4914,6 @@ div.grid_1_1#leftInnerGrid {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    box-sizing: border-box !important;
 }
 
 .dashboard .ordersTable #selectorDiv {
@@ -4958,7 +4938,6 @@ div.grid_1_1#leftInnerGrid {
     border: 1px solid var(--border);
     border-radius: 8px;
     transition: border-color 0.15s ease;
-    box-sizing: border-box !important;
 }
 
 .dashboard .ordersTable #productDiv {
@@ -4981,7 +4960,6 @@ div.grid_1_1#leftInnerGrid {
     background-size: 16px;
     cursor: pointer;
     transition: border-color 0.15s ease;
-    box-sizing: border-box !important;
 }
 
 .dashboard .ordersTable #checkBoxDiv {
@@ -5333,7 +5311,6 @@ div.grid_1_1#leftInnerGrid {
     border-radius: 6px !important;
     text-align: center !important;
     font-size: 14px !important;
-    box-sizing: border-box !important;
 }
 
 .dashboard .settings .sellerBidMinimum tbody .smallGrey {
@@ -5499,7 +5476,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .settings .noticePeriodsContainer .roundedBox .hdr {
     flex-shrink: 0 !important;
     width: 100% !important;
-    box-sizing: border-box !important;
     padding: 16px 20px !important;
     min-height: 70px !important;
     display: flex !important;
@@ -7143,7 +7119,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 
 .dashboard table.pricegrid input.textInput:focus {
     border-color: var(--color-primary) !important;
-    outline: none !important;
     background-color: var(--color-white) !important;
     box-shadow: 0 0 0 3px rgba(33, 118, 203, 0.1) !important;
 }
@@ -7367,7 +7342,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     border-radius: 8px !important;
     border: 1px solid var(--border) !important;
     width: 100% !important;
-    box-sizing: border-box !important;
 }
 
 .dashboard #formContainer .leadtypecontainer .leadtype label {
@@ -7406,7 +7380,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     border-radius: 8px !important;
     border: 1px solid var(--border) !important;
     width: 100% !important;
-    box-sizing: border-box !important;
 }
 
 /* Bottom continue button */
@@ -7472,7 +7445,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 .dashboard #filtersContainer .dropDown.filter select:focus,
 .yui-panel-container .yui-panel .bd select:focus {
     border-color: var(--color-primary) !important;
-    outline: none !important;
 }
 
 /* Checkbox filter sections (State, Language) */
@@ -7768,7 +7740,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     align-items: center !important;
     justify-content: center !important;
     padding: 0 !important;
-    box-sizing: border-box !important;
     background: var(--overlay) !important;
 }
 
@@ -7885,7 +7856,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .requiredMarker {
     background: var(--color-white) !important;
     border: 1px solid var(--border) !important;
     border-radius: 6px !important;
-    box-sizing: border-box !important;
     resize: vertical !important;
 }
 
@@ -7899,7 +7869,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .requiredMarker {
 .yui-panel-container .yui-panel .bd textarea:focus,
 .yui-panel-container .yui-panel .bd input[type="text"]:focus,
 .yui-panel-container .yui-panel .bd input[type="email"]:focus {
-    outline: none !important;
     border-color: var(--color-primary) !important;
     box-shadow: 0 0 0 3px rgba(0, 96, 167, 0.1) !important;
 }
@@ -7934,7 +7903,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .requiredMarker {
     background: var(--color-white) !important;
     border: 1px solid var(--border-light, var(--border)) !important;
     border-radius: 8px !important;
-    box-sizing: border-box !important;
     transition: border-color 0.2s, box-shadow 0.2s !important;
 }
 
@@ -8390,12 +8358,10 @@ form[name="ticketLogForm"] .inputGroup .options input.textInput {
     border-radius: 6px !important;
     background: var(--color-white) !important;
     color: var(--color-dark) !important;
-    box-sizing: border-box !important;
 }
 
 form[name="ticketLogForm"] .inputGroup .options input.textInput:focus,
 form[name="ticketLogForm"] .inputGroup .options textarea:focus {
-    outline: none !important;
     border-color: var(--color-primary-light) !important;
     box-shadow: 0 0 0 2px rgba(0, 96, 167, 0.15) !important;
 }
@@ -8411,7 +8377,6 @@ form[name="ticketLogForm"] .inputGroup .options textarea {
     background: var(--color-white) !important;
     color: var(--color-dark) !important;
     resize: vertical !important;
-    box-sizing: border-box !important;
 }
 
 form[name="ticketLogForm"] .buttonGroup {
@@ -8482,7 +8447,6 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button:hover {
 .dashboard .settings input.textInput,
 .dashboard #bidoptions input.textInput {
     max-width: 100% !important;
-    box-sizing: border-box !important;
 }
 
 /* Order form specific fixes */
@@ -8724,7 +8688,6 @@ img.calendarIcon {
 .dashboard select:focus,
 .dashboard .textInput:focus,
 .dashboard input[type="text"]:focus {
-    outline: none;
     border-color: var(--color-primary);
 }
 
@@ -10434,7 +10397,6 @@ img.calendarIcon {
         border-bottom: 1px solid var(--border);
         text-align: right;
         width: 100%;
-        box-sizing: border-box;
     }
 
     .dashboard .ordersTable tbody tr:hover td {
@@ -10517,7 +10479,6 @@ img.calendarIcon {
         padding: 10px 16px;
         border-bottom: 1px solid var(--border);
         width: 100%;
-        box-sizing: border-box;
     }
 
     .dashboard #connectionsTable tbody {
@@ -11714,7 +11675,6 @@ img.calendarIcon {
         padding: 12px 14px;
         align-items: flex-start !important;
         width: 100% !important;
-        box-sizing: border-box;
     }
 
     .dashboard #search {
@@ -11849,7 +11809,6 @@ img.calendarIcon {
     .dashboard .sideBar {
         width: 100% !important;
         max-width: 100% !important;
-        box-sizing: border-box;
     }
 
     .dashboard #managerContainer {
@@ -11912,7 +11871,6 @@ img.calendarIcon {
         width: 100% !important;
         min-width: 0 !important;
         max-width: 100% !important;
-        box-sizing: border-box !important;
     }
 
     .dashboard #search .buttonGroup {
@@ -12138,7 +12096,6 @@ img.calendarIcon {
         border-bottom: 1px solid var(--border) !important;
         text-align: right !important;
         width: 100% !important;
-        box-sizing: border-box !important;
     }
 
     .dashboard .nestedListTable tbody td::before {
@@ -12244,7 +12201,6 @@ img.calendarIcon {
         border: none !important;
         border-bottom: 1px solid var(--border) !important;
         width: 100% !important;
-        box-sizing: border-box !important;
     }
 
     .dashboard .activeOrders tbody td::before,
