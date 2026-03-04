@@ -92,7 +92,7 @@ details > summary {
 }
 
 .proposal-settings-amt-dt{
-    position: unset;
+    position: unset !important;
     left: 0;
     margin-bottom: unset;
     width: unset
