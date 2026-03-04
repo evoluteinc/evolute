@@ -6168,16 +6168,19 @@ form[name="ticketLogForm"] .formSectionContent {
 
 /* ========== WHOLESALE ORDERS - CLEAN COMPACT TABLE ========== */
 
+.dashboard .settings table.nestedListTable.dinamicTable,
 .dashboard .channels table.nestedListTable.ordersTable {
     border-collapse: collapse !important;
 }
 
+.dashboard .settings table.nestedListTable.dinamicTable thead tr.actions td.paginationTop,
 .dashboard .channels table.nestedListTable.ordersTable thead tr.actions td.paginationTop {
     padding: 16px 20px !important;
     font-size: 13px !important;
     line-height: 1.5 !important;
 }
 
+.dashboard .settings table.nestedListTable.dinamicTable thead tr.colheaders th,
 .dashboard .channels table.nestedListTable.ordersTable thead tr.colheaders th {
     padding: 10px 16px !important;
     font-size: 11px !important;
@@ -6189,6 +6192,7 @@ form[name="ticketLogForm"] .formSectionContent {
     border-bottom: 1px solid var(--border) !important;
 }
 
+.dashboard .settings table.nestedListTable.dinamicTable tbody tr td,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td {
     padding: 8px 16px !important;
     font-size: 13px !important;
@@ -6196,12 +6200,14 @@ form[name="ticketLogForm"] .formSectionContent {
     border: none !important;
 }
 
+.dashboard .settings table.nestedListTable.dinamicTable tbody tr td.first,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td.first {
     font-weight: 500 !important;
     color: var(--color-dark) !important;
 }
 
 /* Delivery links - simple inline */
+.dashboard .settings table.nestedListTable.dinamicTable tbody tr td .oliDiv,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv {
     display: inline-flex !important;
     align-items: center !important;
@@ -6209,6 +6215,7 @@ form[name="ticketLogForm"] .formSectionContent {
     padding: 2px 0 !important;
 }
 
+.dashboard .settings table.nestedListTable.dinamicTable tbody tr td .oliDiv .left a,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .left a {
     color: var(--color-primary) !important;
     text-decoration: none !important;
@@ -6216,10 +6223,12 @@ form[name="ticketLogForm"] .formSectionContent {
     white-space: nowrap;
 }
 
+.dashboard .settings table.nestedListTable.dinamicTable tbody tr td .oliDiv .left a:hover,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .left a:hover {
     text-decoration: none !important;
 }
 
+.dashboard .settings table.nestedListTable.dinamicTable tbody tr td .oliDiv .right a,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .right a {
     color: var(--color-error) !important;
     font-size: 12px !important;
@@ -6227,6 +6236,7 @@ form[name="ticketLogForm"] .formSectionContent {
 }
 
 /* Action button - simple text link style */
+.dashboard .settings table.nestedListTable.dinamicTable tbody tr td.last .buttonGroup,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td.last .buttonGroup,
 .mask.show,
 .mask[style*="display: block"],
@@ -6237,6 +6247,7 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     display: block !important;
 }
 
+.dashboard .settings table.nestedListTable.dinamicTable tbody tr td.last .buttonGroup a.addLink,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td.last .buttonGroup a.addLink {
     display: inline-block !important;
     padding: 6px 12px !important;
@@ -6249,11 +6260,13 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     white-space: nowrap !important;
 }
 
+.dashboard .settings table.nestedListTable.dinamicTable tbody tr td.last .buttonGroup a.addLink:hover,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td.last .buttonGroup a.addLink:hover {
     background-color: var(--bg-info) !important;
     border-color: var(--bg-info) !important;
 }
 
+.dashboard .settings table.nestedListTable.dinamicTable tfoot tr.actions td.paginationBottom,
 .dashboard .channels table.nestedListTable.ordersTable tfoot tr.actions td.paginationBottom {
     padding: 16px 20px !important;
     background-color: var(--color-white) !important;
