@@ -193,7 +193,7 @@ form[name="ticketLogForm"] .roundedBox .hdr .tl,
 form[name="ticketLogForm"] .roundedBox .hdr .tr,
 form[name="ticketLogForm"] .roundedBox b.bb,
 form[name="ticketLogForm"] .roundedBox b.bt {
-    display: none !important;
+    display: none;
 }
 
 /* Inputs */
