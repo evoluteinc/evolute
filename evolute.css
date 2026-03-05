@@ -289,3 +289,10 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
     gap: 8px;
 }
 
+div.subtabHeading {
+    height: 33px;
+    border-bottom: none !important;
+    display: none;
+    width: auto !important;
+}
+
