@@ -7688,65 +7688,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     width: 100% !important;
 }
 
-.yui-dialog .ft .button-group .yui-button,
-.yui-dialog .ft span.yui-button {
-    float: none !important;
-    box-shadow: none !important;
-}
-
-.yui-dialog .ft .button-group .yui-button button,
-.yui-dialog .ft span.yui-button button {
-    padding: 12px 24px !important;
-    border: 1px solid var(--border) !important;
-    background-color: var(--color-white) !important;
-    color: var(--color-dark) !important;
-}
-
-.yui-dialog .ft .button-group .yui-button button:hover,
-.yui-dialog .ft span.yui-button button:hover {
-    background-color: var(--bg-light) !important;
-    border-color: var(--color-gray) !important;
-}
-
-/* Primary button (first button / login button) */
-
-.yui-dialog .ft .button-group .yui-button.login-button button:hover,
-.yui-dialog .ft .button-group .yui-button:first-child button:hover {
-    background-color: var(--color-primary-light) !important;
-    border-color: var(--color-primary-light) !important;
-}
-
-/* Button icons */
-.yui-dialog .ft .button-group .yui-button:first-child button::before {
-    content: '';
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background-color: currentColor;
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 2 11 13'/%3E%3Cpath d='m22 2-7 20-4-9-9-4 20-7z'/%3E%3C/svg%3E");
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 2 11 13'/%3E%3Cpath d='m22 2-7 20-4-9-9-4 20-7z'/%3E%3C/svg%3E");
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    flex-shrink: 0;
-}
-
-.yui-dialog .ft .button-group .yui-button:last-child button::before {
-    content: '';
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background-color: currentColor;
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 6 6 18'/%3E%3Cpath d='m6 6 12 12'/%3E%3C/svg%3E");
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 6 6 18'/%3E%3Cpath d='m6 6 12 12'/%3E%3C/svg%3E");
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    flex-shrink: 0;
-}
-
 /* Dialog container - use inset for full centering */
 .yui-panel-container.yui-dialog {
     position: fixed !important;
@@ -11714,13 +11655,6 @@ img.calendarIcon {
         padding: 0 !important;
         background: transparent !important;
         border: none !important;
-    }
-
-    .yui-dialog .ft .button-group .yui-button button,
-    .yui-dialog .ft span.yui-button button {
-        width: 100% !important;
-        padding: 14px 16px !important;
-        margin: 0 !important;
     }
 
     .dashboard .grid_340px_600px .secondary,
