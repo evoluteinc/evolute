@@ -2589,7 +2589,6 @@ body.login {
 .dashboard #Main:has([name="publisher_signup_v2_1"]) table.trafficDrivers,
 .dashboard #Main:has([name="publisher_signup_v2_2"]) table.trafficDrivers {
     width: 100%;
-    border-collapse: collapse;
     background: transparent;
     border: none;
     margin-bottom: 0;
@@ -3063,11 +3062,10 @@ div.titleDiv {
 
 .dashboard .buttonGroup {
     display: flex !important;
+    flex-wrap: wrap;
     gap: 12px;
-    padding: 20px !important;
+    padding: 12px !important;
     margin: 0 !important;
-    float: none !important;
-    clear: none !important;
     text-align: left !important;
     white-space: normal !important;
 }
@@ -3747,7 +3745,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .nestedListTable,
 .dashboard table.nestedListTable {
     width: 100% !important;
-    border-collapse: collapse !important;
     min-width: auto !important;
     margin: 0 !important;
     background-color: var(--color-white) !important;
@@ -3789,7 +3786,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .ordersTable {
     width: 100%;
     min-width: 100%;
-    border-collapse: collapse;
     table-layout: fixed !important;
 }
 
@@ -4783,7 +4779,6 @@ div.grid_1_1#leftInnerGrid {
 
 #dailyLeadLimits {
     width: 100%;
-    border-collapse: collapse;
     min-width: 0 !important;
 }
 
@@ -5074,7 +5069,6 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .settings table.nestedListTable {
     width: 100% !important;
-    border-collapse: collapse !important;
     border-spacing: 0 !important;
     margin: 0 !important;
     background-color: var(--color-white) !important;
@@ -5102,6 +5096,10 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .settings table.nestedListTable tbody tr td.center,
 .dashboard table.pricegrid tbody tr.estimate td.estimate {
     text-align: center !important;
+}
+
+.dashboard table.pricegrid tbody tr.estimate td.estimate:empty {
+    display: none;
 }
 
 .dashboard .settings .formSectionContent .buttonGroup .yui-link-button .first-child a:hover,
@@ -5228,7 +5226,6 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .settings .sellerBidMinimum {
     width: 100% !important;
-    border-collapse: collapse !important;
     margin: 0 !important;
 }
 
@@ -6107,7 +6104,6 @@ form[name="ticketLogForm"] .formSectionContent {
 .yui-panel-container .yui-panel .bd table,
 .dashboard #filtersContainer table.cBoxes {
     width: 100% !important;
-    border-collapse: collapse !important;
 }
 
 .yui-panel-container .yui-panel .bd table tr,
@@ -6141,11 +6137,6 @@ form[name="ticketLogForm"] .formSectionContent {
 }
 
 /* ========== WHOLESALE ORDERS - CLEAN COMPACT TABLE ========== */
-
-.dashboard .settings table.nestedListTable.dynamicTable,
-.dashboard .channels table.nestedListTable.ordersTable {
-    border-collapse: collapse !important;
-}
 
 .dashboard .settings table.nestedListTable.dynamicTable thead tr.actions td.paginationTop,
 .dashboard .channels table.nestedListTable.ordersTable thead tr.actions td.paginationTop {
@@ -7110,19 +7101,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     text-align: left !important;
     background-color: var(--bg-light) !important;
     position: relative !important;
-}
-
-.dashboard table.pricegrid tbody td.label::after {
-    content: '' !important;
-    position: absolute !important;
-    right: 0 !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    width: 3px !important;
-    height: 60% !important;
-    background-color: var(--color-primary) !important;
-    border-radius: 2px !important;
-    opacity: 0.6 !important;
 }
 
 /* Input fields - modern, clean design */
@@ -8782,7 +8760,6 @@ img.calendarIcon {
 
 .dashboard .reports .nestedListTable {
     width: 100% !important;
-    border-collapse: collapse;
     background: var(--color-white);
     border-radius: 8px;
     overflow: hidden;
@@ -9128,7 +9105,6 @@ img.calendarIcon {
 /* Nested list tables (Account Overview, Active Orders) */
 .dashboard .nestedListTable {
     width: 100%;
-    border-collapse: collapse;
 }
 
 .dashboard .nestedListTable td.right {
@@ -9319,13 +9295,6 @@ img.calendarIcon {
     padding: 0;
 }
 
-.dashboard .buttonGroup {
-    display: flex;
-    gap: 8px;
-    margin-left: 132px;
-    padding-top: 8px;
-}
-
 /* Quick Links */
 .dashboard #leadManagerQuickLinksDiv .boxContent ul {
     list-style: none;
@@ -9363,7 +9332,6 @@ img.calendarIcon {
 .dashboard table.listTable,
 .dashboard table.leadListTable {
     width: 100%;
-    border-collapse: collapse;
     background-color: var(--color-white);
 }
 
