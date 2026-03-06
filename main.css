@@ -2958,17 +2958,15 @@ body.login {
 div.titleDiv {
     display: flex;
     background-color: var(--bg-light);
-    margin-bottom: 0;
+    margin: 0 0 12px 0;
 }
 
 .titleDiv h3 {
     display: flex;
     padding: 16px 24px;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 600;
     line-height: 1.5;
-    font-weight: bold;
-    background-color: transparent;
-    border: 0;
 }
 
 .dashboard .labelValue .label .bold,
@@ -4575,9 +4573,8 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .formSectionContent .instructions,
 .dashboard .ordersTable .smallGrey {
-    font-size: 12px;
+    font-size: 14px;
     color: var(--color-gray);
-    margin-top: 4px;
 }
 
 /* Marketing Methods Grid */
@@ -5096,10 +5093,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .settings table.nestedListTable tbody tr td.center,
 .dashboard table.pricegrid tbody tr.estimate td.estimate {
     text-align: center !important;
-}
-
-.dashboard table.pricegrid tbody tr.estimate td.estimate:empty {
-    display: none;
 }
 
 .dashboard .settings .formSectionContent .buttonGroup .yui-link-button .first-child a:hover,
@@ -6774,26 +6767,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     min-width: 200px !important;
 }
 
-/* Settings sections */
-.dashboard #settingsContainer .content {
-    margin-bottom: 24px !important;
-    padding-bottom: 24px !important;
-    border-bottom: 1px solid var(--border) !important;
-}
-
-.dashboard #settingsContainer .content:last-child {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-    border-bottom: none !important;
-}
-
-.dashboard #settingsContainer .titleDiv h3 {
-    font-size: 15px !important;
-    font-weight: 600 !important;
-    color: var(--color-dark) !important;
-    margin: 0 0 16px 0 !important;
-}
-
 /* Input groups in settings */
 .dashboard #settingsContainer .inputGroup {
     display: flex !important;
@@ -6822,6 +6795,9 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 }
 
 .dashboard #settingsContainer .inputGroup .option {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px;
     margin-bottom: 10px !important;
 }
 
@@ -6855,11 +6831,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 .dashboard #endDateDiv.disabled select {
     background-color: var(--bg-light) !important;
     color: var(--color-muted) !important;
-}
-
-/* Volume limits */
-.dashboard #volumeLimits .inputGroup {
-    margin-bottom: 16px !important;
 }
 
 .dashboard #volumeLimits .inputGroup .mainLabel label {
@@ -9427,9 +9398,8 @@ img.calendarIcon {
 
 .dashboard .channels .instructions {
     font-size: 14px;
-    margin-left: 0 !important;
+    line-height: 1.5;
     color: var(--color-gray);
-    margin-bottom: 20px;
 }
 
 .dashboard div#bidinfo {
