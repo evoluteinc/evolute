@@ -3735,6 +3735,7 @@ div.grid_1_1#leftInnerGrid {
     width: 100% !important;
     min-width: auto !important;
     margin: 0 !important;
+    top: 0 !important;
     background-color: var(--color-white) !important;
 }
 
