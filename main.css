@@ -9005,6 +9005,8 @@ img.calendarIcon {
     line-height: 1;
     padding: 14px 16px;
     margin: 0;
+    background: var(--bg-info) !important;
+    border-bottom: 1px solid var(--border) !important;
 }
 
 .dashboard .blueBox .boxContent,
@@ -9319,10 +9321,8 @@ img.calendarIcon {
 .dashboard .grid_580px_240px .column2 > div,
 .dashboard .grid_n_240px .secondary > div {
     background-color: var(--color-white);
-    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 16px;
-    margin-bottom: 16px;
 }
 
 .dashboard .infoBox h3,
