@@ -9453,7 +9453,7 @@ img.calendarIcon {
     position: relative;
     display: flex;
     align-items: stretch;
-    flex-direction: column;
+    gap: 20px
 }
 
 /* Fixed width override */
@@ -9792,7 +9792,7 @@ img.calendarIcon {
 }
 
 /* Input focus states */
-
+.dashboard #leadStoreSearchForm,
 .dashboard #deliveryForm {
     display: flex;
     align-items: stretch;
