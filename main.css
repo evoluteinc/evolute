@@ -3029,11 +3029,6 @@ div.titleDiv {
     line-height: 1.5 !important;
 }
 
-.dashboard .mainLabel .requiredMarker {
-    color: var(--color-error) !important;
-    margin-left: 2px;
-}
-
 .dashboard .options {
     flex: 1 !important;
     min-width: 0;
@@ -3584,20 +3579,6 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .formSectionContent .mainLabelContent {
     padding-right: 16px;
-}
-
-.dashboard .formSectionContent label,
-.dashboard #formContainer label {
-    font-size: 14px;
-    color: var(--color-gray);
-    line-height: 1.5;
-}
-
-.dashboard .formSectionContent label.required,
-.dashboard .formSectionContent .bold,
-.dashboard .formSectionContent span.bold {
-    font-weight: 600;
-    color: var(--color-dark);
 }
 
 .dashboard .formSectionContent .requiredMarker,
@@ -4492,21 +4473,9 @@ div.grid_1_1#leftInnerGrid {
 
 /* ========== WIZARD FORM FIELDS ========== */
 
-.dashboard .formSectionContent .mainLabel label {
-    font-size: 14px;
-    color: var(--color-dark);
-    line-height: 1.5;
-}
-
-.dashboard .formSectionContent .mainLabel label.required,
-.dashboard .blueBox .bold {
-    font-weight: 600;
-}
-
 .dashboard .formSectionContent .options {
     flex: 1;
     width: auto;
-    float: none;
 }
 
 /* Small inputs - phone numbers, codes, extensions, etc */
