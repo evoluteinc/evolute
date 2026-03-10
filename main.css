@@ -3047,13 +3047,16 @@ div.titleDiv {
 }
 
 .dashboard .optionsContent {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 16px 24px;
+    gap: 16px;
     padding: 0 !important;
-    line-height: normal !important;
-    background: transparent !important;
+}
+
+.dashboard .optionsContent .option {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    row-gap: 12px;
 }
 
 /* Buttons */
@@ -3601,13 +3604,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .formSectionContent .mainLabel .requiredMarker {
     color: var(--color-error);
     margin-left: 2px;
-}
-
-.dashboard .formSectionContent .optionsContent {
-    padding-left: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px 24px;
 }
 
 /* Narrower input boxes for order/leads creation */
@@ -4513,14 +4509,6 @@ div.grid_1_1#leftInnerGrid {
     float: none;
 }
 
-.dashboard .formSectionContent .optionsContent {
-    padding-left: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    align-items: center;
-    gap: 6px 16px;
-}
-
 /* Small inputs - phone numbers, codes, extensions, etc */
 .dashboard .formSectionContent .textInput[size="3"],
 .dashboard .formSectionContent input.textInput[size="3"] {
@@ -4813,13 +4801,6 @@ div.grid_1_1#leftInnerGrid {
     font-weight: 600;
     color: var(--color-dark);
     margin: 16px 0 8px;
-}
-
-.dashboard .blueBox p {
-    font-size: 14px;
-    color: var(--color-gray);
-    line-height: 1.5;
-    margin: 0 0 12px;
 }
 
 .dashboard .blueBox .docPreview {
@@ -9340,11 +9321,12 @@ img.calendarIcon {
 .dashboard .infoBox p,
 .dashboard .helpBox p,
 .dashboard #sidebar p,
-.dashboard .sidebar p {
-    font-size: 13px;
+.dashboard .sidebar p,
+.dashboard .blueBox p {
     color: var(--color-gray);
-    margin: 0 0 8px 0;
+    font-size: 14px;
     line-height: 1.5;
+    margin: 0 0 8px 0;
 }
 
 /* Payment/Invoice boxes */
