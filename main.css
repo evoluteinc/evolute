@@ -480,7 +480,9 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    padding: 12px;
     gap: 8px;
+    border-bottom: 1px solid var(--border);
 }
 .dashboard .labelValue:last-child,
 .dashboard .labelValue:last-of-type {
