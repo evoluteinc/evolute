@@ -220,6 +220,7 @@ form[name="ticketLogForm"] .roundedBox b.bt {
 
 .dashboard input[type="file"] {
     border-color: var(--color-primary) !important;
+    padding: 0 !important;
     cursor: pointer;
 }
 
@@ -239,7 +240,7 @@ form[name="ticketLogForm"] .roundedBox b.bt {
 }
 
 .dashboard input[type="file"]::file-selector-button:hover {
-    background-color: var(--color-primary-light);
+    background: var(--color-muted);
 }
 
 /* Login inputs */
