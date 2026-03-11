@@ -4950,7 +4950,7 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard .settings .sellerBidMinimum tbody td.price,
-.dashboard .settings table.nestedListTable.dynamicTable tbody tr:nth-child(even),
+.dashboard table.nestedListTable.dynamicTable tbody tr:nth-child(even),
 .dashboard .channels table.nestedListTable.ordersTable tbody tr:nth-child(even),
 .dashboard #formContainer ul.text li.details .target > div.even,
 .dashboard table.pricegrid tbody tr.odd,
@@ -5754,7 +5754,7 @@ form[name="ticketLogForm"] .formSectionContent {
 }
 
 .yui-panel-container .yui-panel .bd table tr,
-.dashboard .settings table.nestedListTable.dynamicTable tbody tr,
+.dashboard table.nestedListTable.dynamicTable tbody tr,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr {
     border-bottom: 1px solid var(--border) !important;
 }
@@ -5777,21 +5777,21 @@ form[name="ticketLogForm"] .formSectionContent {
 
 /* ========== WHOLESALE ORDERS - CLEAN COMPACT TABLE ========== */
 
-.dashboard .settings table.nestedListTable.dynamicTable thead tr.actions td.paginationTop,
+.dashboard table.nestedListTable.dynamicTable thead tr.actions td.paginationTop,
 .dashboard .channels table.nestedListTable.ordersTable thead tr.actions td.paginationTop {
     padding: 16px 20px !important;
     font-size: 13px !important;
     line-height: 1.5 !important;
 }
 
-.dashboard .settings table.nestedListTable.dynamicTable thead tr.colheaders th,
+.dashboard table.nestedListTable.dynamicTable thead tr.colheaders th,
 .dashboard .channels table.nestedListTable.ordersTable thead tr.colheaders th {
     padding: 10px 16px !important;
     font-size: 11px !important;
     letter-spacing: 0.5px !important;
 }
 
-.dashboard .settings table.nestedListTable.dynamicTable tbody tr td,
+.dashboard table.nestedListTable.dynamicTable tbody tr td,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td {
     padding: 8px 14px !important;
     font-size: 13px !important;
@@ -5800,14 +5800,14 @@ form[name="ticketLogForm"] .formSectionContent {
     border: none !important;
 }
 
-.dashboard .settings table.nestedListTable.dynamicTable tbody tr td.first,
+.dashboard table.nestedListTable.dynamicTable tbody tr td.first,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td.first {
     font-weight: 500 !important;
     color: var(--color-dark) !important;
 }
 
 /* Delivery links - simple inline */
-.dashboard .settings table.nestedListTable.dynamicTable tbody tr td .oliDiv,
+.dashboard table.nestedListTable.dynamicTable tbody tr td .oliDiv,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv {
     display: inline-flex !important;
     align-items: center !important;
@@ -5815,21 +5815,21 @@ form[name="ticketLogForm"] .formSectionContent {
     padding: 2px 0 !important;
 }
 
-.dashboard .settings table.nestedListTable.dynamicTable tbody tr td .oliDiv .left a,
+.dashboard table.nestedListTable.dynamicTable tbody tr td .oliDiv .left a,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .left a {
     color: var(--color-primary) !important;
     font-size: 13px !important;
     white-space: nowrap;
 }
 
-.dashboard .settings table.nestedListTable.dynamicTable tbody tr td .oliDiv .right a,
+.dashboard table.nestedListTable.dynamicTable tbody tr td .oliDiv .right a,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .right a {
     color: var(--color-error) !important;
     font-size: 12px !important;
 }
 
 /* Action button - simple text link style */
-.dashboard .settings table.nestedListTable.dynamicTable tbody tr td.last .buttonGroup,
+.dashboard table.nestedListTable.dynamicTable tbody tr td.last .buttonGroup,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td.last .buttonGroup,
 .mask.show,
 .mask[style*="display: block"],
@@ -5840,7 +5840,7 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     display: block !important;
 }
 
-.dashboard .settings table.nestedListTable.dynamicTable tbody tr td.last .buttonGroup a.addLink,
+.dashboard table.nestedListTable.dynamicTable tbody tr td.last .buttonGroup a.addLink,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td.last .buttonGroup a.addLink {
     display: inline-block !important;
     padding: 6px 12px !important;
@@ -5852,13 +5852,13 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     white-space: nowrap !important;
 }
 
-.dashboard .settings table.nestedListTable.dynamicTable tbody tr td.last .buttonGroup a.addLink:hover,
+.dashboard table.nestedListTable.dynamicTable tbody tr td.last .buttonGroup a.addLink:hover,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td.last .buttonGroup a.addLink:hover {
     background-color: var(--bg-info) !important;
     border-color: var(--bg-info) !important;
 }
 
-.dashboard .settings table.nestedListTable.dynamicTable tfoot tr.actions td.paginationBottom,
+.dashboard table.nestedListTable.dynamicTable tfoot tr.actions td.paginationBottom,
 .dashboard .channels table.nestedListTable.ordersTable tfoot tr.actions td.paginationBottom {
     padding: 16px 20px !important;
     background-color: var(--color-white) !important;
@@ -8912,7 +8912,7 @@ img.calendarIcon {
     position: relative;
     display: flex;
     align-items: stretch;
-    flex-direction: column;
+    gap: 20px
 }
 
 /* Fixed width override */
@@ -9235,7 +9235,7 @@ img.calendarIcon {
 }
 
 /* Input focus states */
-
+.dashboard #leadStoreSearchForm,
 .dashboard #deliveryForm {
     display: flex;
     align-items: stretch;
