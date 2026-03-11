@@ -314,6 +314,14 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
     }
 }
 
+@media (max-width: 1024px) {
+    .dashboard #leadStoreSearchFields,
+    .dashboard .grid_200px_n > .secondary {
+        width: 100%;
+        order: -1;
+    }
+}
+
 .dashboard .formSectionContent .optionsContent {
     display: flex !important;
     flex-direction: column;
