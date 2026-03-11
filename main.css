@@ -6103,16 +6103,8 @@ form[name="ticketLogForm"] .formSectionContent {
     border-bottom: 1px solid var(--border) !important;
 }
 
-.yui-panel-container .yui-panel .bd table tr:last-child,
-.dashboard .summarySection .labelValue:last-child,
-.dashboard .summaryRow:last-child,
-.dashboard .formSectionContent ul.text li:last-child {
-    border-bottom: none !important;
-}
-
 .yui-panel-container .yui-panel .bd table td {
-    padding: 12px 16px !important;
-    font-size: 14px !important;
+    padding: 12px !important;
 }
 
 .yui-panel-container .yui-panel .bd table td:first-child {
@@ -7649,7 +7641,7 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     top: auto !important;
     left: auto !important;
     width: 100% !important;
-    max-width: 600px !important;
+    max-width: 700px !important;
     max-height: calc(100vh - 40px) !important;
     margin: 0 !important;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25) !important;
@@ -7883,7 +7875,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .requiredMarker {
 .yui-overlay[style*="visibility: visible"],
 .yui-panel-container.visible,
 .yui-overlay.visible {
-    visibility: visible !important;
     display: flex !important;
 }
 
@@ -8055,7 +8046,6 @@ div[id*="panel"] {
 .yui-panel-container .yui-panel .bd,
 .yui-panel-container .yui-panel .ft {
     display: block !important;
-    visibility: visible !important;
 }
 
 .yui-panel-container .yui-panel .hd {
@@ -9075,15 +9065,6 @@ img.calendarIcon {
     color: var(--color-primary);
     text-decoration: none;
     font-weight: 600;
-}
-
-.dashboard .nestedListTable thead tr.colheaders th {
-    padding: 12px 16px;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--color-gray);
-    text-align: center;
-    border-bottom: 1px solid var(--border);
 }
 
 .dashboard .nestedListTable tfoot td {
