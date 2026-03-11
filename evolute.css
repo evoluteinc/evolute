@@ -352,3 +352,10 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
     gap: 8px;
 }
 
+div.checkAllNone{
+    display: flex;
+    justify-content: center;
+    padding: 8px 4px;
+    gap: 5px;
+    font-weight: bold;
+}
