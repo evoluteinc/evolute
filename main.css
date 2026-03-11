@@ -2899,7 +2899,7 @@ body.login {
 
 div.titleDiv {
     display: flex;
-    padding: 0 !important;
+    padding: 12px !important;
     background-color: var(--bg-light);
     margin: 0 !important;
 }
