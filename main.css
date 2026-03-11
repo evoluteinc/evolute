@@ -67,15 +67,26 @@ a:hover {
     text-decoration: underline;
 }
 
+a:link,
+a:visited,
+a:active {
+    color: var(--color-primary-light);
+}
+
 input,
 select,
 button,
 textarea {
     font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
     cursor: pointer;
+    transition: all .2s ease;
+}
+
+select,
+button,
+textarea {
     appearance: none;
     -webkit-appearance: none;
-    transition: all .2s ease;
 }
 
 button:hover {
@@ -222,6 +233,8 @@ form[name="ticketLogForm"] .roundedBox b.bb,
 form[name="ticketLogForm"] .roundedBox b.bt {
     display: none;
 }
+
+/* WE ARE CLEAN */
 
 /* Inputs */
 .dashboard input[type="text"],
@@ -415,6 +428,104 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
     background-color: var(--color-primary) !important;
     color: var(--color-white) !important;
 }
+
+/* Table headers */
+.dashboard thead th,
+.dashboard tr.colheaders th {
+    padding: 12px 16px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: var(--color-gray) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    background-color: var(--bg-light) !important;
+    border: none !important;
+    border-bottom: 1px solid var(--border) !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+}
+.dashboard thead th a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+.dashboard thead th.sortable,
+.dashboard tr.colheaders th.sortable {
+    cursor: pointer !important;
+    transition: background-color 0.15s ease !important;
+}
+.dashboard thead th.sortedAsc a,
+.dashboard thead th.sortedDesc a,
+.dashboard tr.colheaders th.sortedAsc a,
+.dashboard tr.colheaders th.sortedDesc a {
+    color: var(--color-primary) !important;
+    font-weight: 600 !important;
+}
+
+/* Button groups */
+.dashboard .buttonGroup,
+.dashboard .contentInline,
+.yui-dialog .ft .button-group {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    align-items: center !important;
+    padding: 12px !important;
+    margin: 0 !important;
+    text-align: left !important;
+    white-space: normal !important;
+}
+
+/* Label-value pairs */
+.dashboard .labelValue,
+.dashboard .summarySection .labelValue,
+.dashboard .summaryRow {
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 0 !important;
+    border-bottom: 1px solid var(--border) !important;
+}
+.dashboard .labelValue:last-child,
+.dashboard .labelValue:last-of-type {
+    border-bottom: none !important;
+}
+.dashboard .labelValue .label,
+.dashboard .summarySection .labelValue .label,
+.dashboard .summaryRow .label {
+    width: 180px !important;
+    min-width: 180px !important;
+    flex-shrink: 0 !important;
+    padding: 0 20px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--color-gray) !important;
+}
+.dashboard .labelValue .value,
+.dashboard .summarySection .labelValue .value,
+.dashboard .summaryRow .value {
+    flex: 1 !important;
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
+}
+.dashboard .labelValue .value.inactive {
+    color: var(--color-error) !important;
+    font-weight: 500 !important;
+}
+
+/* Calendar icons */
+.dashboard img.calendarIcon,
+.dashboard img[src*="calbtn.gif"],
+.dashboard img[src*="calendar.gif"],
+.dashboard img[id*="CalendarIcon"] {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23004279' stroke-width='2'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E");
+    width: 18px !important;
+    height: 18px !important;
+    vertical-align: middle !important;
+    cursor: pointer !important;
+    margin-left: 8px !important;
+}
+
+/* WE ARE CLEAN */
+
 
 /* clean classes */
 
@@ -1279,18 +1390,6 @@ body.login {
     padding: 0 !important;
 }
 
-.login a:link,
-.login a:visited,
-.login a:active,
-.dashboard .sellerHomeContentBoxL .boxContent h2 a:hover,
-.dashboard .sellerHomeContentBoxR .boxContent h2 a:hover,
-.dashboard #settingssubnav .subsection .link a:hover,
-.dashboard .reportContainer .reportLink:hover,
-.dashboard .ordersTable tbody tr td a:hover,
-.dashboard .channelInfo h2.headerLeft a:hover {
-    color: var(--color-primary-light);
-}
-
 .login #usernameField,
 .login #passwordField,
 .login #emailField {
@@ -2060,17 +2159,6 @@ body.login {
     border-radius: 4px;
 }
 
-.dashboard #MainNavigation.tabs ul li a.selected,
-.dashboard #MainNavigation.tabs ul li a:hover .selected,
-.dashboard #MainNavigation.tabs ul li a:active .selected {
-    position: relative;
-    top: 0;
-    background: none;
-    padding: 0;
-    color: var(--color-primary);
-    background-color: var(--bg-light);
-}
-
 .dashboard #SubNavigation.subtabs {
     font-size: 14px;
     font-weight: 500 !important;
@@ -2799,16 +2887,7 @@ body.login {
 
 /* Label Value Pairs */
 
-.dashboard .labelValue {
-    display: flex !important;
-    align-items: center;
-    padding: 12px 0 !important;
-    border-bottom: 1px solid var(--border);
-}
-
-.dashboard .labelValue:last-child,
 .dashboard .reportContainer:last-child,
-.dashboard .labelValue:last-of-type,
 .dashboard .reports table#report tr:last-child td,
 .dashboard .reports table.reportResults tr:last-child td,
 .dashboard .reports .nestedListTable tbody tr:last-child td,
@@ -2816,13 +2895,6 @@ body.login {
 .dashboard .nestedListTable td.last,
 .dashboard #leadManagerQuickLinksDiv .boxContent ul li:last-child {
     border-bottom: none;
-}
-
-.dashboard .labelValue .label {
-    width: 180px !important;
-    min-width: 180px;
-    flex-shrink: 0;
-    padding: 0 20px;
 }
 
 div.titleDiv {
@@ -2849,20 +2921,9 @@ div.titleDiv {
     color: var(--color-dark) !important;
 }
 
-.dashboard .labelValue .value {
-    flex: 1;
-    font-size: 14px !important;
-    color: var(--color-dark) !important;
-}
-
-.dashboard .labelValue .value.inactive {
-    color: var(--color-error) !important;
-    font-weight: 500;
-}
-
 .dashboard .labelValue .value.active {
     color: var(--color-success) !important;
-    font-weight: 500;
+    font-weight: 500 !important;
 }
 
 /* Form Styles */
@@ -2916,18 +2977,6 @@ div.titleDiv {
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 12px;
-}
-
-/* Buttons */
-
-.dashboard .buttonGroup {
-    display: flex !important;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 12px !important;
-    margin: 0 !important;
-    text-align: left !important;
-    white-space: normal !important;
 }
 
 /* Integration Options */
@@ -3689,16 +3738,7 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .ordersTable thead tr.colheaders th {
     padding: 14px 20px;
-    font-size: 12px;
     font-weight: 500;
-    color: var(--color-gray);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    background-color: var(--bg-light);
-    border: none;
-    border-bottom: 1px solid var(--border);
-    text-align: left;
-    white-space: nowrap;
 }
 
 /* Wholesale orders table - column widths (percentage-based for fixed layout) */
@@ -4050,18 +4090,7 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard #formContainer select {
-    width: 100%;
     max-width: 300px;
-    padding: 10px 14px;
-    font-size: 14px;
-    color: var(--color-dark);
-    background-color: var(--color-white);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 16px;
 }
 
 .dashboard #formContainer select:focus,
@@ -4512,18 +4541,6 @@ div.grid_1_1#leftInnerGrid {
     min-width: 0 !important;
 }
 
-#dailyLeadLimits thead th {
-    padding: 12px 16px;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--color-gray);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    background-color: var(--bg-light);
-    border-bottom: 1px solid var(--border);
-    text-align: left;
-}
-
 #dailyLeadLimits tbody tr,
 .dashboard .ordersTable .parentRow {
     transition: background-color 0.15s ease;
@@ -4639,18 +4656,7 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard .ordersTable #productDiv select {
-    width: 100%;
     height: 42px !important;
-    padding: 0 36px 0 14px !important;
-    font-size: 14px;
-    color: var(--color-dark);
-    background-color: var(--color-white);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 16px;
 }
 
 .dashboard .ordersTable #checkBoxDiv {
@@ -4779,19 +4785,6 @@ div.grid_1_1#leftInnerGrid {
     border-spacing: 0 !important;
     margin: 0 !important;
     background-color: var(--color-white) !important;
-}
-
-.dashboard .settings table.nestedListTable thead tr.colheaders th {
-    padding: 12px 16px !important;
-    font-size: 12px !important;
-    font-weight: 600 !important;
-    color: var(--color-gray) !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.05em !important;
-    background-color: var(--bg-light) !important;
-    border: none !important;
-    border-bottom: 1px solid var(--border) !important;
-    text-align: left !important;
 }
 
 .dashboard .settings table.nestedListTable thead tr.colheaders th.first {
@@ -5657,16 +5650,10 @@ form[name="ticketLogForm"] .formSectionContent {
 
 /* Table headers styling */
 .dashboard #connectionsTable thead tr.colheaders th {
-    white-space: nowrap !important;
     padding: 14px 20px !important;
     font-size: 13px !important;
-    font-weight: 600 !important;
-    text-transform: uppercase !important;
     letter-spacing: 0.5px !important;
-    color: var(--color-gray) !important;
-    background-color: var(--bg-light) !important;
     border-bottom: 2px solid var(--border) !important;
-    text-align: left !important;
 }
 
 /* Superheader styling (Orders, Feedback) */
@@ -5798,12 +5785,7 @@ form[name="ticketLogForm"] .formSectionContent {
 .dashboard .channels table.nestedListTable.ordersTable thead tr.colheaders th {
     padding: 10px 16px !important;
     font-size: 11px !important;
-    font-weight: 600 !important;
-    text-transform: uppercase !important;
     letter-spacing: 0.5px !important;
-    color: var(--color-gray) !important;
-    background-color: var(--bg-light) !important;
-    border-bottom: 1px solid var(--border) !important;
 }
 
 .dashboard .settings table.nestedListTable.dynamicTable tbody tr td,
@@ -5982,25 +5964,10 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 }
 
 /* Lead Channel Detail content area */
-.dashboard .roundedBox .labelValue {
-    display: flex !important;
-    align-items: center !important;
-    padding: 12px 0 !important;
-    border-bottom: 1px solid var(--border) !important;
-}
-
-.dashboard .roundedBox .labelValue .label,
 .dashboard #settingsContainer .inputGroup .mainLabel label {
     font-size: 14px !important;
     font-weight: 500 !important;
     color: var(--color-gray) !important;
-}
-
-.dashboard .roundedBox .labelValue .value {
-    flex: 1 !important;
-    font-size: 14px !important;
-    line-height: 1.5;
-    color: var(--color-dark) !important;
 }
 
 /* ========== CREATE PROPOSAL PAGE STYLING ========== */
@@ -6382,11 +6349,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 
 .dashboard .dropDown.filter select,
 .dashboard .dropDownContainer select {
-    padding: 10px 14px !important;
-    font-size: 14px !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 8px !important;
-    background-color: var(--color-white) !important;
     min-width: 200px !important;
 }
 
@@ -6441,13 +6403,16 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     margin: 0 !important;
 }
 
-.dashboard #maxAmountDiv input,
-.dashboard #endDateDiv select {
+.dashboard #maxAmountDiv input {
     padding: 8px 12px !important;
     font-size: 14px !important;
     border: 1px solid var(--border) !important;
     border-radius: 6px !important;
     background-color: var(--color-white) !important;
+}
+
+.dashboard #endDateDiv select {
+    padding: 8px 12px !important;
 }
 
 .dashboard #maxAmountDiv.disabled input,
@@ -6527,38 +6492,10 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 }
 
 /* Label-value pairs in summary */
-.dashboard .summarySection .labelValue,
-.dashboard .summaryRow {
-    display: flex !important;
-    align-items: center !important;
-    padding: 10px 0 !important;
-    border-bottom: 1px solid var(--border) !important;
-}
-
-.dashboard .summarySection .labelValue .label,
-.dashboard .summaryRow .label {
-    flex: 0 0 180px !important;
-    font-size: 14px !important;
-    font-weight: 500 !important;
-    color: var(--color-gray) !important;
-}
-
-.dashboard .summarySection .labelValue .value,
-.dashboard .summaryRow .value {
-    flex: 1 !important;
-    font-size: 14px !important;
-    color: var(--color-dark) !important;
-}
-
 /* Recipient list */
 
 .dashboard .recipientList select {
-    width: 100% !important;
     max-width: 300px !important;
-    padding: 10px 14px !important;
-    font-size: 14px !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 8px !important;
 }
 
 .dashboard .recipientList a {
@@ -7103,11 +7040,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 /* Dropdown filters (Max Vehicle Age, Buyer Name) */
 
 .dashboard #filtersContainer .dropDown.filter select {
-    padding: 12px 16px !important;
-    font-size: 14px !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 8px !important;
-    background-color: var(--color-white) !important;
     min-width: 200px !important;
 }
 
@@ -8112,7 +8044,10 @@ img.calendarIcon {
 }
 
 /* Report filter select dropdown */
-.dashboard .reports .filter select,
+.dashboard .reports .filter select {
+    min-width: 250px;
+}
+
 .dashboard .reports .filter .rptFilterSelect {
     font-size: 14px;
     padding: 10px 36px 10px 12px;
@@ -8282,19 +8217,6 @@ img.calendarIcon {
     overflow: hidden;
 }
 
-.dashboard .reports .nestedListTable thead tr.colheaders th {
-    padding: 10px 16px;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--color-gray);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    text-align: left;
-    background: var(--bg-light);
-    border-bottom: 1px solid var(--border);
-    white-space: nowrap;
-}
-
 .dashboard .reports .nestedListTable tbody tr td {
     padding: 12px 16px;
     font-size: 13px;
@@ -8397,15 +8319,6 @@ img.calendarIcon {
 }
 
 .dashboard .reports .calendarWithSelects select {
-    font-size: 14px;
-    padding: 10px 30px 10px 10px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background-color: var(--color-white);
-    color: var(--color-dark);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231e3a5f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 8px center;
     min-width: 70px;
 }
 
@@ -8454,11 +8367,6 @@ img.calendarIcon {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23004279' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9V2h12v7'/%3E%3Cpath d='M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2'/%3E%3Crect x='6' y='14' width='12' height='8'/%3E%3C/svg%3E");
 }
 
-.dashboard .reports img[src*="calendar.gif"] {
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23004279' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E");
-    width: 18px;
-    height: 18px;
-}
 
 .dashboard .reports img[src*="new_ltg_up.gif"] {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M12 8l-6 6h12z'/%3E%3C/svg%3E");
@@ -8709,14 +8617,6 @@ img.calendarIcon {
 }
 
 .dashboard #chartSelectorContainer select {
-    padding: 10px 36px 10px 12px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    font-size: 14px;
-    background-color: var(--color-white);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231e3a5f' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
     min-width: 280px;
 }
 
@@ -8754,14 +8654,6 @@ img.calendarIcon {
 }
 
 .dashboard #search select {
-    padding: 10px 36px 10px 12px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    font-size: 14px;
-    background-color: var(--color-white);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231e3a5f' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
     min-width: 140px;
 }
 
@@ -8922,14 +8814,6 @@ img.calendarIcon {
 }
 
 .dashboard .categoryContainer select {
-    padding: 10px 36px 10px 12px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    font-size: 14px;
-    background-color: var(--color-white);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231e3a5f' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
     min-width: 250px;
 }
 
@@ -8990,17 +8874,6 @@ img.calendarIcon {
 .dashboard .radioContainer .popLink {
     font-size: 12px;
     color: var(--color-primary);
-}
-
-/* Calendar icon replacement */
-.dashboard img.calendarIcon,
-.dashboard img[src*="calbtn.gif"] {
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23004279' stroke-width='2'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E");
-    width: 18px;
-    height: 18px;
-    vertical-align: middle;
-    cursor: pointer;
-    margin-left: 8px;
 }
 
 /* YUI button overrides */
@@ -9325,17 +9198,6 @@ img.calendarIcon {
     color: var(--color-gray);
     padding: 24px 16px;
     background-color: transparent;
-}
-
-/* Calendar icon next to date fields */
-.dashboard img[id*="CalendarIcon"],
-.dashboard .calendarIcon {
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23004279' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E");
-    width: 20px !important;
-    height: 20px !important;
-    cursor: pointer;
-    vertical-align: middle;
-    margin-left: 8px;
 }
 
 /* Form section header separator */
