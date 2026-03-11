@@ -23,8 +23,8 @@
 html,
 body {
     font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-style: normal;
-    line-height: normal;
+    font-size: 14px;
+    line-height: 1.5;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
@@ -56,11 +56,47 @@ ul {
     list-style: none;
 }
 
+a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .2s ease;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 input,
 select,
 button,
 textarea {
     font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
+    transition: all .2s ease;
+}
+
+select,
+button,
+textarea,
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="file"] {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:disabled,
+input[type="radio"]:disabled,
+input[type="button"]:disabled,
+input[type="checkbox"]:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .hidden,
@@ -196,24 +232,50 @@ form[name="ticketLogForm"] .roundedBox b.bt {
     display: none;
 }
 
+/* WE ARE CLEAN */
+
 /* Inputs */
 .dashboard input[type="text"],
 .dashboard input[type="date"],
 .dashboard input[type="number"],
+.dashboard input[type="file"],
 .dashboard input.textInput {
     width: 100% !important;
+    max-width: 100%;
     height: 40px !important;
-    padding: 10px 12px !important;
+    padding: 0 12px !important;
     font-size: 14px !important;
     font-weight: 500 !important;
-    line-height: 1.5 !important;
+    line-height: 40px !important;
     color: var(--color-dark) !important;
     background: var(--color-white) !important;
     border-width: 1px !important;
     border-style: solid !important;
     border-color: var(--border) !important;
     border-radius: 6px !important;
-    transition: all 0.2s !important;
+}
+
+.dashboard input[type="file"] {
+    border-color: var(--color-primary) !important;
+    padding: 0 !important;
+}
+
+.dashboard input[type="file"]::file-selector-button {
+    height: 40px !important;
+    margin-right: 12px !important;
+    padding: 0 14px !important;
+    border-radius: 6px 0 0 6px !important;
+    border: none !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+    background: var(--color-primary);
+    color: var(--color-white);
+    transition: all 0.2s ease !important;
+}
+
+.dashboard input[type="file"]::file-selector-button:hover {
+    background: var(--color-muted);
 }
 
 /* Login inputs */
@@ -228,7 +290,6 @@ form[name="ticketLogForm"] .roundedBox b.bt {
     background: var(--color-white);
     border: 1px solid var(--border);
     border-radius: 8px;
-    transition: all 0.2s;
 }
 
 /* Selects */
@@ -239,11 +300,7 @@ form[name="ticketLogForm"] .roundedBox b.bt {
     background: var(--color-white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2371717a' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 12px center !important;
     border: 1px solid var(--border) !important;
     border-radius: 6px !important;
-    transition: all 0.2s !important;
     width: 100% !important;
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    cursor: pointer !important;
 }
 
 /* Textareas */
@@ -256,7 +313,6 @@ form[name="ticketLogForm"] .roundedBox b.bt {
     background: var(--color-white) !important;
     border: 1px solid var(--border) !important;
     border-radius: 6px !important;
-    transition: all 0.2s !important;
     width: 100% !important;
     resize: vertical !important;
     min-height: 100px !important;
@@ -290,18 +346,19 @@ form[name="ticketLogForm"] .roundedBox b.bt {
     width: 16px;
     height: 16px;
     accent-color: var(--color-primary);
-    cursor: pointer;
     margin: 0;
 }
 
 .dashboard input[type="checkbox"] + label,
+.dashboard input[type="radio"] + label,
+.dashboard label:has(input[type="checkbox"]),
 .dashboard label:has(input[type="radio"]) {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-size: 14px;
     color: var(--color-dark);
-    cursor: pointer;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 /* YUI Button/Link wrapper reset */
@@ -345,13 +402,8 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
     line-height: 1 !important;
     border-radius: 8px !important;
     border: none !important;
-    cursor: pointer !important;
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    transition: all 0.2s ease !important;
     background-color: var(--color-primary) !important;
     color: var(--color-white) !important;
-    text-decoration: none !important;
     white-space: nowrap !important;
 }
 
@@ -374,6 +426,106 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
     background-color: var(--color-primary) !important;
     color: var(--color-white) !important;
 }
+
+/* Table headers */
+.dashboard thead th,
+.dashboard tr.colheaders th {
+    padding: 12px 16px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: var(--color-gray) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    background-color: var(--bg-light) !important;
+    border: none !important;
+    border-bottom: 1px solid var(--border) !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+}
+.dashboard thead th a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+.dashboard thead th.sortable,
+.dashboard tr.colheaders th.sortable {
+    cursor: pointer !important;
+    transition: background-color 0.15s ease !important;
+}
+.dashboard thead th.sortedAsc a,
+.dashboard thead th.sortedDesc a,
+.dashboard tr.colheaders th.sortedAsc a,
+.dashboard tr.colheaders th.sortedDesc a {
+    color: var(--color-primary) !important;
+    font-weight: 600 !important;
+}
+
+/* Button groups */
+.dashboard .buttonGroup,
+.dashboard .contentInline,
+.yui-dialog .ft .button-group {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    align-items: center !important;
+    padding: 12px !important;
+    margin: 0 !important;
+    text-align: left !important;
+    white-space: normal !important;
+}
+
+/* Label-value pairs */
+.dashboard .labelValue,
+.dashboard .summarySection .labelValue,
+.dashboard .summaryRow {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px;
+    gap: 8px;
+    border-bottom: 1px solid var(--border);
+}
+.dashboard .labelValue:last-child,
+.dashboard .labelValue:last-of-type {
+    border-bottom: none !important;
+}
+.dashboard .labelValue .label,
+.dashboard .summarySection .labelValue .label,
+.dashboard .summaryRow .label {
+    min-width: 220px;
+    width: 220px;
+    max-width: 220px;
+    color: var(--color-gray) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+.dashboard .labelValue .value,
+.dashboard .summarySection .labelValue .value,
+.dashboard .summaryRow .value {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
+}
+.dashboard .labelValue .value.inactive {
+    color: var(--color-error) !important;
+    font-weight: 500 !important;
+}
+
+/* Calendar icons */
+.dashboard img.calendarIcon,
+.dashboard img[src*="calbtn.gif"],
+.dashboard img[src*="calendar.gif"],
+.dashboard img[id*="CalendarIcon"] {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23004279' stroke-width='2'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E");
+    width: 18px !important;
+    height: 18px !important;
+    vertical-align: middle !important;
+    cursor: pointer !important;
+    margin-left: 8px !important;
+}
+
+/* WE ARE CLEAN */
+
 
 /* clean classes */
 
@@ -443,8 +595,6 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
     font-weight: 400;
     line-height: 1.5;
     color: var(--color-primary);
-    cursor: pointer;
-    text-decoration: none;
 }
 
 .action-view::before,
@@ -551,9 +701,7 @@ dialog.modal {
     border: none;
     background: transparent;
     border-radius: 6px;
-    cursor: pointer;
     color: var(--color-gray);
-    transition: all 0.15s;
 }
 .modal .close:hover {
     background: var(--bg-light);
@@ -640,10 +788,6 @@ dialog.modal {
     border-width: 2px;
     border-style: solid;
     border-color: transparent;
-    cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
-    transition: all 0.2s ease;
 }
 .btn svg { width: 16px; height: 16px; flex-shrink: 0; }
 
@@ -669,116 +813,6 @@ dialog.modal {
 .btn-danger {
     color: white;
     background-color: var(--color-error) !important;
-}
-
-button:hover {
-    opacity: 0.9;
-}
-
-button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-.datepicker {
-    background: var(--color-white);
-    border-radius: 12px;
-    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
-    width: 280px;
-    padding: 16px;
-}
-.datepicker .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 16px;
-}
-.datepicker .nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    border: none;
-    background: transparent;
-    border-radius: 6px;
-    cursor: pointer;
-    color: var(--color-gray);
-    transition: all 0.15s;
-}
-.datepicker .nav:hover {
-    background: var(--bg-light);
-    color: var(--color-dark);
-}
-.datepicker .nav .icon {
-    width: 18px;
-    height: 18px;
-}
-.datepicker .selects {
-    display: flex;
-    gap: 8px;
-}
-.datepicker .select {
-    padding: 6px 28px 6px 10px;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--color-dark);
-    background: var(--color-white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2371717a' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 8px center;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    cursor: pointer;
-    appearance: none;
-}
-.datepicker .select:hover {
-    border-color: var(--color-muted);
-}
-.datepicker .select:focus {
-    border-color: var(--color-primary);
-}
-.datepicker .weekdays,
-.datepicker .days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 4px;
-}
-.datepicker .weekdays {
-    margin-bottom: 8px;
-}
-.datepicker .weekday {
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--color-muted);
-    text-align: center;
-    padding: 8px 0;
-}
-.datepicker .day {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    font-size: 14px;
-    color: var(--color-dark);
-    border: none;
-    background: transparent;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.15s;
-    margin: 0 auto;
-}
-.datepicker .day:hover:not(.selected) {
-    background: var(--bg-light);
-}
-.datepicker .day.muted {
-    color: var(--color-muted);
-}
-.datepicker .day.selected {
-    background: var(--color-primary);
-    color: var(--color-white);
-    font-weight: 500;
-}
-.datepicker .day.today:not(.selected) {
-    border: 1px solid var(--color-primary);
 }
 
 .modal .form {
@@ -842,7 +876,6 @@ button:disabled {
     background: var(--color-white);
     border: 1px solid var(--border);
     border-radius: 6px;
-    transition: all 0.15s;
     width: 100%;
 }
 .field .input:hover,
@@ -865,10 +898,7 @@ button:disabled {
     background: var(--color-white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2371717a' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 12px center;
     border: 1px solid var(--border);
     border-radius: 6px;
-    transition: all 0.15s;
     width: 100%;
-    appearance: none;
-    cursor: pointer;
 }
 .field .textarea {
     padding: 10px 12px;
@@ -877,7 +907,6 @@ button:disabled {
     background: var(--color-white);
     border: 1px solid var(--border);
     border-radius: 6px;
-    transition: all 0.15s;
     width: 100%;
     resize: vertical;
     min-height: 100px;
@@ -906,14 +935,12 @@ button:disabled {
     gap: 8px;
     font-size: 14px;
     color: var(--color-dark);
-    cursor: pointer;
 }
 .checkboxes .option input,
 .radios .option input {
     width: 16px;
     height: 16px;
     accent-color: var(--color-primary);
-    cursor: pointer;
     margin: 0;
 }
 
@@ -953,11 +980,7 @@ button:disabled {
 }
 .table tbody td a {
     color: var(--color-primary);
-    text-decoration: none;
     font-weight: 500;
-}
-.table tbody td a:hover {
-    text-decoration: underline;
 }
 .table .actions {
     display: flex;
@@ -971,11 +994,8 @@ button:disabled {
     padding: 4px 2px;
     font-size: 13px;
     color: var(--color-primary);
-    cursor: pointer;
     border: none;
     background: none;
-    text-decoration: none;
-    transition: all 0.15s;
 }
 .table .actions .action.delete {
     color: var(--color-error);
@@ -1084,7 +1104,6 @@ button:disabled {
     padding: 8px 16px;
     border: 1px solid var(--border);
     border-radius: 20px;
-    transition: all 0.15s;
 }
 .checkboxes.pills .option:hover,
 .radios.pills .option:hover {
@@ -1134,32 +1153,6 @@ button:disabled {
     }
     .modal .row {
         flex-direction: column;
-    }
-    .datepicker {
-        width: 100%;
-        max-width: 320px;
-        padding: 12px;
-    }
-    .datepicker .day {
-        width: 28px;
-        height: 28px;
-        font-size: 13px;
-    }
-    .datepicker .weekday {
-        font-size: 11px;
-        padding: 6px 0;
-    }
-    .datepicker .select {
-        font-size: 13px;
-        padding: 5px 24px 5px 8px;
-    }
-    .datepicker .nav {
-        width: 28px;
-        height: 28px;
-    }
-    .datepicker .nav .icon {
-        width: 16px;
-        height: 16px;
     }
     .card {
         padding: 16px;
@@ -1278,7 +1271,6 @@ body.login {
 
 .login #air {
     display: flex;
-    vertical-align: middle;
     width: auto;
     padding: 0;
     margin: 0;
@@ -1286,8 +1278,6 @@ body.login {
 
 .login #logoDiv {
     display: flex;
-    float: none;
-    clear: none;
     margin-left: 0;
     margin-top: 0;
 }
@@ -1400,18 +1390,6 @@ body.login {
     padding: 0 !important;
 }
 
-.login a:link,
-.login a:visited,
-.login a:active,
-.dashboard .sellerHomeContentBoxL .boxContent h2 a:hover,
-.dashboard .sellerHomeContentBoxR .boxContent h2 a:hover,
-.dashboard #settingssubnav .subsection .link a:hover,
-.dashboard .reportContainer .reportLink:hover,
-.dashboard .ordersTable tbody tr td a:hover,
-.dashboard .channelInfo h2.headerLeft a:hover {
-    color: var(--color-primary-light);
-}
-
 .login #usernameField,
 .login #passwordField,
 .login #emailField {
@@ -1486,7 +1464,6 @@ body.login {
     justify-content: center;
     width: 100%;
     margin-right: 0;
-    float: left;
     position: relative;
     background-color: var(--color-white);
 }
@@ -1625,7 +1602,6 @@ body.login {
     border: 1px solid var(--border) !important;
     border-radius: 10px !important;
     background-color: var(--bg-light) !important;
-    transition: all 0.2s ease !important;
 }
 
 .login form[name="changePasswordForm"] input.textInput.password:focus {
@@ -1653,8 +1629,6 @@ body.login {
     background-color: var(--color-primary) !important;
     border: none !important;
     border-radius: 10px !important;
-    cursor: pointer;
-    transition: all 0.2s ease;
 }
 
 .login form[name="changePasswordForm"] .yui-button.yui-submit-button button:hover {
@@ -1712,8 +1686,6 @@ body.login {
     align-items: center;
     justify-content: center;
     width: 100%;
-    float: left;
-    clear: right;
     margin-left: 0;
     margin-top: 0;
     padding: 16px 14px;
@@ -1738,7 +1710,6 @@ body.login {
     width: 100% !important;
     white-space: nowrap;
     gap: 4px;
-    float: right;
     font-size: 85%;
     margin-top: 0;
     margin-right: 0;
@@ -1749,8 +1720,6 @@ body.login {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    float: left;
-    clear: right;
     margin: 0;
     font-size: 14px;
     font-weight: 500;
@@ -1793,7 +1762,6 @@ body.login {
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    clear: both !important;
     margin: 0 !important;
     padding: 24px !important;
     height: auto !important;
@@ -1833,9 +1801,7 @@ body.login {
     align-items: center !important;
     gap: 6px !important;
     color: var(--color-gray) !important;
-    text-decoration: none !important;
     font-size: 12px !important;
-    transition: color 0.15s ease !important;
 }
 
 .dashboard #footer a:hover,
@@ -1929,9 +1895,7 @@ body.login {
     align-items: center !important;
     gap: 6px !important;
     color: var(--color-gray) !important;
-    text-decoration: none !important;
     font-size: 13px !important;
-    transition: color 0.3s ease !important;
 }
 
 /* Add icons to links */
@@ -2007,8 +1971,6 @@ body.login {
     line-height: 20px;
     padding: 6px 8px;
     border-radius: 4px;
-    text-decoration: none !important;
-    transition: all .3s ease;
 }
 
 .dashboard #links a:hover,
@@ -2059,7 +2021,6 @@ body.login {
     line-height: 20px;
     padding: 6px 8px;
     border-radius: 4px;
-    text-decoration: none !important;
 }
 
 .dashboard .userInfo #accountName strong::before {
@@ -2177,7 +2138,6 @@ body.login {
     align-items: center;
     justify-content: flex-start;
     height: auto;
-    float: left;
     text-align: left;
     overflow: hidden;
     padding: 0;
@@ -2195,27 +2155,11 @@ body.login {
     font-size: 14px !important;
     font-weight: 500 !important;
     line-height: 20px !important;
-    text-decoration: none !important;
     position: relative;
     border-radius: 4px;
-    transition: all .3s ease;
-}
-
-.dashboard #MainNavigation.tabs ul li a.selected,
-.dashboard #MainNavigation.tabs ul li a:hover .selected,
-.dashboard #MainNavigation.tabs ul li a:active .selected {
-    position: relative;
-    top: 0;
-    background: none;
-    padding: 0;
-    color: var(--color-primary);
-    cursor: pointer;
-    text-decoration: none !important;
-    background-color: var(--bg-light);
 }
 
 .dashboard #SubNavigation.subtabs {
-    float: left;
     font-size: 14px;
     font-weight: 500 !important;
     line-height: 20px;
@@ -2262,7 +2206,6 @@ body.login {
     justify-content: flex-start;
     align-items: center;
     width: auto;
-    float: left;
     text-align: left;
     overflow: hidden;
     margin-left: 0;
@@ -2280,13 +2223,11 @@ body.login {
     white-space: nowrap;
     width: 100%;
     color: var(--color-dark) !important;
-    text-decoration: none !important;
     font-size: 14px !important;
     font-weight: 500 !important;
     line-height: 20px !important;
     padding: 6px 8px !important;
     border-radius: 4px;
-    transition: all .3s ease;
 }
 
 .dashboard #MainNavigation.tabs ul li a::before {
@@ -2612,7 +2553,6 @@ body.login {
 .dashboard #Main:has([name="publisher_signup_v2_2"]) table.trafficDrivers tbody tr td {
     padding: 8px 4px;
     border: none;
-    vertical-align: middle;
 }
 
 .dashboard #Main:has([name="publisher_signup_v2_1"]) table.trafficDrivers tbody tr td.checkboxCell,
@@ -2627,7 +2567,6 @@ body.login {
     font-size: 14px;
     font-weight: 400;
     color: var(--color-dark);
-    cursor: pointer;
     user-select: none;
     display: inline-block !important;
     margin: 0 !important;
@@ -2761,7 +2700,6 @@ body.login {
     text-align: left !important;
     padding-right: 0 !important;
     flex-shrink: 0;
-    float: none !important;
     position: static !important;
 }
 
@@ -2831,11 +2769,33 @@ body.login {
 .dashboard div.greenBox,
 .dashboard .redBox,
 .dashboard div.redBox {
-    background-color: var(--color-white) !important;
-    background-image: none !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 12px !important;
-    min-width: auto !important;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    min-width: auto;
+}
+
+.dashboard .blueBox,
+.dashboard div.blueBox {
+    color: var(--color-primary-light);
+    background-color: var(--bg-info);
+    border-color: var(--color-primary-light);
+}
+
+.dashboard .greenBox,
+.dashboard div.greenBox {
+    color: var(--color-success);
+    background-color: var(--bg-success);
+    border-color: var(--color-success);
+}
+
+.dashboard .redBox,
+.dashboard div.redBox {
+    color: var(--color-error);
+    background-color: var(--bg-error);
+    border-color: var(--color-error);
 }
 
 .dashboard .blueBox .boxContent,
@@ -2907,7 +2867,6 @@ body.login {
     border: none !important;
     border-bottom: 1px solid var(--border) !important;
     border-radius: 12px 12px 0 0;
-    clear: none !important;
 }
 
 .dashboard .sectionHeader h2 {
@@ -2923,22 +2882,12 @@ body.login {
     display: flex;
     align-items: stretch;
     flex-direction: column;
-    background-color: var(--color-white) !important;
-    padding: 12px !important;
+    gap: 20px;
 }
 
 /* Label Value Pairs */
 
-.dashboard .labelValue {
-    display: flex !important;
-    align-items: center;
-    padding: 12px 0 !important;
-    border-bottom: 1px solid var(--border);
-}
-
-.dashboard .labelValue:last-child,
 .dashboard .reportContainer:last-child,
-.dashboard .labelValue:last-of-type,
 .dashboard .reports table#report tr:last-child td,
 .dashboard .reports table.reportResults tr:last-child td,
 .dashboard .reports .nestedListTable tbody tr:last-child td,
@@ -2948,26 +2897,20 @@ body.login {
     border-bottom: none;
 }
 
-.dashboard .labelValue .label {
-    width: 180px !important;
-    min-width: 180px;
-    flex-shrink: 0;
-    padding: 0 20px;
-    float: none !important;
-}
-
 div.titleDiv {
     display: flex;
+    padding: 0 !important;
     background-color: var(--bg-light);
-    margin: 0 0 12px 0;
+    margin: 0 !important;
 }
 
 .titleDiv h3 {
     display: flex;
-    padding: 16px 24px;
+    padding: 0 !important;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 600 !important;
     line-height: 1.5;
+    border-top: 0 !important;
 }
 
 .dashboard .labelValue .label .bold,
@@ -2980,21 +2923,9 @@ div.titleDiv {
     color: var(--color-dark) !important;
 }
 
-.dashboard .labelValue .value {
-    flex: 1;
-    font-size: 14px !important;
-    color: var(--color-dark) !important;
-    float: none !important;
-}
-
-.dashboard .labelValue .value.inactive {
-    color: var(--color-error) !important;
-    font-weight: 500;
-}
-
 .dashboard .labelValue .value.active {
     color: var(--color-success) !important;
-    font-weight: 500;
+    font-weight: 500 !important;
 }
 
 /* Form Styles */
@@ -3005,8 +2936,6 @@ div.titleDiv {
     align-items: flex-start;
     padding: 16px 0 !important;
     margin: 0 !important;
-    clear: both;
-    float: none !important;
     width: 100% !important;
     overflow: visible !important;
 }
@@ -3017,7 +2946,6 @@ div.titleDiv {
     text-align: right !important;
     padding-right: 20px !important;
     flex-shrink: 0;
-    float: none !important;
     position: static !important;
 }
 
@@ -3034,10 +2962,8 @@ div.titleDiv {
     flex: 1 !important;
     min-width: 0;
     width: auto !important;
-    float: none !important;
     position: static !important;
     text-align: left !important;
-    clear: none !important;
     padding: 0 !important;
     margin: 0 !important;
 }
@@ -3053,18 +2979,6 @@ div.titleDiv {
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 12px;
-}
-
-/* Buttons */
-
-.dashboard .buttonGroup {
-    display: flex !important;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 12px !important;
-    margin: 0 !important;
-    text-align: left !important;
-    white-space: normal !important;
 }
 
 /* Integration Options */
@@ -3166,27 +3080,7 @@ div.titleDiv {
 .dashboard .systemError .boxContent a,
 .dashboard .errorBox .boxContent a {
     color: var(--color-primary-light);
-    text-decoration: none;
     font-weight: 500;
-}
-
-.dashboard .systemError .boxContent a:hover,
-.dashboard .errorBox .boxContent a:hover,
-.dashboard .ordersTable .oliDiv .right a:hover,
-.dashboard .reports .nestedListTable tbody td a:hover,
-.dashboard .reports .reportExportLink:hover,
-.dashboard .reports a[title="Print this report"]:hover,
-.dashboard .hdr h2 .headerLink:hover,
-.dashboard .nestedListTable td.right a:hover,
-.dashboard #leadSearchBox ul li a:hover,
-.dashboard #salesForceLinks li a:hover,
-.dashboard #userGuideLinks li a:hover,
-.dashboard #leadManagerQuickLinksDiv .boxContent ul li a:hover,
-.dashboard .radioContainer .popLink:hover,
-.dashboard .nestedListTable tbody td a:hover,
-.dashboard .noChartData a:hover,
-.dashboard #FooterContent a:hover {
-    text-decoration: underline;
 }
 
 /* States */
@@ -3328,7 +3222,6 @@ div.grid_1_1#leftInnerGrid {
     background-color: var(--border);
     border-radius: 10px;
     flex-shrink: 0;
-    transition: background-color 0.15s ease;
 }
 
 .dashboard .sellerHomeContentBoxL .boxContent > a:hover,
@@ -3384,7 +3277,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .sellerHomeContentBoxL .boxContent h2 a,
 .dashboard .sellerHomeContentBoxR .boxContent h2 a {
     color: var(--color-dark);
-    text-decoration: none;
 }
 
 .dashboard .sellerHomeContentBoxL .boxContent p,
@@ -3401,13 +3293,11 @@ div.grid_1_1#leftInnerGrid {
     display: flex;
     padding: 12px 20px 20px;
     margin: 0;
-    float: none;
     margin-top: auto;
 }
 
 .dashboard .sellerHomeContentBoxL .yui-button,
 .dashboard .sellerHomeContentBoxR .yui-button {
-    float: none;
     margin: 0;
     width: 100%;
     background: transparent !important;
@@ -3442,7 +3332,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .sellerHomeContentBoxR .yui-button .first-child a:hover {
     background-color: var(--color-primary-light) !important;
     color: var(--color-white) !important;
-    text-decoration: none !important;
 }
 
 /* ========== SETTINGS ========== */
@@ -3549,7 +3438,6 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard #settingssubnav .section .header a {
     color: var(--color-white);
-    text-decoration: none;
 }
 
 .dashboard #settingssubnav .subsection .link {
@@ -3559,8 +3447,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard #settingssubnav .subsection .link a {
     font-size: 14px;
     color: var(--color-gray);
-    text-decoration: none;
-    transition: color 0.15s ease;
 }
 
 .dashboard #settingssubnav .subsection .link.current a {
@@ -3599,7 +3485,6 @@ div.grid_1_1#leftInnerGrid {
     height: 16px;
     margin: 0;
     cursor: pointer;
-    vertical-align: middle;
 }
 
 /* ========== REPORTS ========== */
@@ -3682,7 +3567,6 @@ div.grid_1_1#leftInnerGrid {
     font-size: 14px;
     font-weight: 600;
     color: var(--color-dark);
-    text-decoration: none;
     transition: color 0.15s ease;
 }
 
@@ -3697,12 +3581,10 @@ div.grid_1_1#leftInnerGrid {
     font-size: 13px;
     font-weight: 500;
     color: var(--color-white);
-    text-decoration: none;
     padding: 10px 20px;
     background-color: var(--color-primary);
     border: none;
     border-radius: 8px;
-    transition: all 0.15s ease;
     white-space: nowrap;
 }
 
@@ -3809,7 +3691,6 @@ div.grid_1_1#leftInnerGrid {
     line-height: 1.5;
     background-color: var(--color-white);
     border-bottom: 1px solid var(--border);
-    vertical-align: middle;
 }
 
 /* Lead Channels List - keep table structure, use table-layout fixed */
@@ -3829,7 +3710,6 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup {
     display: inline-block !important;
-    float: none !important;
     margin: 0;
     padding: 0;
 }
@@ -3845,9 +3725,7 @@ div.grid_1_1#leftInnerGrid {
     color: var(--color-white) !important;
     font-size: 14px !important;
     font-weight: 500 !important;
-    text-decoration: none !important;
     border-radius: 8px !important;
-    transition: background-color 0.15s ease !important;
 }
 
 .dashboard .ordersTable thead tr.actions td.paginationTop .yui-button.login-button {
@@ -3862,16 +3740,7 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .ordersTable thead tr.colheaders th {
     padding: 14px 20px;
-    font-size: 12px;
     font-weight: 500;
-    color: var(--color-gray);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    background-color: var(--bg-light);
-    border: none;
-    border-bottom: 1px solid var(--border);
-    text-align: left;
-    white-space: nowrap;
 }
 
 /* Wholesale orders table - column widths (percentage-based for fixed layout) */
@@ -3918,7 +3787,6 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .ordersTable thead tr.colheaders th a {
     color: var(--color-gray);
-    text-decoration: none;
 }
 
 .dashboard .ordersTable thead tr.colheaders th a:hover,
@@ -3989,7 +3857,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .ordersTable tbody tr td a {
     color: var(--color-dark);
     font-weight: 500;
-    text-decoration: none;
 }
 
 .dashboard .ordersTable tbody tr td.status .active {
@@ -4169,8 +4036,6 @@ div.grid_1_1#leftInnerGrid {
     background-color: var(--color-white);
     border: 1px solid var(--border);
     border-radius: 6px;
-    text-decoration: none;
-    transition: all 0.15s ease;
 }
 
 .dashboard .paginationContainer .pagination ul li a:hover {
@@ -4209,8 +4074,6 @@ div.grid_1_1#leftInnerGrid {
     padding: 12px 0;
     margin: 0;
     width: 100%;
-    float: none;
-    clear: none;
 }
 
 .dashboard #formContainer .mainLabel {
@@ -4218,7 +4081,6 @@ div.grid_1_1#leftInnerGrid {
     flex-shrink: 0;
     padding: 10px 0;
     text-align: right;
-    float: none;
 }
 
 .dashboard #formContainer .mainLabelContent {
@@ -4227,25 +4089,10 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard #formContainer .options {
     flex: 1;
-    float: none;
 }
 
 .dashboard #formContainer select {
-    width: 100%;
     max-width: 300px;
-    padding: 10px 14px;
-    font-size: 14px;
-    color: var(--color-dark);
-    background-color: var(--color-white);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 16px;
-    cursor: pointer;
-    transition: border-color 0.15s ease;
 }
 
 .dashboard #formContainer select:focus,
@@ -4374,7 +4221,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .ordersTable .detailsLink,
 .dashboard .noChartData a {
     color: var(--color-primary);
-    text-decoration: none;
     font-weight: 500;
 }
 
@@ -4387,7 +4233,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .ordersTable .addLink:hover,
 .dashboard .ordersTable .detailsLink:hover {
     color: var(--color-primary-light);
-    text-decoration: underline;
 }
 
 .dashboard .marketingMethodsHeader {
@@ -4401,8 +4246,6 @@ div.grid_1_1#leftInnerGrid {
 /* Form section links - docPreview and getCode */
 .dashboard .formSectionContent .optionsContent .docPreview,
 .dashboard .formSectionContent .optionsContent .getCode {
-    float: none !important;
-    clear: none !important;
     margin: 0 !important;
     padding: 0 !important;
     display: inline-block !important;
@@ -4420,8 +4263,6 @@ div.grid_1_1#leftInnerGrid {
     background: var(--bg-info) !important;
     border: 1px solid var(--bg-info) !important;
     border-radius: 6px !important;
-    text-decoration: none !important;
-    transition: all 0.2s ease !important;
 }
 
 .dashboard .formSectionContent .optionsContent .docPreview a:hover,
@@ -4432,7 +4273,6 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard .formSectionContent .optionsContent > div[style*="float"] {
-    float: none !important;
     width: auto !important;
     display: inline-flex !important;
     align-items: center !important;
@@ -4446,7 +4286,6 @@ div.grid_1_1#leftInnerGrid {
 /* Clean row layout for form items */
 .dashboard .formSectionContent .optionsContent .clear {
     display: block !important;
-    clear: both !important;
     height: 12px !important;
 }
 
@@ -4520,15 +4359,8 @@ div.grid_1_1#leftInnerGrid {
     max-width: 130px !important;
 }
 
-.dashboard .formSectionContent .instructions,
-.dashboard .ordersTable .smallGrey {
-    font-size: 14px;
-    color: var(--color-gray);
-}
-
 /* Marketing Methods Grid */
 .dashboard .formSectionContent .optionsContent > div[style*="float: left"] {
-    float: none !important;
     display: inline-flex !important;
     align-items: center !important;
 }
@@ -4592,14 +4424,11 @@ div.grid_1_1#leftInnerGrid {
     padding: 0 20px;
     background: var(--color-primary);
     color: var(--color-white);
-    text-decoration: none;
     font-size: 14px;
     font-weight: 600;
     line-height: 1;
     border-radius: 6px;
     border: 1px solid var(--color-primary);
-    transition: all 0.2s ease;
-    cursor: pointer;
 }
 
 .dashboard .integration-support a:hover {
@@ -4637,16 +4466,6 @@ div.grid_1_1#leftInnerGrid {
     gap: 8px;
 }
 
-/* Bold field values in wizard */
-
-/* Inline help images */
-.dashboard .inlineHelpImg,
-.dashboard .ordersTable #checkBoxDiv input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-}
-
 /* ========== LEAD CHANNEL DETAIL ========== */
 
 .dashboard .channelInfo {
@@ -4678,7 +4497,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .nestedListTable tbody td a,
 .dashboard #FooterContent a {
     color: var(--color-primary);
-    text-decoration: none;
 }
 
 .dashboard .channelInfo h2.headerRight {
@@ -4690,7 +4508,6 @@ div.grid_1_1#leftInnerGrid {
     font-size: 13px;
     font-weight: 500;
     border-radius: 6px;
-    cursor: pointer;
     transition: background-color 0.15s ease;
 }
 
@@ -4717,27 +4534,13 @@ div.grid_1_1#leftInnerGrid {
     color: var(--color-primary);
     font-size: 13px;
     font-weight: 500;
-    text-decoration: none;
     border-radius: 6px;
     border: 1px solid var(--border);
-    transition: all 0.15s ease;
 }
 
 #dailyLeadLimits {
     width: 100%;
     min-width: 0 !important;
-}
-
-#dailyLeadLimits thead th {
-    padding: 12px 16px;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--color-gray);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    background-color: var(--bg-light);
-    border-bottom: 1px solid var(--border);
-    text-align: left;
 }
 
 #dailyLeadLimits tbody tr,
@@ -4784,7 +4587,6 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard .blueBox img.sidebar {
-    float: left;
     margin: 0 16px 12px 0;
     border-radius: 8px;
 }
@@ -4856,21 +4658,7 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard .ordersTable #productDiv select {
-    width: 100%;
     height: 42px !important;
-    padding: 0 36px 0 14px !important;
-    font-size: 14px;
-    color: var(--color-dark);
-    background-color: var(--color-white);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 16px;
-    cursor: pointer;
-    transition: border-color 0.15s ease;
 }
 
 .dashboard .ordersTable #checkBoxDiv {
@@ -4899,7 +4687,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .ordersTable .addLink,
 .dashboard .reports .nestedListTable tbody td a {
     color: var(--color-primary);
-    text-decoration: none;
     font-size: 13px;
     font-weight: 500;
 }
@@ -4941,7 +4728,6 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .ordersTable .oliDiv .right a {
     color: var(--color-error);
-    text-decoration: none;
     font-size: 13px;
 }
 
@@ -5003,19 +4789,6 @@ div.grid_1_1#leftInnerGrid {
     background-color: var(--color-white) !important;
 }
 
-.dashboard .settings table.nestedListTable thead tr.colheaders th {
-    padding: 12px 16px !important;
-    font-size: 12px !important;
-    font-weight: 600 !important;
-    color: var(--color-gray) !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.05em !important;
-    background-color: var(--bg-light) !important;
-    border: none !important;
-    border-bottom: 1px solid var(--border) !important;
-    text-align: left !important;
-}
-
 .dashboard .settings table.nestedListTable thead tr.colheaders th.first {
     border-left: none !important;
 }
@@ -5043,17 +4816,7 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .settings table.nestedListTable tbody tr td a {
     color: var(--color-primary-light) !important;
-    text-decoration: none !important;
     font-weight: 500 !important;
-}
-
-.dashboard .settings table.nestedListTable tbody tr td a:hover,
-.dashboard #connectionsTable tbody tr td:first-child a:hover,
-.dashboard #formContainer ul.text li.details .right a:hover,
-.dashboard .checkActions a:hover,
-.dashboard .editCopy a:hover,
-.dashboard #filtersContainer .checkAll a:hover {
-    text-decoration: underline !important;
 }
 
 .dashboard .settings table.nestedListTable thead tr td.paginationTop p.information {
@@ -5093,15 +4856,11 @@ div.grid_1_1#leftInnerGrid {
     background-color: var(--color-primary) !important;
     border: none !important;
     border-radius: 8px !important;
-    text-decoration: none !important;
-    cursor: pointer !important;
-    transition: background-color 0.15s ease !important;
 }
 
 .dashboard .settings table.nestedListTable tfoot .yui-button.yui-link-button .first-child a:hover,
 .dashboard .settings table.nestedListTable tfoot .yui-button .first-child a:hover {
     background-color: var(--color-primary-light) !important;
-    text-decoration: none !important;
 }
 
 .dashboard .settings table.nestedListTable tfoot .yui-button.yui-link-button,
@@ -5180,7 +4939,6 @@ div.grid_1_1#leftInnerGrid {
     font-size: 14px !important;
     border: 1px solid var(--border) !important;
     text-align: center !important;
-    vertical-align: middle !important;
 }
 
 .dashboard .settings .sellerBidMinimum tbody td.bidGridLeft {
@@ -5470,6 +5228,8 @@ div.grid_1_1#leftInnerGrid {
 .yui-panel-container .yui-panel .bd .formSectionContent,
 .dashboard .gridWrapper {
     padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
 }
 
 .dashboard .settings #linkContainer .roundedBox .formSectionContent .boxContent p {
@@ -5487,8 +5247,6 @@ div.grid_1_1#leftInnerGrid {
     background-color: var(--bg-info) !important;
     border: 1px solid var(--bg-info) !important;
     border-radius: 8px !important;
-    cursor: pointer !important;
-    transition: all 0.15s ease !important;
     word-break: break-all !important;
 }
 
@@ -5514,16 +5272,12 @@ form[name="ticketLogForm"] .formSectionContent {
     padding: 20px !important;
 }
 
-.dashboard .settings .formSectionContent p {
-    font-size: 14px !important;
-    line-height: 1.6 !important;
-    color: var(--color-dark) !important;
-}
-
 .dashboard .settings .formSectionContent p.instructions {
     padding: 12px 16px !important;
     margin: 0 0 16px 0 !important;
-    font-size: 13px !important;
+    font-size: 14px !important;
+    font-weight: 300;
+    line-height: 1.5;
     color: var(--color-gray) !important;
     background-color: var(--bg-light) !important;
     border-radius: 8px !important;
@@ -5567,8 +5321,6 @@ form[name="ticketLogForm"] .formSectionContent {
     background-color: var(--bg-error) !important;
     border: 1px solid var(--color-error) !important;
     border-radius: 8px !important;
-    cursor: pointer !important;
-    transition: all 0.15s ease !important;
 }
 
 .dashboard .settings table.nestedListTable thead tr td.paginationTop .yui-button.yui-submit-button .first-child button:hover {
@@ -5586,7 +5338,6 @@ form[name="ticketLogForm"] .formSectionContent {
 
 .dashboard .settings table.nestedListTable thead tr.colheaders th.sortable a {
     color: var(--color-gray) !important;
-    text-decoration: none !important;
 }
 
 .dashboard .settings table.nestedListTable thead tr.colheaders th.sortedAsc a,
@@ -5608,18 +5359,6 @@ form[name="ticketLogForm"] .formSectionContent {
 .dashboard .settings table.nestedListTable tbody tr td.checkbox {
     width: 40px !important;
     text-align: center !important;
-}
-
-.dashboard .settings table.nestedListTable input[type="checkbox"] {
-    width: 18px !important;
-    height: 18px !important;
-    cursor: pointer !important;
-    accent-color: var(--color-primary) !important;
-}
-
-.dashboard .settings table.nestedListTable input[type="checkbox"]:disabled {
-    cursor: not-allowed !important;
-    opacity: 0.5 !important;
 }
 
 /* Pagination footer */
@@ -5676,9 +5415,6 @@ form[name="ticketLogForm"] .formSectionContent {
     background-color: var(--color-white) !important;
     border: 1px solid var(--border) !important;
     border-radius: 6px !important;
-    text-decoration: none !important;
-    cursor: pointer !important;
-    transition: all 0.15s ease !important;
 }
 
 .dashboard .settings table.nestedListTable tfoot .paginationContainer .pagination ul li a:hover,
@@ -5897,13 +5633,6 @@ form[name="ticketLogForm"] .formSectionContent {
     cursor: pointer !important;
 }
 
-.dashboard #connectionsTable #search #checkBoxDiv label.checkbox input[type="checkbox"],
-.dashboard .checkboxGrid input[type="checkbox"] {
-    width: 16px !important;
-    height: 16px !important;
-    accent-color: var(--color-primary) !important;
-}
-
 .dashboard #connectionsTable #search #searchButtonDiv .yui-button button {
     padding: 10px 20px !important;
     font-size: 14px !important;
@@ -5912,7 +5641,6 @@ form[name="ticketLogForm"] .formSectionContent {
     border: 1px solid var(--border) !important;
     border-radius: 8px !important;
     color: var(--color-dark) !important;
-    cursor: pointer !important;
 }
 
 .dashboard #connectionsTable thead tr.actions td.paginationTop .buttonGroup {
@@ -5924,16 +5652,10 @@ form[name="ticketLogForm"] .formSectionContent {
 
 /* Table headers styling */
 .dashboard #connectionsTable thead tr.colheaders th {
-    white-space: nowrap !important;
     padding: 14px 20px !important;
     font-size: 13px !important;
-    font-weight: 600 !important;
-    text-transform: uppercase !important;
     letter-spacing: 0.5px !important;
-    color: var(--color-gray) !important;
-    background-color: var(--bg-light) !important;
     border-bottom: 2px solid var(--border) !important;
-    text-align: left !important;
 }
 
 /* Superheader styling (Orders, Feedback) */
@@ -5984,7 +5706,6 @@ form[name="ticketLogForm"] .formSectionContent {
 .dashboard #connectionsTable tbody tr td:first-child a {
     color: var(--color-primary) !important;
     font-weight: 500 !important;
-    text-decoration: none !important;
 }
 
 /* Product count styling */
@@ -6037,16 +5758,8 @@ form[name="ticketLogForm"] .formSectionContent {
     border-bottom: 1px solid var(--border) !important;
 }
 
-.yui-panel-container .yui-panel .bd table tr:last-child,
-.dashboard .summarySection .labelValue:last-child,
-.dashboard .summaryRow:last-child,
-.dashboard .formSectionContent ul.text li:last-child {
-    border-bottom: none !important;
-}
-
 .yui-panel-container .yui-panel .bd table td {
-    padding: 12px 16px !important;
-    font-size: 14px !important;
+    padding: 12px !important;
 }
 
 .yui-panel-container .yui-panel .bd table td:first-child {
@@ -6074,12 +5787,7 @@ form[name="ticketLogForm"] .formSectionContent {
 .dashboard .channels table.nestedListTable.ordersTable thead tr.colheaders th {
     padding: 10px 16px !important;
     font-size: 11px !important;
-    font-weight: 600 !important;
-    text-transform: uppercase !important;
     letter-spacing: 0.5px !important;
-    color: var(--color-gray) !important;
-    background-color: var(--bg-light) !important;
-    border-bottom: 1px solid var(--border) !important;
 }
 
 .dashboard table.nestedListTable.dynamicTable tbody tr td,
@@ -6109,21 +5817,15 @@ form[name="ticketLogForm"] .formSectionContent {
 .dashboard table.nestedListTable.dynamicTable tbody tr td .oliDiv .left a,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .left a {
     color: var(--color-primary) !important;
-    text-decoration: none !important;
     font-size: 13px !important;
     white-space: nowrap;
 }
 
 .dashboard table.nestedListTable.dynamicTable tbody tr td .oliDiv .left a:hover,
-.dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .left a:hover {
-    text-decoration: none !important;
-}
-
 .dashboard table.nestedListTable.dynamicTable tbody tr td .oliDiv .right a,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .right a {
     color: var(--color-error) !important;
     font-size: 12px !important;
-    text-decoration: none !important;
 }
 
 /* Action button - simple text link style */
@@ -6147,7 +5849,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     background-color: var(--bg-info) !important;
     border: 1px solid var(--bg-info) !important;
     border-radius: 4px !important;
-    text-decoration: none !important;
     white-space: nowrap !important;
 }
 
@@ -6167,7 +5868,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 
 .dashboard .gridWrapper .grid_1_1 .column {
     width: auto !important;
-    float: none !important;
     margin: 0 !important;
 }
 
@@ -6189,7 +5889,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     color: var(--color-dark) !important;
     background-color: var(--color-white) !important;
     border: 1px solid var(--border) !important;
-    text-decoration: none !important;
 }
 
 .dashboard .settings .formSectionContent .buttonGroup .yui-submit-button .first-child button:hover,
@@ -6249,9 +5948,7 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     font-size: 14px !important;
     font-weight: 500 !important;
     color: var(--color-gray) !important;
-    text-decoration: none !important;
     border-bottom: 2px solid transparent !important;
-    transition: all 0.15s ease !important;
 }
 
 .dashboard .roundedBox .subTabs ul li a:hover,
@@ -6270,25 +5967,10 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 }
 
 /* Lead Channel Detail content area */
-.dashboard .roundedBox .labelValue {
-    display: flex !important;
-    align-items: center !important;
-    padding: 12px 0 !important;
-    border-bottom: 1px solid var(--border) !important;
-}
-
-.dashboard .roundedBox .labelValue .label,
 .dashboard #settingsContainer .inputGroup .mainLabel label {
     font-size: 14px !important;
     font-weight: 500 !important;
     color: var(--color-gray) !important;
-}
-
-.dashboard .roundedBox .labelValue .value {
-    flex: 1 !important;
-    font-size: 14px !important;
-    line-height: 1.5;
-    color: var(--color-dark) !important;
 }
 
 /* ========== CREATE PROPOSAL PAGE STYLING ========== */
@@ -6382,14 +6064,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     background-color: var(--color-primary) !important;
     border: none !important;
     border-radius: 8px !important;
-    cursor: pointer !important;
-}
-
-.dashboard #formContainer #bottomButton .yui-button button:disabled,
-.dashboard #buttons #save.yui-button-disabled .first-child button,
-.dashboard #formContainer #bottomButton .buttonGroup .yui-button-disabled .first-child button {
-    background-color: var(--color-muted) !important;
-    cursor: not-allowed !important;
 }
 
 /* ========== CREATE PROPOSAL - STEP 1 IMPROVEMENTS ========== */
@@ -6500,7 +6174,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     width: 16px !important;
     height: 16px !important;
     accent-color: var(--color-primary) !important;
-    cursor: pointer !important;
     margin: 0 !important;
 }
 
@@ -6519,7 +6192,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 .dashboard #formContainer ul.text li.details .right a {
     font-size: 12px !important;
     color: var(--color-primary) !important;
-    text-decoration: none !important;
 }
 
 /* Exclusivity section full width */
@@ -6551,14 +6223,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     cursor: pointer !important;
 }
 
-.dashboard #formContainer .leadtype label input[type="radio"],
-.dashboard #settingsContainer .inputGroup .option input[type="radio"] {
-    width: 16px !important;
-    height: 16px !important;
-    margin-top: 2px !important;
-    accent-color: var(--color-primary) !important;
-}
-
 /* ========== CREATE PROPOSAL - STEP 2 (FILTERS/PRICE/SETTINGS) ========== */
 
 .dashboard #loantovalue {
@@ -6588,7 +6252,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     font-size: 14px;
     font-weight: 500;
     line-height: 1.5;
-    text-decoration: none;
 }
 
 .dashboard span#toggleViewSpan {
@@ -6624,9 +6287,7 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     font-size: 14px !important;
     font-weight: 500 !important;
     color: var(--color-gray) !important;
-    text-decoration: none !important;
     border-bottom: 3px solid transparent !important;
-    transition: all 0.15s ease !important;
 }
 
 .dashboard #bidgridTabs li a.current {
@@ -6691,11 +6352,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 
 .dashboard .dropDown.filter select,
 .dashboard .dropDownContainer select {
-    padding: 10px 14px !important;
-    font-size: 14px !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 8px !important;
-    background-color: var(--color-white) !important;
     min-width: 200px !important;
 }
 
@@ -6750,13 +6406,16 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     margin: 0 !important;
 }
 
-.dashboard #maxAmountDiv input,
-.dashboard #endDateDiv select {
+.dashboard #maxAmountDiv input {
     padding: 8px 12px !important;
     font-size: 14px !important;
     border: 1px solid var(--border) !important;
     border-radius: 6px !important;
     background-color: var(--color-white) !important;
+}
+
+.dashboard #endDateDiv select {
+    padding: 8px 12px !important;
 }
 
 .dashboard #maxAmountDiv.disabled input,
@@ -6796,8 +6455,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     font-size: 14px !important;
     font-weight: 500 !important;
     border-radius: 8px !important;
-    cursor: pointer !important;
-    transition: all 0.15s ease !important;
 }
 
 .dashboard #buttons .backbutton .first-child button,
@@ -6838,44 +6495,15 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 }
 
 /* Label-value pairs in summary */
-.dashboard .summarySection .labelValue,
-.dashboard .summaryRow {
-    display: flex !important;
-    align-items: center !important;
-    padding: 10px 0 !important;
-    border-bottom: 1px solid var(--border) !important;
-}
-
-.dashboard .summarySection .labelValue .label,
-.dashboard .summaryRow .label {
-    flex: 0 0 180px !important;
-    font-size: 14px !important;
-    font-weight: 500 !important;
-    color: var(--color-gray) !important;
-}
-
-.dashboard .summarySection .labelValue .value,
-.dashboard .summaryRow .value {
-    flex: 1 !important;
-    font-size: 14px !important;
-    color: var(--color-dark) !important;
-}
-
 /* Recipient list */
 
 .dashboard .recipientList select {
-    width: 100% !important;
     max-width: 300px !important;
-    padding: 10px 14px !important;
-    font-size: 14px !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 8px !important;
 }
 
 .dashboard .recipientList a {
     font-size: 13px !important;
     color: var(--color-primary) !important;
-    text-decoration: none !important;
     margin-right: 12px !important;
 }
 
@@ -6900,14 +6528,7 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     font-size: 14px !important;
     font-weight: 500 !important;
     border-radius: 8px !important;
-    text-decoration: none !important;
-    cursor: pointer !important;
-    transition: all 0.15s ease !important;
 }
-
-/* Primary action button (Send Proposal) */
-
-/* Secondary action buttons (Close, Back to List) */
 
 /* Price grid table */
 /* ========== PRICE GRID COMPREHENSIVE REDESIGN ========== */
@@ -7017,7 +6638,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     border-radius: 6px !important;
     background-color: var(--color-white) !important;
     text-align: center !important;
-    transition: all 0.2s ease !important;
 }
 
 .dashboard table.pricegrid input.textInput:focus {
@@ -7067,7 +6687,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 .dashboard .checkActions a {
     font-size: 13px !important;
     color: var(--color-primary) !important;
-    text-decoration: none !important;
     margin-right: 16px !important;
 }
 
@@ -7080,7 +6699,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 .dashboard .editCopy a {
     font-size: 14px !important;
     color: var(--color-primary) !important;
-    text-decoration: none !important;
 }
 
 /* ========== CREATE PROPOSAL STEP 1 - ENHANCED PRODUCT CARDS ========== */
@@ -7184,11 +6802,9 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 .dashboard #formContainer li.details .target .right a {
     font-size: 13px !important;
     color: var(--color-primary) !important;
-    text-decoration: none !important;
     padding: 6px 12px !important;
     border: 1px solid var(--color-primary) !important;
     border-radius: 6px !important;
-    transition: all 0.15s ease !important;
 }
 
 .dashboard #formContainer li.details .target .right a:hover {
@@ -7301,8 +6917,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     background-color: var(--color-primary) !important;
     border: none !important;
     border-radius: 8px !important;
-    cursor: pointer !important;
-    transition: all 0.15s ease !important;
 }
 
 /* ========== AUTO WARRANTY STEP 2 - FILTERS TAB IMPROVEMENTS ========== */
@@ -7386,7 +7000,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     width: 16px !important;
     height: 16px !important;
     accent-color: var(--color-primary) !important;
-    cursor: pointer !important;
 }
 
 .dashboard #filtersContainer table.cBoxes label,
@@ -7407,7 +7020,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 .dashboard #filtersContainer .checkAll a {
     font-size: 13px !important;
     color: var(--color-primary) !important;
-    text-decoration: none !important;
     font-weight: 500 !important;
 }
 
@@ -7431,13 +7043,7 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 /* Dropdown filters (Max Vehicle Age, Buyer Name) */
 
 .dashboard #filtersContainer .dropDown.filter select {
-    padding: 12px 16px !important;
-    font-size: 14px !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 8px !important;
-    background-color: var(--color-white) !important;
     min-width: 200px !important;
-    cursor: pointer !important;
 }
 
 /* Pricing message */
@@ -7583,7 +7189,7 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     top: auto !important;
     left: auto !important;
     width: 100% !important;
-    max-width: 600px !important;
+    max-width: 700px !important;
     max-height: calc(100vh - 40px) !important;
     margin: 0 !important;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25) !important;
@@ -7713,10 +7319,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .requiredMarker {
     background: var(--color-white) !important;
     border: 1px solid var(--border-light, var(--border)) !important;
     border-radius: 8px !important;
-    cursor: pointer !important;
-    transition: border-color 0.2s !important;
-    appearance: none !important;
-    -webkit-appearance: none !important;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
     background-repeat: no-repeat !important;
     background-position: right 12px center !important;
@@ -7731,7 +7333,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .requiredMarker {
     background: var(--color-white) !important;
     border: 1px solid var(--border-light, var(--border)) !important;
     border-radius: 8px !important;
-    transition: border-color 0.2s, box-shadow 0.2s !important;
 }
 
 /* YUI Simple Dialog styles */
@@ -7749,7 +7350,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .requiredMarker {
     width: 16px !important;
     height: 16px !important;
     margin-right: 10px !important;
-    float: left !important;
     display: block !important;
 }
 
@@ -7817,7 +7417,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .requiredMarker {
 .yui-overlay[style*="visibility: visible"],
 .yui-panel-container.visible,
 .yui-overlay.visible {
-    visibility: visible !important;
     display: flex !important;
 }
 
@@ -7906,10 +7505,8 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .requiredMarker {
     height: 32px !important;
     width: 32px !important;
     margin: auto !important;
-    text-decoration: none !important;
     border-radius: 8px !important;
     font-weight: 500 !important;
-    transition: all 0.2s ease !important;
 }
 
 /* Today's date */
@@ -7932,8 +7529,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .requiredMarker {
 .yui-calendar td.calcell.calcellhover a {
     background-color: var(--color-primary-light) !important;
     color: var(--color-white) !important;
-    cursor: pointer !important;
-    transform: scale(1.05) !important;
 }
 
 /* Out of month dates */
@@ -7989,7 +7584,6 @@ div[id*="panel"] {
 .yui-panel-container .yui-panel .bd,
 .yui-panel-container .yui-panel .ft {
     display: block !important;
-    visibility: visible !important;
 }
 
 .yui-panel-container .yui-panel .hd {
@@ -8035,9 +7629,6 @@ body.yui-skin-sam .yui-panel-container {
     background-color: var(--color-primary) !important;
     border: none !important;
     border-radius: 8px !important;
-    text-decoration: none !important;
-    cursor: pointer !important;
-    transition: all 0.2s ease !important;
     margin-top: 12px !important;
 }
 
@@ -8057,7 +7648,6 @@ body.yui-skin-sam .yui-panel-container {
     padding: 4px 12px !important;
     font-size: 13px !important;
     color: var(--color-primary) !important;
-    text-decoration: none !important;
     cursor: pointer !important;
     position: absolute !important;
     right: 16px !important;
@@ -8067,7 +7657,6 @@ body.yui-skin-sam .yui-panel-container {
 .yui-panel .hd .container-close:hover,
 .yui-dialog .hd .container-close:hover {
     color: var(--color-primary-light) !important;
-    text-decoration: underline !important;
 }
 
 /* Modal header title styling */
@@ -8146,7 +7735,6 @@ form[name="ticketLogForm"] .inputGroup {
     display: block !important;
     margin-bottom: 16px !important;
     padding: 0 !important;
-    float: none !important;
     width: 100% !important;
 }
 
@@ -8155,7 +7743,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel {
     width: 100% !important;
     padding: 0 0 6px 0 !important;
     text-align: left !important;
-    float: none !important;
 }
 
 form[name="ticketLogForm"] .inputGroup .mainLabel label {
@@ -8167,7 +7754,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel label {
 form[name="ticketLogForm"] .inputGroup .options {
     display: block !important;
     width: 100% !important;
-    float: none !important;
     padding: 0 !important;
 }
 
@@ -8231,23 +7817,6 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button:hover {
     background: var(--color-primary-light) !important;
 }
 
-/* Datepicker / Calendar fixes */
-.yui-calcontainer {
-    position: absolute !important;
-    z-index: 9999 !important;
-    max-width: 300px !important;
-    background: var(--color-white) !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 8px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-    padding: 12px !important;
-}
-
-.yui-calendar {
-    width: 100% !important;
-    font-size: 13px !important;
-}
-
 .yui-calcontainer .calclose,
 .container-close {
     position: absolute !important;
@@ -8273,12 +7842,6 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button:hover {
     max-width: 200px !important;
     width: auto !important;
     min-width: 100px !important;
-}
-
-/* Input box fixes */
-.dashboard .settings input.textInput,
-.dashboard #bidoptions input.textInput {
-    max-width: 100% !important;
 }
 
 /* Order form specific fixes */
@@ -8373,7 +7936,6 @@ img.calendarIcon {
     background: var(--color-secondary) !important;
     color: var(--color-white) !important;
     border-radius: 4px !important;
-    text-decoration: none !important;
     font-size: 12px !important;
     margin-left: auto !important;
 }
@@ -8406,7 +7968,6 @@ img.calendarIcon {
 
 /* Lead Channels list - make name links clickable/prominent */
 .dashboard .channels table.nestedListTable td a:not(.pagination a) {
-    text-decoration: underline !important;
     color: var(--color-primary);
 }
 
@@ -8486,7 +8047,10 @@ img.calendarIcon {
 }
 
 /* Report filter select dropdown */
-.dashboard .reports .filter select,
+.dashboard .reports .filter select {
+    min-width: 250px;
+}
+
 .dashboard .reports .filter .rptFilterSelect {
     font-size: 14px;
     padding: 10px 36px 10px 12px;
@@ -8494,16 +8058,11 @@ img.calendarIcon {
     border-radius: 8px;
     background-color: var(--color-white);
     color: var(--color-dark);
-    cursor: pointer;
     min-width: 250px;
     max-width: 100%;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231e3a5f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 10px center;
-    transition: border-color 0.2s ease;
 }
 
 .dashboard .reports .filter select:hover,
@@ -8537,7 +8096,6 @@ img.calendarIcon {
     background-color: var(--color-white);
     color: var(--color-dark);
     min-width: 120px;
-    transition: border-color 0.2s ease;
 }
 
 /* Report buttons */
@@ -8597,7 +8155,6 @@ img.calendarIcon {
     display: inline-flex;
     align-items: center;
     color: inherit;
-    text-decoration: none;
 }
 
 .dashboard .reports .rptHeaderCenter a img,
@@ -8663,19 +8220,6 @@ img.calendarIcon {
     overflow: hidden;
 }
 
-.dashboard .reports .nestedListTable thead tr.colheaders th {
-    padding: 10px 16px;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--color-gray);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    text-align: left;
-    background: var(--bg-light);
-    border-bottom: 1px solid var(--border);
-    white-space: nowrap;
-}
-
 .dashboard .reports .nestedListTable tbody tr td {
     padding: 12px 16px;
     font-size: 13px;
@@ -8703,7 +8247,6 @@ img.calendarIcon {
     align-items: center;
     gap: 6px;
     color: var(--color-primary);
-    text-decoration: none;
     font-size: 13px;
     font-weight: 500;
 }
@@ -8779,19 +8322,6 @@ img.calendarIcon {
 }
 
 .dashboard .reports .calendarWithSelects select {
-    font-size: 14px;
-    padding: 10px 30px 10px 10px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background-color: var(--color-white);
-    color: var(--color-dark);
-    cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231e3a5f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 8px center;
     min-width: 70px;
 }
 
@@ -8804,7 +8334,6 @@ img.calendarIcon {
     border: 1px solid var(--border);
     border-radius: 8px;
     background-color: var(--color-white);
-    cursor: pointer;
 }
 
 .dashboard .reports .calendarWithSelects .showCalendarButton:hover {
@@ -8841,11 +8370,6 @@ img.calendarIcon {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23004279' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9V2h12v7'/%3E%3Cpath d='M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2'/%3E%3Crect x='6' y='14' width='12' height='8'/%3E%3C/svg%3E");
 }
 
-.dashboard .reports img[src*="calendar.gif"] {
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23004279' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E");
-    width: 18px;
-    height: 18px;
-}
 
 .dashboard .reports img[src*="new_ltg_up.gif"] {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M12 8l-6 6h12z'/%3E%3C/svg%3E");
@@ -8893,7 +8417,6 @@ img.calendarIcon {
 .dashboard .grid_340px_600px .secondary {
     flex: 0 0 300px;
     width: 300px;
-    float: none;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -8902,7 +8425,6 @@ img.calendarIcon {
 
 .dashboard .grid_340px_600px .primary {
     flex: 1;
-    float: none;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -8943,7 +8465,6 @@ img.calendarIcon {
     font-size: 12px;
     font-weight: 500;
     color: var(--color-primary);
-    text-decoration: none;
 }
 
 /* Section headers inside boxes */
@@ -8989,9 +8510,7 @@ img.calendarIcon {
     border-radius: 6px;
     font-size: 13px;
     font-weight: 600;
-    text-decoration: none;
     display: inline-block;
-    transition: all 0.15s ease;
 }
 
 /* Nested list tables (Account Overview, Active Orders) */
@@ -9007,17 +8526,7 @@ img.calendarIcon {
 
 .dashboard .nestedListTable td.right a {
     color: var(--color-primary);
-    text-decoration: none;
     font-weight: 600;
-}
-
-.dashboard .nestedListTable thead tr.colheaders th {
-    padding: 12px 16px;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--color-gray);
-    text-align: center;
-    border-bottom: 1px solid var(--border);
 }
 
 .dashboard .nestedListTable tfoot td {
@@ -9084,7 +8593,6 @@ img.calendarIcon {
 .dashboard #salesForceLinks li a,
 .dashboard #userGuideLinks li a {
     color: var(--color-primary);
-    text-decoration: none;
     font-size: 13px;
 }
 
@@ -9112,16 +8620,6 @@ img.calendarIcon {
 }
 
 .dashboard #chartSelectorContainer select {
-    padding: 10px 36px 10px 12px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    font-size: 14px;
-    background-color: var(--color-white);
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231e3a5f' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    cursor: pointer;
     min-width: 280px;
 }
 
@@ -9159,16 +8657,6 @@ img.calendarIcon {
 }
 
 .dashboard #search select {
-    padding: 10px 36px 10px 12px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    font-size: 14px;
-    background-color: var(--color-white);
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231e3a5f' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    cursor: pointer;
     min-width: 140px;
 }
 
@@ -9201,7 +8689,6 @@ img.calendarIcon {
 
 .dashboard #leadManagerQuickLinksDiv .boxContent ul li a {
     color: var(--color-primary);
-    text-decoration: none;
     font-size: 13px;
     display: flex;
     align-items: center;
@@ -9250,14 +8737,6 @@ img.calendarIcon {
 .dashboard table.leadListTable tbody tr:hover td,
 .dashboard .nestedListTable tbody tr:hover td {
     background-color: var(--bg-info);
-}
-
-.dashboard table.listTable input[type="checkbox"],
-.dashboard table.leadListTable input[type="checkbox"],
-.dashboard .radioContainer input[type="radio"] {
-    width: 16px;
-    height: 16px;
-    accent-color: var(--color-primary);
 }
 
 /* Info boxes / Help boxes */
@@ -9338,16 +8817,6 @@ img.calendarIcon {
 }
 
 .dashboard .categoryContainer select {
-    padding: 10px 36px 10px 12px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    font-size: 14px;
-    background-color: var(--color-white);
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231e3a5f' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    cursor: pointer;
     min-width: 250px;
 }
 
@@ -9377,7 +8846,6 @@ img.calendarIcon {
     font-weight: 500;
     line-height: 1;
     text-transform: lowercase;
-    text-decoration: underline;
 }
 
 .dashboard .productsByCategory {
@@ -9394,7 +8862,6 @@ img.calendarIcon {
     background-color: var(--bg-light);
     border: 1px solid var(--border);
     border-radius: 8px;
-    transition: border-color 0.15s ease;
 }
 
 .dashboard .radioContainer label {
@@ -9410,18 +8877,6 @@ img.calendarIcon {
 .dashboard .radioContainer .popLink {
     font-size: 12px;
     color: var(--color-primary);
-    text-decoration: none;
-}
-
-/* Calendar icon replacement */
-.dashboard img.calendarIcon,
-.dashboard img[src*="calbtn.gif"] {
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23004279' stroke-width='2'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E");
-    width: 18px;
-    height: 18px;
-    vertical-align: middle;
-    cursor: pointer;
-    margin-left: 8px;
 }
 
 /* YUI button overrides */
@@ -9438,6 +8893,10 @@ img.calendarIcon {
 }
 
 .dashboard #FormFields form {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 24px;
     width: 100%;
     margin-bottom: 24px;
 }
@@ -9581,7 +9040,6 @@ img.calendarIcon {
 
 /* Form inline layout fix */
 .dashboard .formSectionContent > div[style*="float"] {
-    float: none !important;
     display: inline-flex;
     align-items: center;
 }
@@ -9598,12 +9056,6 @@ img.calendarIcon {
 .dashboard .formSectionContent > div[style*="width: 30%"] {
     width: auto !important;
     text-align: left !important;
-    float: none !important;
-}
-
-.dashboard .formSectionContent > div[style*="clear: right"] {
-    clear: none !important;
-    float: none !important;
 }
 
 /* Connections container */
@@ -9751,18 +9203,6 @@ img.calendarIcon {
     background-color: transparent;
 }
 
-/* Calendar icon next to date fields */
-.dashboard img[id*="CalendarIcon"],
-.dashboard .calendarIcon {
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23004279' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E");
-    width: 20px !important;
-    height: 20px !important;
-    cursor: pointer;
-    vertical-align: middle;
-    margin-left: 8px;
-    transition: opacity 0.15s ease;
-}
-
 /* Form section header separator */
 
 .dashboard .sectionHeader h2 {
@@ -9788,7 +9228,10 @@ img.calendarIcon {
 .dashboard .instructions:not(span) {
     font-size: 12px;
     color: var(--color-gray);
-    white-space: nowrap;
+}
+
+.dashboard .instructions a {
+    color: var(--color-primary-light);
 }
 
 /* Input focus states */
@@ -9926,6 +9369,8 @@ img.calendarIcon {
     .dashboard #iliWizardSteps ul li,
     .dashboard .formSectionContent .options {
         width: 100%;
+        max-width: 100%;
+        min-width: 100%;
     }
 
     .dashboard #leadManagerQuickLinksDiv {
@@ -10427,7 +9872,6 @@ img.calendarIcon {
 
     .dashboard .blueBox img.sidebar,
     .dashboard .wizard-integration-details img.sidebar {
-        float: none;
         display: block;
         margin: 0 auto 16px;
     }
@@ -10813,7 +10257,6 @@ img.calendarIcon {
     .dashboard .inputGroup .options,
     .dashboard .options {
         width: 100% !important;
-        float: none !important;
     }
 
     .dashboard .secondary {
@@ -10977,7 +10420,6 @@ img.calendarIcon {
         background: var(--color-primary) !important;
         color: var(--color-white) !important;
         border-radius: 6px !important;
-        text-decoration: none !important;
         font-size: 14px !important;
         text-align: center !important;
     }
@@ -11163,7 +10605,6 @@ img.calendarIcon {
 
     .dashboard .settings table.nestedListTable tbody tr td:nth-child(2) a:hover,
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(2) a:hover {
-        text-decoration: none !important;
         opacity: 0.9 !important;
     }
 
@@ -11204,7 +10645,6 @@ img.calendarIcon {
         font-weight: 500 !important;
         color: var(--color-gray) !important;
         font-size: 12px !important;
-        float: none !important;
         width: 100% !important;
         min-width: unset !important;
     }
@@ -11212,7 +10652,6 @@ img.calendarIcon {
     .dashboard .labelValue .value {
         font-size: 14px !important;
         text-align: left !important;
-        float: none !important;
         width: 100% !important;
         font-weight: 500 !important;
         color: var(--color-dark) !important;
@@ -11471,7 +10910,6 @@ img.calendarIcon {
     .yui-dialog .ft span.yui-button {
         flex: 1 !important;
         display: flex !important;
-        float: none !important;
         margin: 0 !important;
         padding: 0 !important;
         background: transparent !important;
@@ -11737,7 +11175,6 @@ img.calendarIcon {
     .dashboard .roundedBox2 .formSectionContent > div[style] {
         display: block !important;
         width: 100% !important;
-        float: none !important;
         margin: 0 0 12px 0 !important;
         text-align: left !important;
     }
@@ -11854,7 +11291,6 @@ img.calendarIcon {
 
     .dashboard .chartHeader h2 span {
         display: block !important;
-        float: none !important;
     }
 
     .dashboard .chartHeader .smallGrey {
@@ -11892,7 +11328,6 @@ img.calendarIcon {
         font-size: 14px !important;
         font-weight: 500 !important;
         color: var(--color-primary-light) !important;
-        text-decoration: none !important;
     }
 
     .dashboard .nestedListTable tbody tr {
@@ -12168,7 +11603,6 @@ img.calendarIcon {
     .dashboard .formSectionContent > table > tbody > tr > td:last-child a {
         color: var(--color-primary-light) !important;
         font-weight: 500 !important;
-        text-decoration: none !important;
     }
 
     .dashboard .inputGroup:has(select[name*="balance"]) .optionsContent,
@@ -12284,8 +11718,6 @@ img.calendarIcon {
         width: 100% !important;
         margin-bottom: 12px !important;
         text-align: left !important;
-        float: none !important;
-        clear: both !important;
     }
 
     .dashboard .roundedBox2 .formSectionContent .mainLabelContent {
