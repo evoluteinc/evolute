@@ -64,13 +64,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
-}
-
-a:link,
-a:visited,
-a:active {
-    color: var(--color-primary-light);
+    text-decoration: none;
 }
 
 input,
@@ -78,13 +72,17 @@ select,
 button,
 textarea {
     font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
-    cursor: pointer;
     transition: all .2s ease;
 }
 
 select,
 button,
-textarea {
+textarea,
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="file"] {
+    cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
 }
@@ -479,10 +477,10 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
 .dashboard .labelValue,
 .dashboard .summarySection .labelValue,
 .dashboard .summaryRow {
-    display: flex !important;
-    align-items: center !important;
-    padding: 12px 0 !important;
-    border-bottom: 1px solid var(--border) !important;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
 }
 .dashboard .labelValue:last-child,
 .dashboard .labelValue:last-of-type {
@@ -491,18 +489,13 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
 .dashboard .labelValue .label,
 .dashboard .summarySection .labelValue .label,
 .dashboard .summaryRow .label {
-    width: 180px !important;
-    min-width: 180px !important;
-    flex-shrink: 0 !important;
-    padding: 0 20px !important;
+    color: var(--color-gray) !important;
     font-size: 14px !important;
     font-weight: 500 !important;
-    color: var(--color-gray) !important;
 }
 .dashboard .labelValue .value,
 .dashboard .summarySection .labelValue .value,
 .dashboard .summaryRow .value {
-    flex: 1 !important;
     font-size: 14px !important;
     color: var(--color-dark) !important;
 }
