@@ -359,3 +359,26 @@ div.checkAllNone{
     gap: 5px;
     font-weight: bold;
 }
+
+table.leadListTable div.lsPaginationTop,
+table.leadListTable div.lsPaginationBottom {
+    white-space: nowrap;
+    padding: 4px
+}
+
+.dashboard .lsListingTop,
+.dashboard .lsListingBottom {
+    display: flex;
+    justify-content: space-between;
+}
+.dashboard .lpPaginationInput,
+.dashboard .lpPaginationInput #topCartButton,
+.dashboard .lpPaginationInput #bottomCartButton,
+.dashboard .lpPaginationInput #topCartButton .topNumber,
+.dashboard .lpPaginationInput #bottomCartButton .topNumber {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+}

@@ -461,7 +461,6 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
 
 /* Button groups */
 .dashboard .buttonGroup,
-.dashboard .contentInline,
 .yui-dialog .ft .button-group {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -3331,6 +3330,7 @@ div.grid_1_1#leftInnerGrid {
 
 /* ========== SETTINGS ========== */
 
+.dashboard #leadStoreSearch,
 .dashboard .grid_200px_n {
     display: flex;
     flex-direction: row;
@@ -3339,11 +3339,13 @@ div.grid_1_1#leftInnerGrid {
     width: 100%;
 }
 
+.dashboard #searchResultsContainer,
 .dashboard .grid_200px_n > .primary {
     flex: 1;
     min-width: 0;
 }
 
+.dashboard #leadStoreSearchFields,
 .dashboard .grid_200px_n > .secondary {
     width: 280px;
     flex-shrink: 0;
@@ -7135,6 +7137,7 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     align-items: center !important;
     gap: 12px !important;
     width: 100% !important;
+    white-space: nowrap;
 }
 
 /* Dialog container - use inset for full centering */
