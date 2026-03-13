@@ -56,6 +56,10 @@ ul {
     list-style: none;
 }
 
+svg {
+    flex-shrink: 0;
+}
+
 a {
     color: inherit;
     cursor: pointer;
@@ -788,7 +792,7 @@ dialog.modal {
     border-style: solid;
     border-color: transparent;
 }
-.btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+.btn svg { width: 16px; height: 16px;}
 
 .btn-secondary {
     background-color: var(--border);
@@ -1030,7 +1034,6 @@ dialog.modal {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    flex-shrink: 0;
 }
 .badge.success {
     background: var(--bg-success);
@@ -2512,7 +2515,6 @@ body.login {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%232f466b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20'/%3E%3Cpath d='M2 12h20'/%3E%3C/svg%3E");
     background-size: contain;
     background-repeat: no-repeat;
-    flex-shrink: 0;
 }
 
 .dashboard #Main:has([name="publisher_signup_v2_1"]) #offlineContainer > span::before,
@@ -2524,7 +2526,6 @@ body.login {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%232f466b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z'/%3E%3Cpath d='m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9'/%3E%3Cpath d='M12 3v6'/%3E%3C/svg%3E");
     background-size: contain;
     background-repeat: no-repeat;
-    flex-shrink: 0;
 }
 
 .dashboard #Main:has([name="publisher_signup_v2_1"]) table.trafficDrivers,
@@ -2624,7 +2625,6 @@ body.login {
     border: 2px solid var(--border);
     background: var(--color-white);
     color: var(--color-muted);
-    flex-shrink: 0;
 }
 
 .dashboard #Main:has(#buyerSignupFormv22) #steps li.completed,
@@ -2698,7 +2698,6 @@ body.login {
     min-width: auto !important;
     text-align: left !important;
     padding-right: 0 !important;
-    flex-shrink: 0;
     position: static !important;
 }
 
@@ -2939,7 +2938,6 @@ div.titleDiv {
     min-width: 220px;
     text-align: left !important;
     padding-right: 20px !important;
-    flex-shrink: 0;
     position: static !important;
 }
 
@@ -3215,7 +3213,6 @@ div.grid_1_1#leftInnerGrid {
     height: 44px;
     background-color: var(--border);
     border-radius: 10px;
-    flex-shrink: 0;
 }
 
 .dashboard .sellerHomeContentBoxL .boxContent > a:hover,
@@ -3348,7 +3345,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard #leadStoreSearchFields,
 .dashboard .grid_200px_n > .secondary {
     width: 280px;
-    flex-shrink: 0;
     left: 0;
     margin: 0 !important;
     order: -1;
@@ -4076,7 +4072,6 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard #formContainer .mainLabel {
     width: 140px;
-    flex-shrink: 0;
     padding: 10px 0;
     text-align: right;
 }
@@ -5128,7 +5123,6 @@ div.grid_1_1#leftInnerGrid {
 
 /* Header row with title */
 .dashboard .settings .noticePeriodsContainer .roundedBox .hdr {
-    flex-shrink: 0 !important;
     width: 100% !important;
     padding: 16px 20px !important;
     min-height: 70px !important;
@@ -6165,11 +6159,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     margin: 0 !important;
 }
 
-.dashboard #formContainer ul.text li.details .right,
-.dashboard #formContainer li.details .target .right {
-    flex-shrink: 0 !important;
-}
-
 .dashboard #formContainer ul.text li.details .right a {
     font-size: 12px !important;
     color: var(--color-primary) !important;
@@ -6858,7 +6847,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     height: 18px !important;
     accent-color: var(--color-primary) !important;
     margin-top: 2px !important;
-    flex-shrink: 0 !important;
 }
 
 /* Voice Program section - same as Exclusivity, break out of columns */
@@ -7183,7 +7171,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 }
 
 .yui-panel-container .yui-panel .hd {
-    flex-shrink: 0 !important;
     padding: 20px 24px !important;
     font-size: 18px !important;
     font-weight: 600 !important;
@@ -7199,7 +7186,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 }
 
 .yui-panel-container .yui-panel .ft {
-    flex-shrink: 0 !important;
     padding: 20px 24px 24px 24px !important;
     background: var(--bg-light) !important;
     border-top: 1px solid var(--border) !important;
@@ -9115,10 +9101,6 @@ img.calendarIcon {
 
 /* Lead Manager Quick Links improvements */
 
-.dashboard #leadManagerQuickLinksDiv .roundedBox3 .sectionHeader {
-    flex-shrink: 0;
-}
-
 .dashboard #leadManagerQuickLinksDiv .inlineSideBar {
     flex: 1;
     display: block;
@@ -9658,7 +9640,6 @@ img.calendarIcon {
         color: var(--color-gray);
         text-transform: uppercase;
         letter-spacing: 0.05em;
-        flex-shrink: 0;
         margin-right: 16px;
         text-align: left;
     }
@@ -10323,7 +10304,6 @@ img.calendarIcon {
         color: var(--color-gray) !important;
         text-transform: uppercase !important;
         min-width: 100px !important;
-        flex-shrink: 0 !important;
     }
 
     .dashboard .ordersTable tbody tr td:nth-child(1)::before {
@@ -11335,7 +11315,6 @@ img.calendarIcon {
         text-transform: uppercase !important;
         letter-spacing: 0.03em !important;
         text-align: left !important;
-        flex-shrink: 0 !important;
         margin-right: 16px !important;
     }
 
@@ -11441,7 +11420,6 @@ img.calendarIcon {
         color: var(--color-gray) !important;
         text-transform: uppercase !important;
         letter-spacing: 0.03em !important;
-        flex-shrink: 0 !important;
         margin-right: 16px !important;
     }
 
@@ -11484,7 +11462,6 @@ img.calendarIcon {
         text-transform: uppercase !important;
         letter-spacing: 0.03em !important;
         text-align: left !important;
-        flex-shrink: 0 !important;
         margin-right: 12px !important;
     }
 
