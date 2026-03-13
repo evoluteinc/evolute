@@ -85,10 +85,19 @@ textarea,
 input[type="text"],
 input[type="date"],
 input[type="number"],
-input[type="file"] {
-    cursor: pointer;
+input[type="file"],
+input[type="button"] {
     appearance: none;
     -webkit-appearance: none;
+}
+
+select,
+button,
+input[type="file"],
+input[type="radio"],
+input[type="button"],
+input[type="checkbox"] {
+    cursor: pointer;
 }
 
 button:hover {
@@ -235,8 +244,6 @@ form[name="ticketLogForm"] .roundedBox b.bb,
 form[name="ticketLogForm"] .roundedBox b.bt {
     display: none;
 }
-
-/* WE ARE CLEAN */
 
 /* Inputs */
 .dashboard input[type="text"],
@@ -446,10 +453,7 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
     text-align: left !important;
     white-space: nowrap !important;
 }
-.dashboard thead th a {
-    color: inherit !important;
-    text-decoration: none !important;
-}
+
 .dashboard thead th.sortable,
 .dashboard tr.colheaders th.sortable {
     cursor: pointer !important;
@@ -526,9 +530,6 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
     cursor: pointer !important;
     margin-left: 8px !important;
 }
-
-/* WE ARE CLEAN */
-
 
 /* clean classes */
 
@@ -1336,7 +1337,6 @@ body.login {
 }
 
 .login label.required {
-    font-weight: bold;
     line-height: 1;
     color: var(--color-gray) !important;
     font-size: 14px;
@@ -2836,7 +2836,6 @@ body.login {
     background-color: var(--color-white) !important;
     background-image: none !important;
     border-radius: 12px 12px 0 0;
-    overflow: visible !important;
 }
 
 .dashboard .roundedBox .hdr h2 span,
@@ -2844,7 +2843,6 @@ body.login {
     top: 0 !important;
     font-size: 16px;
     font-weight: 600;
-    line-height: inherit;
 }
 
 /* Section Headers */
@@ -2930,7 +2928,6 @@ div.titleDiv {
     padding: 16px !important;
     margin: 0 !important;
     width: 100% !important;
-    overflow: visible !important;
 }
 
 .dashboard .mainLabel {
@@ -3189,7 +3186,6 @@ div.grid_1_1#leftInnerGrid {
     width: 100% !important;
     min-width: 0 !important;
     max-width: none !important;
-    flex: none !important;
     padding: 0 !important;
     margin: 0 !important;
 }
@@ -3508,7 +3504,6 @@ div.grid_1_1#leftInnerGrid {
     padding: 16px 24px !important;
     margin: 0 !important;
     margin-bottom: 0 !important;
-    overflow: visible !important;
 }
 
 .dashboard .reportListWrapper .roundedBox .hdr h2 {
@@ -3617,12 +3612,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .roundedBox2 {
     overflow: hidden;
     min-width: 0 !important;
-}
-
-/* Proposals table - no horizontal scroll, fit content */
-.dashboard .roundedBox2:has(.ordersTable) {
-    overflow-x: visible !important;
-    overflow: visible !important;
 }
 
 .dashboard .ordersTable {
@@ -3736,10 +3725,6 @@ div.grid_1_1#leftInnerGrid {
     font-weight: 500;
 }
 
-/* Wholesale orders table - column widths (percentage-based for fixed layout) */
-.dashboard .ordersTable thead tr.colheaders th:nth-child(1) {
-    width: 8% !important;
-}
 .dashboard .ordersTable thead tr.colheaders th:nth-child(2),
 .dashboard .ordersTable thead tr.colheaders th:nth-child(3),
 .dashboard .ordersTable tbody td[style*="width:10px"],
@@ -3758,7 +3743,6 @@ div.grid_1_1#leftInnerGrid {
 /* Delivery column - prevent text breaking */
 .dashboard .ordersTable tbody td.nowrap {
     white-space: normal !important;
-    overflow: visible !important;
 }
 
 .dashboard .ordersTable tbody td .oliDiv {
@@ -3788,11 +3772,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .inlineSideBar strong,
 .dashboard #leadManagerQuickLinksDiv .inlineSideBar strong {
     color: var(--color-dark);
-}
-
-.dashboard .ordersTable thead tr.colheaders th.sortable {
-    cursor: pointer;
-    transition: color 0.15s ease;
 }
 
 .dashboard .ordersTable thead tr.colheaders th.superheader {
@@ -4891,7 +4870,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .settings .grid_200px_n,
 .dashboard .settings .grid_200px_n .primary {
     max-width: 100% !important;
-    overflow: visible !important;
 }
 
 .dashboard .settings .formSectionContent,
@@ -5543,7 +5521,6 @@ form[name="ticketLogForm"] .formSectionContent {
     color: var(--color-gray) !important;
     font-size: 14px !important;
     line-height: 1.5 !important;
-    font-weight: normal !important;
 }
 
 .dashboard #successMessage h3 {
@@ -5772,7 +5749,7 @@ form[name="ticketLogForm"] .formSectionContent {
 .dashboard table.nestedListTable.dynamicTable thead tr.colheaders th,
 .dashboard .channels table.nestedListTable.ordersTable thead tr.colheaders th {
     padding: 10px 16px !important;
-    font-size: 11px !important;
+    font-size: 12px !important;
     letter-spacing: 0.5px !important;
 }
 
@@ -6627,7 +6604,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     padding: 8px 20px !important;
     font-size: 12px !important;
     color: var(--color-gray) !important;
-    font-style: italic !important;
     background-color: var(--bg-light) !important;
 }
 
@@ -7277,7 +7253,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .requiredMarker {
 
 .yui-panel-container .yui-panel .bd textarea::placeholder {
     color: var(--color-muted) !important;
-    font-style: italic !important;
 }
 
 .yui-panel-container .yui-panel .bd select {
@@ -7335,7 +7310,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .requiredMarker {
 .yui-skin-sam .yui-panel .bd em,
 .yui-simple-dialog .bd em,
 .yui-panel .bd em {
-    font-style: italic !important;
     font-weight: 600 !important;
     color: var(--color-gray) !important;
 }
@@ -7537,16 +7511,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .requiredMarker {
 
 /* ========== COMPREHENSIVE MODAL FIX - FINAL ========== */
 
-/* Ensure all modal elements display correctly */
-.yui-panel-container *,
-.yui-simple-dialog *,
-.yui-dialog *,
-div[id*="Dialog"],
-div[id*="Panel"],
-div[id*="panel"] {
-    box-sizing: border-box !important;
-}
-
 /* Force display of modal content */
 .yui-panel-container .yui-panel .hd,
 .yui-panel-container .yui-panel .bd,
@@ -7639,7 +7603,6 @@ body.yui-skin-sam .yui-panel-container {
     color: var(--color-dark) !important;
     line-height: 1.2 !important;
 }
-
 
 /* ========== YUI CALENDAR - WITHOUT yui-skin-sam PREFIX ========== */
 /* In case body doesn't have yui-skin-sam class */
@@ -7810,12 +7773,6 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button:hover {
     max-width: 200px !important;
     width: auto !important;
     min-width: 100px !important;
-}
-
-/* Order form specific fixes */
-.dashboard #bidoptions .inputGroup .options,
-.dashboard #bidoptions .optionsContent {
-    overflow: visible !important;
 }
 
 /* Calendar icon positioning */
@@ -8122,7 +8079,6 @@ img.calendarIcon {
 .dashboard .reports .rptHeaderRight a {
     display: inline-flex;
     align-items: center;
-    color: inherit;
 }
 
 .dashboard .reports .rptHeaderCenter a img,
@@ -8807,7 +8763,6 @@ img.calendarIcon {
 }
 
 .dashboard .channels .hdr h2 a {
-    color: inherit;
     font-size: 14px;
     font-weight: 500;
     line-height: 1;
@@ -9034,10 +8989,6 @@ img.calendarIcon {
 }
 /* ========== ADDITIONAL FIXES & IMPROVEMENTS ========== */
 
-/* Home page sidebar improvements */
-/* Ensure roundedBox has proper background */
-/* Account Management Support box styling */
-
 .dashboard #salesForceLinks,
 .dashboard #userGuideLinks {
     display: flex;
@@ -9067,14 +9018,12 @@ img.calendarIcon {
 }
 
 .dashboard #search .inputGroup .mainLabel {
-    flex: none;
     width: auto;
     text-align: right;
     padding-top: 10px;
 }
 
 .dashboard #search .inputGroup .options {
-    flex: none;
     width: 100%;
 }
 
@@ -9305,7 +9254,6 @@ img.calendarIcon {
     }
 
     .dashboard .grid_340px_600px .secondary {
-        flex: none;
         width: 100%;
         order: -1;
     }
@@ -9329,7 +9277,6 @@ img.calendarIcon {
     }
 
     .dashboard #leadManagerQuickLinksDiv {
-        flex: none;
         width: 100%;
         flex-direction: row;
         flex-wrap: wrap;
@@ -9395,7 +9342,6 @@ img.calendarIcon {
 
     .dashboard .mainLabel,
     .dashboard #search .inputGroup .mainLabel {
-        flex: none;
         width: 100%;
         text-align: left;
         padding: 0 0 6px;
@@ -10797,7 +10743,6 @@ img.calendarIcon {
         flex-direction: column !important;
         border: none !important;
         border-radius: 0 !important;
-        overflow: visible !important;
     }
 
     .dashboard .reports table.reportResults td.rptDataLeft {
@@ -10931,7 +10876,6 @@ img.calendarIcon {
     .dashboard #leadSearchFormWidgets .textInput {
         min-width: 0 !important;
         width: 100% !important;
-        flex: none !important;
     }
 
     .dashboard .nestedListTable td {
@@ -11042,7 +10986,6 @@ img.calendarIcon {
     .dashboard .grid_580px_240px > .column1,
     .dashboard .grid_580px_240px > .column2 {
         width: 100% !important;
-        flex: none !important;
     }
 
     .dashboard .inlineSideBar {
