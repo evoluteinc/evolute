@@ -413,3 +413,63 @@ input[disabled]:hover{
 .xsmallGrey{
     font-size: xx-small;
 }
+
+/* delivery default mapping styles */
+div.mapping-h{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: var(--bg-info) !important;
+    padding: 12px 16px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: var(--color-gray) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    background-color: var(--bg-light) !important;
+    border: none !important;
+    border-bottom: 1px solid var(--border) !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+}
+
+details.mapping > summary{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  cursor: default;
+  list-style: none;
+}
+
+details.mapping.plus > summary {
+  display: grid;
+  grid-template-columns: 2% 48% 50%;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+}
+
+details.mapping.plus > summary::before {
+  content: "▶️";
+  margin-right: 0.5rem;
+}
+
+details.mapping.plus[open] > summary::before {
+  content: "🔽";
+}
+
+details.mapping {
+  padding: 0.5rem;
+}
+
+details.mapping.even {
+  background-color: rgb(251, 251, 251);
+}
+
+details.mapping.odd {
+  background-color: rgb(255, 255, 255);
+}
+
+details.mapping>table {
+    width: 50%;
+    font-size: smaller;
+    margin: 10px;
+}
