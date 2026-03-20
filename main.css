@@ -4520,15 +4520,6 @@ div.grid_1_1#leftInnerGrid {
     transition: background-color 0.15s ease;
 }
 
-#dailyLeadLimits tbody td,
-.dashboard table.listTable tbody td,
-.dashboard table.leadListTable tbody td {
-    padding: 12px 16px;
-    font-size: 14px;
-    color: var(--color-dark);
-    border-bottom: 1px solid var(--border);
-}
-
 #dailyLeadLimits tbody td.right,
 .dashboard .reports .rptHeaderRight,
 .dashboard .reports .rptDataRight {
@@ -5753,10 +5744,13 @@ form[name="ticketLogForm"] .formSectionContent {
     letter-spacing: 0.5px !important;
 }
 
+#dailyLeadLimits tbody td,
+.dashboard table.listTable tbody td,
+.dashboard table.leadListTable tbody td,
 .dashboard table.nestedListTable.dynamicTable tbody tr td,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td {
-    padding: 8px 14px !important;
-    font-size: 13px !important;
+    padding: 10px !important;
+    font-size: 12px !important;
     line-height: 1;
     vertical-align: middle !important;
     border: none !important;
@@ -8625,17 +8619,6 @@ img.calendarIcon {
     background-color: var(--color-white);
 }
 
-.dashboard table.listTable thead th,
-.dashboard table.leadListTable thead th {
-    padding: 12px 16px;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--color-white);
-    background-color: var(--color-primary);
-    text-align: left;
-    border: none;
-}
-
 .dashboard table.listTable thead th:first-child,
 .dashboard table.leadListTable thead th:first-child,
 .dashboard table.listTable tbody td:first-child,
@@ -8915,17 +8898,6 @@ img.calendarIcon {
     display: inline-flex;
     align-items: center;
     gap: 12px;
-}
-
-/* Nested list table improvements */
-.dashboard .nestedListTable thead th {
-    padding: 12px 16px;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--color-dark);
-    text-align: left;
-    background-color: var(--bg-light);
-    border-bottom: 1px solid var(--border);
 }
 
 .dashboard .nestedListTable thead th.first {
