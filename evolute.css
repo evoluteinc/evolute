@@ -553,3 +553,7 @@ details.mapping>table {
     font-weight: 600;
     text-align: center;
 }
+
+.ai-center {
+    align-items: center;
+}
