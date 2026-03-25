@@ -14,15 +14,17 @@
     function init() {
         if (!document.body.classList.contains('dashboard')) return;
 
-        clean(['.br', '.tr', '.tc', '.clear', 'link[href*="member-reporting.css"]']);
+        try {
+            clean(['.br', '.tr', '.tc', '.clear', 'link[href*="member-reporting.css"]']);
 
-        document.querySelectorAll('#PrimaryContent br, #PrimaryContent h2:empty').forEach(function(el) {
-            if (el.tagName === 'BR' || !el.textContent.trim()) el.remove();
-        });
+            document.querySelectorAll('#PrimaryContent br, #PrimaryContent h2:empty').forEach(function(el) {
+                if (el.tagName === 'BR' || !el.textContent.trim()) el.remove();
+            });
 
-        document.querySelectorAll('[style*="width: 1100px"]').forEach(function(el) {
-            el.style.width = '';
-        });
+            document.querySelectorAll('[style*="width: 1100px"]').forEach(function(el) {
+                el.style.width = '';
+            });
+        } catch(e) {}
 
         var header = document.getElementById('HeaderContent');
         if (!header || !header.parentNode || header.parentNode.id !== 'Header') return;
@@ -38,5 +40,9 @@
         };
     }
 
-    document.addEventListener('DOMContentLoaded', init);
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
 })();
