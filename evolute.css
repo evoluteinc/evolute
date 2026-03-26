@@ -1,6 +1,9 @@
 :root {
 	--color-orange: #f59e0b;
     --color-red-balance: #CC3300;
+    --color-blue-primary: #004279;
+    --color-blue-secondary: #0060a7;
+    --color-blue-third: #00ade1;
 }
 
 .flex-row-20 {
@@ -464,8 +467,8 @@ input[disabled]:hover{
 	font-weight: bold
 }
 
-.tableActions .first,
-.tableActions .last {
+.dashboard .tableActions .first,
+.dashboard .tableActions .last {
     padding: 16px;
 }
 
@@ -492,17 +495,17 @@ input[disabled]:hover{
     gap: 6px;
 }
 
-.balanceDefault {
+.dashboard .balanceDefault {
     color: var(--color-red-balance);
 }
 
-#balanceContainer {
+.dashboard #balanceContainer {
     display: flex;
 }
 
-#topNumber,
-#bottomNumber,
-.balanceContainer {
+.dashboard #topNumber,
+.dashboard #bottomNumber,
+.dashboard .balanceContainer {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -584,4 +587,19 @@ details.mapping>table {
 table#accountOverview{
     width: 90% !important;
     margin: 0 auto !important
+}
+
+/************Menu item selected*************/
+
+.dashboard #MainNavigation ul li.selected a,
+.dashboard #SubNavigation.subtabs ul li.current a {
+        color: var(--color-primary-light) !important;
+        background-color: var(--bg-light) !important;
+        font-weight: 600 !important;
+    }
+
+/************Menu item selected*************/
+
+a#agreementLink {
+    color: #00ade1 !important;
 }
