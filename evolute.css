@@ -442,7 +442,9 @@ input[disabled]:hover{
     flex: 1;
 }
 
-.mainContent{
+.dashboard .column1,
+.dashboard .column2,
+.dashboard .mainContent{
     display: flex;
     gap: 12px;
     flex-direction: column;
