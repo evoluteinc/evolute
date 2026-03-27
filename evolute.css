@@ -593,6 +593,12 @@ table#accountOverview{
     margin: 0 auto !important
 }
 
+.options:has(.width-100pct){
+    width: 100% !important;
+}
+
+.options:has(.width-50pct){
+    width: 50% !important;
 /************Menu item selected*************/
 
 .dashboard #MainNavigation ul li.selected a,
