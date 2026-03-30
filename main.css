@@ -2022,6 +2022,8 @@ body.login {
     line-height: 20px;
     padding: 6px 8px;
     border-radius: 4px;
+    white-space: normal;
+    overflow-wrap: break-word;
 }
 
 .dashboard .userInfo #accountName strong::before {
