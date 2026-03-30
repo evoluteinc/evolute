@@ -630,3 +630,15 @@ a#agreementLink {
 ul.leadstore_bullets{
     list-style: inside;
 }
+
+.dashboard #accountMgmtContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin: 6px;
+}
+
+.dashboard #accountMgmtContainer label{
+    width: 100%;
+}
