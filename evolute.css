@@ -670,3 +670,14 @@ ul.leadstore_bullets{
 #filterByState, #filterByZip{
     margin: 5px;
 }
+
+/* volume guidance*/
+#volumeGuidanceBar{
+    width: 100% !important;
+    float: unset;
+    margin-right: 0px;
+}
+
+#volumeGuidanceDiv{
+    width: 100% !important;
+}
