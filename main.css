@@ -546,36 +546,6 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
     background: var(--bg-light);
 }
 
-.component {
-    display: flex;
-    flex-direction: column;
-    width: 800px;
-    gap: 24px;
-    align-items: center;
-}
-.component:nth-last-child(1),
-.component:nth-last-child(2) {
-    width: 100%;
-}
-.component > .info {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 6px;
-}
-.component > .info .name {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--color-dark);
-    margin: 0;
-}
-.component > .info .about {
-    font-size: 14px;
-    color: var(--color-gray);
-    line-height: 1.5;
-    margin: 0;
-}
-
 .links {
     flex: 1;
     display: flex;
@@ -842,22 +812,47 @@ dialog.modal {
 }
 
 .card {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
     background: var(--color-white);
     border-radius: 12px;
     border: 1px solid var(--border);
-    padding: 24px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
-.card .title {
+.card div:last-child {
+    border-bottom: 0;
+}
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     font-size: 16px;
     font-weight: 600;
-    color: var(--color-dark);
-    margin: 0;
-    padding-bottom: 16px;
+    line-height: 1.5;
+    color: var(--color-primary);
+    padding: 16px 24px;
+    background: var(--bg-info);
+}
+.card-description {
+    color: var(--color-gray);
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 24px;
     border-bottom: 1px solid var(--border);
+}
+
+.card-content {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+}
+
+.content-inline {
+    flex-direction: row;
 }
 
 .field {
@@ -1988,6 +1983,13 @@ body.login {
     background-color: var(--bg-light);
 }
 
+.dashboard .sectionHeader #saveSuccess {
+    background-position: left center !important;
+    background-repeat: no-repeat;
+    white-space: nowrap;
+    padding-left: 20px;
+}
+
 .dashboard .userInfo #accountName {
     font-size: 0 !important;
     padding: 0 !important;
@@ -2022,6 +2024,8 @@ body.login {
     line-height: 20px;
     padding: 6px 8px;
     border-radius: 4px;
+    white-space: normal;
+    overflow-wrap: break-word;
 }
 
 .dashboard .userInfo #accountName strong::before {
@@ -7919,15 +7923,6 @@ img.calendarIcon {
     gap: 16px;
     padding: 0;
     width: 100%;
-}
-
-/* Report page title */
-.dashboard .reports h1 {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--color-primary);
-    margin: 0 0 12px 0;
-    padding: 0;
 }
 
 /* Filter section */
