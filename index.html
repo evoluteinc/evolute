@@ -5,311 +5,307 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evolute</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="clean.css">
 </head>
-<body>
-    <div class="wrapper">
-        <!--
-        <div class="overlay">
-            <div class="modal">
-                <div class="header">
-                    <span class="label">Terms & Conditions</span>
-                    <button class="close">
-                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                    </button>
-                </div>
-                <div class="body">
-                    <h2 class="title">Terms & Conditions</h2>
-                    <p class="description">This action will permanently delete the channel and all associated lead data, bids, and connection settings. This cannot be undone.</p>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum veritatis iure, non repudiandae quod nisi! Vel at obcaecati rem a, veniam perferendis aperiam natus officia. Minima voluptatibus id molestiae.</p>
-                                    <p class="description">This action will permanently delete the channel and all associated lead data, bids, and connection settings. This cannot be undone.</p>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum veritatis iure, non repudiandae quod nisi! Vel at obcaecati rem a, veniam perferendis aperiam natus officia. Minima voluptatibus id molestiae.</p>
-                                        <p class="description">This action will permanently delete the channel and all associated lead data, bids, and connection settings. This cannot be undone.</p>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum veritatis iure, non repudiandae quod nisi! Vel at obcaecati rem a, veniam perferendis aperiam natus officia. Minima voluptatibus id molestiae.</p>
-                                        <p class="description">This action will permanently delete the channel and all associated lead data, bids, and connection settings. This cannot be undone.</p>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum veritatis iure, non repudiandae quod nisi! Vel at obcaecati rem a, veniam perferendis aperiam natus officia. Minima voluptatibus id molestiae.</p>
-                </div>
-                <div class="footer">
-                    <button class="btn btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Cancel</button>
-                    <button class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Remove Channel</button>
-                </div>
-            </div>
+<body class="dashboard">
+    <aside>
+        <div class="nav-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="150" viewBox="0 0 792 195.87"><style>.cls-1{fill:#7d878e}.cls-2{fill:#fff}.cls-3{fill:#00ade1}.cls-4{fill:#004279}.cls-5{fill:#0060a7}.cls-6{fill:#56b45e}</style><path class="cls-1" d="M257.25,52.44c-26.17,0-47.45,21.29-47.45,47.45s21.29,47.45,47.45,47.45c13.68,0,26.69-5.91,35.71-16.2,2.93-3.35,2.6-8.44-.75-11.38-3.35-2.93-8.44-2.6-11.38.75-5.96,6.8-14.55,10.7-23.58,10.7-17.27,0-31.33-14.05-31.33-31.33s14.05-31.33,31.33-31.33c14.49,0,26.71,9.89,30.28,23.26h-41.02c-4.45,0-8.06,3.61-8.06,8.06s3.61,8.06,8.06,8.06h50.13c4.45,0,8.06-3.61,8.06-8.06,0-26.17-21.29-47.45-47.45-47.45Z"/><path class="cls-1" d="M738.19,52.44c-26.16,0-47.45,21.29-47.45,47.45s21.29,47.45,47.45,47.45c13.68,0,26.69-5.91,35.71-16.2,2.93-3.35,2.6-8.44-.75-11.38-3.35-2.93-8.44-2.6-11.38.75-5.96,6.8-14.55,10.7-23.58,10.7-17.27,0-31.33-14.05-31.33-31.33s14.05-31.33,31.33-31.33c14.49,0,26.71,9.89,30.28,23.26h-41.02c-4.45,0-8.06,3.61-8.06,8.06s3.61,8.06,8.06,8.06h50.13c4.45,0,8.06-3.61,8.06-8.06,0-26.17-21.29-47.45-47.45-47.45Z"/><path class="cls-1" d="m448.02 52.44c-26.17 0-47.45 21.29-47.45 47.45s21.29 47.45 47.45 47.45c13.68 0 26.69-5.91 35.71-16.2 7.57-8.65 11.74-19.75 11.74-31.25 0-26.17-21.29-47.45-47.45-47.45zm23.58 68.09c-5.96 6.8-14.55 10.7-23.58 10.7-17.27 0-31.33-14.05-31.33-31.33s14.05-31.33 31.33-31.33 31.33 14.05 31.33 31.33c0 7.6-2.75 14.92-7.75 20.63z"/><path class="cls-1" d="m618.15 55.42c-4.45 0-8.06 3.61-8.06 8.06v40.36c0 6.64-2.41 13.04-6.77 18.03-5.21 5.95-12.72 9.36-20.61 9.36-15.1 0-27.39-12.29-27.39-27.39v-40.36c0-4.45-3.61-8.06-8.06-8.06s-8.06 3.61-8.06 8.06v40.36c0 23.99 19.52 43.51 43.51 43.51 12.54 0 24.48-5.42 32.75-14.86 6.94-7.93 10.77-18.11 10.77-28.66v-40.36c0-4.45-3.61-8.06-8.06-8.06z"/><path class="cls-1" d="M683.27,131.23c-15.1,0-27.39-12.29-27.39-27.39v-40.39h23.22c4.45,0,8.06-3.61,8.06-8.06s-3.61-8.06-8.06-8.06h-23.22v-27.77c0-4.45-3.61-8.06-8.06-8.06s-8.06,3.61-8.06,8.06v33.89c-.15.62-.25,1.27-.25,1.94s.09,1.32.25,1.94v46.51c0,23.99,19.52,43.51,43.51,43.51,4.45,0,8.06-3.61,8.06-8.06s-3.61-8.06-8.06-8.06Z"/><path class="cls-1" d="M515.72,12.82c-4.45,0-8.06,3.61-8.06,8.06v117.28c0,4.45,3.61,8.06,8.06,8.06s8.06-3.61,8.06-8.06V20.89c0-4.45-3.61-8.06-8.06-8.06Z"/><path class="cls-1" d="M360.86,146.95c.19-.28.36-.57.51-.87.02-.04.05-.07.07-.11l39.39-78.89c1.99-3.98.37-8.83-3.61-10.82-3.98-1.99-8.83-.37-10.82,3.61l-32.18,64.44-32.18-64.44c-1.99-3.98-6.83-5.6-10.82-3.61-3.98,1.99-5.6,6.83-3.61,10.82l39.39,78.89s.05.07.07.11c.16.3.32.59.52.87,0,0,.01.02.02.02.19.28.41.54.64.79.06.07.12.13.18.19.19.19.39.38.59.56.05.05.1.09.16.14.25.2.52.39.8.56.07.05.15.08.23.13.14.08.27.16.41.23.07.04.15.06.23.1.12.06.25.11.37.16.21.08.42.16.63.22.11.03.22.07.34.1.25.06.49.11.74.15.09.01.18.03.27.05.34.04.68.07,1.02.07,0,0,0,0,0,0s0,0,0,0c.34,0,.68-.03,1.02-.07.09-.01.18-.03.27-.05.25-.04.49-.09.74-.15.11-.03.22-.06.34-.1.21-.07.42-.14.63-.22.13-.05.25-.1.37-.16.07-.03.15-.06.23-.1.14-.07.28-.15.41-.23.08-.04.15-.08.23-.13.28-.17.55-.36.8-.56.06-.04.11-.09.16-.14.21-.18.4-.36.59-.55.06-.07.13-.13.19-.2.23-.25.44-.51.63-.79,0,0,.01-.02.02-.03Z"/><path class="cls-4" d="M66.5,125.36c-16.06-15.64-37.2-24.31-59.6-24.47,1.53,46.57,39.08,84.02,85.7,85.36l-.03-1.5c-.63-22.54-9.89-43.63-26.07-59.39Z"/><path class="cls-3" d="M92.58,9.63C46.3,10.98,8.94,47.92,6.94,94.03c46.66-.35,84.62-37.9,85.64-84.4Z"/><path class="cls-6" d="M183.44,94c-2-45.54-38.48-82.13-83.98-84.3.5,22.03,9.23,42.74,24.72,58.5,15.78,16.06,36.8,25.2,59.26,25.8Z"/><path class="cls-5" d="m99.48 184.74-0.04 1.44c45.83-2.17 82.52-39.26 84.04-85.26-45.87 1.19-82.71 37.89-84 83.83z"/><path class="cls-2" d="M183.44,94c-22.46-.6-43.48-9.74-59.26-25.8-15.49-15.77-24.22-36.47-24.72-58.5-1.42-.07-2.84-.1-4.28-.1-.87,0-1.74.02-2.61.04-1.03,46.5-38.99,84.04-85.64,84.4-.06,1.3-.09,2.6-.09,3.91,0,.99.02,1.97.05,2.94,22.4.16,43.54,8.83,59.6,24.47,16.18,15.76,25.43,36.85,26.07,59.39l.03,1.5c.86.02,1.73.04,2.59.04,1.42,0,2.84-.04,4.25-.1l.04-1.44c1.29-45.93,38.13-82.63,84-83.83.03-.99.06-1.98.06-2.98,0-1.32-.03-2.63-.09-3.94Z"/></svg>
         </div>
-        -->
-        <div class="component">
-            <div class="info">
-                <h2 class="name">Actions</h2>
-            </div>
-            <div class="links">
-                <a href="" class="action-view">View</a>
-                <a href="" class="action-edit">Edit</a>
-                <a href="" class="action-delete">Delete</a>
-                <a href="" class="action-copy">Copy</a>
-            </div> 
+        <div class="nav-group">
+            <span>New</span>
+            <a href="#content-price">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v6"/><path d="M15 3v6"/><path d="M9 15v6"/><path d="M15 15v6"/></svg>
+                Price Grid
+            </a>
+            <a href="#content-filters">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                Filters
+            </a>
         </div>
-        <div class="component">
-            <div class="info">
-                <h2 class="name">Buttons</h2>
-            </div>
-            <div class="button-wrapper">
-                <button class="btn btn-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                    Cancel
-                </button>
-                <button class="btn btn-primary" disabled>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-                    Print
-                </button>
-                <button class="btn btn-accent">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                    Submit
-                </button>
-            </div>
-            <div class="button-wrapper">
-                <button class="btn btn-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                    Submit
-                </button>
-            </div>
-            <div class="button-wrapper">
-                <button class="btn btn-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-                    Back
-                </button>
-                <button class="btn btn-primary">
-                    Next
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                </button>
-            </div>
-            <div class="button-wrapper">
-                <button class="btn btn-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                    Cancel
-                </button>
-                <button class="btn btn-outline">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    Download
-                </button>
-                <button class="btn btn-danger">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-                    Remove
-                </button>
-            </div>
+        <div class="nav-group">
+            <span>Actions</span>
+            <a href="#content-actions"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Actions</a>
+            <a href="#content-buttons"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="3"/></svg> Buttons</a>
         </div>
-        <div class="component">
-            <div class="info">
-                <h2 class="name">Modal</h2>
-                <p class="about">Clase <b>.modal</b> con estructura interna <b>.header</b>, <b>.body</b> y <b>.footer</b>. Incluye botones <b>.btn.cancel</b> y <b>.btn.primary</b>. Ancho controlado por max-width.</p>
-            </div>
-            <div class="modal">
-                <div class="header">
-                    <span class="label">Terms & Conditions</span>
-                    <button class="close">
-                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                    </button>
-                </div>
-                <div class="body">
-                    <h2 class="title">Terms & Conditions</h2>
-                    <p class="description">This action will permanently delete the channel and all associated lead data, bids, and connection settings. This cannot be undone.</p>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum veritatis iure, non repudiandae quod nisi! Vel at obcaecati rem a, veniam perferendis aperiam natus officia. Minima voluptatibus id molestiae.</p>
-                                    <p class="description">This action will permanently delete the channel and all associated lead data, bids, and connection settings. This cannot be undone.</p>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum veritatis iure, non repudiandae quod nisi! Vel at obcaecati rem a, veniam perferendis aperiam natus officia. Minima voluptatibus id molestiae.</p>
-                                        <p class="description">This action will permanently delete the channel and all associated lead data, bids, and connection settings. This cannot be undone.</p>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum veritatis iure, non repudiandae quod nisi! Vel at obcaecati rem a, veniam perferendis aperiam natus officia. Minima voluptatibus id molestiae.</p>
-                                        <p class="description">This action will permanently delete the channel and all associated lead data, bids, and connection settings. This cannot be undone.</p>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum veritatis iure, non repudiandae quod nisi! Vel at obcaecati rem a, veniam perferendis aperiam natus officia. Minima voluptatibus id molestiae.</p>
-                </div>
-                <div class="footer">
-                    <button class="btn btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Cancel</button>
-                    <button class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Remove Channel</button>
-                </div>
-            </div>
+        <div class="nav-group">
+            <span>Modals</span>
+            <a href="#content-modal-confirm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Confirm</a>
+            <a href="#content-modal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg> Normal</a>
+            <a href="#content-modal-form"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> Form</a>
         </div>
+        <div class="nav-group">
+            <span>Forms</span>
+            <a href="#content-inputs"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg> Input Types</a>
+            <a href="#content-checkboxes">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                Checkbox Group
+            </a>
+            <a href="#content-radios"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg> Radio Group</a>
+        </div>
+        <div class="nav-group">
+            <span>Tables</span>
+            <a href="#content-table"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg> Table</a>
+            <a href="#content-table-advanced">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v6"/><path d="M15 3v6"/><path d="M9 15v6"/><path d="M15 15v6"/></svg>
+                Colspan &amp; Rowspan
+            </a>
+        </div>
+    </aside>
+    <main class="main">
+        <div class="content">
+            <div class="card" id="content-price">
+                <div class="card-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v6"/><path d="M15 3v6"/><path d="M9 15v6"/><path d="M15 15v6"/></svg>
+                    Price Grid
+                </div>
+                <div class="card-description">Two rate grid examples: <b>.rates</b> standard and <b>.rates.dark</b> dark-header variant.</div>
+                <div class="card-content">
 
-        <div class="component">
-            <div class="info">
-                <h2 class="name">Modal with Form</h2>
-                <p class="about">Variante del modal que contiene un <b>.form</b> con campos <b>.field</b> dentro del <b>.body</b>. Cada field soporta <b>.input</b>, <b>.select</b> y <b>.textarea</b> con sus estados hover y focus.</p>
-            </div>
-            <div class="modal">
-                <div class="header">
-                    <span class="label">New Connection</span>
-                    <button class="close">
-                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                    </button>
                 </div>
-                <div class="body">
-                    <h2 class="title">Create Publisher Connection</h2>
-                    <div class="form">
-                        <div class="field">
-                            <label class="label">Account Name</label>
-                            <input class="input" type="text" placeholder="Acme Leads Inc.">
-                        </div>
-                        <div class="field">
-                            <label class="label">Contact Email</label>
-                            <input class="input" type="email" placeholder="contact@acmeleads.com">
-                        </div>
-                        <div class="field">
-                            <label class="label">Connection Type</label>
-                            <select class="select">
-                                <option value="" disabled selected>Select a type</option>
-                                <option>Publisher</option>
-                                <option>Buyer</option>
-                                <option>Wholesale</option>
-                            </select>
-                        </div>
-                        <div class="field">
-                            <label class="label">Daily Lead Limit</label>
-                            <input class="input" type="number" placeholder="500">
-                        </div>
-                        <div class="field">
-                            <label class="label">Notes</label>
-                            <textarea class="textarea" placeholder="Describe the connection requirements, return policy, or special bid settings..."></textarea>
-                        </div>
+                <div class="card-content">
+
+                </div>
+            </div>
+            <div class="card" id="content-filters">
+                <div class="card-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>
+                    Filters
+                </div>
+                <div class="card-description">Multi-select with search bar (<b>.multiselect</b>) and simple checkbox grid (<b>.checks</b>).</div>
+                <div class="card-content">
+
+                </div>
+                <div class="card-content">
+
+                </div>
+            </div>
+            <div class="card" id="content-actions">
+                <div class="card-title"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Actions</div>
+                <div class="card-description">Inline action links for row-level operations. Use <b>.action-view</b>, <b>.action-edit</b>, <b>.action-delete</b> and <b>.action-copy</b> — each with its own color and icon style.</div>
+                <div class="card-content content-inline">
+                    <a href="" class="action-view">View</a>
+                    <a href="" class="action-edit">Edit</a>
+                    <a href="" class="action-delete">Delete</a>
+                    <a href="" class="action-copy">Copy</a>
+                </div>
+            </div>
+            <div class="card" id="content-buttons">
+                <div class="card-title"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="3"/></svg> Buttons</div>
+                <div class="card-description">Button variants using <b>.btn</b> as the base class. Combine with <b>.btn-primary</b>, <b>.btn-secondary</b> or <b>.btn-accent</b>. Supports icons, disabled state and full-width layout.</div>
+                <div class="card-content">
+                    <div class="button-wrapper">
+                        <button class="btn btn-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18" />
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                            </svg>
+                            Cancel
+                        </button>
+                        <button class="btn btn-primary" disabled>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 6 2 18 2 18 9" />
+                                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+                                <rect x="6" y="14" width="12" height="8" />
+                            </svg>
+                            Print
+                        </button>
+                        <button class="btn btn-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            Submit
+                        </button>
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            Submit
+                        </button>
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="btn btn-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="19" y1="12" x2="5" y2="12" />
+                                <polyline points="12 19 5 12 12 5" />
+                            </svg>
+                            Back
+                        </button>
+                        <button class="btn btn-primary">
+                            Next
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18" />
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                            </svg>
+                            Cancel
+                        </button>
+                        <button class="btn btn-outline">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                            Download
+                        </button>
+                        <button class="btn btn-danger">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="3 6 5 6 21 6" />
+                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                            </svg>
+                            Remove
+                        </button>
                     </div>
                 </div>
-                <div class="footer">
-                    <button class="btn btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Cancel</button>
-                    <button class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> Create Connection</button>
+            </div>
+            <div class="card" id="content-inputs">
+                <div class="card-title"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg> Input Types</div>
+                <div class="card-description">Form fields using <b>.field</b> with <b>.label</b> + <b>.input</b>, <b>.select</b> or <b>.textarea</b>. All share border, hover and focus styles with box-shadow. Wrapped inside a <b>.card</b>.</div>
+                <div class="card-content">
+                    <div class="field">
+                        <label class="label">Account Name</label>
+                        <input class="input" type="text" placeholder="Acme Leads Inc.">
+                    </div>
+                    <div class="field">
+                        <label class="label">Contact Email</label>
+                        <input class="input" type="email" placeholder="contact@acmeleads.com">
+                    </div>
+                    <div class="field">
+                        <label class="label">Password</label>
+                        <input class="input" type="password" placeholder="Enter password">
+                    </div>
+                    <div class="field">
+                        <label class="label">Daily Lead Limit</label>
+                        <input class="input" type="number" placeholder="500">
+                    </div>
+                    <div class="field">
+                        <label class="label">Phone</label>
+                        <input class="input" type="tel" placeholder="+1 (555) 000-0000">
+                    </div>
+                    <div class="field">
+                        <label class="label">Order Date</label>
+                        <input class="input" type="date">
+                    </div>
+                    <div class="field">
+                        <label class="label">Search Leads</label>
+                        <input class="input" type="search" placeholder="Search by name or channel...">
+                    </div>
+                    <div class="field">
+                        <label class="label">Webhook URL</label>
+                        <input class="input" type="url" placeholder="https://api.example.com/webhook">
+                    </div>
+                    <div class="field">
+                        <label class="label">Connection Type</label>
+                        <select class="select">
+                            <option value="" disabled selected>Select a type</option>
+                            <option>Publisher</option>
+                            <option>Buyer</option>
+                            <option>Wholesale</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label class="label">Return Policy</label>
+                        <textarea class="textarea"
+                            placeholder="Describe the return policy terms and notice period requirements..."></textarea>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="component">
-            <div class="info">
-                <h2 class="name">Input Types</h2>
-                <p class="about">Campos de formulario usando <b>.field</b> con <b>.label</b> + <b>.input</b>, <b>.select</b> o <b>.textarea</b>. Todos comparten estilos de borde, hover y focus con box-shadow. Se envuelven dentro de un <b>.card</b>.</p>
-            </div>
-            <div class="card">
-                <div class="field">
-                    <label class="label">Account Name</label>
-                    <input class="input" type="text" placeholder="Acme Leads Inc.">
+            <div class="card" id="content-checkboxes">
+                <div class="card-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    Checkbox Group
                 </div>
-                <div class="field">
-                    <label class="label">Contact Email</label>
-                    <input class="input" type="email" placeholder="contact@acmeleads.com">
-                </div>
-                <div class="field">
-                    <label class="label">Password</label>
-                    <input class="input" type="password" placeholder="Enter password">
-                </div>
-                <div class="field">
-                    <label class="label">Daily Lead Limit</label>
-                    <input class="input" type="number" placeholder="500">
-                </div>
-                <div class="field">
-                    <label class="label">Phone</label>
-                    <input class="input" type="tel" placeholder="+1 (555) 000-0000">
-                </div>
-                <div class="field">
-                    <label class="label">Order Date</label>
-                    <input class="input" type="date">
-                </div>
-                <div class="field">
-                    <label class="label">Search Leads</label>
-                    <input class="input" type="search" placeholder="Search by name or channel...">
-                </div>
-                <div class="field">
-                    <label class="label">Webhook URL</label>
-                    <input class="input" type="url" placeholder="https://api.example.com/webhook">
-                </div>
-                <div class="field">
-                    <label class="label">Connection Type</label>
-                    <select class="select">
-                        <option value="" disabled selected>Select a type</option>
-                        <option>Publisher</option>
-                        <option>Buyer</option>
-                        <option>Wholesale</option>
-                    </select>
-                </div>
-                <div class="field">
-                    <label class="label">Return Policy</label>
-                    <textarea class="textarea" placeholder="Describe the return policy terms and notice period requirements..."></textarea>
+                <div class="card-description">Class <b>.checkboxes</b> with <b>.option</b> wrapping each input. Layout variants: default (column), <b>.inline</b> (row), <b>.grid</b> (3 columns with CSS grid) and <b>.pills</b> (hidden input, pill style using :has).</div>
+                <div class="card-content">
+                    <div class="checkboxes">
+                        <span class="label">Stacked (default)</span>
+                        <label class="option"><input type="checkbox" checked> API Integration</label>
+                        <label class="option"><input type="checkbox"> Webhook Delivery</label>
+                        <label class="option"><input type="checkbox" checked> Data Import</label>
+                        <label class="option"><input type="checkbox"> Voice Program</label>
+                    </div>
+                    <div class="checkboxes inline">
+                        <span class="label">Inline</span>
+                        <label class="option"><input type="checkbox" checked> Email</label>
+                        <label class="option"><input type="checkbox"> SMS</label>
+                        <label class="option"><input type="checkbox" checked> Push</label>
+                        <label class="option"><input type="checkbox"> Voice</label>
+                        <label class="option"><input type="checkbox"> Webhook</label>
+                    </div>
+                    <div class="checkboxes grid">
+                        <span class="label">Grid (3 columns)</span>
+                        <label class="option"><input type="checkbox" checked> Orders</label>
+                        <label class="option"><input type="checkbox"> Leads</label>
+                        <label class="option"><input type="checkbox" checked> Channels</label>
+                        <label class="option"><input type="checkbox"> Connections</label>
+                        <label class="option"><input type="checkbox"> Reports</label>
+                        <label class="option"><input type="checkbox" checked> Subscriptions</label>
+                    </div>
+                    <div class="checkboxes pills">
+                        <span class="label">Pills</span>
+                        <label class="option"><input type="checkbox" checked> Publisher</label>
+                        <label class="option"><input type="checkbox"> Buyer</label>
+                        <label class="option"><input type="checkbox" checked> Seller</label>
+                        <label class="option"><input type="checkbox"> Wholesale</label>
+                        <label class="option"><input type="checkbox"> Admin</label>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="component">
-            <div class="info">
-                <h2 class="name">Checkbox Group</h2>
-                <p class="about">Clase <b>.checkboxes</b> con <b>.option</b> que envuelve cada input. Variantes de layout: default (columna), <b>.inline</b> (fila), <b>.grid</b> (3 columnas con CSS grid) y <b>.pills</b> (input oculto, estilo pill con :has).</p>
-            </div>
-            <div class="card">
-                <div class="checkboxes">
-                    <span class="label">Stacked (default)</span>
-                    <label class="option"><input type="checkbox" checked> API Integration</label>
-                    <label class="option"><input type="checkbox"> Webhook Delivery</label>
-                    <label class="option"><input type="checkbox" checked> Data Import</label>
-                    <label class="option"><input type="checkbox"> Voice Program</label>
-                </div>
-                <div class="checkboxes inline">
-                    <span class="label">Inline</span>
-                    <label class="option"><input type="checkbox" checked> Email</label>
-                    <label class="option"><input type="checkbox"> SMS</label>
-                    <label class="option"><input type="checkbox" checked> Push</label>
-                    <label class="option"><input type="checkbox"> Voice</label>
-                    <label class="option"><input type="checkbox"> Webhook</label>
-                </div>
-                <div class="checkboxes grid">
-                    <span class="label">Grid (3 columns)</span>
-                    <label class="option"><input type="checkbox" checked> Orders</label>
-                    <label class="option"><input type="checkbox"> Leads</label>
-                    <label class="option"><input type="checkbox" checked> Channels</label>
-                    <label class="option"><input type="checkbox"> Connections</label>
-                    <label class="option"><input type="checkbox"> Reports</label>
-                    <label class="option"><input type="checkbox" checked> Subscriptions</label>
-                </div>
-                <div class="checkboxes pills">
-                    <span class="label">Pills</span>
-                    <label class="option"><input type="checkbox" checked> Publisher</label>
-                    <label class="option"><input type="checkbox"> Buyer</label>
-                    <label class="option"><input type="checkbox" checked> Seller</label>
-                    <label class="option"><input type="checkbox"> Wholesale</label>
-                    <label class="option"><input type="checkbox"> Admin</label>
+            <div class="card" id="content-radios">
+                <div class="card-title"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg> Radio Group</div>
+                <div class="card-description">Class <b>.radios</b> with the same structure as checkboxes. Only one selection allowed per group using the name attribute. Same variants: default, <b>.inline</b>, <b>.grid</b> and <b>.pills</b>.</div>
+                <div class="card-content">
+                    <div class="radios">
+                        <span class="label">Stacked (default)</span>
+                        <label class="option"><input type="radio" name="plan" checked> Basic Plan</label>
+                        <label class="option"><input type="radio" name="plan"> Professional</label>
+                        <label class="option"><input type="radio" name="plan"> Enterprise</label>
+                    </div>
+                    <div class="radios inline">
+                        <span class="label">Inline</span>
+                        <label class="option"><input type="radio" name="freq" checked> Daily</label>
+                        <label class="option"><input type="radio" name="freq"> Weekly</label>
+                        <label class="option"><input type="radio" name="freq"> Monthly</label>
+                        <label class="option"><input type="radio" name="freq"> Yearly</label>
+                    </div>
+                    <div class="radios grid">
+                        <span class="label">Grid (3 columns)</span>
+                        <label class="option"><input type="radio" name="bid" checked> Fixed Price</label>
+                        <label class="option"><input type="radio" name="bid"> Auction</label>
+                        <label class="option"><input type="radio" name="bid"> Bid Group</label>
+                        <label class="option"><input type="radio" name="bid"> Wholesale</label>
+                        <label class="option"><input type="radio" name="bid"> Custom</label>
+                        <label class="option"><input type="radio" name="bid"> Voice</label>
+                    </div>
+                    <div class="radios pills">
+                        <span class="label">Pills</span>
+                        <label class="option"><input type="radio" name="status" checked> Active</label>
+                        <label class="option"><input type="radio" name="status"> Paused</label>
+                        <label class="option"><input type="radio" name="status"> Closed</label>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="component">
-            <div class="info">
-                <h2 class="name">Radio Group</h2>
-                <p class="about">Clase <b>.radios</b> con la misma estructura que checkboxes. Solo permite una seleccion por grupo usando el atributo name. Mismas variantes: default, <b>.inline</b>, <b>.grid</b> y <b>.pills</b>.</p>
-            </div>
-            <div class="card">
-                <div class="radios">
-                    <span class="label">Stacked (default)</span>
-                    <label class="option"><input type="radio" name="plan" checked> Basic Plan</label>
-                    <label class="option"><input type="radio" name="plan"> Professional</label>
-                    <label class="option"><input type="radio" name="plan"> Enterprise</label>
-                </div>
-                <div class="radios inline">
-                    <span class="label">Inline</span>
-                    <label class="option"><input type="radio" name="freq" checked> Daily</label>
-                    <label class="option"><input type="radio" name="freq"> Weekly</label>
-                    <label class="option"><input type="radio" name="freq"> Monthly</label>
-                    <label class="option"><input type="radio" name="freq"> Yearly</label>
-                </div>
-                <div class="radios grid">
-                    <span class="label">Grid (3 columns)</span>
-                    <label class="option"><input type="radio" name="bid" checked> Fixed Price</label>
-                    <label class="option"><input type="radio" name="bid"> Auction</label>
-                    <label class="option"><input type="radio" name="bid"> Bid Group</label>
-                    <label class="option"><input type="radio" name="bid"> Wholesale</label>
-                    <label class="option"><input type="radio" name="bid"> Custom</label>
-                    <label class="option"><input type="radio" name="bid"> Voice</label>
-                </div>
-                <div class="radios pills">
-                    <span class="label">Pills</span>
-                    <label class="option"><input type="radio" name="status" checked> Active</label>
-                    <label class="option"><input type="radio" name="status"> Paused</label>
-                    <label class="option"><input type="radio" name="status"> Closed</label>
-                </div>
-            </div>
-        </div>
-
-        <div class="component">
-            <div class="info">
-                <h2 class="name">Table</h2>
-                <p class="about">Clase <b>.table</b> con thead fijo y hover en filas. Columna de acciones con <b>.actions</b> y links <b>.action.view</b>, <b>.action.edit</b>, <b>.action.delete</b>. En mobile oculta thead y usa <b>::before</b> con <b>data-label</b> para mostrar las cabeceras.</p>
+            <div class="card" id="content-table">
+                <div class="card-title"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg> Table</div>
+                <div class="card-description">Class <b>.table</b> with fixed thead and row hover. Actions column using <b>.actions</b> with <b>.action.view</b>, <b>.action.edit</b>, <b>.action.delete</b> links. On mobile, thead is hidden and <b>::before</b> with <b>data-label</b> is used to show column headers.</div>
             </div>
             <table class="table">
                 <thead>
@@ -333,9 +329,25 @@
                         <td data-label="Status"><span class="badge success">Active</span></td>
                         <td data-label="Actions">
                             <div class="actions">
-                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View</a>
-                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Edit</a>
-                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Delete</a>
+                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg> View</a>
+                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                                    </svg> Edit</a>
+                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="3 6 5 6 21 6" />
+                                        <path
+                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                                    </svg> Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -348,9 +360,25 @@
                         <td data-label="Status"><span class="badge success">Active</span></td>
                         <td data-label="Actions">
                             <div class="actions">
-                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View</a>
-                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Edit</a>
-                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Delete</a>
+                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg> View</a>
+                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                                    </svg> Edit</a>
+                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="3 6 5 6 21 6" />
+                                        <path
+                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                                    </svg> Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -363,9 +391,25 @@
                         <td data-label="Status"><span class="badge danger">Inactive</span></td>
                         <td data-label="Actions">
                             <div class="actions">
-                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View</a>
-                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Edit</a>
-                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Delete</a>
+                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg> View</a>
+                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                                    </svg> Edit</a>
+                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="3 6 5 6 21 6" />
+                                        <path
+                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                                    </svg> Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -378,9 +422,25 @@
                         <td data-label="Status"><span class="badge warning">Pending</span></td>
                         <td data-label="Actions">
                             <div class="actions">
-                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View</a>
-                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Edit</a>
-                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Delete</a>
+                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg> View</a>
+                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                                    </svg> Edit</a>
+                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="3 6 5 6 21 6" />
+                                        <path
+                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                                    </svg> Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -393,9 +453,25 @@
                         <td data-label="Status"><span class="badge success">Active</span></td>
                         <td data-label="Actions">
                             <div class="actions">
-                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View</a>
-                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Edit</a>
-                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Delete</a>
+                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg> View</a>
+                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                                    </svg> Edit</a>
+                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="3 6 5 6 21 6" />
+                                        <path
+                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                                    </svg> Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -408,9 +484,25 @@
                         <td data-label="Status"><span class="badge success">Active</span></td>
                         <td data-label="Actions">
                             <div class="actions">
-                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View</a>
-                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Edit</a>
-                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Delete</a>
+                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg> View</a>
+                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                                    </svg> Edit</a>
+                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="3 6 5 6 21 6" />
+                                        <path
+                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                                    </svg> Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -423,9 +515,25 @@
                         <td data-label="Status"><span class="badge warning">Pending</span></td>
                         <td data-label="Actions">
                             <div class="actions">
-                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View</a>
-                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Edit</a>
-                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Delete</a>
+                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg> View</a>
+                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                                    </svg> Edit</a>
+                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="3 6 5 6 21 6" />
+                                        <path
+                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                                    </svg> Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -438,20 +546,36 @@
                         <td data-label="Status"><span class="badge danger">Inactive</span></td>
                         <td data-label="Actions">
                             <div class="actions">
-                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View</a>
-                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Edit</a>
-                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Delete</a>
+                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg> View</a>
+                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                                    </svg> Edit</a>
+                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="3 6 5 6 21 6" />
+                                        <path
+                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                                    </svg> Delete</a>
                             </div>
                         </td>
                     </tr>
                 </tbody>
             </table>
-        </div>
-
-        <div class="component">
-            <div class="info">
-                <h2 class="name">Table with Colspan & Rowspan</h2>
-                <p class="about">Atributos nativos <b>colspan</b> y <b>rowspan</b> dentro de <b>.table</b>. Celdas con rowspan usan <b>vertical-align: top</b> y fondo sutil. Filas de resumen con clase <b>.summary</b> aplican borde superior y texto <b>font-weight: 600</b>. En mobile, rowspan no tiene efecto en layout flex y colspan se muestra como celda de ancho completo.</p>
+            <div class="card" id="content-table-advanced">
+                <div class="card-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v6"/><path d="M15 3v6"/><path d="M9 15v6"/><path d="M15 15v6"/></svg>
+                    Table with Colspan &amp; Rowspan
+                </div>
+                <div class="card-description">Native <b>colspan</b> and <b>rowspan</b> attributes inside <b>.table</b>. Cells with rowspan use <b>vertical-align: top</b> and a subtle background. Summary rows with class <b>.summary</b> apply a top border and <b>font-weight: 600</b> text. On mobile, rowspan has no effect on the flex layout and colspan renders as a full-width cell.</div>
             </div>
             <table class="table">
                 <thead>
@@ -517,7 +641,123 @@
                 </tbody>
             </table>
         </div>
-
+    </main>
+    <div class="overlay" style="display:none">
+        <div class="modal" id="content-modal-confirm">
+            <div class="header">
+                <span class="label">Terms & Conditions</span>
+                <button class="close">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+            <div class="body">
+                <h2 class="title">Terms & Conditions</h2>
+                <p class="description">This action will permanently delete the channel and all associated lead data, bids, and connection settings. This cannot be undone.</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum veritatis iure, non repudiandae quod nisi! Vel at obcaecati rem a, veniam perferendis aperiam natus officia. Minima voluptatibus id molestiae.</p>
+                <p class="description">This action will permanently delete the channel and all associated lead data, bids, and connection settings. This cannot be undone.</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum veritatis iure, non repudiandae quod nisi! Vel at obcaecati rem a, veniam perferendis aperiam natus officia. Minima voluptatibus id molestiae.</p>
+                <p class="description">This action will permanently delete the channel and all associated lead data, bids, and connection settings. This cannot be undone.</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum veritatis iure, non repudiandae quod nisi! Vel at obcaecati rem a, veniam perferendis aperiam natus officia. Minima voluptatibus id molestiae.</p>
+                <p class="description">This action will permanently delete the channel and all associated lead data, bids, and connection settings. This cannot be undone.</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum veritatis iure, non repudiandae quod nisi! Vel at obcaecati rem a, veniam perferendis aperiam natus officia. Minima voluptatibus id molestiae.</p>
+            </div>
+            <div class="footer">
+                <button class="btn btn-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> 
+                    Cancel
+                </button>
+                <button class="btn btn-primary">
+                    Accept Terms
+                </button>
+            </div>
+        </div>
+        <div class="modal" id="content-modal">
+            <div class="header">
+                <span class="label">Terms & Conditions</span>
+                <button class="close">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+            <div class="body">
+                <h2 class="title">Terms & Conditions</h2>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, inventore eum! Nisi corrupti blanditiis beatae distinctio veniam, aliquam ipsum numquam explicabo provident eius ullam, dolores qui tempora recusandae, ad sequi?</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, inventore eum! Nisi corrupti blanditiis beatae distinctio veniam, aliquam ipsum numquam explicabo provident eius ullam, dolores qui tempora recusandae, ad sequi?</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, inventore eum! Nisi corrupti blanditiis beatae distinctio veniam, aliquam ipsum numquam explicabo provident eius ullam, dolores qui tempora recusandae, ad sequi?</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, inventore eum! Nisi corrupti blanditiis beatae distinctio veniam, aliquam ipsum numquam explicabo provident eius ullam, dolores qui tempora recusandae, ad sequi?</p>
+            </div>
+            <div class="footer">
+                <button class="btn btn-secondary">Cancel</button>
+                <button class="btn btn-primary">Accept</button>
+            </div>
+        </div>
+        <div class="modal" id="content-modal-form">
+            <div class="header">
+                <span class="label">New Connection</span>
+                <button class="close">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+            <div class="body">
+                <h2 class="title">Create Publisher Connection</h2>
+                <div class="form">
+                    <div class="field">
+                        <label class="label">Account Name</label>
+                        <input class="input" type="text" placeholder="Acme Leads Inc.">
+                    </div>
+                    <div class="field">
+                        <label class="label">Contact Email</label>
+                        <input class="input" type="email" placeholder="contact@acmeleads.com">
+                    </div>
+                    <div class="field">
+                        <label class="label">Connection Type</label>
+                        <select class="select">
+                            <option value="" disabled selected>Select a type</option>
+                            <option>Publisher</option>
+                            <option>Buyer</option>
+                            <option>Wholesale</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label class="label">Daily Lead Limit</label>
+                        <input class="input" type="number" placeholder="500">
+                    </div>
+                    <div class="field">
+                        <label class="label">Notes</label>
+                        <textarea class="textarea" placeholder="Describe the connection requirements, return policy, or special bid settings..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <button class="btn btn-secondary">Cancel</button>
+                <button class="btn btn-primary">Create Connection</button>
+            </div>
+        </div>
     </div>
+<script>
+    const overlay = document.querySelector('.overlay');
+
+    document.querySelectorAll('aside a[href^="#content-modal"]').forEach(link =>
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            overlay.querySelectorAll('.modal').forEach(m => m.style.display = 'none');
+            document.getElementById(e.currentTarget.getAttribute('href').slice(1)).style.display = 'flex';
+            overlay.style.display = 'flex';
+        })
+    );
+
+    document.addEventListener('click', e => {
+        if (e.target === overlay || e.target.closest('.close') || e.target.closest('.btn-secondary')) {
+            overlay.style.display = 'none';
+        }
+    });
+</script>
 </body>
 </html>
