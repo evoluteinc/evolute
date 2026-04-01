@@ -681,3 +681,12 @@ ul.leadstore_bullets{
 #volumeGuidanceDiv{
     width: 100% !important;
 }
+/**** Links underline in tables ****/
+.dashboard table.table tbody tr td a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  
+}
+/********/
