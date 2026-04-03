@@ -159,7 +159,22 @@
                     Reorder fields
                 </div>
                 <div class="card-content">
-
+                    <div class="custom-fields">
+                        <div class="custom-selection">
+                            <span class="label">Available fields</span>
+                            <div class="search-field">
+                                <div class="search-bar">
+                                    <input type="text" id="reorder-search" placeholder="Search fields...">
+                                </div>
+                            </div>
+                            <ul class="custom-items" id="reorder-available"></ul>
+                            <span class="label" id="show-available">Show more</span>
+                        </div>
+                        <div class="custom-selection">
+                            <span class="label">Your fields</span>
+                            <ul class="custom-items" id="reorder-selected"></ul>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -717,10 +732,19 @@
         }
     });
 
-    // Shared state helpers
-    const stateBoxes = () => [...document.querySelectorAll('.pick-content input[type="checkbox"]')];
-    const pillCheckAll = document.querySelector('[data-action="check-all"] input');
+    // ── Filter: shared state helpers ──────────────────────────────────────────
+    const filterSection  = document.querySelector('#content-filters');
+    const stateBoxes     = () => [...document.querySelectorAll('.pick-content input[type="checkbox"]')];
+    const pillCheckAll   = document.querySelector('[data-action="check-all"] input');
     const pillUncheckAll = document.querySelector('[data-action="uncheck-all"] input');
+    const searchInput    = filterSection.querySelector('.search-bar input');
+    const searchCount    = filterSection.querySelector('.search-count');
+    const searchResults  = filterSection.querySelector('.search-results');
+
+    function updateCount() {
+        const n = stateBoxes().filter(cb => cb.checked).length;
+        searchCount.textContent = n > 0 ? `${n} state${n === 1 ? '' : 's'} selected` : '';
+    }
 
     function setAllStates(checked) {
         stateBoxes().forEach(cb => cb.checked = checked);
@@ -740,16 +764,7 @@
         setAllStates(false);
     });
 
-    // V1 search bar
-    const searchInput = document.querySelector('.search-bar input');
-    const searchCount = document.querySelector('.search-count');
-    const searchResults = document.querySelector('.search-results');
-
-    function updateCount() {
-        const n = stateBoxes().filter(cb => cb.checked).length;
-        searchCount.textContent = n > 0 ? `${n} state${n === 1 ? '' : 's'} selected` : '';
-    }
-
+    // V1 search dropdown
     function renderDropdown(filter) {
         const q = (filter || '').toLowerCase();
         const states = stateBoxes();
@@ -783,28 +798,184 @@
         });
     }
 
-    function openDropdown() {
+    searchInput.addEventListener('focus', () => {
         renderDropdown(searchInput.value);
         searchResults.classList.add('open');
-    }
-
-    function closeDropdown() {
-        searchResults.classList.remove('open');
-        searchInput.value = '';
-    }
-
-    searchInput.addEventListener('focus', openDropdown);
+    });
     searchInput.addEventListener('input', () => renderDropdown(searchInput.value));
 
     document.addEventListener('click', e => {
-        if (!e.target.closest('.search-field')) closeDropdown();
+        if (!e.target.closest('#content-filters .search-field')) {
+            searchResults.classList.remove('open');
+            searchInput.value = '';
+        }
     });
 
-    // V1 check all / uncheck all buttons
-    document.querySelector('[data-search-action="check-all"]').addEventListener('click', () => setAllStates(true));
-    document.querySelector('[data-search-action="uncheck-all"]').addEventListener('click', () => setAllStates(false));
+    // V1 buttons (independent — do not affect V2 pill state)
+    filterSection.querySelector('[data-search-action="check-all"]').addEventListener('click', () => {
+        stateBoxes().forEach(cb => cb.checked = true);
+        updateCount();
+        if (searchResults.classList.contains('open')) renderDropdown(searchInput.value);
+    });
+    filterSection.querySelector('[data-search-action="uncheck-all"]').addEventListener('click', () => {
+        stateBoxes().forEach(cb => cb.checked = false);
+        updateCount();
+        if (searchResults.classList.contains('open')) renderDropdown(searchInput.value);
+    });
 
     updateCount();
+
+    // ── Reorder fields ────────────────────────────────────────────────────────
+    const FIELDS = [
+        'Custom Field','Connection Name','Traffic Segmentation ID','SecureRights Token',
+        'ID#','Connection Id','Product','Capture Time','Purchase Price','Bid Price',
+        'Loan Value','Loan to Value','Estimated Home Value',
+        'How much additional cash do you wish to borrow?','Property Description',
+        'Purchase Year','Loan Purpose','Do you prefer a loan or line of credit?',
+        'Loan Type','1st Mortgage Balance','DERIVED_MTG_ONE_INT',
+        'Do you have a 2nd Mortgage?','2nd Mortgage Balance','2nd Mortgage Interest',
+        'What is your annual income?','Minimum Monthly Debt Pmt','Occupational Status',
+        'Have you been in bankruptcy in the past 7 years?','Credit Grade',
+        'First Name','Last Name','Email','Primary Phone','Secondary Phone',
+        'Preferred time to call','Address','City','State','ZIP',
+        'Property State','Property ZIP','Primary Phone first 10 digits',
+        'Secondary Phone first 10 digits','Property Area Code','Primary Phone Prefix',
+        'Primary Phone Suffix','Primary Phone Extension','Secondary Phone Area Code',
+        'Secondary Phone Prefix','Secondary Phone Suffix','Secondary Phone Extension',
+        'Language','Comments','IP Address','Capture support info','Order Id','SSN Mask'
+    ];
+
+    const SVG_PLUS   = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>`;
+    const SVG_DRAG   = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="5" r="1"/><circle cx="9" cy="12" r="1"/><circle cx="9" cy="19" r="1"/><circle cx="15" cy="5" r="1"/><circle cx="15" cy="12" r="1"/><circle cx="15" cy="19" r="1"/></svg>`;
+    const SVG_SAVE   = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>`;
+    const SVG_TRASH  = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>`;
+
+    const availableList  = document.getElementById('reorder-available');
+    const selectedList   = document.getElementById('reorder-selected');
+    const reorderSearch  = document.getElementById('reorder-search');
+    const showMoreBtn    = document.getElementById('show-available');
+
+    // key: field name, value: custom alias (editable)
+    const selected = new Map();
+    let dragSrc = null;
+    let visibleCount = 4;
+    const SHOW_STEP = 5;
+    const isMobile = () => window.innerWidth <= 768;
+
+    function toKey(name) { return name.replace(/\s+/g, '_').toUpperCase(); }
+
+    function renderAvailable(filter, resetVisible) {
+        if (resetVisible) visibleCount = 4;
+        const q = (filter || '').toLowerCase();
+        const available = FIELDS.filter(f => !selected.has(f) && (!q || f.toLowerCase().includes(q)));
+        const slice = isMobile() ? available.slice(0, visibleCount) : available;
+
+        availableList.innerHTML = slice.length
+            ? slice.map(f => `
+                <li data-field="${f.replace(/"/g, '&quot;')}">
+                    <div class="field-control" style="flex:1">${f}</div>
+                    <div class="custom-actions">
+                        <button class="btn btn-primary reorder-add">${SVG_PLUS}</button>
+                    </div>
+                </li>`).join('')
+            : `<li><div class="field-control" style="flex:1;color:var(--color-muted)">No fields found</div></li>`;
+
+        // Show/hide "Show more" — mobile only, hide when all visible
+        if (isMobile() && available.length > visibleCount) {
+            const remaining = available.length - visibleCount;
+            showMoreBtn.textContent = `Show ${Math.min(SHOW_STEP, remaining)} more`;
+            showMoreBtn.style.display = '';
+        } else {
+            showMoreBtn.style.display = 'none';
+        }
+
+        availableList.querySelectorAll('.reorder-add').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const name = btn.closest('li').dataset.field;
+                selected.set(name, toKey(name));
+                renderAvailable(reorderSearch.value);
+                renderSelected();
+            });
+        });
+    }
+
+    showMoreBtn.addEventListener('click', () => {
+        visibleCount += SHOW_STEP;
+        renderAvailable(reorderSearch.value);
+    });
+
+    function renderSelected() {
+        if (!selected.size) {
+            selectedList.innerHTML = `<li><div class="field-control" style="flex:1;color:var(--color-muted)">No fields added yet</div></li>`;
+            return;
+        }
+
+        selectedList.innerHTML = [...selected.entries()].map(([name, alias]) => `
+            <li draggable="true" data-field="${name.replace(/"/g, '&quot;')}">
+                <div class="field-drag">${SVG_DRAG}</div>
+                <div class="field-control" style="flex:1">
+                    ${name}
+                    <input type="text" value="${alias}">
+                </div>
+                <div class="custom-actions">
+                    <button class="btn btn-primary reorder-save" disabled>${SVG_SAVE}</button>
+                    <button class="btn btn-danger reorder-remove">${SVG_TRASH}</button>
+                </div>
+            </li>`).join('');
+
+        selectedList.querySelectorAll('li').forEach(li => {
+            const input     = li.querySelector('input');
+            const saveBtn   = li.querySelector('.reorder-save');
+            const origAlias = input.value;
+
+            // Enable save only when value differs from saved alias
+            input.addEventListener('input', () => {
+                saveBtn.disabled = input.value.trim() === origAlias;
+            });
+
+            // Save alias
+            saveBtn.addEventListener('click', () => {
+                const newAlias = input.value.trim();
+                if (newAlias) {
+                    selected.set(li.dataset.field, newAlias);
+                    saveBtn.disabled = true;
+                }
+            });
+
+            // Remove
+            li.querySelector('.reorder-remove').addEventListener('click', () => {
+                selected.delete(li.dataset.field);
+                renderAvailable(reorderSearch.value);
+                renderSelected();
+            });
+
+            // Drag & drop
+            li.addEventListener('dragstart', () => { dragSrc = li; li.classList.add('dragging'); });
+            li.addEventListener('dragend',   () => { dragSrc = null; selectedList.querySelectorAll('li').forEach(x => x.classList.remove('dragging', 'drag-over')); });
+            li.addEventListener('dragover',  e => { e.preventDefault(); if (li !== dragSrc) li.classList.add('drag-over'); });
+            li.addEventListener('dragleave', () => li.classList.remove('drag-over'));
+            li.addEventListener('drop', e => {
+                e.preventDefault();
+                li.classList.remove('drag-over');
+                if (!dragSrc || dragSrc === li) return;
+                // Rebuild Map order
+                const keys = [...selected.keys()];
+                const fromIdx = keys.indexOf(dragSrc.dataset.field);
+                const toIdx   = keys.indexOf(li.dataset.field);
+                keys.splice(fromIdx, 1);
+                keys.splice(toIdx, 0, dragSrc.dataset.field);
+                const reordered = new Map(keys.map(k => [k, selected.get(k)]));
+                selected.clear();
+                reordered.forEach((v, k) => selected.set(k, v));
+                renderSelected();
+            });
+        });
+    }
+
+    reorderSearch.addEventListener('input', () => renderAvailable(reorderSearch.value, true));
+
+    renderAvailable();
+    renderSelected();
 </script>
 </body>
 </html>

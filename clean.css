@@ -105,7 +105,6 @@ aside {
     width: 16px;
     height: 16px;
     flex-shrink: 0;
-    opacity: 0.45;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -114,11 +113,10 @@ aside {
 
 .search-bar input[type="text"] {
     flex: 1;
-    height: 40px;
+    padding-left: 0 !important;
+    line-height: 1 !important;
     outline: 0 !important;
     border: 0 !important;
-    background: transparent;
-    font-size: 14px;
 }
 
 .search-bar .search-count {
@@ -240,6 +238,113 @@ aside {
     z-index: 10;
 }
 
+.custom-actions {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.custom-fields {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.custom-items {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.custom-items li {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    height: 40px;
+    gap: 8px;
+    background-color: var(--color-white);
+}
+
+.custom-selection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field-drag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 32px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    color: var(--color-muted);
+    cursor: grab;
+}
+
+.field-drag:active {
+    cursor: grabbing;
+}
+
+.custom-items li.dragging {
+    opacity: 0.4;
+}
+
+.custom-items li.drag-over {
+    border-top: 2px solid var(--color-primary);
+}
+
+.field-item {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.field-control {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 12px;
+    width: 100%;
+    color: var(--color-muted);
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+}
+
+.field-control input[type="text"] {
+    flex: 1;
+    line-height: 1 !important;
+    height: 14px !important;
+    max-height: 14px;
+    padding: 0 !important;
+    outline: 0 !important;
+    border: 0 !important;
+    text-transform: uppercase;
+}
+
+.custom-actions button,
+.field-control button,
+.field-control .btn {
+    flex: none;
+    width: 40px;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+#show-available {
+    display: none;
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
     .main  {
         margin: 0;
@@ -257,6 +362,17 @@ aside {
     }
 
     .search {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    #show-available {
+        display: block;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .custom-fields {
         align-items: stretch;
         flex-direction: column;
     }

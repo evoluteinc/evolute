@@ -819,7 +819,7 @@ dialog.modal {
     border-radius: 12px;
     border: 1px solid var(--border);
 }
-.card div:last-child {
+.card div.card-description:last-child {
     border-bottom: 0;
 }
 .card-title {
@@ -1082,14 +1082,6 @@ dialog.modal {
     }
     .modal .row {
         flex-direction: column;
-    }
-    .card {
-        padding: 16px;
-        gap: 16px;
-    }
-    .card .title {
-        font-size: 15px;
-        padding-bottom: 12px;
     }
     .table thead,
     .table tbody tr.summary td[colspan]::before {
