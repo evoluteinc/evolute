@@ -22,6 +22,10 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
                 Filters
             </a>
+            <a href="#content-reorder">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                Reorder Fields
+            </a>
         </div>
         <div class="nav-group">
             <span>Actions</span>
@@ -59,7 +63,6 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v6"/><path d="M15 3v6"/><path d="M9 15v6"/><path d="M15 15v6"/></svg>
                     Price Grid
                 </div>
-                <div class="card-description">Two rate grid examples: <b>.rates</b> standard and <b>.rates.dark</b> dark-header variant.</div>
                 <div class="card-content">
 
                 </div>
@@ -72,16 +75,99 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>
                     Filters
                 </div>
-                <div class="card-description">Multi-select with search bar (<b>.multiselect</b>) and simple checkbox grid (<b>.checks</b>).</div>
                 <div class="card-content">
-
+                    <div class="search">
+                        <div class="search-field">
+                            <div class="search-bar">
+                                <input type="text" placeholder="Search states...">
+                                <span class="search-count"></span>
+                            </div>
+                            <div class="search-results"></div>
+                        </div>
+                        <div class="search-actions">
+                            <button type="button" class="btn btn-primary" data-search-action="check-all">Check all</button>
+                            <button type="button" class="btn btn-outline" data-search-action="uncheck-all">Uncheck all</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- FILTER V2 -->
+                <div class="card-content">
+                    <div class="pick">
+                        <div class="checkboxes pills">
+                            <label data-action="check-all"><input type="checkbox"> Check all</label>
+                            <label data-action="uncheck-all"><input type="checkbox"> Uncheck all</label>
+                        </div>
+                        <div class="pick-content">
+                            <label data-label="Alabama"><input type="checkbox" value="AL"> AL</label>
+                            <label data-label="Alaska"><input type="checkbox" value="AK"> AK</label>
+                            <label data-label="Arizona"><input type="checkbox" value="AZ"> AZ</label>
+                            <label data-label="Arkansas"><input type="checkbox" value="AR"> AR</label>
+                            <label data-label="California"><input type="checkbox" value="CA"> CA</label>
+                            <label data-label="Colorado"><input type="checkbox" value="CO"> CO</label>
+                            <label data-label="Connecticut"><input type="checkbox" value="CT"> CT</label>
+                            <label data-label="Delaware"><input type="checkbox" value="DE"> DE</label>
+                            <label data-label="Florida"><input type="checkbox" value="FL"> FL</label>
+                            <label data-label="Georgia"><input type="checkbox" value="GA"> GA</label>
+                            <label data-label="Hawaii"><input type="checkbox" value="HI"> HI</label>
+                            <label data-label="Idaho"><input type="checkbox" value="ID"> ID</label>
+                            <label data-label="Illinois"><input type="checkbox" value="IL"> IL</label>
+                            <label data-label="Indiana"><input type="checkbox" value="IN"> IN</label>
+                            <label data-label="Iowa"><input type="checkbox" value="IA"> IA</label>
+                            <label data-label="Kansas"><input type="checkbox" value="KS"> KS</label>
+                            <label data-label="Kentucky"><input type="checkbox" value="KY"> KY</label>
+                            <label data-label="Louisiana"><input type="checkbox" value="LA"> LA</label>
+                            <label data-label="Maine"><input type="checkbox" value="ME"> ME</label>
+                            <label data-label="Maryland"><input type="checkbox" value="MD"> MD</label>
+                            <label data-label="Massachusetts"><input type="checkbox" value="MA"> MA</label>
+                            <label data-label="Michigan"><input type="checkbox" value="MI"> MI</label>
+                            <label data-label="Minnesota"><input type="checkbox" value="MN"> MN</label>
+                            <label data-label="Mississippi"><input type="checkbox" value="MS"> MS</label>
+                            <label data-label="Missouri"><input type="checkbox" value="MO"> MO</label>
+                            <label data-label="Montana"><input type="checkbox" value="MT"> MT</label>
+                            <label data-label="Nebraska"><input type="checkbox" value="NE"> NE</label>
+                            <label data-label="Nevada"><input type="checkbox" value="NV"> NV</label>
+                            <label data-label="New Hampshire"><input type="checkbox" value="NH"> NH</label>
+                            <label data-label="New Jersey"><input type="checkbox" value="NJ"> NJ</label>
+                            <label data-label="New Mexico"><input type="checkbox" value="NM"> NM</label>
+                            <label data-label="New York"><input type="checkbox" value="NY"> NY</label>
+                            <label data-label="North Carolina"><input type="checkbox" value="NC"> NC</label>
+                            <label data-label="North Dakota"><input type="checkbox" value="ND"> ND</label>
+                            <label data-label="Ohio"><input type="checkbox" value="OH"> OH</label>
+                            <label data-label="Oklahoma"><input type="checkbox" value="OK"> OK</label>
+                            <label data-label="Oregon"><input type="checkbox" value="OR"> OR</label>
+                            <label data-label="Pennsylvania"><input type="checkbox" value="PA"> PA</label>
+                            <label data-label="Rhode Island"><input type="checkbox" value="RI"> RI</label>
+                            <label data-label="South Carolina"><input type="checkbox" value="SC"> SC</label>
+                            <label data-label="South Dakota"><input type="checkbox" value="SD"> SD</label>
+                            <label data-label="Tennessee"><input type="checkbox" value="TN"> TN</label>
+                            <label data-label="Texas"><input type="checkbox" value="TX"> TX</label>
+                            <label data-label="Utah"><input type="checkbox" value="UT"> UT</label>
+                            <label data-label="Vermont"><input type="checkbox" value="VT"> VT</label>
+                            <label data-label="Virginia"><input type="checkbox" value="VA"> VA</label>
+                            <label data-label="Washington"><input type="checkbox" value="WA"> WA</label>
+                            <label data-label="West Virginia"><input type="checkbox" value="WV"> WV</label>
+                            <label data-label="Wisconsin"><input type="checkbox" value="WI"> WI</label>
+                            <label data-label="Wyoming"><input type="checkbox" value="WY"> WY</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- FILTER V2 -->
+            </div>
+            <div class="card" id="content-reorder">
+                <div class="card-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    Reorder fields
                 </div>
                 <div class="card-content">
 
                 </div>
             </div>
+
             <div class="card" id="content-actions">
-                <div class="card-title"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Actions</div>
+                <div class="card-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    Actions
+                </div>
                 <div class="card-description">Inline action links for row-level operations. Use <b>.action-view</b>, <b>.action-edit</b>, <b>.action-delete</b> and <b>.action-copy</b> — each with its own color and icon style.</div>
                 <div class="card-content content-inline">
                     <a href="" class="action-view">View</a>
@@ -235,37 +321,37 @@
                 </div>
                 <div class="card-description">Class <b>.checkboxes</b> with <b>.option</b> wrapping each input. Layout variants: default (column), <b>.inline</b> (row), <b>.grid</b> (3 columns with CSS grid) and <b>.pills</b> (hidden input, pill style using :has).</div>
                 <div class="card-content">
+                    <span class="label">Stacked (default)</span>
                     <div class="checkboxes">
-                        <span class="label">Stacked (default)</span>
-                        <label class="option"><input type="checkbox" checked> API Integration</label>
-                        <label class="option"><input type="checkbox"> Webhook Delivery</label>
-                        <label class="option"><input type="checkbox" checked> Data Import</label>
-                        <label class="option"><input type="checkbox"> Voice Program</label>
+                        <label><input type="checkbox" checked> API Integration</label>
+                        <label><input type="checkbox"> Webhook Delivery</label>
+                        <label><input type="checkbox" checked> Data Import</label>
+                        <label><input type="checkbox"> Voice Program</label>
                     </div>
+                    <span class="label">Inline</span>
                     <div class="checkboxes inline">
-                        <span class="label">Inline</span>
-                        <label class="option"><input type="checkbox" checked> Email</label>
-                        <label class="option"><input type="checkbox"> SMS</label>
-                        <label class="option"><input type="checkbox" checked> Push</label>
-                        <label class="option"><input type="checkbox"> Voice</label>
-                        <label class="option"><input type="checkbox"> Webhook</label>
+                        <label><input type="checkbox" checked> Email</label>
+                        <label><input type="checkbox"> SMS</label>
+                        <label><input type="checkbox" checked> Push</label>
+                        <label><input type="checkbox"> Voice</label>
+                        <label><input type="checkbox"> Webhook</label>
                     </div>
+                    <span class="label">Grid</span>
                     <div class="checkboxes grid">
-                        <span class="label">Grid (3 columns)</span>
-                        <label class="option"><input type="checkbox" checked> Orders</label>
-                        <label class="option"><input type="checkbox"> Leads</label>
-                        <label class="option"><input type="checkbox" checked> Channels</label>
-                        <label class="option"><input type="checkbox"> Connections</label>
-                        <label class="option"><input type="checkbox"> Reports</label>
-                        <label class="option"><input type="checkbox" checked> Subscriptions</label>
+                        <label><input type="checkbox" checked> Orders</label>
+                        <label><input type="checkbox"> Leads</label>
+                        <label><input type="checkbox" checked> Channels</label>
+                        <label><input type="checkbox"> Connections</label>
+                        <label><input type="checkbox"> Reports</label>
+                        <label><input type="checkbox" checked> Subscriptions</label>
                     </div>
+                    <span class="label">Pills</span>
                     <div class="checkboxes pills">
-                        <span class="label">Pills</span>
-                        <label class="option"><input type="checkbox" checked> Publisher</label>
-                        <label class="option"><input type="checkbox"> Buyer</label>
-                        <label class="option"><input type="checkbox" checked> Seller</label>
-                        <label class="option"><input type="checkbox"> Wholesale</label>
-                        <label class="option"><input type="checkbox"> Admin</label>
+                        <label><input type="checkbox" checked> Publisher</label>
+                        <label><input type="checkbox"> Buyer</label>
+                        <label><input type="checkbox" checked> Seller</label>
+                        <label><input type="checkbox"> Wholesale</label>
+                        <label><input type="checkbox"> Admin</label>
                     </div>
                 </div>
             </div>
@@ -273,33 +359,33 @@
                 <div class="card-title"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg> Radio Group</div>
                 <div class="card-description">Class <b>.radios</b> with the same structure as checkboxes. Only one selection allowed per group using the name attribute. Same variants: default, <b>.inline</b>, <b>.grid</b> and <b>.pills</b>.</div>
                 <div class="card-content">
+                    <span class="label">Stacked (default)</span>
                     <div class="radios">
-                        <span class="label">Stacked (default)</span>
-                        <label class="option"><input type="radio" name="plan" checked> Basic Plan</label>
-                        <label class="option"><input type="radio" name="plan"> Professional</label>
-                        <label class="option"><input type="radio" name="plan"> Enterprise</label>
+                        <label><input type="radio" name="plan" checked> Basic Plan</label>
+                        <label><input type="radio" name="plan"> Professional</label>
+                        <label><input type="radio" name="plan"> Enterprise</label>
                     </div>
+                    <span class="label">Inline</span>
                     <div class="radios inline">
-                        <span class="label">Inline</span>
-                        <label class="option"><input type="radio" name="freq" checked> Daily</label>
-                        <label class="option"><input type="radio" name="freq"> Weekly</label>
-                        <label class="option"><input type="radio" name="freq"> Monthly</label>
-                        <label class="option"><input type="radio" name="freq"> Yearly</label>
+                        <label><input type="radio" name="freq" checked> Daily</label>
+                        <label><input type="radio" name="freq"> Weekly</label>
+                        <label><input type="radio" name="freq"> Monthly</label>
+                        <label><input type="radio" name="freq"> Yearly</label>
                     </div>
+                    <span class="label">Grid</span>
                     <div class="radios grid">
-                        <span class="label">Grid (3 columns)</span>
-                        <label class="option"><input type="radio" name="bid" checked> Fixed Price</label>
-                        <label class="option"><input type="radio" name="bid"> Auction</label>
-                        <label class="option"><input type="radio" name="bid"> Bid Group</label>
-                        <label class="option"><input type="radio" name="bid"> Wholesale</label>
-                        <label class="option"><input type="radio" name="bid"> Custom</label>
-                        <label class="option"><input type="radio" name="bid"> Voice</label>
+                        <label><input type="radio" name="bid" checked> Fixed Price</label>
+                        <label><input type="radio" name="bid"> Auction</label>
+                        <label><input type="radio" name="bid"> Bid Group</label>
+                        <label><input type="radio" name="bid"> Wholesale</label>
+                        <label><input type="radio" name="bid"> Custom</label>
+                        <label><input type="radio" name="bid"> Voice</label>
                     </div>
+                    <span class="label">Pills</span>
                     <div class="radios pills">
-                        <span class="label">Pills</span>
-                        <label class="option"><input type="radio" name="status" checked> Active</label>
-                        <label class="option"><input type="radio" name="status"> Paused</label>
-                        <label class="option"><input type="radio" name="status"> Closed</label>
+                        <label><input type="radio" name="status" checked> Active</label>
+                        <label><input type="radio" name="status"> Paused</label>
+                        <label><input type="radio" name="status"> Closed</label>
                     </div>
                 </div>
             </div>
@@ -329,25 +415,9 @@
                         <td data-label="Status"><span class="badge success">Active</span></td>
                         <td data-label="Actions">
                             <div class="actions">
-                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                                        <circle cx="12" cy="12" r="3" />
-                                    </svg> View</a>
-                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
-                                    </svg> Edit</a>
-                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="3 6 5 6 21 6" />
-                                        <path
-                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-                                    </svg> Delete</a>
+                                <a href="#" class="action-view">View</a>
+                                <a href="#" class="action-edit">Edit</a>
+                                <a href="#" class="action-delete">Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -360,25 +430,9 @@
                         <td data-label="Status"><span class="badge success">Active</span></td>
                         <td data-label="Actions">
                             <div class="actions">
-                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                                        <circle cx="12" cy="12" r="3" />
-                                    </svg> View</a>
-                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
-                                    </svg> Edit</a>
-                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="3 6 5 6 21 6" />
-                                        <path
-                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-                                    </svg> Delete</a>
+                                <a href="#" class="action-view">View</a>
+                                <a href="#" class="action-edit">Edit</a>
+                                <a href="#" class="action-delete">Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -391,25 +445,9 @@
                         <td data-label="Status"><span class="badge danger">Inactive</span></td>
                         <td data-label="Actions">
                             <div class="actions">
-                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                                        <circle cx="12" cy="12" r="3" />
-                                    </svg> View</a>
-                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
-                                    </svg> Edit</a>
-                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="3 6 5 6 21 6" />
-                                        <path
-                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-                                    </svg> Delete</a>
+                                <a href="#" class="action-view">View</a>
+                                <a href="#" class="action-edit">Edit</a>
+                                <a href="#" class="action-delete">Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -422,25 +460,9 @@
                         <td data-label="Status"><span class="badge warning">Pending</span></td>
                         <td data-label="Actions">
                             <div class="actions">
-                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                                        <circle cx="12" cy="12" r="3" />
-                                    </svg> View</a>
-                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
-                                    </svg> Edit</a>
-                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="3 6 5 6 21 6" />
-                                        <path
-                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-                                    </svg> Delete</a>
+                                <a href="#" class="action-view">View</a>
+                                <a href="#" class="action-edit">Edit</a>
+                                <a href="#" class="action-delete">Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -453,25 +475,9 @@
                         <td data-label="Status"><span class="badge success">Active</span></td>
                         <td data-label="Actions">
                             <div class="actions">
-                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                                        <circle cx="12" cy="12" r="3" />
-                                    </svg> View</a>
-                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
-                                    </svg> Edit</a>
-                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="3 6 5 6 21 6" />
-                                        <path
-                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-                                    </svg> Delete</a>
+                                <a href="#" class="action-view">View</a>
+                                <a href="#" class="action-edit">Edit</a>
+                                <a href="#" class="action-delete">Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -484,25 +490,9 @@
                         <td data-label="Status"><span class="badge success">Active</span></td>
                         <td data-label="Actions">
                             <div class="actions">
-                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                                        <circle cx="12" cy="12" r="3" />
-                                    </svg> View</a>
-                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
-                                    </svg> Edit</a>
-                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="3 6 5 6 21 6" />
-                                        <path
-                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-                                    </svg> Delete</a>
+                                <a href="#" class="action-view">View</a>
+                                <a href="#" class="action-edit">Edit</a>
+                                <a href="#" class="action-delete">Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -515,25 +505,9 @@
                         <td data-label="Status"><span class="badge warning">Pending</span></td>
                         <td data-label="Actions">
                             <div class="actions">
-                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                                        <circle cx="12" cy="12" r="3" />
-                                    </svg> View</a>
-                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
-                                    </svg> Edit</a>
-                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="3 6 5 6 21 6" />
-                                        <path
-                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-                                    </svg> Delete</a>
+                                <a href="#" class="action-view">View</a>
+                                <a href="#" class="action-edit">Edit</a>
+                                <a href="#" class="action-delete">Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -546,25 +520,9 @@
                         <td data-label="Status"><span class="badge danger">Inactive</span></td>
                         <td data-label="Actions">
                             <div class="actions">
-                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                                        <circle cx="12" cy="12" r="3" />
-                                    </svg> View</a>
-                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
-                                    </svg> Edit</a>
-                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="3 6 5 6 21 6" />
-                                        <path
-                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-                                    </svg> Delete</a>
+                                <a href="#" class="action-view">View</a>
+                                <a href="#" class="action-edit">Edit</a>
+                                <a href="#" class="action-delete">Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -758,6 +716,95 @@
             overlay.style.display = 'none';
         }
     });
+
+    // Shared state helpers
+    const stateBoxes = () => [...document.querySelectorAll('.pick-content input[type="checkbox"]')];
+    const pillCheckAll = document.querySelector('[data-action="check-all"] input');
+    const pillUncheckAll = document.querySelector('[data-action="uncheck-all"] input');
+
+    function setAllStates(checked) {
+        stateBoxes().forEach(cb => cb.checked = checked);
+        pillCheckAll.checked = checked;
+        pillUncheckAll.checked = !checked;
+        updateCount();
+        if (searchResults.classList.contains('open')) renderDropdown(searchInput.value);
+    }
+
+    // V2 pill buttons
+    document.querySelector('[data-action="check-all"]').addEventListener('click', e => {
+        e.preventDefault();
+        setAllStates(true);
+    });
+    document.querySelector('[data-action="uncheck-all"]').addEventListener('click', e => {
+        e.preventDefault();
+        setAllStates(false);
+    });
+
+    // V1 search bar
+    const searchInput = document.querySelector('.search-bar input');
+    const searchCount = document.querySelector('.search-count');
+    const searchResults = document.querySelector('.search-results');
+
+    function updateCount() {
+        const n = stateBoxes().filter(cb => cb.checked).length;
+        searchCount.textContent = n > 0 ? `${n} state${n === 1 ? '' : 's'} selected` : '';
+    }
+
+    function renderDropdown(filter) {
+        const q = (filter || '').toLowerCase();
+        const states = stateBoxes();
+        const matches = q
+            ? states.filter(cb => cb.closest('label').dataset.label.toLowerCase().includes(q) || cb.value.toLowerCase().includes(q))
+            : states;
+
+        if (!matches.length) {
+            searchResults.innerHTML = '<div class="search-no-results">No states found</div>';
+            return;
+        }
+
+        searchResults.innerHTML = matches.map(cb => `
+            <label class="search-result-item${cb.checked ? ' checked' : ''}" data-value="${cb.value}">
+                <input type="checkbox"${cb.checked ? ' checked' : ''}>
+                ${cb.closest('label').dataset.label}
+                <span style="margin-left:auto;font-size:11px;opacity:.5">${cb.value}</span>
+            </label>
+        `).join('');
+
+        searchResults.querySelectorAll('.search-result-item').forEach(item => {
+            item.addEventListener('click', e => {
+                e.preventDefault();
+                const v2 = stateBoxes().find(cb => cb.value === item.dataset.value);
+                if (!v2) return;
+                v2.checked = !v2.checked;
+                item.querySelector('input').checked = v2.checked;
+                item.classList.toggle('checked', v2.checked);
+                updateCount();
+            });
+        });
+    }
+
+    function openDropdown() {
+        renderDropdown(searchInput.value);
+        searchResults.classList.add('open');
+    }
+
+    function closeDropdown() {
+        searchResults.classList.remove('open');
+        searchInput.value = '';
+    }
+
+    searchInput.addEventListener('focus', openDropdown);
+    searchInput.addEventListener('input', () => renderDropdown(searchInput.value));
+
+    document.addEventListener('click', e => {
+        if (!e.target.closest('.search-field')) closeDropdown();
+    });
+
+    // V1 check all / uncheck all buttons
+    document.querySelector('[data-search-action="check-all"]').addEventListener('click', () => setAllStates(true));
+    document.querySelector('[data-search-action="uncheck-all"]').addEventListener('click', () => setAllStates(false));
+
+    updateCount();
 </script>
 </body>
 </html>
