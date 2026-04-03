@@ -178,7 +178,7 @@ a.btn-primary:hover{
     display: grid;
     grid-template-columns: 1fr fit-content(20%);
     gap: 20px;
-    width: 80%;
+    width: 65%;
 }
 
 #howtoLink{
@@ -785,4 +785,9 @@ ul.leadstore_bullets{
 
 #price-grid-head th{
     border: none !important;
+    text-wrap-mode: wrap !important;
+}
+
+.dashboard table.pricegrid{
+    table-layout: fixed;
 }
