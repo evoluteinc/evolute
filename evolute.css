@@ -84,8 +84,7 @@
 }
 
 .proposal-products {
-    margin-top: 24px;
-    padding: 20px;
+    padding: 10px;
     background-color: var(--bg-light);
     border: 1px solid var(--border);
     border-radius: 10px;
@@ -94,7 +93,6 @@
 
 .proposal-product {
     flex-grow: 1;
-    margin-left: 1em;
 }
 
 details > summary {
