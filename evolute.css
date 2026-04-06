@@ -441,6 +441,24 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
         content: "STATUS";
     }
 
+    .dashboard #pgpKeyTable tbody tr td:nth-child(1)::before {
+        content: "KEY NAME";
+    }
+
+    .dashboard #pgpKeyTable tbody tr td:nth-child(2)::before {
+        content: "STATUS";
+    }
+
+    .dashboard #pgpKeyTable tbody tr td:nth-child(3)::before {
+        content: "DATE";
+    }
+
+    .dashboard #pgpKeyTable tbody tr td:nth-child(4)::before {
+        content: "ACTIONS";
+    }
+
+    pgpKeyTable
+
     .dashboard .dynamicTable thead tr.actions td.paginationTop .buttonGroup,
     .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup {
         position: fixed;
@@ -608,8 +626,9 @@ input[disabled]:hover{
     justify-content: end;
 }
 
-.dashboard .tableAcctionsBottom .buttonGroup .yui-button.yui-submit-button{
-    flex: unset;
+.dashboard .tableAcctionsBottom .buttonGroup .yui-button.yui-submit-button,
+.dashboard .tableAcctionsBottom .buttonGroup .yui-button.yui-link-button{
+    flex: unset !important;
 }
 
 .table#activeOrdersList{
