@@ -60,6 +60,8 @@ svg {
     flex-shrink: 0;
 }
 
+#dateTimeLink,
+.linkSpan,
 a {
     color: inherit;
     cursor: pointer;
@@ -942,7 +944,8 @@ dialog.modal {
 .table tbody tr:hover td {
     background: var(--bg-info);
 }
-.table tbody td a {
+
+.table tbody td :is(a, .linkSpan) {
     color: var(--color-primary);
 }
 .table .actions {
@@ -2575,6 +2578,7 @@ body.login {
 .dashboard .infoBox a,
 .dashboard .helpBox a,
 .dashboard #sidebar a,
+.dashboard #dateTimeLink,
 .dashboard .sidebar a,
 .dashboard .roundedBox4 a,
 .dashboard .sideBar a {
@@ -7835,6 +7839,8 @@ img.calendarIcon {
     color: var(--color-primary);
 }
 
+.dashboard table.table tbody tr td a::before,
+.dashboard table.table tbody tr td .linkSpan::before,
 .dashboard .channels table.nestedListTable tbody tr td:nth-child(2) a::before {
     content: '';
     display: inline-block;
