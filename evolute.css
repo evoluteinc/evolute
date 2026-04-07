@@ -900,3 +900,33 @@ table#report td.rptHeaderCenter, table#report td.rptHeaderLeft, table.bodyListin
 .dashboard #settingsContainer .inputGroup .options.hidden-tracking-option:is(#httpTrackingOptionContainer, #xmlTrackingOptionContainer, #customTrackingOptionContainer, #noCustomTrackingOptionContainer){
     display: none !important;
 }
+
+/*** settings custom brand ***/
+ul.cb-tabs.yui-nav{
+    padding-top: 10px;
+}
+
+ul.cb-tabs.yui-nav > li{
+    padding: 10px 20px;
+    border-radius: 10px 10px 0 0;
+    border: solid 1px var(--color-primary);
+    color: var(--color-white) !important;
+    background: var(--color-primary);
+    margin:0 !important;
+}
+
+ul.cb-tabs.yui-nav > li:is(.selected){
+    background: var(--color-orange)
+}
+
+ul.cb-tabs.yui-nav > li > a >em{
+    color: var(--color-white) !important
+}
+
+ul.cb-tabs.yui-nav > li:not(.selected):hover{
+    background: var(--color-bg-light)
+}
+
+ul.cb-tabs.yui-nav > li:not(.selected):hover >a >em{
+    color: var(--color-primary) !important;
+}
