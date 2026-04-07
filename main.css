@@ -561,6 +561,11 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
     gap: 24px;
 }
 
+.dashboard #Main:has(form[name="buyer_signup_1"]) #MainContent #PrimaryContent .grid_450px_350px .secondary .sideBar {
+    padding: 0 !important;
+}
+
+
 .operatorOnly {
     color: var(--color-warning);
 }
