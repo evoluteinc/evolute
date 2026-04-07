@@ -387,86 +387,114 @@ aside {
 }
 
 /* ── Price Grid V1 ───────────────────────────────────────────────────────── */
-.pgrid {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 13px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
+#content-price table.grid {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    font-size: 13px !important;
 }
 
-.pgrid thead tr:first-child th {
-    padding: 10px 16px;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--color-dark);
-    background: var(--bg-light);
-    border-bottom: 1px solid var(--border);
-    text-align: left;
+/* First header row: Loan Amount / Credit Grade banner */
+#content-price table.grid thead tr:first-child th {
+    padding: 12px 16px !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    color: var(--color-dark) !important;
+    background: var(--bg-light) !important;
+    border-bottom: 1px solid var(--border) !important;
+    border-right: none !important;
+    text-align: left !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+    white-space: normal !important;
 }
 
-.pgrid thead tr:first-child th:last-child {
-    text-align: center;
-    color: var(--color-muted);
-    font-weight: 500;
-    font-size: 11px;
-    letter-spacing: .04em;
+#content-price table.grid thead tr:first-child th:last-child {
+    text-align: center !important;
+    color: var(--color-muted) !important;
+    font-weight: 500 !important;
+    font-size: 11px !important;
+    letter-spacing: .06em !important;
+    text-transform: uppercase !important;
+}
+
+/* Second header row: column labels with per-column color accent */
+#content-price table.grid thead tr:last-child th {
+    padding: 0 !important;
+    border-bottom: 1px solid var(--border) !important;
+    border-right: none !important;
+    white-space: normal !important;
+    background: var(--color-white) !important;
+    text-align: center !important;
+}
+
+#content-price table.grid thead tr:last-child th:first-child {
+    border-right: 1px solid var(--border) !important;
+}
+
+/* Inner label inside th for colored pill */
+#content-price table.grid thead tr:last-child th .col-label {
+    display: block;
+    padding: 8px 16px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .08em;
     text-transform: uppercase;
 }
 
-.pgrid thead tr:last-child th {
-    padding: 6px 16px;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: .04em;
-    text-transform: uppercase;
-    color: var(--color-muted);
-    text-align: center;
-    background: var(--color-white);
-    border-bottom: 1px solid var(--border);
+#content-price table.grid thead tr:last-child th:nth-child(2) .col-label { color: #16a34a; border-top: 2px solid #16a34a; }
+#content-price table.grid thead tr:last-child th:nth-child(3) .col-label { color: #0ea5e9; border-top: 2px solid #0ea5e9; }
+#content-price table.grid thead tr:last-child th:nth-child(4) .col-label { color: #f59e0b; border-top: 2px solid #f59e0b; }
+#content-price table.grid thead tr:last-child th:nth-child(5) .col-label { color: #dc2626; border-top: 2px solid #dc2626; }
+
+/* Colored bottom border on data cells per column */
+#content-price table.grid tbody td:nth-child(2) { border-left: 2px solid #e8faf0 !important; }
+#content-price table.grid tbody td:nth-child(3) { border-left: 2px solid #e0f2fe !important; }
+#content-price table.grid tbody td:nth-child(4) { border-left: 2px solid #fef3c7 !important; }
+#content-price table.grid tbody td:nth-child(5) { border-left: 2px solid #fee2e2 !important; }
+
+#content-price table.grid tbody tr {
+    border-bottom: 1px solid var(--border) !important;
 }
 
-.pgrid thead tr:last-child th:first-child {
-    border-right: 1px solid var(--border);
+#content-price table.grid tbody tr:last-child {
+    border-bottom: none !important;
 }
 
-.pgrid tbody tr {
-    border-bottom: 1px solid var(--border);
+#content-price table.grid tbody tr:nth-child(even) {
+    background: var(--bg-light) !important;
 }
 
-.pgrid tbody tr:last-child {
-    border-bottom: none;
+#content-price table.grid tbody td {
+    padding: 10px 16px !important;
+    text-align: center !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark) !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-right: none !important;
 }
 
-.pgrid tbody tr:nth-child(even) {
-    background: var(--bg-light);
+#content-price table.grid tbody td:first-child {
+    text-align: left !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    color: var(--color-muted) !important;
+    border-right: 1px solid var(--border) !important;
+    border-left: none !important;
 }
 
-.pgrid tbody td {
-    padding: 10px 16px;
-    text-align: center;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--color-dark);
-}
-
-.pgrid tbody td:first-child {
-    text-align: left;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--color-muted);
-    border-right: 1px solid var(--border);
-}
-
-.pgrid tbody td:empty::after {
+#content-price table.grid tbody td:empty::after {
     content: '—';
     color: var(--border);
     font-weight: 400;
 }
 
 /* ── Price Grid V2 ───────────────────────────────────────────────────────── */
-.pbox {
+.tiles {
     display: flex;
     flex-direction: column;
     border: 1px solid var(--border);
@@ -474,35 +502,44 @@ aside {
     overflow: hidden;
 }
 
-.prow {
+.trow {
     display: grid;
     grid-template-columns: 100px repeat(4, 1fr);
     align-items: stretch;
 }
 
-.prow + .prow {
+.trow + .trow {
     border-top: 1px solid var(--border);
 }
 
-.phead {
+.trow.thead {
     background: var(--bg-light);
 }
 
-.phead .pcell {
+.trow.thead .range,
+.trow.thead .grade {
     padding: 8px 12px;
-    text-align: center;
     font-size: 11px;
     font-weight: 600;
     letter-spacing: .04em;
     text-transform: uppercase;
     color: var(--color-muted);
+    text-align: center;
+}
+
+.trow.thead .range {
+    border-right: 1px solid var(--border);
+    text-align: left;
+}
+
+.trow.thead .grade {
     border-left: 1px solid var(--border);
 }
 
-.plabel {
+.range {
     display: flex;
     align-items: center;
-    padding: 0 12px;
+    padding: 12px;
     font-size: 12px;
     font-weight: 500;
     color: var(--color-muted);
@@ -510,61 +547,40 @@ aside {
     border-right: 1px solid var(--border);
 }
 
-.prow:nth-child(even) .plabel {
+.trow:nth-child(even) .range {
     background: var(--color-white);
 }
 
-.pcell {
-    padding: 6px 8px;
+.grade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-dark);
     border-left: 1px solid var(--border);
 }
 
-.prow:nth-child(even) .pcell {
+.trow:nth-child(even) .grade {
     background: var(--color-white);
 }
 
-.pcell input[type="number"] {
-    width: 100%;
-    height: 32px;
-    padding: 0 8px;
-    font-size: 13px;
-    font-weight: 600;
-    text-align: center;
-    color: var(--color-dark);
-    border: 1px solid transparent;
-    border-radius: 4px;
-    outline: none;
-    background: transparent;
-    transition: border-color .15s, box-shadow .15s, background .15s;
-    -moz-appearance: textfield;
-    appearance: textfield;
-}
-
-.pcell input[type="number"]::-webkit-inner-spin-button,
-.pcell input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-}
-
-.pcell input[type="number"]:hover {
-    border-color: var(--border);
-    background: var(--color-white);
-}
-
-.pcell input[type="number"]:focus {
-    border-color: var(--color-primary);
-    background: var(--color-white);
-    box-shadow: 0 0 0 3px var(--bg-info);
-}
-
-.pcell input[type="number"]::placeholder {
-    font-weight: 400;
+.grade:not(.active) {
     color: var(--border);
+    font-weight: 400;
 }
 
-.pcell input[type="number"]:not(:placeholder-shown) {
-    border-color: var(--border);
-    background: var(--color-white);
-}
+/* Per-column color accents — V2 */
+.trow.thead .grade:nth-child(2) { color: #16a34a; border-top: 2px solid #16a34a; }
+.trow.thead .grade:nth-child(3) { color: #0ea5e9; border-top: 2px solid #0ea5e9; }
+.trow.thead .grade:nth-child(4) { color: #f59e0b; border-top: 2px solid #f59e0b; }
+.trow.thead .grade:nth-child(5) { color: #dc2626; border-top: 2px solid #dc2626; }
+
+.trow:not(.thead) .grade:nth-child(2).active { color: #16a34a; background: #f0fdf4; font-weight: 700; }
+.trow:not(.thead) .grade:nth-child(3).active { color: #0ea5e9; background: #f0f9ff; font-weight: 700; }
+.trow:not(.thead) .grade:nth-child(4).active { color: #f59e0b; background: #fffbeb; font-weight: 700; }
+.trow:not(.thead) .grade:nth-child(5).active { color: #dc2626; background: #fef2f2; font-weight: 700; }
 
 /* ── Reorder V2 ──────────────────────────────────────────────────────────── */
 .pos-input {

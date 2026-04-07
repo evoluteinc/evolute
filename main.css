@@ -556,6 +556,8 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
 
 .dashboard #Main:has(form[name="buyer_signup_1"]) #MainContent #PrimaryContent .grid_450px_350px {
     display: flex;
+    align-items: stretch;
+    flex-direction: column;
     gap: 24px;
 }
 
