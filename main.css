@@ -545,7 +545,7 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
     width: 100vw;
     height: 100vh;
     z-index: 666;
-    background-color: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
 }
 
 .dashboard #Main:has(form[name="buyer_signup_1"]) #MainContent {
@@ -557,7 +557,7 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
 .dashboard #Main:has(form[name="buyer_signup_1"]) #MainContent #PrimaryContent .grid_450px_350px {
     display: flex;
     align-items: stretch;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 24px;
 }
 
@@ -568,6 +568,10 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
 .dashboard #Main:has(form[name="buyer_signup_1"]) #MainContent #PrimaryContent .formSectionContent .inputGroup {
     flex-direction: column !important;
     align-items: stretch !important;
+}
+
+.dashboard #Main:has(form[name="buyer_signup_1"]) #MainContent #PrimaryContent .formSectionContent {
+    gap: 0 !important;
 }
 
 
