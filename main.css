@@ -534,6 +534,31 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
 
 /* clean classes */
 
+.dashboard #Main:has(form[name="buyer_signup_1"]) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 666;
+    background-color: var(--color-primary);
+}
+
+.dashboard #Main:has(form[name="buyer_signup_1"]) #MainContent {
+    width: 600px;
+    min-height: auto;
+    padding: 0;
+}
+
+.dashboard #Main:has(form[name="buyer_signup_1"]) #MainContent #PrimaryContent .grid_450px_350px {
+    display: flex;
+    gap: 24px;
+}
+
 .operatorOnly {
     color: var(--color-warning);
 }

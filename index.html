@@ -63,11 +63,85 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v6"/><path d="M15 3v6"/><path d="M9 15v6"/><path d="M15 15v6"/></svg>
                     Price Grid
                 </div>
+                <!-- PRICE GRID V1 -->
                 <div class="card-content">
-
+                    <table class="pgrid">
+                        <thead>
+                            <tr>
+                                <th>Loan Amount</th>
+                                <th colspan="4">Credit Grade</th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>XLNT</th>
+                                <th>GOOD</th>
+                                <th>FAIR</th>
+                                <th>POOR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>15-24K</td><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>25-49K</td><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>50-74K</td><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>75-99K</td><td>23.00</td><td></td><td></td><td></td></tr>
+                            <tr><td>100-149K</td><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>150+</td><td></td><td></td><td></td><td></td></tr>
+                        </tbody>
+                    </table>
                 </div>
+                <!-- PRICE GRID V2 -->
                 <div class="card-content">
-
+                    <div class="pbox">
+                        <div class="prow phead">
+                            <div class="plabel"></div>
+                            <div class="pcell">XLNT</div>
+                            <div class="pcell">GOOD</div>
+                            <div class="pcell">FAIR</div>
+                            <div class="pcell">POOR</div>
+                        </div>
+                        <div class="prow">
+                            <div class="plabel">15-24K</div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                        </div>
+                        <div class="prow">
+                            <div class="plabel">25-49K</div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                        </div>
+                        <div class="prow">
+                            <div class="plabel">50-74K</div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                        </div>
+                        <div class="prow">
+                            <div class="plabel">75-99K</div>
+                            <div class="pcell"><input type="number" value="23"></div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                        </div>
+                        <div class="prow">
+                            <div class="plabel">100-149K</div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                        </div>
+                        <div class="prow">
+                            <div class="plabel">150+</div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                            <div class="pcell"><input type="number" placeholder="—"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="card" id="content-filters">
@@ -176,6 +250,28 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- REORDER V2 -->
+                <div class="card-content">
+                    <div class="custom-fields">
+                        <div class="custom-selection">
+                            <span class="label">Available fields</span>
+                            <div class="search-field">
+                                <div class="search-bar">
+                                    <input type="text" id="reorder2-search" placeholder="Search fields...">
+                                </div>
+                            </div>
+                            <ul class="custom-items" id="reorder2-available"></ul>
+                            <span class="label" id="show2-available">Show more</span>
+                        </div>
+                        <div class="custom-selection">
+                            <span class="label">Your fields</span>
+                            <ul class="custom-items" id="reorder2-selected"></ul>
+                            <span class="label" id="show2-selected">Show more</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- REORDER V2 -->
             </div>
 
             <div class="card" id="content-actions">
@@ -976,6 +1072,146 @@
 
     renderAvailable();
     renderSelected();
+
+    // ── Reorder V2 (position input) ───────────────────────────────────────────
+    const avail2List  = document.getElementById('reorder2-available');
+    const sel2List    = document.getElementById('reorder2-selected');
+    const search2     = document.getElementById('reorder2-search');
+    const showMore2   = document.getElementById('show2-available');
+
+    const showMore2Sel    = document.getElementById('show2-selected');
+    const selected2       = new Map();
+    let visible2Count     = 4;
+    let visible2SelCount  = 5;
+
+    function renderAvailable2(filter, resetVisible) {
+        if (resetVisible) visible2Count = 4;
+        const q = (filter || '').toLowerCase();
+        const available = FIELDS.filter(f => !selected2.has(f) && (!q || f.toLowerCase().includes(q)));
+        const slice = isMobile() ? available.slice(0, visible2Count) : available;
+
+        avail2List.innerHTML = slice.length
+            ? slice.map(f => `
+                <li data-field="${f.replace(/"/g, '&quot;')}">
+                    <div class="field-control" style="flex:1">${f}</div>
+                    <div class="custom-actions">
+                        <button class="btn btn-primary reorder2-add">${SVG_PLUS}</button>
+                    </div>
+                </li>`).join('')
+            : `<li><div class="field-control" style="flex:1;color:var(--color-muted)">No fields found</div></li>`;
+
+        if (isMobile() && available.length > visible2Count) {
+            const remaining = available.length - visible2Count;
+            showMore2.textContent = `Show ${Math.min(SHOW_STEP, remaining)} more`;
+            showMore2.style.display = '';
+        } else {
+            showMore2.style.display = 'none';
+        }
+
+        avail2List.querySelectorAll('.reorder2-add').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const name = btn.closest('li').dataset.field;
+                selected2.set(name, toKey(name));
+                renderAvailable2(search2.value);
+                renderSelected2();
+            });
+        });
+    }
+
+    showMore2.addEventListener('click', () => {
+        visible2Count += SHOW_STEP;
+        renderAvailable2(search2.value);
+    });
+
+    showMore2Sel.addEventListener('click', () => {
+        visible2SelCount += SHOW_STEP;
+        renderSelected2();
+    });
+
+    function renderSelected2() {
+        if (!selected2.size) {
+            sel2List.innerHTML = `<li><div class="field-control" style="flex:1;color:var(--color-muted)">No fields added yet</div></li>`;
+            showMore2Sel.style.display = 'none';
+            return;
+        }
+
+        const entries = [...selected2.entries()];
+        const slice = entries.slice(0, visible2SelCount);
+
+        sel2List.innerHTML = slice.map(([name, alias], idx) => `
+            <li data-field="${name.replace(/"/g, '&quot;')}">
+                <div class="pos-input">
+                    <input type="number" min="1" max="${selected2.size}" value="${idx + 1}">
+                </div>
+                <div class="field-control" style="flex:1">
+                    ${name}
+                    <input type="text" value="${alias}">
+                </div>
+                <div class="custom-actions">
+                    <button class="btn btn-primary reorder2-save" disabled>${SVG_SAVE}</button>
+                    <button class="btn btn-danger reorder2-remove">${SVG_TRASH}</button>
+                </div>
+            </li>`).join('');
+
+        // Show/hide selected "show more"
+        if (entries.length > visible2SelCount) {
+            const rem = entries.length - visible2SelCount;
+            showMore2Sel.textContent = `Show ${Math.min(SHOW_STEP, rem)} more`;
+            showMore2Sel.style.display = '';
+        } else {
+            showMore2Sel.style.display = 'none';
+        }
+
+        sel2List.querySelectorAll('li').forEach((li, idx) => {
+            const textInput = li.querySelector('.field-control input');
+            const saveBtn   = li.querySelector('.reorder2-save');
+            const posInput  = li.querySelector('.pos-input input');
+            // idx here is the slice index; real position is idx (0-based from full entries)
+            const realIdx   = entries.findIndex(([n]) => n === li.dataset.field);
+            const origAlias = textInput.value;
+            posInput.value  = realIdx + 1;
+
+            // Enable save when alias changes
+            textInput.addEventListener('input', () => {
+                saveBtn.disabled = textInput.value.trim() === origAlias;
+            });
+            saveBtn.addEventListener('click', () => {
+                const newAlias = textInput.value.trim();
+                if (newAlias) {
+                    selected2.set(li.dataset.field, newAlias);
+                    saveBtn.disabled = true;
+                }
+            });
+
+            // Remove
+            li.querySelector('.reorder2-remove').addEventListener('click', () => {
+                selected2.delete(li.dataset.field);
+                visible2SelCount = Math.max(5, visible2SelCount - 1);
+                renderAvailable2(search2.value);
+                renderSelected2();
+            });
+
+            // Position input reorder
+            posInput.addEventListener('change', () => {
+                let newPos = parseInt(posInput.value, 10);
+                const size = selected2.size;
+                if (isNaN(newPos)) { posInput.value = realIdx + 1; return; }
+                newPos = Math.max(1, Math.min(size, newPos)) - 1; // 0-based
+                const keys = [...selected2.keys()];
+                keys.splice(realIdx, 1);
+                keys.splice(newPos, 0, li.dataset.field);
+                const reordered = new Map(keys.map(k => [k, selected2.get(k)]));
+                selected2.clear();
+                reordered.forEach((v, k) => selected2.set(k, v));
+                renderSelected2();
+            });
+        });
+    }
+
+    search2.addEventListener('input', () => renderAvailable2(search2.value, true));
+
+    renderAvailable2();
+    renderSelected2();
 </script>
 </body>
 </html>
