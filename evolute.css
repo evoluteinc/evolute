@@ -822,7 +822,9 @@ ul.leadstore_bullets{
 
 /**** Links underline in tables ****/
 .dashboard #dateTimeLink:hover,
+.dashboard table.dynamicTable tbody tr td a:hover, 
 .dashboard table.table tbody tr td a:hover, 
+.dashboard table.dynamicTable tbody tr td .linkSpan:hover,
 .dashboard table.table tbody tr td .linkSpan:hover {
   text-decoration: underline;
   text-decoration-color: var(--color-primary);
@@ -874,10 +876,10 @@ form.detail .filter:is(.flex-col-20, .flex-row-20){
 }
 
 /**   order tracking   **/
-.dashboard #settingsContainer .inputGroup .options:is(#httpTrackingOptionContainer, #xmlTrackingOptionContainer){
-    display: block;
+.dashboard #settingsContainer .inputGroup .options:is(#httpTrackingOptionContainer, #xmlTrackingOptionContainer, #customTrackingOptionContainer, #noCustomTrackingOptionContainer){
+    display: block !important;
 }
-
-.dashboard #settingsContainer .inputGroup .options.hidden:is(#httpTrackingOptionContainer, #xmlTrackingOptionContainer){
-    display: none;
+ 
+.dashboard #settingsContainer .inputGroup .options.hidden:is(#httpTrackingOptionContainer, #xmlTrackingOptionContainer, #customTrackingOptionContainer, #noCustomTrackingOptionContainer){
+    display: none !important;
 }
