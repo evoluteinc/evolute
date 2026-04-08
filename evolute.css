@@ -375,6 +375,7 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
         flex: unset !important;
     }
   
+    #proposalsTable #proposalsSearchBar,
     #ordersTable #orderSearchBar{
         display: flex !important;
     }
@@ -456,8 +457,35 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
     .dashboard #pgpKeyTable tbody tr td:nth-child(4)::before {
         content: "ACTIONS";
     }
+    
+    .dashboard #proposalsTable tbody tr td:nth-child(1)::before {
+        content: "Name (Order ID-Version)";
+    }
 
-    pgpKeyTable
+    .dashboard #proposalsTable tbody tr td:nth-child(2)::before {
+        content: "TO/FROM";
+    }
+
+    .dashboard #proposalsTable tbody tr td:nth-child(3)::before {
+        content: "PRODUCT";
+    }
+
+    .dashboard #proposalsTable tbody tr td:nth-child(4)::before {
+        content: "STATUS";
+    }
+
+    .dashboard #proposalsTable tbody tr td:nth-child(5)::before {
+        content: "PROPOSED ON";
+    }
+    
+    .dashboard #proposalsTable tbody tr td:nth-child(6)::before {
+        content: "ACCEPT BY DATE";
+    }
+
+    .dashboard #proposalsTable tbody tr td:nth-child(7)::before {
+        content: "START DATE";
+    }
+
 
     .dashboard .dynamicTable thead tr.actions td.paginationTop .buttonGroup,
     .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup {
@@ -476,6 +504,10 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
     .dashboard .reports .filter{
         flex-direction: column;
     }
+
+    #searchFieldDiv{
+    max-width: unset !important;
+}
 }
 
 @media (max-width: 1024px) {
@@ -929,4 +961,8 @@ ul.cb-tabs.yui-nav > li:not(.selected):hover{
 
 ul.cb-tabs.yui-nav > li:not(.selected):hover >a >em{
     color: var(--color-primary) !important;
+}
+
+#searchFieldDiv{
+    max-width: 270px;
 }
