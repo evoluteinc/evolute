@@ -864,18 +864,37 @@ ul.leadstore_bullets{
     width: 100% !important;
 }
 
-/**** Links underline in tables ****/
-.dashboard #dateTimeLink:hover,
-.dashboard table.dynamicTable tbody tr td a:hover, 
-.dashboard table.table tbody tr td a:hover, 
-.dashboard table.dynamicTable tbody tr td .linkSpan:hover,
-.dashboard table.table tbody tr td .linkSpan:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--color-primary);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-  
+/**** Links underline ****/
+
+#MainContent a:not( .buttonGroup a, #settingssubnav a,
+                 .pagination a, th a, .yui-button a,
+                 #bidgridTabs a, .reportLink2, .oliDiv .right a,
+                 .addLink a),
+#reportLink,
+#sidebar a,
+tbody td a ,
+h2 a,
+.inputGroup a
+{
+  color: var(--color-primary) !important;
+  text-decoration: underline !important;
+  text-decoration-color: var(--color-primary) !important;
+  text-decoration-thickness: 1px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
 }
+
+th a {
+    color: var(--color-primary) !important;
+    text-decoration: unset !important;
+    font-weight: 600 !important;
+}
+
+th a:hover {
+  text-decoration: underline !important;
+  text-decoration-color: var(--color-primary) !important;
+}
+
 /********/
 
 .dashboard .blueBox img.sidebar,

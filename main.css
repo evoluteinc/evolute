@@ -4740,7 +4740,7 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard table.nestedListTable tbody tr td .linkSpan,
 .dashboard .settings table.nestedListTable tbody tr td a {
-    color: var(--color-primary-light) !important;
+    color: var(--color-primary) !important;
     font-weight: 500 !important;
 }
 
@@ -5745,6 +5745,8 @@ form[name="ticketLogForm"] .formSectionContent {
 .dashboard table.nestedListTable.dynamicTable tbody tr td .oliDiv .right a,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .right a {
     color: var(--color-error) !important;
+    text-decoration: underline !important;
+    text-decoration-color: var(--color-error) !important;
     font-size: 12px !important;
 }
 
