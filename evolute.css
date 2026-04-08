@@ -505,15 +505,12 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
         flex-direction: column;
     }
 
-<<<<<<< Updated upstream
     #searchFieldDiv{
     max-width: unset !important;
 }
-=======
     #customFieldsTrackingOptionContainer.flex-row-20{
         flex-direction: column;
     }
->>>>>>> Stashed changes
 }
 
 @media (max-width: 1024px) {
