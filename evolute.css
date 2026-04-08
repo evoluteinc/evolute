@@ -880,7 +880,8 @@ ul.leadstore_bullets{
 #sidebar a,
 tbody td a ,
 h2 a,
-.inputGroup a
+.inputGroup a,
+.linkSpan
 {
   color: var(--color-primary) !important;
   text-decoration: underline !important;
