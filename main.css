@@ -4401,23 +4401,7 @@ div.grid_1_1#leftInnerGrid {
 
 /* ========== LEAD CHANNEL DETAIL ========== */
 
-.dashboard .channelInfo {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 16px;
-    padding: 20px 24px;
-    background-color: var(--bg-light);
-    border-bottom: 1px solid var(--border);
-}
-
-.dashboard .channelInfo h2 {
-    margin: 0;
-    padding: 0 !important;
-    background: transparent !important;
-    border: none !important;
-}
-
+.dashboard .channelSettings h2.headerRight ,
 .dashboard .channelInfo h2.headerLeft {
     flex: 1;
     font-size: 14px;
@@ -4430,18 +4414,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .nestedListTable tbody td a,
 .dashboard #FooterContent a {
     color: var(--color-primary);
-}
-
-.dashboard .channelInfo h2.headerRight {
-    display: inline-flex;
-    align-items: center;
-    padding: 8px 16px !important;
-    background-color: var(--bg-light) !important;
-    color: var(--color-dark) !important;
-    font-size: 13px;
-    font-weight: 500;
-    border-radius: 6px;
-    transition: background-color 0.15s ease;
 }
 
 .dashboard .channelInfo h2.headerRight:hover,

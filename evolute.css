@@ -1045,3 +1045,39 @@ ul.cb-tabs.yui-nav > li:not(.selected):hover >a >em{
   flex: 0 0 auto;
   max-width: 150px;
 }
+
+/* ========== LEAD CHANNEL DETAIL ========== */
+.sectionHeader.channelInfo,
+.sectionHeader.channelSettings {
+    display: flex;
+    gap: 2px;
+    border-bottom: 1px solid var(--border) !important;
+    padding: unset !important
+}
+
+.sectionHeader:is(.channelInfo,.channelSettings) :is(.headerLeft, .headerRight) {
+    margin: 0 !important;
+    padding: 10px 20px !important;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    border-bottom: none;
+    border-radius: 8px 8px 0 0 !important;
+}
+
+.sectionHeader.channelInfo .headerRight,
+.sectionHeader.channelSettings .headerLeft {
+    border-bottom: 1px solid var(--color-white) !important;
+    background: var(--color-white);
+    position: relative;
+    top: 1px;
+}
+
+.sectionHeader.channelInfo .headerRight {
+    border-top: unset !important;
+    border-right: unset !important;
+}
+
+.sectionHeader.channelSettings .headerLeft {
+    border-top: unset !important;
+    border-left: unset !important;
+}
