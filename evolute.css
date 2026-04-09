@@ -1092,3 +1092,16 @@
 #FormPageContent .formSectionContent #nextButton{
     margin: 0 15px 15px;
 }
+
+.dashboard .usPhoneNumber {
+    display: flex;
+    gap: 5px;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.dashboard .usPhoneNumber .phoneExt {
+    display: flex;
+    gap: 5px;
+}
