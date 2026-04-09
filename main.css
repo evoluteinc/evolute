@@ -4254,20 +4254,20 @@ div.grid_1_1#leftInnerGrid {
 /* Small inputs - phone numbers, codes, extensions, etc */
 .dashboard .formSectionContent .textInput[size="3"],
 .dashboard .formSectionContent input.textInput[size="3"] {
-    width: 70px !important;
-    max-width: 70px !important;
+    width: 60px !important;
+    max-width: 60px !important;
 }
 
 .dashboard .formSectionContent .textInput[size="4"],
 .dashboard .formSectionContent input.textInput[size="4"] {
-    width: 80px !important;
-    max-width: 80px !important;
+    width: 70px !important;
+    max-width: 70px !important;
 }
 
 .dashboard .formSectionContent .textInput[size="5"],
 .dashboard .formSectionContent input.textInput[size="5"] {
-    width: 90px !important;
-    max-width: 90px !important;
+    width: 80px !important;
+    max-width: 80px !important;
 }
 
 .dashboard .formSectionContent .textInput[size="6"],
@@ -4276,20 +4276,20 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .formSectionContent input.textInput[id*="ext"],
 .dashboard .formSectionContent input.textInput[name*="Ext"],
 .dashboard .formSectionContent input.textInput[id*="Ext"] {
-    width: 100px !important;
-    max-width: 100px !important;
+    width: 90px !important;
+    max-width: 90px !important;
 }
 
 .dashboard .formSectionContent .textInput[size="7"],
 .dashboard .formSectionContent input.textInput[size="7"] {
-    width: 110px !important;
-    max-width: 110px !important;
+    width: 100px !important;
+    max-width: 100px !important;
 }
 
 .dashboard .formSectionContent .textInput[size="10"],
 .dashboard .formSectionContent input.textInput[size="10"] {
-    width: 130px !important;
-    max-width: 130px !important;
+    width: 120px !important;
+    max-width: 120px !important;
 }
 
 /* Marketing Methods Grid */
