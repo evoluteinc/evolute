@@ -965,7 +965,7 @@
     white-space: nowrap !important;
 }
 
-.dashboard .reports table:not(#report):not(.reportResults):not(.nestedListTable) td {
+.dashboard .reports table#report.reportResults tr>td {
     padding: 2px !important;
     border: solid 1px black !important;
 }
