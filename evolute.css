@@ -960,16 +960,18 @@
 .dashboard .reports table#report.reportResults td.rptDataLeft{
     background-color: unset !important;
     color: var(--color-primary) !important;
-    word-break: normal;
+    word-break: keep-all;
+    overflow-wrap: normal;
+    white-space: nowrap !important;
 }
 
-.dashboard .reports table#report.reportResults td{
+.dashboard .reports table:not(#report):not(.reportResults):not(.nestedListTable) td {
     padding: 2px !important;
     border: solid 1px black !important;
 }
 
 .dashboard .reports table#report, .dashboard .reports table.reportResult{
-    border-radius: none;
+    border-radius: 0px;
 }
 
 .dashboard .reports>#PrimaryContent{
