@@ -2641,7 +2641,7 @@ body.login {
 }
 .dashboard #Main:has([name="publisher_signup_v2_1"]) .inputGroup,
 .dashboard #Main:has([name="publisher_signup_v2_2"]) .inputGroup {
-    padding: 16px 24px !important;
+    padding: 0 24px !important;
     align-items: stretch;
     flex-direction: column;
     gap: 8px;
