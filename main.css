@@ -2684,7 +2684,7 @@ body.login {
 }
 .dashboard #Main:has([name="publisher_signup_v2_1"]) .inputGroup,
 .dashboard #Main:has([name="publisher_signup_v2_2"]) .inputGroup {
-    padding: 0 24px !important;
+    padding: 6px 24px !important;
     align-items: stretch;
     flex-direction: column;
     gap: 8px;
@@ -2700,7 +2700,7 @@ body.login {
     align-items: flex-start;
     gap: 8px;
     width: 50%;
-    padding: 0 24px !important;
+    padding: 6px 24px !important;
 }
 
 .dashboard #Main:has(#buyerSignupFormv22) .inputGroup .optionsContent {
