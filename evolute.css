@@ -520,6 +520,12 @@
     .dashboard .weekly-radio-dropdown select{
         flex: unset !important;
     }
+
+    /*** buyer order details ***/
+    .dashboard #buttons>.orderActions.buttonGroup,
+    .dashboard #buttons>.buttonGroup{
+        width: 100% !important;
+    }
 }
 
 @media (max-width: 1024px) {
