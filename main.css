@@ -10454,6 +10454,7 @@ img.calendarIcon {
         overflow: hidden !important;
     }
 
+    .dashboard .settings table.nestedListTable tbody tr th,
     .dashboard .settings table.nestedListTable tbody tr td,
     .dashboard .channels table.nestedListTable tbody tr td {
         display: flex !important;
