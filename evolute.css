@@ -121,10 +121,13 @@
     display: block !important;
 }
 
+.dashboard .subOptions .subOption.operatorOnly,
 .dashboard h1.operatorOnly, h2.operatorOnly, h3.operatorOnly, h4.operatorOnly, p.operatorOnly{
     color: var(--color-orange) !important;
+    background: transparent !important;
 }
 
+.dashboard .subOptions .subOption.operatorOnly .inputGroup label,
 .dashboard #FormFields .inputGroup label p.operatorOnly{
    color: var(--color-orange) !important; 
 }
@@ -623,6 +626,21 @@
     .dashboard .table td span {
         white-space: normal !important;
     }
+
+    .dashboard .contentInline {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+
+    .dashboard .formSectionContent .inputGroup {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .dashboard .formSectionContent {
+        gap: 10px;
+    }
 }
 
 .dashboard .grid_200px_n > * {
@@ -985,7 +1003,9 @@
                     .oliDiv .right a,
                     .addLink a,
                     .integration-support a,
-                    .notice a),
+                    .notice a,
+                    .btn,
+                    .btn-primary),
 .dashboard #reportLink,
 .dashboard #sidebar a,
 .dashboard tbody td a ,
@@ -1231,6 +1251,14 @@
     display: flex;
     gap: 5px;
 
+}
+
+.dashboard .deliveryInteractionClass {
+    background: var(--color-white) ;
+    border: 1px solid var(--border) ;
+    border-radius: 8px ;
+    overflow: hidden ;
+    padding: 5px;
 }
 
 div.titleDiv{
