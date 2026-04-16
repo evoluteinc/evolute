@@ -502,6 +502,34 @@
         content: "START DATE";
     }
 
+    /* Customization Tables */
+    .dashboard :is(#dataTable, #voiceTable) tbody tr th:first-child::before,
+    .dashboard :is(#dataTable, #voiceTable) tbody tr td:nth-child(1)::before {
+        content: "PRODUCT";
+    }
+    
+    .dashboard :is(#dataTable, #voiceTable) tbody tr td:nth-child(2)::before {
+        content: "MAPPING NAME";
+    }
+
+    .dashboard :is(#dataTable, #voiceTable) tbody tr td:nth-child(3)::before {
+        content: "ACTIONS";
+    }
+
+    /* Custom Feedback Table */
+
+    .dashboard #customFeedbackCodesTable tbody tr td:nth-child(1)::before {
+        content: "Your Feedback Code";
+    }
+    
+    .dashboard #customFeedbackCodesTable tbody tr td:nth-child(2)::before {
+        content: "Evolute Inc Feedback Code";
+    }
+
+    .dashboard #customFeedbackCodesTable tbody tr td:nth-child(3)::before {
+        content: "ACTIONS";
+    }
+
     .dashboard .dynamicTable thead tr.actions td.paginationTop .buttonGroup,
     .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup {
         position: fixed;
@@ -536,6 +564,10 @@
     .dashboard #buttons>.orderActions.buttonGroup,
     .dashboard #buttons>.buttonGroup{
         width: 100% !important;
+    }
+
+    .dashboard details.mapping.plus > summary {
+        grid-template-columns: 5% 45% 50% !important;
     }
 }
 
@@ -1270,4 +1302,9 @@ div.titleDiv{
 
 div.titleDiv > a.agreementLink{
     top: 0;
+}
+
+.dashboard #createOrderForm #leadTypeContainer .radioContainer,
+.dashboard #createOrderForm #buttonsContainer .radioContainer {
+    align-items: start;
 }
