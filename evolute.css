@@ -1312,3 +1312,61 @@ div.titleDiv > a.agreementLink{
 .dashboard .modal.info-modal table.pricegrid{
     overflow: auto !important;
 }
+
+/* temp changes for customization page */
+
+.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #leftSide,
+.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #rightSide {
+    width: unset !important;
+}
+
+.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #leftSide .items {
+    width: unset !important;
+}
+
+.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #rightSide .box.leadpoint {
+    float: unset !important;
+}
+
+.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #leftSide .item,
+.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #rightSide .item {
+    gap: unset !important;
+    width: unset !important;
+    padding: unset !important;
+}
+
+.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #leftSide .item .content,
+.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #rightSide .item .content {
+    flex-direction: row !important;
+    gap: 5px !important;
+    padding: 5px !important;
+}
+
+.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #leftSide .item .content.cChildren {
+    flex-direction: column !important;
+    align-items: start;
+}
+
+.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #leftSide .item .content.cChildren p {
+    display: flex;
+    flex-direction: row !important;
+    gap: 5px !important;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.dashboard .settings #customizationFieldsComponent .grid_600px_340px{
+    grid-template-columns: 4fr 4fr !important;
+}
+
+.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #rightSide .items {
+    width: unset !important;
+}
+
+@media (max-width: 481px) {
+    .dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px {
+        flex-direction: column-reverse !important;
+    }
+}
+
+/* temp changes for customization page */
