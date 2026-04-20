@@ -267,7 +267,6 @@
                         <div class="custom-selection">
                             <span class="label">Your fields</span>
                             <ul class="custom-items" id="reorder2-selected"></ul>
-                            <span class="label" id="show2-selected">Show more</span>
                         </div>
                     </div>
                 </div>
@@ -945,6 +944,17 @@
     const SVG_DRAG   = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="5" r="1"/><circle cx="9" cy="12" r="1"/><circle cx="9" cy="19" r="1"/><circle cx="15" cy="5" r="1"/><circle cx="15" cy="12" r="1"/><circle cx="15" cy="19" r="1"/></svg>`;
     const SVG_SAVE   = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>`;
     const SVG_TRASH  = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>`;
+    const SVG_CHEV   = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>`;
+
+    const REPEATABLE = new Set(['Custom Field']);
+    const SUB_FIELDS = {
+        'Loan Purpose': ['Refinance', 'Purchase', 'Home Equity', 'Cash Out', 'Debt Consolidation', 'Other'],
+        'Loan Type': ['Fixed', 'Adjustable', 'FHA', 'VA'],
+        'Credit Grade': ['A+', 'A', 'B', 'C', 'D'],
+        'Occupational Status': ['Employed', 'Self-Employed', 'Retired', 'Unemployed'],
+        'Property Description': ['Single Family', 'Condo', 'Multi-Family', 'Townhouse'],
+        'Custom Field': ['Label', 'Key', 'Type']
+    };
 
     const availableList  = document.getElementById('reorder-available');
     const selectedList   = document.getElementById('reorder-selected');
