@@ -618,6 +618,35 @@
         content: "ACTIONS";
     }
 
+    .dashboard #paymentHistory:has(th.status-col) tbody tr td:nth-child(1)::before {
+        content: "DATE INITIATED";
+    }
+
+    .dashboard #paymentHistory:has(th.status-col) tbody tr td:nth-child(2)::before {
+        content: "DEPOSIT TYPE";
+    }
+
+    .dashboard #paymentHistory:has(th.status-col) tbody tr td:nth-child(3)::before {
+        content: "METHOD";
+    }
+
+    .dashboard #paymentHistory:has(th.status-col) tbody tr td:nth-child(4)::before {
+        content: "AMOUNT ADDED";
+    }
+
+    .dashboard #paymentHistory:has(th.status-col) tbody tr td:nth-child(5)::before {
+        content: "CC FEES";
+    }
+
+    .dashboard #paymentHistory:has(th.status-col) tbody tr td:nth-child(6)::before {
+        content: "TOTAL CHARGED";
+    }
+
+    .dashboard #paymentHistory:has(th.status-col) tbody tr td:nth-child(7)::before {
+        content: "STATUS";
+    }
+
+
 
     .dashboard table.nestedListTable thead tr.colheaders {
         display: none !important;
