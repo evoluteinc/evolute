@@ -11270,6 +11270,7 @@ img.calendarIcon {
         flex: 1;
         font-size: 13px !important;
         color: var(--color-gray) !important;
+        text-align: center !important;
     }
 
     .dashboard #chartSelectorContainer {
