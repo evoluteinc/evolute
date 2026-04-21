@@ -646,7 +646,25 @@
         content: "STATUS";
     }
 
+    .dashboard #deliveryListPerProduct tbody tr td:nth-child(1)::before {
+        content: "DELIVERY NAME";
+    }
 
+    .dashboard #deliveryListPerProduct tbody tr td:nth-child(2)::before {
+        content: "REAL-TIME/BATCH";
+    }
+
+    .dashboard #deliveryListPerProduct tbody tr td:nth-child(3)::before {
+        content: "METHOD";
+    }
+
+    .dashboard #deliveryListPerProduct tbody tr td:nth-child(4)::before {
+        content: "ADDRESS";
+    }
+
+    .dashboard #deliveryListPerProduct tbody tr td:nth-child(5)::before {
+        content: "BRAND";
+    }
 
     .dashboard table.nestedListTable thead tr.colheaders {
         display: none !important;
@@ -1411,4 +1429,8 @@ body:has(dialog[open]){
 
 #pricing .pricegridContainer{
     max-width: 90vw;
+}
+
+.dashboard .roundedBox2:has(> table) {
+    overflow-x: auto;
 }
