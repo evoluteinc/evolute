@@ -11271,6 +11271,7 @@ img.calendarIcon {
         font-size: 13px !important;
         color: var(--color-gray) !important;
         text-align: center !important;
+        gap: 5px;
     }
 
     .dashboard #chartSelectorContainer {
