@@ -569,6 +569,29 @@
     .dashboard details.mapping.plus > summary {
         grid-template-columns: 5% 45% 50% !important;
     }
+    
+    .summaryContainer,
+    .filtersContainer{
+        padding: 15px;
+    }
+
+    .pricegridContainer .pricegrid thead tr.toplabel th.mainHeader.left{
+        text-wrap-mode: wrap !important;
+    }
+
+    .pricegridContainer .pricegrid tbody tr td div.mainLabel{
+        width: auto !important;
+        min-width: 50px !important;
+    }
+
+    .dashboard select#relationshipFactor\.relationshipFactorValueSign{
+        width: auto !important;
+        min-width: unset !important;
+    }
+    
+    .dashboard input[type="text"]#unsignedRelationshipFactorValue{
+        width: unset !important;
+    }
 }
 
 @media (max-width: 1024px) {
