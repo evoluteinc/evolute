@@ -669,8 +669,25 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
     display: none;
 }
 
-.dashboard #Main:has(form[name="friendship_accept_signup_form"]) .secondary .boxContent {
+.dashboard #Main:has(form[name="friendship_accept_signup_form"]) .secondary div.blueBox {
+    position: fixed;
+    top: inherit !important;
+    bottom: 20px !important;
+    left: 20px;
+    width: auto;
+    height: auto !important;
+    z-index: 666;
+    border-radius: 6px !important;
     padding: 0 !important;
+    font-size: 12px !important;
+    line-height: 1.4;
+    color: #fff !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dashboard #Main:has(form[name="friendship_accept_signup_form"]) .secondary .boxContent {
+    color: #fff !important;
+    padding: 12px !important;
 }
 
 
@@ -679,8 +696,8 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
 }
 
 .dashboard #Main:has(form[name="friendship_accept_signup_form"]) .secondary .roundedBox {
-    background-color: transparent !important;
-    border: 1px solid var(--color-white) !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 0 !important;
     padding: 20px !important;
 }
 
