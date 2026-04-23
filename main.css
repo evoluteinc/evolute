@@ -759,8 +759,12 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
     }
 
     .dashboard #Main:has(form[name="friendship_accept_signup_form"]) #expandSignUpLink {
+        justify-content: center;
         right: 0 !important;
         left: 0 !important;
+        width: 220px !important;
+        padding-left: 0;
+        padding-right: 0;
         margin: 0 auto !important;
     }
 }
