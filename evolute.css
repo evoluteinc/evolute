@@ -789,13 +789,15 @@
 
 .dashboard .grid_200px_n > * {
     min-width: 0;
-}
-
-
-.dashboard .grid_200px_n * {
     max-width: 100% !important;
     overflow-wrap: break-word;
 }
+
+
+/* .dashboard .grid_200px_n * {
+    max-width: 100% !important;
+    overflow-wrap: break-word;
+} */
 
 .dashboard .formSectionContent .optionsContent {
     display: flex !important;

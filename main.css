@@ -2924,6 +2924,10 @@ body.login {
     padding: 0;
 }
 
+.dashboard #PrimaryContent {
+    gap: 12px;
+}
+
 /* Grid Layouts */
 
 .dashboard .grid_580px_240px {

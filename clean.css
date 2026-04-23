@@ -271,6 +271,7 @@ aside {
     display: flex;
     flex-direction: column;
     gap: 6px;
+    min-width: 0;
 }
 
 .field-drag {
@@ -294,7 +295,7 @@ aside {
 }
 
 .custom-items li.drag-over {
-    border-top: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
 }
 
 .field-item {
@@ -315,7 +316,7 @@ aside {
     color: var(--color-muted);
     font-size: 12px;
     overflow: hidden;
-    white-space: nowrap;
+    white-space: normal;
     border-radius: 6px;
     border: 1px solid var(--border);
 }
@@ -323,12 +324,12 @@ aside {
 .field-control input[type="text"] {
     flex: 1;
     line-height: 1 !important;
-    height: 14px !important;
-    max-height: 14px;
+    height: 18px !important;
+    max-height: 18px;
     padding: 0 !important;
     outline: 0 !important;
     border: 0 !important;
-    text-transform: uppercase;
+    border-radius: 0 !important;
 }
 
 .custom-actions button,
