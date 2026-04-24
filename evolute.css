@@ -1503,3 +1503,39 @@ body:has(dialog[open]){
 .dashboard .roundedBox2:has(> table) {
     overflow-x: auto;
 }
+
+/* Class assigned to popover wrapper */
+.driver-popover {
+  color: #0060a7;
+  min-width: 400px !important;
+  border: 1px solid #0060a7;
+  box-shadow: 3px 3px 9px rgb(0, 66, 121);
+}
+/* Title and description */
+.driver-popover-title {
+  color: #0060a7;
+  font-size: 18px;
+}
+.driver-popover-description {
+  font-size: 14px;
+  line-height: 18px !important;
+  padding-top: 15px !important;
+  padding-bottom: 10px !important;
+}
+.driver-popover-prev-btn {
+  padding: 5px 20px !important;
+  border: none !important;
+  color: #777 !important;
+  border-radius: 4px !important;
+  text-shadow: none !important;
+  font-size: 16px !important;
+}
+.driver-popover-next-btn {
+  padding: 5px 20px !important;
+  border: none !important;
+  background-color: #1e3a5f !important;
+  color: white !important;
+  border-radius: 4px !important;
+  text-shadow: none !important;
+  font-size: 16px !important;
+}
