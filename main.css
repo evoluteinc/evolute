@@ -1339,6 +1339,7 @@ dialog.modal {
         display: flex;
         flex-direction: column;
         gap: 12px;
+        padding: 12px;
     }
     .table tbody tr {
         display: flex;
@@ -9431,8 +9432,8 @@ aside {
     align-items: stretch;
     flex-direction: column;
     max-width: 1200px;
-    gap: 40px;
-    padding: 40px;
+    gap: 20px;
+    padding: 20px;
 }
 
 .search {
@@ -9959,6 +9960,7 @@ aside {
         margin: 0;
     }
 
+    .dashboard .orderSummaryContainer .filters,
     .content {
         width: 100%;
         max-width: 100%;
@@ -11120,10 +11122,11 @@ aside {
         white-space: nowrap !important;
     }
 
-    .dashboard #connectionsTable thead,
-    .dashboard #connectionsTable tbody,
-    .dashboard #connectionsTable tr {
-        display: table !important;
+    .dashboard #connectionsTable tbody {
+        display: flex !important;
+        align-items: stretch;
+        flex-direction: column !important;
+        gap: 12px !important;
         width: 100% !important;
     }
 

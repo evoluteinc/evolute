@@ -428,7 +428,7 @@
         display: flex !important;
     }
 
-    .dashboard table tbody, .dashboard table thead#price-grid-head {
+    .dashboard table thead#price-grid-head {
         display: contents;
         width: 100%;
     }
@@ -561,6 +561,60 @@
     .dashboard #customFeedbackCodesTable tbody tr td:nth-child(3)::before {
         content: "ACTIONS";
     }
+
+    /* Feedback code Table */
+
+    .dashboard #lpQItable tbody tr td:nth-child(1)::before {
+        content: "Feedback ID";
+    }
+
+    .dashboard #lpQItable tbody tr td:nth-child(2)::before {
+        content: "Feedback String";
+    }
+
+    .dashboard #lpQItable tbody tr td:nth-child(3)::before {
+        content: "Feedback ID";
+    }
+
+    .dashboard #lpQItable tbody tr td:nth-child(4)::before {
+        content: "Feedback String";
+    }
+
+
+    /* Active Orders */
+
+    .dashboard #activeOrdersList tbody tr td:nth-child(1)::before {
+        content: "Name (Order ID-Version)";
+    }
+
+    .dashboard #activeOrdersList tbody tr td:nth-child(2)::before {
+        content: "Actions";
+    }
+
+    .dashboard #activeOrdersList tbody tr td:nth-child(3)::before {
+        content: "Product";
+    }
+
+    .dashboard #activeOrdersList tbody tr td:nth-child(4)::before {
+        content: "Leads Today";
+    }
+
+    .dashboard #activeOrdersList tbody tr td:nth-child(5)::before {
+        content: "Feedback";
+    }
+
+    .dashboard #productSelectionTable tbody tr td:nth-child(1)::before {
+        content: "PRODUCT";
+    }
+
+    .dashboard #productSelectionTable tbody tr td:nth-child(2)::before {
+        content: "ORDER ID";
+    }
+
+    .dashboard #productSelectionTable tbody tr td:nth-child(3)::before {
+        content: "NAME";
+    }
+
 
     .dashboard .dynamicTable thead tr.actions td.paginationTop .buttonGroup,
     .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup {
@@ -1578,4 +1632,16 @@ body:has(dialog[open]){
 
 .dashboard .primaryContainer {
     width: 100% !important;
+}
+
+.yui-panel-container .yui-panel .bd table#lpQItable td:first-child {
+    width: 100% !important;
+}
+
+table.pricegrid tbody tr td.label{
+    width: auto;
+}
+
+.dashboard table#detailsTable tbody tr td:nth-child(2){
+    word-break: break-word;
 }
