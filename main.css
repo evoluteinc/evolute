@@ -10331,7 +10331,7 @@ aside {
 
 	.dashboard .dynamicTable tbody tr,
     .dashboard .ordersTable tbody tr {
-        display: flex !important;
+        display: flex;
         flex-wrap: wrap !important;
         background: var(--color-white);
         border: 1px solid var(--border);
@@ -10426,7 +10426,7 @@ aside {
     }
 
     .dashboard #connectionsTable tbody tr.details td {
-        display: flex !important;
+        display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 10px 16px;
@@ -10439,9 +10439,8 @@ aside {
     }
 
     .dashboard #connectionsTable tbody tr.parentRow {
-        margin-bottom: 0 !important;
-        margin-top: 24px !important;
-        border-radius: 12px 12px 0 0 !important;
+        margin: 0;
+        border-radius: 12px;
     }
 
     .dashboard #connectionsTable tbody tr.parentRow:first-child {
@@ -10450,9 +10449,8 @@ aside {
 
     .dashboard #connectionsTable tbody tr.details {
         margin-top: 0 !important;
-        border-radius: 0 !important;
-        border-top: none !important;
-        background: var(--bg-light) !important;
+        border-radius: 6px !important;
+        background: var(--bg-info) !important;
         box-shadow: none !important;
     }
 
@@ -10997,16 +10995,6 @@ aside {
         gap: 16px !important;
     }
 
-    .dashboard .ordersTable tbody tr {
-        display: flex !important;
-        flex-direction: column !important;
-        background: var(--color-white) !important;
-        border: 1px solid var(--border) !important;
-        border-radius: 8px !important;
-        padding: 0 !important;
-        box-shadow: var(--shadow) !important;
-    }
-
     .dashboard .ordersTable tbody tr td {
         display: flex !important;
         justify-content: space-between !important;
@@ -11266,7 +11254,6 @@ aside {
 
     .dashboard .settings table.nestedListTable tbody tr,
     .dashboard .channels table.nestedListTable tbody tr {
-        display: block !important;
         background: var(--color-white) !important;
         border: 1px solid var(--border) !important;
         border-radius: 8px !important;
@@ -12012,7 +11999,7 @@ aside {
     }
 
     .dashboard .nestedListTable tbody tr {
-        display: flex !important;
+        display: flex;
         flex-direction: column !important;
         background: var(--color-white) !important;
         border: 1px solid var(--border) !important;
