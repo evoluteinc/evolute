@@ -1645,3 +1645,7 @@ table.pricegrid tbody tr td.label{
 .dashboard table#detailsTable tbody tr td:nth-child(2){
     word-break: break-word;
 }
+
+.dashboard form#archiveBrandsForm {
+    overflow-x: auto;
+}
